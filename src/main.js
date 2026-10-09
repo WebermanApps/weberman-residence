@@ -93,9 +93,10 @@ const labelObjs = [];
 const MINOR = new Set(['402', '405', '211', '206', '403', '306', '205', '203', '204', '301', '406', '104', '105', '210', '208']);
 const HIDE = new Set(['402', '405', '211']);
 const KEY = new Set(['101', '103', '201', '207', '209', '302', '303', '407', '404', '401', 'C', 'P', 'L']);
+const KEY2 = new Set(['103', '201', '209', '302', '407', 'P', 'L']);
 function addLabel(item, outdoor) {
   if (HIDE.has(item.id)) return;
-  const el = document.createElement('div'); el.className = 'rlabel' + (['204','301','406'].includes(item.id) ? ' gal' : '') + (outdoor ? ' out' : '') + (MINOR.has(item.id) || outdoor ? ' minor' : '') + (KEY.has(item.id) ? ' key' : '');
+  const el = document.createElement('div'); el.className = 'rlabel' + (['204','301','406'].includes(item.id) ? ' gal' : '') + (outdoor ? ' out' : '') + (MINOR.has(item.id) || outdoor ? ' minor' : '') + (KEY.has(item.id) ? ' key' : '') + (KEY2.has(item.id) ? ' key2' : '');
   el.innerHTML = outdoor ? `${item.name}` : `<span class="num">${item.id}</span>${item.name.replace(' + Conversation Pit', '').replace(' Gallery', '')}`;
   el.addEventListener('click', (e) => { e.stopPropagation(); select(item.id, true); });
   const o = new CSS2DObject(el); o.userData = { item, outdoor }; groups.labels.add(o); labelObjs.push(o);
@@ -143,8 +144,9 @@ function goView(k, instant) {
   if (state.mode !== 'orbit') setMode('orbit');
   setRoof(v.roof); setCut(!!v.cut, v.cut || 4.5);
   viewsEl.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.view === k));
-  const cp = W(...v.cam.slice(0, 2), v.cam[2]), tp = W(...v.tgt.slice(0, 2), v.tgt[2]);
-  if (isMobile() && k !== 'courtyard') { const d = cp.clone().sub(tp).multiplyScalar(k === 'aerial' ? 1.2 : 1.45); cp.copy(tp).add(d); }
+  const mob = isMobile() && k === 'aerial'; const vc = mob ? [49, -178, 104] : v.cam, vt = mob ? [49, 46, 22] : v.tgt;
+  const cp = W(...vc.slice(0, 2), vc[2]), tp = W(...vt.slice(0, 2), vt[2]);
+  if (isMobile() && k !== 'courtyard' && k !== 'aerial') { const d = cp.clone().sub(tp).multiplyScalar(k === 'aerial' ? 1.2 : 1.45); cp.copy(tp).add(d); }
   if (instant) { persp.position.copy(cp); controls.target.copy(tp); persp.fov = v.fov ?? 42; persp.updateProjectionMatrix(); controls.update(); tween = null; }
   else flyTo(cp, tp, v.fov);
   setCaption(v.kicker, v.title);

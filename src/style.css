@@ -165,4 +165,5 @@ svg{width:18px;height:18px;flex-shrink:0}
   .rlabel{font-size:10px;padding:3px 6px}
   .rlabel.minor{display:none}
   .rlabel:not(.key):not(.on){display:none}
+  .roof-on .rlabel:not(.key2):not(.on){display:none}
 }
