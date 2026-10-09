@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#efede6" />
+<meta name="description" content="Weberman Residence: an interactive, drawing-referenced 3D spatial study of a mountain courtyard house." />
+<title>Weberman Residence: Spatial Study</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234d593e'/%3E%3Cpath d='M7 20h18M9 20v-6h14v6M5 14l11-4 11 4' stroke='%23f7f5ef' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+</head>
+<body>
+<div id="app">
+  <header class="header">
+    <div class="brand-wrap">
+      <h1 class="brand">Weberman Residence<span class="brand-colon">:</span> <em>Spatial Study</em></h1>
+    </div>
+    <div class="project-title">
+      <span>A MOUNTAIN COURTYARD HOUSE</span>
+      <small>Concept study · single level · <b id="hdr-total"></b></small>
+    </div>
+    <div class="header-actions">
+      <span class="issue"><i></i>CONCEPT SET · 10.09.26</span>
+      <button class="hdr-btn" id="btn-drawings" aria-label="Drawings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7"/></svg><span class="lbl">Drawings</span></button>
+      <button class="hdr-btn icon" id="btn-about" aria-label="About this model"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button>
+    </div>
+  </header>
+  <div class="main">
+    <aside class="rail" id="rail">
+      <div class="rail-kicker">EXPLORE THE HOUSE</div>
+      <div class="rail-title">Around a courtyard.</div>
+      <div class="rail-sub">Four low pavilions under deep eaves, linked by a glazed engawa.</div>
+      <nav class="room-list" id="room-list" aria-label="Rooms"></nav>
+      <div class="rail-foot">
+        <div class="rule"></div>
+        <p>Built from the plan drawings.<br/>Open to exploration.</p>
+        <button id="btn-notes" class="link-btn">Model notes →</button>
+      </div>
+    </aside>
+    <section class="viewport-shell" id="shell">
+      <div id="viewport"></div>
+      <div class="viewer-top">
+        <div class="seg" id="mode-seg" role="tablist" aria-label="View mode">
+          <button data-mode="orbit" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg><span>3D Model</span></button>
+          <button data-mode="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16"/><path d="M4 12h9M13 4v16"/></svg><span>Plan</span></button>
+          <button data-mode="walk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="13" cy="4.5" r="1.8"/><path d="M10 21l2-6 3 3v3M9 11l3-3 3 3 3 1M12 8l-1 5"/></svg><span>Walk Through</span></button>
+        </div>
+        <div class="right-ctrls">
+          <div class="seg small" id="light-seg" aria-label="Lighting">
+            <button data-light="day" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg><span>Daylight</span></button>
+            <button data-light="eve"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><span>Evening</span></button>
+          </div>
+          <button class="pill" id="btn-roof" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l10-5 10 5M5 10v9h14v-9"/></svg><span>Roof On</span></button>
+          <button class="pill" id="btn-layers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Layers</span></button>
+        </div>
+      </div>
+      <div class="views" id="views" aria-label="Preset views"></div>
+      <div class="caption" id="caption">
+        <div class="cap-kicker" id="cap-kicker">A DRAWING-BASED SPATIAL STUDY</div>
+        <div class="cap-title" id="cap-title">The whole house.</div>
+      </div>
+      <div class="info" id="info" hidden>
+        <button class="close" id="info-close" aria-label="Hide room details">×</button>
+        <div class="info-kicker" id="info-kicker"></div>
+        <div class="info-title" id="info-title"></div>
+        <p class="info-notes" id="info-notes"></p>
+        <div class="info-row"><span>Size</span><b id="info-size"></b></div>
+        <div class="info-row"><span>Area</span><b id="info-area"></b></div>
+        <div class="info-row"><span>Ceiling</span><b id="info-ceil"></b></div>
+        <div class="info-row"><span>Floor</span><b id="info-floor"></b></div>
+        <div class="info-equip" id="info-equip"></div>
+        <div class="info-actions"><button id="info-walk" class="link-btn">Walk in this room →</button></div>
+      </div>
+      <div class="layers" id="layers" hidden>
+        <div class="layers-head"><b>Model Layers</b><button class="close" id="layers-close" aria-label="Close layers">×</button></div>
+        <label class="tg"><span>Roof + eaves</span><input type="checkbox" id="ly-roof" checked><i></i></label>
+        <label class="tg"><span>Cutaway walls</span><input type="checkbox" id="ly-cut"><i></i></label>
+        <div class="slider-row"><span>Section height</span><b id="cut-val">4' 6"</b></div>
+        <input type="range" id="cut-h" min="2" max="15" step="0.5" value="4.5">
+        <div class="sep"></div>
+        <label class="tg"><span>Furniture + equipment</span><input type="checkbox" id="ly-furn" checked><i></i></label>
+        <label class="tg"><span>Room labels</span><input type="checkbox" id="ly-labels" checked><i></i></label>
+        <label class="tg"><span>Plan drawing overlay</span><input type="checkbox" id="ly-overlay"><i></i></label>
+        <div class="slider-row"><span>Overlay opacity</span><b id="ov-val">85%</b></div>
+        <input type="range" id="ov-op" min="0.1" max="1" step="0.05" value="0.85">
+        <div class="sep"></div>
+        <label class="tg"><span>Landscape + site</span><input type="checkbox" id="ly-site" checked><i></i></label>
+        <label class="tg"><span>Mountain backdrop</span><input type="checkbox" id="ly-mtn" checked><i></i></label>
+        <label class="tg"><span>Shadows</span><input type="checkbox" id="ly-shadow" checked><i></i></label>
+      </div>
+      <div class="hint" id="hint">Drag to orbit · Scroll or pinch to zoom · Right-drag or two fingers to pan · Tap a room</div>
+      <div class="walk-pad" id="walk-pad" hidden>
+        <button data-k="f" aria-label="Move forward">↑</button>
+        <button data-k="l" aria-label="Move left">←</button><button data-k="b" aria-label="Move backward">↓</button><button data-k="r" aria-label="Move right">→</button>
+      </div>
+      <div class="tools">
+        <button id="t-reset" aria-label="Reset view" title="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 0 2.5-5.8"/><path d="M4 4v4h4"/></svg></button>
+        <span class="tsep"></span>
+        <button id="t-save" aria-label="Save image" title="Save image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button>
+        <button id="t-full" aria-label="Full screen" title="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+      <div class="loading" id="loading"><div class="spin"></div><span>Building the model…</span></div>
+      <div class="toast" id="toast" hidden></div>
+    </section>
+  </div>
+  <div class="chips" id="chips"></div>
+  <footer class="footer"><span><i class="dot"></i>Interactive architectural model</span><span class="mid">Plan-traced geometry · dimensions in feet + meters</span><span>Designed for Max Weberman</span></footer>
+</div>
+<div class="modal" id="modal" hidden>
+  <div class="modal-card">
+    <div class="modal-head"><b id="modal-title"></b><button class="close" id="modal-close" aria-label="Close">×</button></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "weberman-residence",
+  "version": "1.0.0",
+  "description": "Weberman Residence: Spatial Study. Interactive 3D model of a mountain courtyard house.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  },
+  "private": true,
+  "type": "module"
+}

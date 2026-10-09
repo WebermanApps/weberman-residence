@@ -1,0 +1,3311 @@
+{
+ "rooms": [
+  {
+   "id": "101",
+   "name": "Kitchen",
+   "wing": "Living Pavilion",
+   "x0": 10,
+   "y0": 60,
+   "x1": 26,
+   "y1": 84,
+   "h": 12,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Bright, sleek kitchen: 10' honed Calacatta marble island with seating for four, flat-panel rift oak cabinetry, open oak shelving on the north wall under a ribbon window, integrated appliances.",
+   "w": 16,
+   "d": 24,
+   "area": 384
+  },
+  {
+   "id": "102",
+   "name": "Dining",
+   "wing": "Living Pavilion",
+   "x0": 26,
+   "y0": 60,
+   "x1": 44,
+   "y1": 84,
+   "h": 12,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Seats ten under exposed fir beams. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
+   "w": 18,
+   "d": 24,
+   "area": 432
+  },
+  {
+   "id": "103",
+   "name": "Living + Conversation Pit",
+   "wing": "Living Pavilion",
+   "x0": 44,
+   "y0": 60,
+   "x1": 72,
+   "y1": 84,
+   "h": 12,
+   "floor": "oak",
+   "cond": true,
+   "notes": "The heart of the house. 16-ft sunken conversation pit (18\" down), big fixed mountain-view window to the north, 28 ft of pocketing glass to the courtyard. No stone fireplace: a slim linear gas fire set in a plaster plinth.",
+   "w": 28,
+   "d": 24,
+   "area": 672
+  },
+  {
+   "id": "104",
+   "name": "Walk-in Pantry",
+   "wing": "Living Pavilion",
+   "x0": 0,
+   "y0": 72,
+   "x1": 10,
+   "y1": 84,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Floor-to-ceiling open shelving, second fridge, appliance counter.",
+   "w": 10,
+   "d": 12,
+   "area": 120
+  },
+  {
+   "id": "105",
+   "name": "Mudroom + Gear",
+   "wing": "Living Pavilion",
+   "x0": 0,
+   "y0": 60,
+   "x1": 10,
+   "y1": 72,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Side entry from the bike racks and kitchen garden. Cubbies, boot bench, ski and helmet wall, dog wash.",
+   "w": 10,
+   "d": 12,
+   "area": 120
+  },
+  {
+   "id": "201",
+   "name": "Master Bedroom",
+   "wing": "Sleeping Wing",
+   "x0": 72,
+   "y0": 64,
+   "x1": 86,
+   "y1": 88,
+   "h": 11,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Pushed north for the best mountain view, full-height glass on the north. Private, at the end of the east engawa.",
+   "w": 14,
+   "d": 24,
+   "area": 336
+  },
+  {
+   "id": "202",
+   "name": "Master Bath",
+   "wing": "Sleeping Wing",
+   "x0": 86,
+   "y0": 74,
+   "x1": 98,
+   "y1": 88,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Japanese hinoki soaking tub at the corner window, 8-ft walk-in rain shower, double floating vanity, WC room. Opens to a walled bath garden.",
+   "w": 12,
+   "d": 14,
+   "area": 168
+  },
+  {
+   "id": "203",
+   "name": "Master Closet",
+   "wing": "Sleeping Wing",
+   "x0": 86,
+   "y0": 64,
+   "x1": 98,
+   "y1": 74,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Walk-in closet with oak millwork.",
+   "w": 12,
+   "d": 10,
+   "area": 120
+  },
+  {
+   "id": "204",
+   "name": "East Engawa Gallery",
+   "wing": "Sleeping Wing",
+   "x0": 72,
+   "y0": 14,
+   "x1": 78,
+   "y1": 64,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Glazed engawa along the courtyard: oak floor, shoji-style sliding glass, built-in bench and book wall. Links living, bedrooms and the wellness wing.",
+   "w": 6,
+   "d": 50,
+   "area": 300
+  },
+  {
+   "id": "205",
+   "name": "Laundry",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 54,
+   "x1": 88,
+   "y1": 64,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Next to the bedrooms. Stacked W/D pair, folding counter, drying rack.",
+   "w": 10,
+   "d": 10,
+   "area": 100
+  },
+  {
+   "id": "206",
+   "name": "Linen + Mechanical",
+   "wing": "Sleeping Wing",
+   "x0": 88,
+   "y0": 54,
+   "x1": 98,
+   "y1": 64,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Linen storage, heat pump air handler, ERV, water heating.",
+   "w": 10,
+   "d": 10,
+   "area": 100
+  },
+  {
+   "id": "207",
+   "name": "Kids' Room 1",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 43,
+   "x1": 98,
+   "y1": 54,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "20 x 11 ft with a bed alcove, desk and built-in closet; east window to the meadow.",
+   "w": 20,
+   "d": 11,
+   "area": 220
+  },
+  {
+   "id": "208",
+   "name": "Jack-and-Jill Bath",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 35,
+   "x1": 98,
+   "y1": 43,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Shared by the kids' rooms: two vanities, WC and tub-shower in the middle room, lockable from each side.",
+   "w": 20,
+   "d": 8,
+   "area": 160
+  },
+  {
+   "id": "209",
+   "name": "Kids' Room 2 / Guest",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 24,
+   "x1": 98,
+   "y1": 35,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Fits a queen bed. Doubles as the guest room; the Guest / Pool Bath is just across the engawa.",
+   "w": 20,
+   "d": 11,
+   "area": 220
+  },
+  {
+   "id": "210",
+   "name": "Guest / Pool Bath",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 14,
+   "x1": 88,
+   "y1": 24,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Guest-capable full bath (walk-in shower, vanity, WC) reached from the engawa, also serving the pool and Kids' Room 2 when it hosts guests.",
+   "w": 10,
+   "d": 10,
+   "area": 100
+  },
+  {
+   "id": "211",
+   "name": "Pool Equipment",
+   "wing": "Sleeping Wing",
+   "x0": 88,
+   "y0": 14,
+   "x1": 98,
+   "y1": 24,
+   "h": 9,
+   "floor": "concrete",
+   "cond": false,
+   "notes": "Unconditioned. Pool pump and filter, outdoor storage, exterior access only.",
+   "w": 10,
+   "d": 10,
+   "area": 100
+  },
+  {
+   "id": "301",
+   "name": "South Engawa Gallery",
+   "wing": "Wellness + Gym Wing",
+   "x0": 28,
+   "y0": 22,
+   "x1": 72,
+   "y1": 27,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Glazed engawa that closes the courtyard ring. Lets you reach the gym and wellness rooms in winter without going outside.",
+   "w": 44,
+   "d": 5,
+   "area": 220
+  },
+  {
+   "id": "302",
+   "name": "Exercise Room",
+   "wing": "Wellness + Gym Wing",
+   "x0": 28,
+   "y0": 0,
+   "x1": 50,
+   "y1": 22,
+   "h": 12,
+   "floor": "rubber",
+   "cond": true,
+   "notes": "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors, kids' climbing wall on the west wall. Glass slides open to the turf sprint lane.",
+   "w": 22,
+   "d": 22,
+   "area": 484
+  },
+  {
+   "id": "303",
+   "name": "Wet Room",
+   "wing": "Wellness + Gym Wing",
+   "x0": 50,
+   "y0": 9,
+   "x1": 66,
+   "y1": 22,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Stone wet room: two rain showers, a sunken cold plunge (39-50 F), teak bench. Serves the sauna and hammam.",
+   "w": 16,
+   "d": 13,
+   "area": 208
+  },
+  {
+   "id": "304",
+   "name": "Sauna",
+   "wing": "Wellness + Gym Wing",
+   "x0": 50,
+   "y0": 0,
+   "x1": 58,
+   "y1": 9,
+   "h": 8,
+   "floor": "cedar",
+   "cond": true,
+   "notes": "Cedar sauna for 4 to 5 people, with a low window toward the pool and meadow.",
+   "w": 8,
+   "d": 9,
+   "area": 72
+  },
+  {
+   "id": "305",
+   "name": "Hammam",
+   "wing": "Wellness + Gym Wing",
+   "x0": 58,
+   "y0": 0,
+   "x1": 66,
+   "y1": 9,
+   "h": 8,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Marble steam room with a heated bench and a vaulted ceiling.",
+   "w": 8,
+   "d": 9,
+   "area": 72
+  },
+  {
+   "id": "306",
+   "name": "Changing + Towels",
+   "wing": "Wellness + Gym Wing",
+   "x0": 66,
+   "y0": 0,
+   "x1": 72,
+   "y1": 22,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Towels, robes, lockers. Door to the pool deck and outdoor shower.",
+   "w": 6,
+   "d": 22,
+   "area": 132
+  },
+  {
+   "id": "401",
+   "name": "Entry Genkan",
+   "wing": "Studio + Arrival",
+   "x0": 10,
+   "y0": 48,
+   "x1": 22,
+   "y1": 60,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Stone genkan with a step-up to the oak floor and a rammed-earth feature wall. The first view lines up across the engawa into the courtyard.",
+   "w": 12,
+   "d": 12,
+   "area": 144
+  },
+  {
+   "id": "402",
+   "name": "Coat + Shoe Closet",
+   "wing": "Studio + Arrival",
+   "x0": 10,
+   "y0": 41,
+   "x1": 16,
+   "y1": 48,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Coat and shoe storage.",
+   "w": 6,
+   "d": 7,
+   "area": 42
+  },
+  {
+   "id": "403",
+   "name": "Powder Room",
+   "wing": "Studio + Arrival",
+   "x0": 16,
+   "y0": 41,
+   "x1": 22,
+   "y1": 48,
+   "h": 10,
+   "floor": "stone",
+   "cond": true,
+   "notes": "Powder room by the entry: stone vessel sink, plaster walls.",
+   "w": 6,
+   "d": 7,
+   "area": 42
+  },
+  {
+   "id": "404",
+   "name": "Tatami Room",
+   "wing": "Studio + Arrival",
+   "x0": 10,
+   "y0": 28,
+   "x1": 22,
+   "y1": 41,
+   "h": 9,
+   "floor": "tatami",
+   "cond": true,
+   "notes": "8-mat tatami room with a tokonoma alcove. Shoji slide open to the engawa and courtyard, and a low garden window. Used for tea, meditation, or as an overflow guest room.",
+   "w": 12,
+   "d": 13,
+   "area": 156
+  },
+  {
+   "id": "405",
+   "name": "Instrument + AV Closet",
+   "wing": "Studio + Arrival",
+   "x0": 10,
+   "y0": 22,
+   "x1": 22,
+   "y1": 28,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Cases, cables, rack gear and the network closet. Opens to the office.",
+   "w": 12,
+   "d": 6,
+   "area": 72
+  },
+  {
+   "id": "406",
+   "name": "West Engawa Gallery",
+   "wing": "Studio + Arrival",
+   "x0": 22,
+   "y0": 22,
+   "x1": 28,
+   "y1": 60,
+   "h": 10,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Glazed engawa from the entry to the office and great room.",
+   "w": 6,
+   "d": 38,
+   "area": 228
+  },
+  {
+   "id": "407",
+   "name": "Office / Music Loft",
+   "wing": "Studio + Arrival",
+   "x0": 4,
+   "y0": 0,
+   "x1": 28,
+   "y1": 22,
+   "h": 14,
+   "floor": "oak",
+   "cond": true,
+   "notes": "Loft-like 24 x 22 ft room with a 14-ft ceiling, clerestory and acoustic slat ceiling. Work desk and computer with the MPC, digital piano, e-drum kit, acoustic-electric guitar, mic, PA speakers and mixer. Double-stud walls keep it acoustically separate; it sits as far from the bedrooms as possible.",
+   "w": 24,
+   "d": 22,
+   "area": 528
+  }
+ ],
+ "walls": [
+  {
+   "o": "h",
+   "c": 60,
+   "a": 0,
+   "b": 10,
+   "pos": "105",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 2,
+     "b": 8,
+     "k": "window",
+     "x": [
+      3,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 60,
+   "a": 10,
+   "b": 22,
+   "pos": "101",
+   "neg": "401",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 60,
+   "a": 22,
+   "b": 26,
+   "pos": "101",
+   "neg": "406",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 22,
+     "b": 26,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 60,
+   "a": 26,
+   "b": 28,
+   "pos": "102",
+   "neg": "406",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 26,
+     "b": 28,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 60,
+   "a": 28,
+   "b": 44,
+   "pos": "102",
+   "neg": null,
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 28.5,
+     "b": 43.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 60,
+   "a": 44,
+   "b": 72,
+   "pos": "103",
+   "neg": null,
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 44.5,
+     "b": 71.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 84,
+   "a": 0,
+   "b": 10,
+   "pos": null,
+   "neg": "104",
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 84,
+   "a": 10,
+   "b": 26,
+   "pos": null,
+   "neg": "101",
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 11,
+     "b": 25,
+     "k": "window",
+     "x": [
+      3.5,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 84,
+   "a": 26,
+   "b": 44,
+   "pos": null,
+   "neg": "102",
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 27,
+     "b": 43,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 84,
+   "a": 44,
+   "b": 72,
+   "pos": null,
+   "neg": "103",
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 45,
+     "b": 71,
+     "k": "fixed",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 22,
+   "b": 28,
+   "pos": "405",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 28,
+   "b": 41,
+   "pos": "404",
+   "neg": null,
+   "ext": true,
+   "h": 9,
+   "feats": [
+    {
+     "a": 31,
+     "b": 38,
+     "k": "window",
+     "x": [
+      1.2,
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 41,
+   "b": 48,
+   "pos": "402",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 48,
+   "b": 60,
+   "pos": "401",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 52,
+     "b": 56,
+     "k": "front",
+     "x": null
+    },
+    {
+     "a": 49,
+     "b": 51.5,
+     "k": "fixed",
+     "x": null
+    },
+    {
+     "a": 56.5,
+     "b": 59,
+     "k": "fixed",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 60,
+   "b": 72,
+   "pos": "101",
+   "neg": "105",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 64,
+     "b": 67,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 10,
+   "a": 72,
+   "b": 84,
+   "pos": "101",
+   "neg": "104",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 76,
+     "b": 79,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 26,
+   "a": 60,
+   "b": 84,
+   "pos": "102",
+   "neg": "101",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 60,
+     "b": 84,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 44,
+   "a": 60,
+   "b": 84,
+   "pos": "103",
+   "neg": "102",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 60,
+     "b": 84,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 0,
+   "b": 14,
+   "pos": null,
+   "neg": "306",
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 14,
+   "b": 22,
+   "pos": "204",
+   "neg": "306",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 16,
+     "b": 19,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 22,
+   "b": 27,
+   "pos": "204",
+   "neg": "301",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 22,
+     "b": 27,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 27,
+   "b": 60,
+   "pos": "204",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 27.5,
+     "b": 59.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 60,
+   "b": 64,
+   "pos": "204",
+   "neg": "103",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 60,
+     "b": 64,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 64,
+   "b": 84,
+   "pos": "201",
+   "neg": "103",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 84,
+   "b": 88,
+   "pos": "201",
+   "neg": null,
+   "ext": true,
+   "h": 11,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 72,
+   "a": 0,
+   "b": 10,
+   "pos": "104",
+   "neg": "105",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 0,
+   "a": 60,
+   "b": 72,
+   "pos": "105",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 64,
+     "b": 67,
+     "k": "exdoor",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 0,
+   "a": 72,
+   "b": 84,
+   "pos": "104",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 76,
+     "b": 82,
+     "k": "window",
+     "x": [
+      3,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 64,
+   "a": 72,
+   "b": 78,
+   "pos": "201",
+   "neg": "204",
+   "ext": false,
+   "h": 11,
+   "feats": [
+    {
+     "a": 73,
+     "b": 77,
+     "k": "slide",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 64,
+   "a": 78,
+   "b": 86,
+   "pos": "201",
+   "neg": "205",
+   "ext": false,
+   "h": 11,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 64,
+   "a": 86,
+   "b": 88,
+   "pos": "203",
+   "neg": "205",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 64,
+   "a": 88,
+   "b": 98,
+   "pos": "203",
+   "neg": "206",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 88,
+   "a": 72,
+   "b": 86,
+   "pos": null,
+   "neg": "201",
+   "ext": true,
+   "h": 11,
+   "feats": [
+    {
+     "a": 73,
+     "b": 85,
+     "k": "fixed",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 88,
+   "a": 86,
+   "b": 98,
+   "pos": null,
+   "neg": "202",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 88,
+     "b": 97,
+     "k": "window",
+     "x": [
+      2,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 86,
+   "a": 64,
+   "b": 74,
+   "pos": "203",
+   "neg": "201",
+   "ext": false,
+   "h": 11,
+   "feats": [
+    {
+     "a": 66,
+     "b": 69,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 86,
+   "a": 74,
+   "b": 88,
+   "pos": "202",
+   "neg": "201",
+   "ext": false,
+   "h": 11,
+   "feats": [
+    {
+     "a": 76,
+     "b": 79.5,
+     "k": "slide",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 74,
+   "a": 86,
+   "b": 98,
+   "pos": "202",
+   "neg": "203",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 14,
+   "b": 24,
+   "pos": null,
+   "neg": "211",
+   "ext": true,
+   "h": 9,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 24,
+   "b": 35,
+   "pos": null,
+   "neg": "209",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 26,
+     "b": 33,
+     "k": "window",
+     "x": [
+      2.5,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 35,
+   "b": 43,
+   "pos": null,
+   "neg": "208",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 37,
+     "b": 41,
+     "k": "window",
+     "x": [
+      5.5,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 43,
+   "b": 54,
+   "pos": null,
+   "neg": "207",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 45,
+     "b": 52,
+     "k": "window",
+     "x": [
+      2.5,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 54,
+   "b": 64,
+   "pos": null,
+   "neg": "206",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 56,
+     "b": 59,
+     "k": "exdoor",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 64,
+   "b": 74,
+   "pos": null,
+   "neg": "203",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 67,
+     "b": 72,
+     "k": "window",
+     "x": [
+      6,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 98,
+   "a": 74,
+   "b": 88,
+   "pos": null,
+   "neg": "202",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 76,
+     "b": 87,
+     "k": "window",
+     "x": [
+      2,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 14,
+   "a": 72,
+   "b": 78,
+   "pos": "204",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 73,
+     "b": 77,
+     "k": "exdoor",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 14,
+   "a": 78,
+   "b": 88,
+   "pos": "210",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 81,
+     "b": 85,
+     "k": "window",
+     "x": [
+      5.5,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 14,
+   "a": 88,
+   "b": 98,
+   "pos": "211",
+   "neg": null,
+   "ext": true,
+   "h": 9,
+   "feats": [
+    {
+     "a": 91,
+     "b": 95,
+     "k": "exdoor",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 78,
+   "a": 14,
+   "b": 24,
+   "pos": "210",
+   "neg": "204",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 18,
+     "b": 21,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 78,
+   "a": 24,
+   "b": 35,
+   "pos": "209",
+   "neg": "204",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 27,
+     "b": 30,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 78,
+   "a": 35,
+   "b": 43,
+   "pos": "208",
+   "neg": "204",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 78,
+   "a": 43,
+   "b": 54,
+   "pos": "207",
+   "neg": "204",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 50,
+     "b": 53,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 78,
+   "a": 54,
+   "b": 64,
+   "pos": "205",
+   "neg": "204",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 58,
+     "b": 61,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 54,
+   "a": 78,
+   "b": 88,
+   "pos": "205",
+   "neg": "207",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 54,
+   "a": 88,
+   "b": 98,
+   "pos": "206",
+   "neg": "207",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 88,
+   "a": 14,
+   "b": 24,
+   "pos": "211",
+   "neg": "210",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 88,
+   "a": 54,
+   "b": 64,
+   "pos": "206",
+   "neg": "205",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 57,
+     "b": 60,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 43,
+   "a": 78,
+   "b": 98,
+   "pos": "207",
+   "neg": "208",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 81,
+     "b": 84,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 35,
+   "a": 78,
+   "b": 98,
+   "pos": "208",
+   "neg": "209",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 81,
+     "b": 84,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 24,
+   "a": 78,
+   "b": 88,
+   "pos": "209",
+   "neg": "210",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 24,
+   "a": 88,
+   "b": 98,
+   "pos": "209",
+   "neg": "211",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 4,
+   "b": 10,
+   "pos": null,
+   "neg": "407",
+   "ext": true,
+   "h": 14,
+   "feats": [
+    {
+     "a": 5,
+     "b": 9,
+     "k": "window",
+     "x": [
+      3,
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 10,
+   "b": 22,
+   "pos": "405",
+   "neg": "407",
+   "ext": false,
+   "h": 14,
+   "feats": [
+    {
+     "a": 14,
+     "b": 18,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 22,
+   "b": 28,
+   "pos": "406",
+   "neg": "407",
+   "ext": false,
+   "h": 14,
+   "feats": [
+    {
+     "a": 23,
+     "b": 27,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 28,
+   "b": 50,
+   "pos": "301",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 36,
+     "b": 42,
+     "k": "slide",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 50,
+   "b": 66,
+   "pos": "301",
+   "neg": "303",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 56,
+     "b": 59,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 66,
+   "b": 72,
+   "pos": "301",
+   "neg": "306",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 27,
+   "a": 28,
+   "b": 72,
+   "pos": null,
+   "neg": "301",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 28.5,
+     "b": 71.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 28,
+   "a": 0,
+   "b": 22,
+   "pos": "302",
+   "neg": "407",
+   "ext": false,
+   "h": 14,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 28,
+   "a": 22,
+   "b": 27,
+   "pos": "301",
+   "neg": "406",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 22,
+     "b": 27,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 28,
+   "a": 27,
+   "b": 60,
+   "pos": null,
+   "neg": "406",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 27.5,
+     "b": 59.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 0,
+   "a": 4,
+   "b": 28,
+   "pos": "407",
+   "neg": null,
+   "ext": true,
+   "h": 14,
+   "feats": [
+    {
+     "a": 7,
+     "b": 25,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 0,
+   "a": 28,
+   "b": 50,
+   "pos": "302",
+   "neg": null,
+   "ext": true,
+   "h": 12,
+   "feats": [
+    {
+     "a": 31,
+     "b": 47,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 0,
+   "a": 50,
+   "b": 58,
+   "pos": "304",
+   "neg": null,
+   "ext": true,
+   "h": 8,
+   "feats": [
+    {
+     "a": 51,
+     "b": 57,
+     "k": "window",
+     "x": [
+      3,
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 0,
+   "a": 58,
+   "b": 66,
+   "pos": "305",
+   "neg": null,
+   "ext": true,
+   "h": 8,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 0,
+   "a": 66,
+   "b": 72,
+   "pos": "306",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 68,
+     "b": 71,
+     "k": "exdoor",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 50,
+   "a": 0,
+   "b": 9,
+   "pos": "304",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 50,
+   "a": 9,
+   "b": 22,
+   "pos": "303",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 12,
+     "b": 15,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 9,
+   "a": 50,
+   "b": 58,
+   "pos": "303",
+   "neg": "304",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 52,
+     "b": 54.5,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 9,
+   "a": 58,
+   "b": 66,
+   "pos": "303",
+   "neg": "305",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 61,
+     "b": 63.5,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 66,
+   "a": 0,
+   "b": 9,
+   "pos": "306",
+   "neg": "305",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 66,
+   "a": 9,
+   "b": 22,
+   "pos": "306",
+   "neg": "303",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 12,
+     "b": 15,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 58,
+   "a": 0,
+   "b": 9,
+   "pos": "305",
+   "neg": "304",
+   "ext": false,
+   "h": 8,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 48,
+   "a": 10,
+   "b": 16,
+   "pos": "401",
+   "neg": "402",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 11,
+     "b": 15,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 48,
+   "a": 16,
+   "b": 22,
+   "pos": "401",
+   "neg": "403",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 22,
+   "a": 22,
+   "b": 28,
+   "pos": "406",
+   "neg": "405",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 23,
+     "b": 26,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 22,
+   "a": 28,
+   "b": 41,
+   "pos": "406",
+   "neg": "404",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 30,
+     "b": 39,
+     "k": "slide",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 22,
+   "a": 41,
+   "b": 48,
+   "pos": "406",
+   "neg": "403",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 43,
+     "b": 45.5,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 22,
+   "a": 48,
+   "b": 60,
+   "pos": "406",
+   "neg": "401",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 50,
+     "b": 58,
+     "k": "open",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "h",
+   "c": 41,
+   "a": 10,
+   "b": 16,
+   "pos": "402",
+   "neg": "404",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 41,
+   "a": 16,
+   "b": 22,
+   "pos": "403",
+   "neg": "404",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 16,
+   "a": 41,
+   "b": 48,
+   "pos": "403",
+   "neg": "402",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 28,
+   "a": 10,
+   "b": 22,
+   "pos": "404",
+   "neg": "405",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 4,
+   "a": 0,
+   "b": 22,
+   "pos": "407",
+   "neg": null,
+   "ext": true,
+   "h": 14,
+   "feats": [
+    {
+     "a": 4,
+     "b": 18,
+     "k": "window",
+     "x": [
+      2.5,
+      9
+     ]
+    }
+   ]
+  }
+ ],
+ "furn": [
+  {
+   "room": "101",
+   "label": "Marble island 10'",
+   "x0": 13,
+   "y0": 69,
+   "x1": 23,
+   "y1": 73.5,
+   "h": 3,
+   "z0": 0,
+   "color": "#ece8e1",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Back counter + range",
+   "x0": 12.6,
+   "y0": 81.4,
+   "x1": 25.6,
+   "y1": 83.6,
+   "h": 3,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Open oak shelving",
+   "x0": 10.3,
+   "y0": 60.8,
+   "x1": 11.2,
+   "y1": 63.6,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Tall appliance wall",
+   "x0": 10.4,
+   "y0": 68.5,
+   "x1": 12.6,
+   "y1": 75,
+   "h": 8.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Stools",
+   "x0": 14,
+   "y0": 67.2,
+   "x1": 22,
+   "y1": 68.6,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "102",
+   "label": "Dining table (10)",
+   "x0": 30,
+   "y0": 69,
+   "x1": 40,
+   "y1": 73,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "102",
+   "label": "Chairs",
+   "x0": 30.5,
+   "y0": 67.4,
+   "x1": 39.5,
+   "y1": 68.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#d9cbb5",
+   "shape": "box"
+  },
+  {
+   "room": "102",
+   "label": "Chairs",
+   "x0": 30.5,
+   "y0": 73.4,
+   "x1": 39.5,
+   "y1": 74.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#d9cbb5",
+   "shape": "box"
+  },
+  {
+   "room": "102",
+   "label": "Sideboard",
+   "x0": 29,
+   "y0": 82.6,
+   "x1": 41,
+   "y1": 83.6,
+   "h": 2.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Conversation pit (18\" down)",
+   "x0": 49,
+   "y0": 66,
+   "x1": 65,
+   "y1": 78,
+   "h": -1.5,
+   "z0": 0,
+   "color": "#e6dfd2",
+   "shape": "pit"
+  },
+  {
+   "room": "103",
+   "label": "Pit banquette",
+   "x0": 49.3,
+   "y0": 66.3,
+   "x1": 64.7,
+   "y1": 68.3,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "#d9cbb5",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Pit banquette",
+   "x0": 49.3,
+   "y0": 75.7,
+   "x1": 64.7,
+   "y1": 77.7,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "#d9cbb5",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Pit banquette",
+   "x0": 49.3,
+   "y0": 68.3,
+   "x1": 51.3,
+   "y1": 75.7,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "#d9cbb5",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Coffee table",
+   "x0": 54,
+   "y0": 70.2,
+   "x1": 60,
+   "y1": 73.8,
+   "h": 0.8,
+   "z0": -1.5,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Linear fire plinth",
+   "x0": 67,
+   "y0": 66,
+   "x1": 69,
+   "y1": 78,
+   "h": 1.6,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Lounge chairs",
+   "x0": 45.5,
+   "y0": 79,
+   "x1": 48.5,
+   "y1": 82,
+   "h": 2.4,
+   "z0": 0,
+   "color": "#6f7a55",
+   "shape": "box"
+  },
+  {
+   "room": "104",
+   "label": "Pantry shelving",
+   "x0": 0.4,
+   "y0": 73,
+   "x1": 1.8,
+   "y1": 83.6,
+   "h": 7.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "104",
+   "label": "Pantry shelving",
+   "x0": 8.2,
+   "y0": 77,
+   "x1": 9.6,
+   "y1": 83.6,
+   "h": 7.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "105",
+   "label": "Cubbies + bench",
+   "x0": 0.4,
+   "y0": 67.5,
+   "x1": 2,
+   "y1": 71.6,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "105",
+   "label": "Dog wash",
+   "x0": 6.5,
+   "y0": 60.4,
+   "x1": 9.6,
+   "y1": 63,
+   "h": 2.6,
+   "z0": 0,
+   "color": "#b9b1a3",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "King bed",
+   "x0": 76,
+   "y0": 74,
+   "x1": 82.6,
+   "y1": 81,
+   "h": 2,
+   "z0": 0,
+   "color": "#e6dfd2",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "Headboard",
+   "x0": 75.6,
+   "y0": 74,
+   "x1": 82.9,
+   "y1": 74.6,
+   "h": 3.6,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "Nightstands",
+   "x0": 74.4,
+   "y0": 74.2,
+   "x1": 75.6,
+   "y1": 75.8,
+   "h": 1.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "Nightstands",
+   "x0": 82.9,
+   "y0": 74.2,
+   "x1": 84.1,
+   "y1": 75.8,
+   "h": 1.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "Reading chairs",
+   "x0": 74.5,
+   "y0": 84.5,
+   "x1": 77.5,
+   "y1": 87,
+   "h": 2.4,
+   "z0": 0,
+   "color": "#6f7a55",
+   "shape": "box"
+  },
+  {
+   "room": "201",
+   "label": "Rug",
+   "x0": 75,
+   "y0": 72.5,
+   "x1": 84,
+   "y1": 83,
+   "h": 0.05,
+   "z0": 0,
+   "color": "#cdbfa6",
+   "shape": "box"
+  },
+  {
+   "room": "202",
+   "label": "Hinoki soaking tub",
+   "x0": 93,
+   "y0": 83,
+   "x1": 97.4,
+   "y1": 87.4,
+   "h": 2.2,
+   "z0": 0,
+   "color": "#e2c894",
+   "shape": "box"
+  },
+  {
+   "room": "202",
+   "label": "Walk-in rain shower",
+   "x0": 86.6,
+   "y0": 80,
+   "x1": 92,
+   "y1": 87.4,
+   "h": 0.2,
+   "z0": 0,
+   "color": "#55524c",
+   "shape": "box"
+  },
+  {
+   "room": "202",
+   "label": "Double vanity",
+   "x0": 94.4,
+   "y0": 74.6,
+   "x1": 97.4,
+   "y1": 81.5,
+   "h": 2.9,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "202",
+   "label": "WC",
+   "x0": 87,
+   "y0": 74.6,
+   "x1": 89,
+   "y1": 77,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "203",
+   "label": "Closet millwork",
+   "x0": 86.4,
+   "y0": 64.4,
+   "x1": 88.4,
+   "y1": 73.6,
+   "h": 7.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "203",
+   "label": "Closet millwork",
+   "x0": 95.6,
+   "y0": 64.4,
+   "x1": 97.6,
+   "y1": 73.6,
+   "h": 7.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "203",
+   "label": "Island",
+   "x0": 90.5,
+   "y0": 67,
+   "x1": 93.5,
+   "y1": 71,
+   "h": 3,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "204",
+   "label": "Engawa bench + books",
+   "x0": 76.8,
+   "y0": 30,
+   "x1": 77.6,
+   "y1": 58,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "205",
+   "label": "Washer/dryer",
+   "x0": 78.4,
+   "y0": 61.2,
+   "x1": 82.6,
+   "y1": 63.6,
+   "h": 3,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "205",
+   "label": "Fold counter",
+   "x0": 83,
+   "y0": 61.6,
+   "x1": 87.6,
+   "y1": 63.6,
+   "h": 3,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "206",
+   "label": "Air handler + ERV",
+   "x0": 94,
+   "y0": 59,
+   "x1": 97.6,
+   "y1": 63.6,
+   "h": 6,
+   "z0": 0,
+   "color": "#9aa0a3",
+   "shape": "box"
+  },
+  {
+   "room": "206",
+   "label": "Linen shelves",
+   "x0": 88.4,
+   "y0": 54.4,
+   "x1": 92,
+   "y1": 56,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "207",
+   "label": "Bed (alcove)",
+   "x0": 92,
+   "y0": 46,
+   "x1": 97.6,
+   "y1": 53.6,
+   "h": 2,
+   "z0": 0,
+   "color": "#e6dfd2",
+   "shape": "box"
+  },
+  {
+   "room": "207",
+   "label": "Desk",
+   "x0": 79,
+   "y0": 43.4,
+   "x1": 84,
+   "y1": 45.4,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "207",
+   "label": "Closet",
+   "x0": 88,
+   "y0": 53,
+   "x1": 92,
+   "y1": 53.7,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "Vanity 1",
+   "x0": 81,
+   "y0": 41.4,
+   "x1": 86,
+   "y1": 42.7,
+   "h": 2.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "Vanity 2",
+   "x0": 81,
+   "y0": 35.3,
+   "x1": 86,
+   "y1": 36.6,
+   "h": 2.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "Tub-shower",
+   "x0": 91.5,
+   "y0": 35.4,
+   "x1": 97.6,
+   "y1": 38.5,
+   "h": 1.8,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "WC",
+   "x0": 95,
+   "y0": 40,
+   "x1": 97,
+   "y1": 42.6,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "209",
+   "label": "Queen bed (guest)",
+   "x0": 90.5,
+   "y0": 26.5,
+   "x1": 97.6,
+   "y1": 32.5,
+   "h": 2,
+   "z0": 0,
+   "color": "#e6dfd2",
+   "shape": "box"
+  },
+  {
+   "room": "209",
+   "label": "Desk",
+   "x0": 79,
+   "y0": 32.6,
+   "x1": 84,
+   "y1": 34.6,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "209",
+   "label": "Closet",
+   "x0": 84,
+   "y0": 24.3,
+   "x1": 89,
+   "y1": 25,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "210",
+   "label": "Walk-in shower",
+   "x0": 83,
+   "y0": 14.4,
+   "x1": 87.6,
+   "y1": 18.4,
+   "h": 0.2,
+   "z0": 0,
+   "color": "#55524c",
+   "shape": "box"
+  },
+  {
+   "room": "210",
+   "label": "Vanity",
+   "x0": 78.4,
+   "y0": 14.6,
+   "x1": 80,
+   "y1": 19,
+   "h": 2.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "210",
+   "label": "WC",
+   "x0": 84,
+   "y0": 21.5,
+   "x1": 86,
+   "y1": 23.6,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "211",
+   "label": "Pump + filter",
+   "x0": 90,
+   "y0": 15,
+   "x1": 96,
+   "y1": 18,
+   "h": 3,
+   "z0": 0,
+   "color": "#9aa0a3",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Pilates Cadillac",
+   "x0": 40,
+   "y0": 14,
+   "x1": 47.5,
+   "y1": 16.6,
+   "h": 6.8,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "frame"
+  },
+  {
+   "room": "302",
+   "label": "Pull-up rig",
+   "x0": 29.2,
+   "y0": 16,
+   "x1": 31.4,
+   "y1": 21.5,
+   "h": 8.5,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "frame"
+  },
+  {
+   "room": "302",
+   "label": "Dumbbell rack",
+   "x0": 44,
+   "y0": 20.8,
+   "x1": 49.2,
+   "y1": 21.8,
+   "h": 3,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Plyo boxes",
+   "x0": 33,
+   "y0": 18.5,
+   "x1": 35,
+   "y1": 20.5,
+   "h": 2,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Plyo boxes",
+   "x0": 35.4,
+   "y0": 19,
+   "x1": 37,
+   "y1": 20.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Balance boards",
+   "x0": 38,
+   "y0": 19.8,
+   "x1": 41,
+   "y1": 21.2,
+   "h": 0.4,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Band anchor post",
+   "x0": 49,
+   "y0": 8,
+   "x1": 49.6,
+   "y1": 10,
+   "h": 7,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Training mats",
+   "x0": 33,
+   "y0": 4,
+   "x1": 45,
+   "y1": 11,
+   "h": 0.1,
+   "z0": 0,
+   "color": "#6f7a55",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Kids' climbing wall",
+   "x0": 28.2,
+   "y0": 1,
+   "x1": 29.1,
+   "y1": 14.5,
+   "h": 11,
+   "z0": 0,
+   "color": "#b0684a",
+   "shape": "wall"
+  },
+  {
+   "room": "302",
+   "label": "Crash mat",
+   "x0": 29.1,
+   "y0": 1.5,
+   "x1": 32.5,
+   "y1": 14,
+   "h": 0.9,
+   "z0": 0,
+   "color": "#55524c",
+   "shape": "box"
+  },
+  {
+   "room": "303",
+   "label": "Cold plunge",
+   "x0": 60,
+   "y0": 17,
+   "x1": 65.4,
+   "y1": 21.4,
+   "h": 0.4,
+   "z0": 0,
+   "color": "#5fa3b5",
+   "shape": "box"
+  },
+  {
+   "room": "303",
+   "label": "Rain showers",
+   "x0": 51,
+   "y0": 18.2,
+   "x1": 56,
+   "y1": 21.6,
+   "h": 0.15,
+   "z0": 0,
+   "color": "#55524c",
+   "shape": "box"
+  },
+  {
+   "room": "303",
+   "label": "Teak bench",
+   "x0": 51,
+   "y0": 10,
+   "x1": 57,
+   "y1": 11.4,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "304",
+   "label": "Sauna benches",
+   "x0": 50.4,
+   "y0": 4.6,
+   "x1": 57.6,
+   "y1": 8.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#c08552",
+   "shape": "box"
+  },
+  {
+   "room": "304",
+   "label": "Upper bench",
+   "x0": 50.4,
+   "y0": 6.8,
+   "x1": 57.6,
+   "y1": 8.6,
+   "h": 3,
+   "z0": 0,
+   "color": "#c08552",
+   "shape": "box"
+  },
+  {
+   "room": "305",
+   "label": "Heated marble bench",
+   "x0": 58.4,
+   "y0": 5.8,
+   "x1": 65.6,
+   "y1": 8.6,
+   "h": 1.6,
+   "z0": 0,
+   "color": "#ece8e1",
+   "shape": "box"
+  },
+  {
+   "room": "306",
+   "label": "Lockers + towels",
+   "x0": 70.6,
+   "y0": 1,
+   "x1": 71.6,
+   "y1": 12,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Genkan bench",
+   "x0": 18,
+   "y0": 58.6,
+   "x1": 21.6,
+   "y1": 59.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Rammed earth wall",
+   "x0": 10.5,
+   "y0": 48.6,
+   "x1": 11.2,
+   "y1": 51,
+   "h": 9,
+   "z0": 0,
+   "color": "#b98d6c",
+   "shape": "box"
+  },
+  {
+   "room": "402",
+   "label": "Coats",
+   "x0": 10.4,
+   "y0": 41.4,
+   "x1": 11.6,
+   "y1": 47.6,
+   "h": 7,
+   "z0": 0,
+   "color": "#c39a6b",
+   "shape": "box"
+  },
+  {
+   "room": "403",
+   "label": "Vanity",
+   "x0": 20.6,
+   "y0": 44.5,
+   "x1": 21.6,
+   "y1": 47.6,
+   "h": 2.8,
+   "z0": 0,
+   "color": "#b9b1a3",
+   "shape": "box"
+  },
+  {
+   "room": "403",
+   "label": "WC",
+   "x0": 16.4,
+   "y0": 41.4,
+   "x1": 18.6,
+   "y1": 43.4,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Tatami mats",
+   "x0": 11,
+   "y0": 29,
+   "x1": 21,
+   "y1": 40,
+   "h": 0.15,
+   "z0": 0,
+   "color": "#d8cf9a",
+   "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Tokonoma",
+   "x0": 10.4,
+   "y0": 33,
+   "x1": 12,
+   "y1": 38,
+   "h": 1.0,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Low table",
+   "x0": 15,
+   "y0": 33,
+   "x1": 18,
+   "y1": 36,
+   "h": 1.2,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "405",
+   "label": "Gear racks",
+   "x0": 10.4,
+   "y0": 22.4,
+   "x1": 21.6,
+   "y1": 24,
+   "h": 7,
+   "z0": 0,
+   "color": "#9aa0a3",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Work desk + computer",
+   "x0": 18,
+   "y0": 2,
+   "x1": 26,
+   "y1": 4.6,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Monitors",
+   "x0": 19,
+   "y0": 3.4,
+   "x1": 25,
+   "y1": 3.8,
+   "h": 1.5,
+   "z0": 2.5,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "MPC",
+   "x0": 25,
+   "y0": 3,
+   "x1": 26,
+   "y1": 4,
+   "h": 0.3,
+   "z0": 2.5,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Digital piano",
+   "x0": 5,
+   "y0": 8,
+   "x1": 6.8,
+   "y1": 13,
+   "h": 3,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "E-drum kit",
+   "x0": 7,
+   "y0": 15,
+   "x1": 12,
+   "y1": 20,
+   "h": 3.5,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "drums"
+  },
+  {
+   "room": "407",
+   "label": "Guitar stand",
+   "x0": 13,
+   "y0": 19.8,
+   "x1": 14.5,
+   "y1": 21,
+   "h": 4,
+   "z0": 0,
+   "color": "#b0684a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Mic stand",
+   "x0": 15.5,
+   "y0": 14,
+   "x1": 16.3,
+   "y1": 14.8,
+   "h": 5.5,
+   "z0": 0,
+   "color": "#9aa0a3",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "PA speakers",
+   "x0": 4.5,
+   "y0": 4,
+   "x1": 6,
+   "y1": 5.6,
+   "h": 5.5,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "PA speakers",
+   "x0": 4.5,
+   "y0": 16.4,
+   "x1": 6,
+   "y1": 18,
+   "h": 5.5,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Mixer rack",
+   "x0": 9,
+   "y0": 1,
+   "x1": 13,
+   "y1": 2.6,
+   "h": 3.2,
+   "z0": 0,
+   "color": "#55524c",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Sofa",
+   "x0": 20,
+   "y0": 15.5,
+   "x1": 27.4,
+   "y1": 18.5,
+   "h": 2.6,
+   "z0": 0,
+   "color": "#6f7a55",
+   "shape": "box"
+  },
+  {
+   "room": "407",
+   "label": "Rug",
+   "x0": 8,
+   "y0": 6,
+   "x1": 17,
+   "y1": 13,
+   "h": 0.05,
+   "z0": 0,
+   "color": "#cdbfa6",
+   "shape": "box"
+  }
+ ],
+ "roofs": [
+  {
+   "id": "living",
+   "x0": 0,
+   "y0": 60,
+   "x1": 72,
+   "y1": 84,
+   "oh": {
+    "n": 8,
+    "s": 6,
+    "w": 4,
+    "e": 0
+   },
+   "type": "butterfly",
+   "valley": 72,
+   "hv": 12.6,
+   "he": 14.6,
+   "wall": 12
+  },
+  {
+   "id": "master",
+   "x0": 72,
+   "y0": 64,
+   "x1": 98,
+   "y1": 88,
+   "oh": {
+    "n": 6,
+    "s": 0,
+    "w": 0,
+    "e": 4
+   },
+   "type": "flat",
+   "h": 11.6
+  },
+  {
+   "id": "east",
+   "x0": 72,
+   "y0": 14,
+   "x1": 98,
+   "y1": 64,
+   "oh": {
+    "n": 0,
+    "s": 4,
+    "w": 6,
+    "e": 4
+   },
+   "type": "flat",
+   "h": 10.6
+  },
+  {
+   "id": "south",
+   "x0": 28,
+   "y0": 0,
+   "x1": 72,
+   "y1": 27,
+   "oh": {
+    "n": 6,
+    "s": 6,
+    "w": 0,
+    "e": 0
+   },
+   "type": "flat",
+   "h": 12.6
+  },
+  {
+   "id": "office",
+   "x0": 4,
+   "y0": 0,
+   "x1": 28,
+   "y1": 22,
+   "oh": {
+    "n": 4,
+    "s": 6,
+    "w": 4,
+    "e": 1
+   },
+   "type": "flat",
+   "h": 14.6
+  },
+  {
+   "id": "west",
+   "x0": 10,
+   "y0": 22,
+   "x1": 28,
+   "y1": 60,
+   "oh": {
+    "n": 0,
+    "s": 0,
+    "w": 5,
+    "e": 6
+   },
+   "type": "flat",
+   "h": 10.6
+  }
+ ],
+ "site": {
+  "lot": {
+   "x0": -90,
+   "y0": -80,
+   "x1": 170,
+   "y1": 150
+  },
+  "courtyard": {
+   "x0": 28,
+   "y0": 27,
+   "x1": 72,
+   "y1": 60
+  },
+  "pool": {
+   "x0": 54,
+   "y0": -22,
+   "x1": 88,
+   "y1": -10,
+   "label": "Pool 34' x 12'"
+  },
+  "pooldeck": {
+   "x0": 48,
+   "y0": -28,
+   "x1": 98,
+   "y1": 0
+  },
+  "lane": {
+   "x0": -32,
+   "y0": -16,
+   "x1": 43,
+   "y1": -8,
+   "label": "Turf Sprint Lane 20 yd + 15' run-out"
+  },
+  "outdoor_shower": {
+   "x0": 72.5,
+   "y0": 4,
+   "x1": 77.5,
+   "y1": 10,
+   "label": "Outdoor Shower"
+  },
+  "veg": {
+   "x0": -36,
+   "y0": 66,
+   "x1": -12,
+   "y1": 88,
+   "label": "Vegetable Garden"
+  },
+  "bikes": {
+   "x0": -5,
+   "y0": 61,
+   "x1": -1.5,
+   "y1": 71,
+   "label": "Bike Racks"
+  },
+  "carport": {
+   "x0": -44,
+   "y0": 30,
+   "x1": -20,
+   "y1": 54,
+   "label": "Carport (2 cars, open)"
+  },
+  "entrycourt": {
+   "x0": -20,
+   "y0": 26,
+   "x1": 10,
+   "y1": 60
+  },
+  "pergola": {
+   "x0": 8,
+   "y0": 86,
+   "x1": 26,
+   "y1": 100,
+   "label": "Pergola Dining"
+  },
+  "veranda": {
+   "x0": 26,
+   "y0": 84,
+   "x1": 72,
+   "y1": 92,
+   "label": "Covered Veranda"
+  },
+  "firepit": {
+   "cx": 58,
+   "cy": 104,
+   "r": 7,
+   "label": "Sunken Fire Pit"
+  },
+  "zen": {
+   "x0": 36,
+   "y0": 33,
+   "x1": 58,
+   "y1": 50,
+   "label": "Zen Garden"
+  },
+  "maple": {
+   "cx": 63,
+   "cy": 44,
+   "r": 5
+  },
+  "bathgarden": {
+   "x0": 98,
+   "y0": 74,
+   "x1": 106,
+   "y1": 88,
+   "label": "Bath Garden"
+  },
+  "meadow_label": [
+   120,
+   -40
+  ],
+  "drive": [
+   [
+    -90,
+    10
+   ],
+   [
+    -60,
+    18
+   ],
+   [
+    -44,
+    30
+   ]
+  ]
+ },
+ "clad": {
+  "Living Pavilion": "stucco",
+  "Sleeping Wing": "stucco",
+  "Wellness + Gym Wing": "rammed",
+  "Studio + Arrival": "charred"
+ },
+ "cladOvr": {
+  "401": "rammed",
+  "407": "charred",
+  "104": "charred",
+  "105": "charred",
+  "304": "rammed",
+  "305": "rammed"
+ },
+ "total": 5952,
+ "courtyard": {
+  "x0": 28,
+  "y0": 27,
+  "x1": 72,
+  "y1": 60
+ }
+}
