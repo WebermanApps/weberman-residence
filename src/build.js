@@ -437,7 +437,7 @@ function buildSite(M, groups) {
   addBox('site', FL, c.x0, c.y0, c.x1, c.y1, G, -0.3);
   const lw = S.lawn; addBox('site', [M.plinth, M.plinth, M.turf, M.plinth, M.plinth, M.plinth], lw.x0, lw.y0, lw.x1, lw.y1, -0.5, -0.28);
   const z = S.zen; addBox('site', M.plinth, z.x0 - 0.3, z.y0 - 0.3, z.x1 + 0.3, z.y1 + 0.3, -0.5, -0.26); addBox('site', M.gravel, z.x0, z.y0, z.x1, z.y1, -0.5, -0.27);
-  [[38, 37, 1.6, 1.4], [45.5, 40.5, 1.2, 1.0], [47.5, 36, 0.9, 0.8]].forEach(([x, y, r, h]) => { const g = new THREE.DodecahedronGeometry(r, 0); g.scale(1, h / r * 0.7, 1); g.translate(x - CX, -0.3 + h * 0.3, -(y - CY)); B.add('site', M.plinth, g); });
+  [[42, 33, 1.6, 1.4], [48.5, 36.5, 1.2, 1.0], [50, 32, 0.9, 0.8]].forEach(([x, y, r, h]) => { const g = new THREE.DodecahedronGeometry(r, 0); g.scale(1, h / r * 0.7, 1); g.translate(x - CX, -0.3 + h * 0.3, -(y - CY)); B.add('site', M.plinth, g); });
   // planted water court with reeds + stone water basin (tsukubai)
   const wc = S.water; addBox('site', M.c.blackstone, wc.x0 - 0.6, wc.y0 - 0.6, wc.x1 + 0.6, wc.y1 + 0.6, G, 0.1); addBox('site', M.poolwater, wc.x0, wc.y0, wc.x1, wc.y1, G, -0.05);
   { const reed = new THREE.MeshStandardMaterial({ color: 0x6f8a45, roughness: 0.9 }); const lily = new THREE.MeshStandardMaterial({ color: 0x4f7a3a, roughness: 0.6 });
@@ -446,7 +446,7 @@ function buildSite(M, groups) {
   addCyl('site', M.c.stone, wc.x0 - 1.8, wc.y0 + 2.5, 1.2, -0.3, 1.1, 12); addCyl('site', M.water, wc.x0 - 1.8, wc.y0 + 2.5, 0.8, 1.1, 1.13, 12); addBox('site', M.c.fir, wc.x0 - 1.85, wc.y0 + 2.5, wc.x0 - 0.2, wc.y0 + 2.62, 1.6, 1.72);
   // big shade tree (katsura) + Japanese maples
   const st = S.shadetree; addCyl('site', M.dark, st.cx, st.cy, 0.9, -0.3, 11, 10, 0.55);
-  { const crown = new THREE.MeshStandardMaterial({ color: 0x6d8a3e, roughness: 0.9 }); [[0, 0, 16, 7], [3.5, 2, 14, 4.6], [-3.5, -1.5, 14.5, 4.8], [1.5, -3.5, 18, 4.2], [-2, 3.2, 18.5, 4.4], [0, 0, 21, 4]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1, 0.72, 1); g.translate(st.cx + dx - CX, h, -(st.cy + dy - CY)); B.add('site', crown, g); }); }
+  { const crown = new THREE.MeshStandardMaterial({ color: 0x6d8a3e, roughness: 0.9 }); [[0, 0, 17, 5.6], [2.8, 1.6, 15.5, 3.7], [-2.8, -1.2, 16, 3.8], [1.2, -2.8, 19, 3.4], [-1.6, 2.4, 19.5, 3.5], [0, 0, 22, 3.2]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1, 0.72, 1); g.translate(st.cx + dx - CX, h, -(st.cy + dy - CY)); B.add('site', crown, g); }); }
   { const leaf = new THREE.MeshStandardMaterial({ color: 0xb8442a, roughness: 0.9 }); const leaf2 = new THREE.MeshStandardMaterial({ color: 0xd06a2e, roughness: 0.9 });
     S.maples.forEach(([mx, my], j) => { addCyl('site', M.dark, mx, my, 0.22, -0.3, 4.5, 6, 0.14); [[0, 0, 5.6, 2.5], [1.3, 0.6, 4.9, 1.8], [-1.4, -0.6, 5.1, 1.9], [0.4, -1.2, 6.5, 1.6]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1.15, 0.55, 1.15); g.translate(mx + dx - CX, h, -(my + dy - CY)); B.add('site', j % 2 ? leaf2 : leaf, g); }); }); }
   // stone lanterns (ishidoro)
@@ -455,9 +455,9 @@ function buildSite(M, groups) {
   { for (let k = 0; k < 9; k++) { const a0 = Math.PI * (1.05 + k * 0.06); const g = boxGeo(1.25, 0.18, 1.5); g.translate(0, 0, 0); g.rotateY(a0 + Math.PI / 2); const r = 6.2; addGeo('site', M.teak, g, st.cx + Math.cos(a0) * r, st.cy + Math.sin(a0) * r, 1.4);
       if (k % 2 === 0) { const g2 = boxGeo(0.25, 1.4, 1.1); g2.rotateY(a0 + Math.PI / 2); addGeo('site', M.c.blackstone, g2, st.cx + Math.cos(a0) * r, st.cy + Math.sin(a0) * r, 0.0); } } }
   // tropical planting clumps (broad leaves) along the terrace
-  { const trop = new THREE.MeshStandardMaterial({ color: 0x3f6b35, roughness: 0.8 }); [[35, 34], [57, 47.5], [33.5, 52.5], [65.5, 52.5], [52, 33.3], [66.5, 40]].forEach(([x, y], i) => { for (let k = 0; k < 5; k++) { const g = new THREE.ConeGeometry(0.5, 3 + (k % 3), 4); g.rotateZ((k - 2) * 0.35); g.rotateY(k * 1.3); addGeo('site', trop, g, x + (k - 2) * 0.3, y + ((k * 7) % 3 - 1) * 0.3, 1.0); } }); }
+  { const trop = new THREE.MeshStandardMaterial({ color: 0x3f6b35, roughness: 0.8 }); [[38.5, 29.5], [56, 41.2], [42.5, 52.5], [69.5, 51.5], [54, 29], [70, 36.5]].forEach(([x, y], i) => { for (let k = 0; k < 5; k++) { const g = new THREE.ConeGeometry(0.5, 3 + (k % 3), 4); g.rotateZ((k - 2) * 0.35); g.rotateY(k * 1.3); addGeo('site', trop, g, x + (k - 2) * 0.3, y + ((k * 7) % 3 - 1) * 0.3, 1.0); } }); }
   // lit garden path lights (instanced)
-  { const pts = []; for (let x = 31; x <= 69; x += 6.3) { pts.push([x, 29.2], [x, 57.8]); } for (let y = 35; y <= 52; y += 6) { pts.push([30.2, y], [69.8, y]); }
+  { const pts = []; for (let x = 39; x <= 69; x += 6) { pts.push([x, 28.4], [x, 53.8]); } for (let y = 34; y <= 50; y += 5.3) { pts.push([37.2, y], [70.8, y]); }
     const g = new THREE.CylinderGeometry(0.12, 0.14, 1.6, 6); g.translate(0, 0.8, 0); const im = new THREE.InstancedMesh(g, M.frame, pts.length); const g2 = new THREE.CylinderGeometry(0.16, 0.16, 0.3, 8); const im2 = new THREE.InstancedMesh(g2, M.lamp, pts.length);
     const mm = new THREE.Matrix4(); pts.forEach(([x, y], i) => { mm.makeTranslation(x - CX, -0.3, -(y - CY)); im.setMatrixAt(i, mm); mm.makeTranslation(x - CX, 1.35, -(y - CY)); im2.setMatrixAt(i, mm); }); groups.detail.add(im); groups.detail.add(im2); }
   // courtyard shower (charred board wall, stone floor)
@@ -523,7 +523,7 @@ function buildSite(M, groups) {
   // cars (simple blocks)
   addBox('site', colorMat('#8d9399'), cp.x0 + 3, cp.y0 + 3, cp.x0 + 9.5, cp.y1 - 4, G, 3.6); addBox('site', colorMat('#5b6e5a'), cp.x0 + 13, cp.y0 + 3, cp.x0 + 19.5, cp.y1 - 4, G, 4.8);
   // entry slat screen + low rammed earth wall
-  addBox('site', M.c.rammed, -2.5, 38, -1.5, 49.5, G, 4);
+  addBox('site', M.c.rammed, 1, 36, 2, 47, G, 4);
   // front garden beds (grasses, low shrubs, a multi-stem tree)
   { const grass = new THREE.MeshStandardMaterial({ color: 0x9aa25a, roughness: 1 }), shrub = new THREE.MeshStandardMaterial({ color: 0x4f6e3c, roughness: 0.9 });
     S.frontgarden.forEach(([x0, y0, x1, y1], j) => { addBox('site', M.plinth, x0, y0, x1, y1, G, -1.0); addBox('site', colorMat('#4a3a2c'), x0 + 0.3, y0 + 0.3, x1 - 0.3, y1 - 0.3, -1.0, -0.95);
@@ -539,8 +539,8 @@ function buildSite(M, groups) {
   [[pg.x0, pg.y0 + 0.5], [pg.x1 - 0.7, pg.y0 + 0.5], [pg.x0, pg.y1 - 0.7], [pg.x1 - 0.7, pg.y1 - 0.7]].forEach(([x, y]) => addBox('site', M.c.charred, x, y, x + 0.7, y + 0.7, -0.25, 9));
   addBox('site', M.c.charred, pg.x0 - 1, pg.y0 + 0.5, pg.x1 + 1, pg.y0 + 1.1, 8.4, 9.2); addBox('site', M.c.charred, pg.x0 - 1, pg.y1 - 1.1, pg.x1 + 1, pg.y1 - 0.5, 8.4, 9.2);
   for (let x = pg.x0; x <= pg.x1; x += 1.2) addBox('site', M.c.fir, x, pg.y0 - 0.5, x + 0.25, pg.y1 + 0.5, 9.2, 9.7);
-  addBox('site', colorMat('#6b4a33'), 12, 90, 22, 94, 2.2, 2.5); [12.5, 21].forEach(x => addBox('site', colorMat('#6b4a33'), x, 90.5, x + 0.4, 93.5, -0.25, 2.2));
-  addBox('site', colorMat('#d9cbb5'), 12, 88.4, 22, 89.6, -0.25, 1.3); addBox('site', colorMat('#d9cbb5'), 12, 94.4, 22, 95.6, -0.25, 1.3);
+  addBox('site', colorMat('#6b4a33'), 23, 85, 33, 89, 2.2, 2.5); [23.5, 32].forEach(x => addBox('site', colorMat('#6b4a33'), x, 85.5, x + 0.4, 88.5, -0.25, 2.2));
+  addBox('site', colorMat('#d9cbb5'), 23, 83.4, 33, 84.6, -0.25, 1.3); addBox('site', colorMat('#d9cbb5'), 23, 89.4, 33, 90.6, -0.25, 1.3);
   const fp = S.firepit;
   { const g = new THREE.CylinderGeometry(fp.r + 1.5, fp.r + 1.5, 0.5, 40); g.translate(fp.cx - CX, G + 0.2, -(fp.cy - CY)); B.add('site', M.flag, g);
     addCyl('site', M.c.stone, fp.cx, fp.cy, 2.8, G, -0.2, 28); addCyl('site', M.dark, fp.cx, fp.cy, 2.1, -0.2, -0.18, 24);
@@ -638,19 +638,19 @@ function buildMountains(groups) {
 
 // ---------- labels data ----------
 export const OUTDOOR = [
-  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 28, y0: 27, x1: 72, y1: 60, notes: 'The heart of the house. A big katsura shade tree with a curved teak bench, Japanese maples, a lawn, a raked-gravel garden with three stones, a planted water court with a stone water basin, stone lanterns and lit paths, all on a flagstone terrace under 6-ft eaves. Every main room opens onto it.', h: null, floor: 'Flagstone, lawn, raked gravel', fin: 'Flagstone terrace; raked gravel; lawn; black-stone water court edge; stone lanterns and basin; teak bench; path lights' },
+  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 36, y0: 27, x1: 72, y1: 55, notes: 'The heart of the house, now 36 x 28 ft. A katsura shade tree with a curved teak bench, Japanese maples, a lawn, a raked-gravel garden with three stones, a planted water court with a stone water basin, stone lanterns and lit paths, all on a flagstone terrace under 6-ft eaves. Every main room opens onto it.', h: null, floor: 'Flagstone, lawn, raked gravel', fin: 'Flagstone terrace; raked gravel; lawn; black-stone water court edge; stone lanterns and basin; teak bench; path lights' },
   { id: 'P', name: 'Pool', wing: 'Outdoor', x0: 54, y0: -22, x1: 88, y1: -10, notes: 'Small 34 x 12 ft pool lined in green stone tile, on the sunny south side outside the wellness wing. Flagstone deck, teak loungers, and a bale pavilion at the east end.', floor: 'Flagstone deck', fin: 'Green stone pool tile; flagstone deck; teak and linen loungers' },
   { id: 'B', name: 'Bale Pavilion', wing: 'Outdoor', x0: 90, y0: -27, x1: 97, y1: -19, notes: 'Balinese-style bale by the pool: a raised honey-oak platform with linen cushions under a low standing-seam roof on fir posts.', floor: 'Honey-oak platform', fin: 'Honey oak; fir posts; standing-seam roof; linen cushions' },
   { id: 'L', name: 'Turf Sprint Lane', wing: 'Outdoor', x0: -32, y0: -16, x1: 43, y1: -8, notes: '20 yards (60 ft) of turf marked every 5 yards, plus a 15-ft run-out to a charred-timber end wall. An outdoor pull-up station stands at the gym end.', floor: 'Synthetic turf', fin: 'Turf; charred-timber end wall; black steel pull-up station' },
-  { id: 'V', name: 'Vegetable Garden', wing: 'Outdoor', x0: -36, y0: 66, x1: -12, y1: 88, notes: 'Loved: four 4 x 18 ft cedar raised beds inside a slatted deer fence, a few steps from the mudroom and pantry, with a small orchard of fruit trees beside it.', floor: 'Gravel', fin: 'Cedar beds; gravel paths; fruit trees' },
-  { id: 'F', name: 'Round Stone Fire Pit', wing: 'Outdoor', x0: 51, y0: 97, x1: 65, y1: 111, notes: 'Round stone fire pit with a curved stone seat wall on a flagstone circle, facing the mountains off the covered veranda.', floor: 'Flagstone', fin: 'Natural stone ring and seat walls; flagstone' },
-  { id: 'D', name: 'Pergola Dining', wing: 'Outdoor', x0: 8, y0: 86, x1: 26, y1: 100, notes: 'Outdoor table for ten under a charred-timber and fir pergola, next to the kitchen and the view.', floor: 'Flagstone', fin: 'Flagstone; charred timber and fir pergola' },
+  { id: 'V', name: 'Vegetable Garden', wing: 'Outdoor', x0: -30, y0: 64, x1: -6, y1: 86, notes: 'Loved: four 4 x 18 ft cedar raised beds inside a slatted deer fence, a few steps from the mudroom and pantry, with a small orchard of fruit trees beside it.', floor: 'Gravel', fin: 'Cedar beds; gravel paths; fruit trees' },
+  { id: 'F', name: 'Round Stone Fire Pit', wing: 'Outdoor', x0: 51, y0: 92, x1: 65, y1: 106, notes: 'Round stone fire pit with a curved stone seat wall on a flagstone circle, facing the mountains off the covered veranda.', floor: 'Flagstone', fin: 'Natural stone ring and seat walls; flagstone' },
+  { id: 'D', name: 'Pergola Dining', wing: 'Outdoor', x0: 19, y0: 81, x1: 37, y1: 95, notes: 'Outdoor table for ten under a charred-timber and fir pergola, next to the kitchen and the view.', floor: 'Flagstone', fin: 'Flagstone; charred timber and fir pergola' },
   { id: 'W', name: 'Climbing Pavilion', wing: 'Outdoor', x0: -22, y0: 0, x1: -4, y1: 18, area: 0, cov: 324, notes: 'Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. A 16-ft-wide, 12-ft-high kids\' bouldering wall sits on the north side facing the sprint lane, over a poured-rubber soft-fall surface and crash pad. It sits in the active zone between the exercise room, the sprint lane and a second 4-bike rack. Covered outdoor area, not conditioned.', floor: 'Poured-rubber soft-fall', equip: ['Climbing wall 16\' × 12\'', 'Bouldering volume', 'Crash pad', '4-bike rack'], fin: 'Fir frame; standing-seam roof; charred fascia; poured rubber' },
   { id: 'S', name: 'Outdoor Shower', wing: 'Outdoor', x0: 72.5, y0: 4, x1: 77.5, y1: 10, notes: 'Loved: stone shower by the pool behind solid charred-timber walls (no slat enclosure), next to the changing room.', floor: 'Stone', fin: 'Charred timber walls; stone floor; brass rain head' },
   { id: 'Q', name: 'Courtyard Shower', wing: 'Outdoor', x0: 66.5, y0: 27.5, x1: 71.5, y1: 31.5, notes: 'A second open-air shower in the courtyard corner by the wellness wing, with a charred-timber privacy wall and a brass rain head.', floor: 'Black stone', fin: 'Black stone; charred timber; brass' },
-  { id: 'K', name: 'Bike Racks', wing: 'Outdoor', x0: -6, y0: 61, x1: -1.5, y1: 71, notes: 'Six-bike rack under the mudroom eave, with gear storage just inside.', floor: 'Stone', fin: 'Stone; black steel' },
+  { id: 'K', name: 'Bike Racks', wing: 'Outdoor', x0: 3, y0: 62, x1: 7.5, y1: 72, notes: 'Six-bike rack under the mudroom eave, with gear storage just inside.', floor: 'Stone', fin: 'Stone; black steel' },
   { id: 'R', name: 'Carport', wing: 'Outdoor', x0: -44, y0: 30, x1: -20, y1: 54, notes: 'Modern black carport for two cars: slim black steel posts and a low standing-seam roof, off the gravel drive. A covered walkway leads past the front garden to the door.', floor: 'Gravel', fin: 'Black steel; standing-seam roof; gravel drive' },
-  { id: 'E', name: 'Covered Walkway + Front Garden', wing: 'Outdoor', x0: -20, y0: 51, x1: 5, y1: 57, notes: 'Black-steel covered walkway on flagstone from the carport to the front door, past front-garden beds of grasses, low shrubs and a multi-stem tree.', floor: 'Flagstone', fin: 'Flagstone; black steel; standing-seam roof; planted beds' },
+  { id: 'E', name: 'Covered Walkway + Front Garden', wing: 'Outdoor', x0: -20, y0: 48, x1: 13, y1: 54, notes: 'Black-steel covered walkway on flagstone from the carport to the front door, past front-garden beds of grasses, low shrubs and a multi-stem tree.', floor: 'Flagstone', fin: 'Flagstone; black steel; standing-seam roof; planted beds' },
 ];
 
 export function buildAll(groups) {

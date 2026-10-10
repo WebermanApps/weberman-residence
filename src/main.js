@@ -81,15 +81,16 @@ pcontrols.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }; pcontr
 
 const VIEWS = {
   aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: true, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
-  courtyard: { name: 'Courtyard', cam: [31.5, 30.5, 6.2], tgt: [58, 52, 6.5], roof: true, title: 'The courtyard.', kicker: 'VIEW · FLAGSTONE TERRACE, LOOKING NORTH-EAST', fov: 62 },
-  living: { name: 'Living', cam: [44, 22, 56], tgt: [56, 72, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
+  courtyard: { name: 'Courtyard', cam: [39, 29.5, 6.2], tgt: [67, 43, 6], roof: true, title: 'The courtyard.', kicker: 'VIEW · FLAGSTONE TERRACE, LOOKING NORTH-EAST', fov: 62 },
+  living: { name: 'Living', cam: [48, 20, 54], tgt: [58, 67, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
   office: { name: 'Office', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Office / music loft.', kicker: 'ROOM 407 · ROOF HIDDEN' },
   wellness: { name: 'Wellness', cam: [70, -44, 58], tgt: [52, 8, 0], roof: false, cut: 8, title: 'Wellness + gym wing.', kicker: 'ROOMS 301-306 · ON THE POOL · ROOF HIDDEN' },
-  bath: { name: 'Bath', cam: [93, 71, 22], tgt: [93.8, 83, 0], roof: false, cut: 8, title: 'Master bath.', kicker: 'ROOM 202 · HINOKI SOAKING TUB BY THE WINDOW, SKYLIGHT', fov: 55 },
+  bath: { name: 'Bath', cam: [93, 66, 22], tgt: [93.8, 78, 0], roof: false, cut: 8, title: 'Master bath.', kicker: 'ROOM 202 · HINOKI SOAKING TUB BY THE WINDOW, SKYLIGHT', fov: 55 },
   climb: { name: 'Climbing', cam: [-4, -30, 8], tgt: [-13, 14, 6], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
-  kitchen: { name: 'Kitchen', cam: [20, 48, 27], tgt: [30, 75, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · MARBLE ISLAND, ZELLIGE, CONVERSATION PIT', fov: 50 },
+  kitchen: { name: 'Kitchen', cam: [30, 43, 27], tgt: [39, 70, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · MARBLE ISLAND, ZELLIGE, CONVERSATION PIT', fov: 50 },
   gym: { name: 'Gym', cam: [52, -12, 24], tgt: [38, 11, 2], roof: false, cut: 8, title: 'Exercise room.', kicker: 'ROOM 302 · CALM STUDIO, RIG, CADILLAC, ROWER', fov: 50 },
-  master: { name: 'Master', cam: [124, 38, 64], tgt: [86, 76, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
+  kids: { name: 'Kids', cam: [104, 20, 36], tgt: [90, 38, 0], roof: false, cut: 8, title: 'Kids\' rooms.', kicker: 'ROOMS 207-209 · WINDOW SEATS, DESKS BY THE WINDOW, CLIMBING WALLS', fov: 52 },
+  master: { name: 'Master', cam: [124, 33, 64], tgt: [86, 71, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
 };
 
 // ---------- state ----------
@@ -98,7 +99,7 @@ const state = { mode: 'orbit', light: 'day', roof: true, cut: false, cutH: 4.5, 
 // ---------- labels ----------
 const labelObjs = [];
 const MINOR = new Set(['402', '405', '211', '206', '403', '306', '205', '203', '204', '301', '406', '104', '105', '210', '208']);
-const HIDE = new Set(['402', '405', '211']);
+const HIDE = new Set(['402', '405', '211', '212', '213']);
 const KEY = new Set(['W', '101', '103', '201', '207', '209', '302', '303', '407', '404', '401', 'C', 'P', 'L']);
 const KEY2 = new Set(['W', '103', '201', '209', '302', '407', 'P', 'L']);
 function addLabel(item, outdoor) {
@@ -112,7 +113,7 @@ P.rooms.forEach(r => addLabel(r, false)); OUTDOOR.forEach(r => addLabel(r, true)
 function placeLabels() {
   for (const o of labelObjs) {
     const it = o.userData.item; let cx = (it.x0 + it.x1) / 2, cy = (it.y0 + it.y1) / 2;
-    if (it.id === '103') { cx = 58; cy = 63; } if (it.id === 'K') { cx = -9; cy = 70; } if (it.id === '105') cy = 63; if (it.id === '404') cy = 32; if (it.id === '403') cy = 46; if (it.id === 'C') { cy = 47; cx = 46; } if (it.id === '204') cy = 46; if (it.id === '406') cy = 36; if (it.id === '301') cx = 46;
+    if (it.id === '103') { cx = 61; cy = 58; } if (it.id === 'K') { cx = 2; cy = 70; } if (it.id === '105') cy = 58; if (it.id === '404') cy = 31; if (it.id === '403') cy = 44; if (it.id === 'C') { cy = 44; cx = 47; } if (it.id === '204') cy = 42; if (it.id === '406') cy = 34; if (it.id === '301') cx = 54;
     let z = 1.5;
     if (!o.userData.outdoor) z = state.mode === 'plan' ? 1 : (state.roof && state.mode !== 'walk' ? roofUnder(cx, cy) + 2.2 : 4);
     if (o.userData.outdoor) z = it.id === 'C' ? 2.5 : 3;
@@ -243,7 +244,7 @@ function setMode(m) {
   $('walk-pad').hidden = m !== 'walk'; viewsEl.hidden = m === 'walk';
   if (m === 'plan') {
     camera = ortho; setRoof(false); setCut(true, 4.5); setOverlay(true);
-    pcontrols.target.copy(W(isMobile() ? 49 : 40, isMobile() ? 60 : 50, 0)); ortho.position.set(pcontrols.target.x, 400, pcontrols.target.z + 0.01); ortho.zoom = isMobile() ? 0.56 : 0.92; resize();
+    pcontrols.target.copy(W(isMobile() ? 49 : 40, isMobile() ? 56 : 47, 0)); ortho.position.set(pcontrols.target.x, 400, pcontrols.target.z + 0.01); ortho.zoom = isMobile() ? 0.56 : 0.92; resize();
     $('hint').textContent = 'Drag to pan · Scroll or pinch to zoom · Tap a room';
     setCaption('PLAN VIEW · DRAWING OVERLAY ON 3D CUT AT 4\' 6"', 'Floor plan.');
     viewsEl.querySelectorAll('button').forEach(b => b.classList.remove('on'));
@@ -326,7 +327,7 @@ $('modal-close').onclick = () => $('modal').hidden = true; $('modal').onclick = 
 const programTable = () => `<table>${WINGS.map(w => `<tr><td colspan="3"><b>${w}</b></td></tr>` + P.rooms.filter(r => r.wing === w).map(r => `<tr><td>${r.id}</td><td>${r.name}${r.cond ? '' : ' (unconditioned)'}</td><td style="text-align:right">${r.area} SF · ${(r.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')).join('')}<tr><td colspan="3"><b>Covered Outdoor (Not Conditioned)</b></td></tr>${(P.covered||[]).map(c => `<tr><td>${c.id}</td><td>${c.name}</td><td style="text-align:right">${c.area} SF · ${(c.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')}<tr><td></td><td><b>Total Conditioned</b></td><td style="text-align:right"><b>${P.total.toLocaleString()} SF · ${Math.round(P.total * SF2M2)} m²</b></td></tr></table>`;
 $('btn-drawings').onclick = () => { modal('Drawings', `<div class="tabs"><button class="on" data-img="Floor_Plan.png">Floor Plan</button><button data-img="Site_Plan.png">Site Plan</button><button data-img="prog">Room Program</button></div><div id="dw"><img src="./Floor_Plan.png" alt="Floor plan"></div>`);
   document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); $('dw').innerHTML = b.dataset.img === 'prog' ? programTable() : `<img src="./${b.dataset.img}" alt="${b.textContent}">`; }); };
-const ABOUT = `<h3>Concept</h3><p>A low, warm courtyard house for a mountain site, drawing on Bali, Japan and mid-century modernism rather than the cabin. Four single-storey pavilions wrap a 44 × 33 ft courtyard: <b>living</b> to the north facing the mountains, <b>sleeping</b> to the east, <b>wellness + gym</b> to the south on the pool, and <b>studio + arrival</b> to the west. A glazed engawa links them all, so every room looks into the garden. Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, standing seam metal, white stucco, shou sugi ban, rammed earth and natural stone.</p>
+const ABOUT = `<h3>Concept</h3><p>A low, warm courtyard house for a mountain site, drawing on Bali, Japan and mid-century modernism rather than the cabin. Four single-storey pavilions wrap a 36 × 28 ft courtyard: <b>living</b> to the north facing the mountains, <b>sleeping</b> to the east, <b>wellness + gym</b> to the south on the pool, and <b>studio + arrival</b> to the west. Glazed engawas on the east and west and an open-air covered walkway on the south link them all, so every room looks into the garden. Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, standing seam metal, white stucco, shou sugi ban, rammed earth and natural stone.</p>
 <h3>Model Notes</h3><p>Geometry is generated from the same plan data as the 2D drawings. Wall heights run up to the underside of each roof: 10 to 14 ft, with the butterfly roof rising from 12' 7" at the valley to about 14' at the walls. Areas are measured to wall centerlines. Furniture and equipment are simple blocks at true size. The lot, grades and mountain backdrop are illustrative only.</p>${programTable()}`;
 $('btn-about').onclick = () => modal('About This Model', ABOUT); $('btn-notes').onclick = () => modal('Model Notes', ABOUT);
 

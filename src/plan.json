@@ -4,10 +4,10 @@
    "id": "101",
    "name": "Kitchen",
    "wing": "Living Pavilion",
-   "x0": 10,
-   "y0": 60,
-   "x1": 26,
-   "y1": 84,
+   "x0": 20,
+   "y0": 55,
+   "x1": 36,
+   "y1": 79,
    "h": 12,
    "floor": "stonetile",
    "cond": true,
@@ -22,46 +22,46 @@
    "id": "102",
    "name": "Dining",
    "wing": "Living Pavilion",
-   "x0": 26,
-   "y0": 60,
-   "x1": 44,
-   "y1": 84,
+   "x0": 36,
+   "y0": 55,
+   "x1": 50,
+   "y1": 79,
    "h": 12,
    "floor": "herring",
    "cond": true,
-   "notes": "Seats ten under exposed fir beams and a big paper lantern. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
-   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; honey-oak table; paper lantern",
+   "notes": "Seats eight under exposed fir beams and a big paper lantern. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
+   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; honey-oak table for eight; paper lantern",
    "floorName": "Oak herringbone",
-   "w": 18,
+   "w": 14,
    "d": 24,
-   "area": 432
+   "area": 336
   },
   {
    "id": "103",
    "name": "Living + Conversation Pit",
    "wing": "Living Pavilion",
-   "x0": 44,
-   "y0": 60,
+   "x0": 50,
+   "y0": 55,
    "x1": 72,
-   "y1": 84,
+   "y1": 79,
    "h": 12,
    "floor": "herring",
    "cond": true,
-   "notes": "The heart of the house, fully open to the garden: 28 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. 16-ft sunken conversation pit with a low modular sofa, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
+   "notes": "The heart of the house, fully open to the garden: 21 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. 16-ft sunken conversation pit with a low modular sofa, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
    "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; linen pit upholstery; cognac leather; paper lanterns; shoji screens; art wall",
    "floorName": "Oak herringbone",
-   "w": 28,
+   "w": 22,
    "d": 24,
-   "area": 672
+   "area": 528
   },
   {
    "id": "104",
    "name": "Walk-in Pantry",
    "wing": "Living Pavilion",
-   "x0": 0,
-   "y0": 72,
-   "x1": 10,
-   "y1": 84,
+   "x0": 10,
+   "y0": 67,
+   "x1": 20,
+   "y1": 79,
    "h": 10,
    "floor": "stonetile",
    "cond": true,
@@ -76,10 +76,10 @@
    "id": "105",
    "name": "Mudroom + Gear",
    "wing": "Living Pavilion",
-   "x0": 0,
-   "y0": 60,
-   "x1": 10,
-   "y1": 72,
+   "x0": 10,
+   "y0": 55,
+   "x1": 20,
+   "y1": 67,
    "h": 10,
    "floor": "stonetile",
    "cond": true,
@@ -95,9 +95,9 @@
    "name": "Master Bedroom",
    "wing": "Sleeping Wing",
    "x0": 72,
-   "y0": 64,
+   "y0": 59,
    "x1": 86,
-   "y1": 88,
+   "y1": 83,
    "h": 11,
    "floor": "honey",
    "cond": true,
@@ -113,9 +113,9 @@
    "name": "Master Bath",
    "wing": "Sleeping Wing",
    "x0": 86,
-   "y0": 74,
+   "y0": 69,
    "x1": 98,
-   "y1": 88,
+   "y1": 83,
    "h": 10,
    "floor": "blackstone",
    "cond": true,
@@ -131,9 +131,9 @@
    "name": "Master Closet",
    "wing": "Sleeping Wing",
    "x0": 86,
-   "y0": 64,
+   "y0": 59,
    "x1": 98,
-   "y1": 74,
+   "y1": 69,
    "h": 10,
    "floor": "honey",
    "cond": true,
@@ -151,7 +151,7 @@
    "x0": 72,
    "y0": 14,
    "x1": 78,
-   "y1": 64,
+   "y1": 59,
    "h": 10,
    "floor": "honey",
    "cond": true,
@@ -159,17 +159,17 @@
    "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
    "floorName": "Wide-plank honey oak",
    "w": 6,
-   "d": 50,
-   "area": 300
+   "d": 45,
+   "area": 270
   },
   {
    "id": "205",
    "name": "Laundry",
    "wing": "Sleeping Wing",
    "x0": 78,
-   "y0": 54,
+   "y0": 49,
    "x1": 88,
-   "y1": 64,
+   "y1": 59,
    "h": 10,
    "floor": "stone",
    "cond": true,
@@ -185,9 +185,9 @@
    "name": "Linen + Mechanical",
    "wing": "Sleeping Wing",
    "x0": 88,
-   "y0": 54,
+   "y0": 49,
    "x1": 98,
-   "y1": 64,
+   "y1": 59,
    "h": 10,
    "floor": "concrete",
    "cond": true,
@@ -202,55 +202,55 @@
    "id": "207",
    "name": "Kids' Room 1",
    "wing": "Sleeping Wing",
-   "x0": 78,
-   "y0": 43,
+   "x0": 85,
+   "y0": 36.5,
    "x1": 98,
-   "y1": 54,
+   "y1": 49,
    "h": 10,
    "floor": "honey",
    "cond": true,
-   "notes": "Calm white room with a window-seat reading nook on the east window, a desk by the window, low cube shelves with bins and beanbags, and a small bouldering wall with a crash mat.",
-   "fin": "Honey-oak floor; calm white lime plaster; oak window seat with linen cushion; cube bins; bouldering panel",
+   "notes": "Compact 13 x 12.5 ft calm white room: window-seat reading nook on the east window, desk by the window, wardrobe, low cube shelves with bins, a beanbag, and a small bouldering wall with a crash mat.",
+   "fin": "Honey-oak floor; calm white lime plaster; oak window seat with linen cushion; oak wardrobe; cube bins; bouldering panel",
    "floorName": "Wide-plank honey oak",
-   "w": 20,
-   "d": 11,
-   "area": 220
+   "w": 13,
+   "d": 12.5,
+   "area": 162.5
   },
   {
    "id": "208",
    "name": "Jack-and-Jill Bath",
    "wing": "Sleeping Wing",
    "x0": 78,
-   "y0": 35,
-   "x1": 98,
-   "y1": 43,
+   "y0": 30,
+   "x1": 85,
+   "y1": 45.5,
    "h": 10,
    "floor": "stone",
    "cond": true,
-   "notes": "Shared by the kids' rooms: two vanities, WC and a tiled tub-shower in the middle room, lockable from each side.",
+   "notes": "Tighter 7 x 15.5 ft bath (about 109 SF) between the kids' rooms: two vanities, WC and a tiled tub-shower, lockable from each side.",
    "fin": "Honed limestone; white tile tub-shower; oak vanities",
    "floorName": "Honed limestone",
-   "w": 20,
-   "d": 8,
-   "area": 160
+   "w": 7,
+   "d": 15.5,
+   "area": 108.5
   },
   {
    "id": "209",
    "name": "Kids' Room 2 / Guest",
    "wing": "Sleeping Wing",
-   "x0": 78,
+   "x0": 85,
    "y0": 24,
    "x1": 98,
-   "y1": 35,
+   "y1": 36.5,
    "h": 10,
    "floor": "honey",
    "cond": true,
-   "notes": "Fits a queen bed, so it doubles as the guest room. Window-seat nook, desk by the window, cube shelves and a beanbag, and a small climbing wall feature. The Guest / Pool Bath is just across the engawa.",
+   "notes": "Compact 13 x 12.5 ft room that still fits a queen bed, so it doubles as the guest room. Window-seat nook, desk by the window, cube shelves, and a small climbing wall feature. The Guest / Pool Bath is just down the engawa.",
    "fin": "Honey-oak floor; calm white lime plaster; oak window seat; cube bins; climbing panel",
    "floorName": "Wide-plank honey oak",
-   "w": 20,
-   "d": 11,
-   "area": 220
+   "w": 13,
+   "d": 12.5,
+   "area": 162.5
   },
   {
    "id": "210",
@@ -289,22 +289,58 @@
    "area": 100
   },
   {
+   "id": "212",
+   "name": "Kids' Entry + Closet",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 24,
+   "x1": 85,
+   "y1": 30,
+   "h": 10,
+   "floor": "honey",
+   "cond": true,
+   "notes": "Entry vestibule from the east engawa to Kids' Room 2, with a wardrobe.",
+   "fin": "Honey-oak floor; lime plaster; oak wardrobe",
+   "floorName": "Wide-plank honey oak",
+   "w": 7,
+   "d": 6,
+   "area": 42
+  },
+  {
+   "id": "213",
+   "name": "Kids' Entry",
+   "wing": "Sleeping Wing",
+   "x0": 78,
+   "y0": 45.5,
+   "x1": 85,
+   "y1": 49,
+   "h": 10,
+   "floor": "honey",
+   "cond": true,
+   "notes": "Short entry vestibule from the east engawa to Kids' Room 1.",
+   "fin": "Honey-oak floor; lime plaster",
+   "floorName": "Wide-plank honey oak",
+   "w": 7,
+   "d": 3.5,
+   "area": 24.5
+  },
+  {
    "id": "301",
-   "name": "South Engawa Gallery",
+   "name": "South Covered Walkway",
    "wing": "Wellness + Gym Wing",
-   "x0": 28,
+   "x0": 36,
    "y0": 22,
    "x1": 72,
    "y1": 27,
    "h": 10,
-   "floor": "honey",
-   "cond": true,
-   "notes": "Glazed engawa that closes the courtyard ring. Lets you reach the gym and wellness rooms in winter without going outside.",
-   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
-   "floorName": "Wide-plank honey oak",
-   "w": 44,
+   "floor": "flagstone",
+   "cond": false,
+   "notes": "Open-air covered walkway (not conditioned) under the wellness-wing eave, closing the courtyard ring. Flagstone floor, open to the courtyard, with glass doors into the east and west galleries.",
+   "fin": "Flagstone floor; open-air, covered by the wellness-wing roof; cedar soffit",
+   "floorName": "Flagstone (open-air)",
+   "w": 36,
    "d": 5,
-   "area": 220
+   "area": 180
   },
   {
    "id": "302",
@@ -400,10 +436,10 @@
    "id": "401",
    "name": "Entry Genkan",
    "wing": "Studio + Arrival",
-   "x0": 10,
-   "y0": 48,
-   "x1": 22,
-   "y1": 60,
+   "x0": 18,
+   "y0": 46,
+   "x1": 30,
+   "y1": 55,
    "h": 10,
    "floor": "stonetile",
    "cond": true,
@@ -411,17 +447,17 @@
    "fin": "Large stone tiles; rammed-earth feature wall; lime plaster; charred-oak pivot door",
    "floorName": "Large-format limestone tiles",
    "w": 12,
-   "d": 12,
-   "area": 144
+   "d": 9,
+   "area": 108
   },
   {
    "id": "402",
    "name": "Coat + Shoe Closet",
    "wing": "Studio + Arrival",
-   "x0": 10,
-   "y0": 41,
-   "x1": 16,
-   "y1": 48,
+   "x0": 18,
+   "y0": 40,
+   "x1": 24,
+   "y1": 46,
    "h": 10,
    "floor": "honey",
    "cond": true,
@@ -429,17 +465,17 @@
    "fin": "Honey-oak floor; oak millwork",
    "floorName": "Wide-plank honey oak",
    "w": 6,
-   "d": 7,
-   "area": 42
+   "d": 6,
+   "area": 36
   },
   {
    "id": "403",
    "name": "Powder Room",
    "wing": "Studio + Arrival",
-   "x0": 16,
-   "y0": 41,
-   "x1": 22,
-   "y1": 48,
+   "x0": 24,
+   "y0": 40,
+   "x1": 30,
+   "y1": 46,
    "h": 10,
    "floor": "stone",
    "cond": true,
@@ -447,34 +483,34 @@
    "fin": "Honed limestone; lime plaster; integrated stone basin",
    "floorName": "Honed limestone",
    "w": 6,
-   "d": 7,
-   "area": 42
+   "d": 6,
+   "area": 36
   },
   {
    "id": "404",
    "name": "Tatami Room",
    "wing": "Studio + Arrival",
-   "x0": 10,
+   "x0": 18,
    "y0": 28,
-   "x1": 22,
-   "y1": 41,
+   "x1": 30,
+   "y1": 40,
    "h": 9,
    "floor": "tatami",
    "cond": true,
-   "notes": "8-mat tatami room (loved) with a tokonoma alcove, low table, zabuton and a paper andon lantern. Shoji slide open to the engawa and courtyard; low garden window. Used for tea, meditation, or as an overflow guest room.",
+   "notes": "8-mat (12 x 12 ft) tatami room (loved) with a tokonoma alcove, low table, zabuton and a paper andon lantern. Shoji slide open to the engawa and courtyard; low garden window. Used for tea, meditation, or as an overflow guest room.",
    "fin": "Tatami; lime plaster; shoji; walnut tokonoma",
    "floorName": "Tatami (8 mats)",
    "w": 12,
-   "d": 13,
-   "area": 156
+   "d": 12,
+   "area": 144
   },
   {
    "id": "405",
    "name": "Instrument + AV Closet",
    "wing": "Studio + Arrival",
-   "x0": 10,
+   "x0": 18,
    "y0": 22,
-   "x1": 22,
+   "x1": 30,
    "y1": 28,
    "h": 10,
    "floor": "honey",
@@ -490,10 +526,10 @@
    "id": "406",
    "name": "West Engawa Gallery",
    "wing": "Studio + Arrival",
-   "x0": 22,
+   "x0": 30,
    "y0": 22,
-   "x1": 28,
-   "y1": 60,
+   "x1": 36,
+   "y1": 55,
    "h": 10,
    "floor": "honey",
    "cond": true,
@@ -501,8 +537,8 @@
    "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
    "floorName": "Wide-plank honey oak",
    "w": 6,
-   "d": 38,
-   "area": 228
+   "d": 33,
+   "area": 198
   },
   {
    "id": "407",
@@ -526,17 +562,17 @@
  "walls": [
   {
    "o": "h",
-   "c": 60,
-   "a": 0,
-   "b": 10,
+   "c": 55,
+   "a": 10,
+   "b": 18,
    "pos": "105",
    "neg": null,
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 2,
-     "b": 8,
+     "a": 11,
+     "b": 17,
      "k": "window",
      "x": [
       3,
@@ -547,9 +583,20 @@
   },
   {
    "o": "h",
-   "c": 60,
-   "a": 10,
-   "b": 22,
+   "c": 55,
+   "a": 18,
+   "b": 20,
+   "pos": "105",
+   "neg": "401",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 55,
+   "a": 20,
+   "b": 30,
    "pos": "101",
    "neg": "401",
    "ext": false,
@@ -558,17 +605,17 @@
   },
   {
    "o": "h",
-   "c": 60,
-   "a": 22,
-   "b": 26,
+   "c": 55,
+   "a": 30,
+   "b": 36,
    "pos": "101",
    "neg": "406",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 22,
-     "b": 26,
+     "a": 30,
+     "b": 36,
      "k": "open",
      "x": null
     }
@@ -576,35 +623,17 @@
   },
   {
    "o": "h",
-   "c": 60,
-   "a": 26,
-   "b": 28,
-   "pos": "102",
-   "neg": "406",
-   "ext": false,
-   "h": 12,
-   "feats": [
-    {
-     "a": 26,
-     "b": 28,
-     "k": "open",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "h",
-   "c": 60,
-   "a": 28,
-   "b": 44,
+   "c": 55,
+   "a": 36,
+   "b": 50,
    "pos": "102",
    "neg": null,
    "ext": true,
    "h": 12,
    "feats": [
     {
-     "a": 28.5,
-     "b": 43.5,
+     "a": 36.5,
+     "b": 49.5,
      "k": "glass",
      "x": null
     }
@@ -612,8 +641,8 @@
   },
   {
    "o": "h",
-   "c": 60,
-   "a": 44,
+   "c": 55,
+   "a": 50,
    "b": 72,
    "pos": "103",
    "neg": null,
@@ -621,7 +650,7 @@
    "h": 12,
    "feats": [
     {
-     "a": 44.5,
+     "a": 50.5,
      "b": 71.5,
      "k": "glass",
      "x": null
@@ -630,9 +659,9 @@
   },
   {
    "o": "h",
-   "c": 84,
-   "a": 0,
-   "b": 10,
+   "c": 79,
+   "a": 10,
+   "b": 20,
    "pos": null,
    "neg": "104",
    "ext": true,
@@ -641,17 +670,17 @@
   },
   {
    "o": "h",
-   "c": 84,
-   "a": 10,
-   "b": 26,
+   "c": 79,
+   "a": 20,
+   "b": 36,
    "pos": null,
    "neg": "101",
    "ext": true,
    "h": 12,
    "feats": [
     {
-     "a": 18,
-     "b": 25,
+     "a": 28,
+     "b": 35,
      "k": "window",
      "x": [
       4.5,
@@ -662,17 +691,17 @@
   },
   {
    "o": "h",
-   "c": 84,
-   "a": 26,
-   "b": 44,
+   "c": 79,
+   "a": 36,
+   "b": 50,
    "pos": null,
    "neg": "102",
    "ext": true,
    "h": 12,
    "feats": [
     {
-     "a": 27,
-     "b": 43,
+     "a": 37,
+     "b": 49,
      "k": "glass",
      "x": null
     }
@@ -680,8 +709,8 @@
   },
   {
    "o": "h",
-   "c": 84,
-   "a": 44,
+   "c": 79,
+   "a": 50,
    "b": 72,
    "pos": null,
    "neg": "103",
@@ -689,7 +718,7 @@
    "h": 12,
    "feats": [
     {
-     "a": 45,
+     "a": 51,
      "b": 71,
      "k": "fixed",
      "x": null
@@ -698,78 +727,17 @@
   },
   {
    "o": "v",
-   "c": 10,
-   "a": 22,
-   "b": 28,
-   "pos": "405",
-   "neg": null,
-   "ext": true,
-   "h": 10,
-   "feats": []
-  },
-  {
-   "o": "v",
-   "c": 10,
-   "a": 28,
-   "b": 41,
-   "pos": "404",
-   "neg": null,
-   "ext": true,
-   "h": 9,
-   "feats": [
-    {
-     "a": 31,
-     "b": 38,
-     "k": "window",
-     "x": [
-      1.2,
-      6
-     ]
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 10,
-   "a": 41,
-   "b": 48,
-   "pos": "402",
-   "neg": null,
-   "ext": true,
-   "h": 10,
-   "feats": []
-  },
-  {
-   "o": "v",
-   "c": 10,
-   "a": 48,
-   "b": 60,
-   "pos": "401",
-   "neg": null,
-   "ext": true,
-   "h": 10,
-   "feats": [
-    {
-     "a": 52,
-     "b": 56,
-     "k": "front",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 10,
-   "a": 60,
-   "b": 72,
+   "c": 20,
+   "a": 55,
+   "b": 67,
    "pos": "101",
    "neg": "105",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 64,
-     "b": 67,
+     "a": 59,
+     "b": 62,
      "k": "door",
      "x": null
     }
@@ -777,17 +745,17 @@
   },
   {
    "o": "v",
-   "c": 10,
-   "a": 72,
-   "b": 84,
+   "c": 20,
+   "a": 67,
+   "b": 79,
    "pos": "101",
    "neg": "104",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 76,
-     "b": 79,
+     "a": 71,
+     "b": 74,
      "k": "door",
      "x": null
     }
@@ -795,17 +763,53 @@
   },
   {
    "o": "v",
-   "c": 26,
-   "a": 60,
-   "b": 84,
+   "c": 36,
+   "a": 22,
+   "b": 27,
+   "pos": "301",
+   "neg": "406",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 22.5,
+     "b": 26.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 36,
+   "a": 27,
+   "b": 55,
+   "pos": null,
+   "neg": "406",
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 27.5,
+     "b": 54.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 36,
+   "a": 55,
+   "b": 79,
    "pos": "102",
    "neg": "101",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 60,
-     "b": 84,
+     "a": 55,
+     "b": 79,
      "k": "open",
      "x": null
     }
@@ -813,17 +817,46 @@
   },
   {
    "o": "v",
-   "c": 44,
-   "a": 60,
-   "b": 84,
+   "c": 50,
+   "a": 0,
+   "b": 9,
+   "pos": "304",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 50,
+   "a": 9,
+   "b": 22,
+   "pos": "303",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": [
+    {
+     "a": 12,
+     "b": 15,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 50,
+   "a": 55,
+   "b": 79,
    "pos": "103",
    "neg": "102",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 60,
-     "b": 84,
+     "a": 55,
+     "b": 79,
      "k": "open",
      "x": null
     }
@@ -869,26 +902,8 @@
    "h": 10,
    "feats": [
     {
-     "a": 22,
-     "b": 27,
-     "k": "open",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 72,
-   "a": 27,
-   "b": 60,
-   "pos": "204",
-   "neg": null,
-   "ext": true,
-   "h": 10,
-   "feats": [
-    {
-     "a": 27.5,
-     "b": 59.5,
+     "a": 22.5,
+     "b": 26.5,
      "k": "glass",
      "x": null
     }
@@ -897,16 +912,34 @@
   {
    "o": "v",
    "c": 72,
-   "a": 60,
-   "b": 64,
+   "a": 27,
+   "b": 55,
+   "pos": "204",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 27.5,
+     "b": 54.5,
+     "k": "glass",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 72,
+   "a": 55,
+   "b": 59,
    "pos": "204",
    "neg": "103",
    "ext": false,
    "h": 12,
    "feats": [
     {
-     "a": 60,
-     "b": 64,
+     "a": 55,
+     "b": 59,
      "k": "open",
      "x": null
     }
@@ -915,8 +948,8 @@
   {
    "o": "v",
    "c": 72,
-   "a": 64,
-   "b": 84,
+   "a": 59,
+   "b": 79,
    "pos": "201",
    "neg": "103",
    "ext": false,
@@ -926,8 +959,8 @@
   {
    "o": "v",
    "c": 72,
-   "a": 84,
-   "b": 88,
+   "a": 79,
+   "b": 83,
    "pos": "201",
    "neg": null,
    "ext": true,
@@ -936,9 +969,9 @@
   },
   {
    "o": "h",
-   "c": 72,
-   "a": 0,
-   "b": 10,
+   "c": 67,
+   "a": 10,
+   "b": 20,
    "pos": "104",
    "neg": "105",
    "ext": false,
@@ -947,17 +980,17 @@
   },
   {
    "o": "v",
-   "c": 0,
-   "a": 60,
-   "b": 72,
+   "c": 10,
+   "a": 55,
+   "b": 67,
    "pos": "105",
    "neg": null,
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 64,
-     "b": 67,
+     "a": 59,
+     "b": 62,
      "k": "exdoor",
      "x": null
     }
@@ -965,17 +998,17 @@
   },
   {
    "o": "v",
-   "c": 0,
-   "a": 72,
-   "b": 84,
+   "c": 10,
+   "a": 67,
+   "b": 79,
    "pos": "104",
    "neg": null,
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 76,
-     "b": 82,
+     "a": 71,
+     "b": 77,
      "k": "window",
      "x": [
       3,
@@ -986,7 +1019,7 @@
   },
   {
    "o": "h",
-   "c": 64,
+   "c": 59,
    "a": 72,
    "b": 78,
    "pos": "201",
@@ -1004,7 +1037,7 @@
   },
   {
    "o": "h",
-   "c": 64,
+   "c": 59,
    "a": 78,
    "b": 86,
    "pos": "201",
@@ -1015,7 +1048,7 @@
   },
   {
    "o": "h",
-   "c": 64,
+   "c": 59,
    "a": 86,
    "b": 88,
    "pos": "203",
@@ -1026,7 +1059,7 @@
   },
   {
    "o": "h",
-   "c": 64,
+   "c": 59,
    "a": 88,
    "b": 98,
    "pos": "203",
@@ -1037,7 +1070,7 @@
   },
   {
    "o": "h",
-   "c": 88,
+   "c": 83,
    "a": 72,
    "b": 86,
    "pos": null,
@@ -1055,7 +1088,7 @@
   },
   {
    "o": "h",
-   "c": 88,
+   "c": 83,
    "a": 86,
    "b": 98,
    "pos": null,
@@ -1077,16 +1110,16 @@
   {
    "o": "v",
    "c": 86,
-   "a": 64,
-   "b": 74,
+   "a": 59,
+   "b": 69,
    "pos": "203",
    "neg": "201",
    "ext": false,
    "h": 11,
    "feats": [
     {
-     "a": 66,
-     "b": 69,
+     "a": 61,
+     "b": 64,
      "k": "door",
      "x": null
     }
@@ -1095,16 +1128,16 @@
   {
    "o": "v",
    "c": 86,
-   "a": 74,
-   "b": 88,
+   "a": 69,
+   "b": 83,
    "pos": "202",
    "neg": "201",
    "ext": false,
    "h": 11,
    "feats": [
     {
-     "a": 76,
-     "b": 79.5,
+     "a": 71,
+     "b": 74.5,
      "k": "slide",
      "x": null
     }
@@ -1112,7 +1145,7 @@
   },
   {
    "o": "h",
-   "c": 74,
+   "c": 69,
    "a": 86,
    "b": 98,
    "pos": "202",
@@ -1136,7 +1169,7 @@
    "o": "v",
    "c": 98,
    "a": 24,
-   "b": 35,
+   "b": 36.5,
    "pos": null,
    "neg": "209",
    "ext": true,
@@ -1144,7 +1177,7 @@
    "feats": [
     {
      "a": 26,
-     "b": 33,
+     "b": 34,
      "k": "window",
      "x": [
       2.5,
@@ -1156,37 +1189,16 @@
   {
    "o": "v",
    "c": 98,
-   "a": 35,
-   "b": 43,
-   "pos": null,
-   "neg": "208",
-   "ext": true,
-   "h": 10,
-   "feats": [
-    {
-     "a": 37,
-     "b": 41,
-     "k": "window",
-     "x": [
-      5.5,
-      8
-     ]
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 98,
-   "a": 43,
-   "b": 54,
+   "a": 36.5,
+   "b": 49,
    "pos": null,
    "neg": "207",
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 45,
-     "b": 52,
+     "a": 39,
+     "b": 47,
      "k": "window",
      "x": [
       2.5,
@@ -1198,16 +1210,16 @@
   {
    "o": "v",
    "c": 98,
-   "a": 54,
-   "b": 64,
+   "a": 49,
+   "b": 59,
    "pos": null,
    "neg": "206",
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 56,
-     "b": 59,
+     "a": 50,
+     "b": 53,
      "k": "exdoor",
      "x": null
     }
@@ -1216,16 +1228,16 @@
   {
    "o": "v",
    "c": 98,
-   "a": 64,
-   "b": 74,
+   "a": 59,
+   "b": 69,
    "pos": null,
    "neg": "203",
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 67,
-     "b": 72,
+     "a": 62,
+     "b": 67,
      "k": "window",
      "x": [
       6,
@@ -1237,16 +1249,16 @@
   {
    "o": "v",
    "c": 98,
-   "a": 74,
-   "b": 88,
+   "a": 69,
+   "b": 83,
    "pos": null,
    "neg": "202",
    "ext": true,
    "h": 10,
    "feats": [
     {
-     "a": 76,
-     "b": 87,
+     "a": 71,
+     "b": 82,
      "k": "window",
      "x": [
       2,
@@ -1334,15 +1346,15 @@
    "o": "v",
    "c": 78,
    "a": 24,
-   "b": 35,
-   "pos": "209",
+   "b": 30,
+   "pos": "212",
    "neg": "204",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 27,
-     "b": 30,
+     "a": 24.5,
+     "b": 27.5,
      "k": "door",
      "x": null
     }
@@ -1351,8 +1363,8 @@
   {
    "o": "v",
    "c": 78,
-   "a": 35,
-   "b": 43,
+   "a": 30,
+   "b": 45.5,
    "pos": "208",
    "neg": "204",
    "ext": false,
@@ -1362,16 +1374,16 @@
   {
    "o": "v",
    "c": 78,
-   "a": 43,
-   "b": 54,
-   "pos": "207",
+   "a": 45.5,
+   "b": 49,
+   "pos": "213",
    "neg": "204",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 50,
-     "b": 53,
+     "a": 45.75,
+     "b": 48.75,
      "k": "door",
      "x": null
     }
@@ -1380,16 +1392,16 @@
   {
    "o": "v",
    "c": 78,
-   "a": 54,
-   "b": 64,
+   "a": 49,
+   "b": 59,
    "pos": "205",
    "neg": "204",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 58,
-     "b": 61,
+     "a": 52,
+     "b": 55,
      "k": "door",
      "x": null
     }
@@ -1397,8 +1409,19 @@
   },
   {
    "o": "h",
-   "c": 54,
+   "c": 49,
    "a": 78,
+   "b": 85,
+   "pos": "205",
+   "neg": "213",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 49,
+   "a": 85,
    "b": 88,
    "pos": "205",
    "neg": "207",
@@ -1408,7 +1431,7 @@
   },
   {
    "o": "h",
-   "c": 54,
+   "c": 49,
    "a": 88,
    "b": 98,
    "pos": "206",
@@ -1431,16 +1454,16 @@
   {
    "o": "v",
    "c": 88,
-   "a": 54,
-   "b": 64,
+   "a": 49,
+   "b": 59,
    "pos": "206",
    "neg": "205",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 57,
-     "b": 60,
+     "a": 52,
+     "b": 55,
      "k": "door",
      "x": null
     }
@@ -1448,17 +1471,82 @@
   },
   {
    "o": "h",
-   "c": 43,
-   "a": 78,
+   "c": 36.5,
+   "a": 85,
    "b": 98,
+   "pos": "207",
+   "neg": "209",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 85,
+   "a": 24,
+   "b": 30,
+   "pos": "209",
+   "neg": "212",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 24.5,
+     "b": 27.5,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 85,
+   "a": 30,
+   "b": 36.5,
+   "pos": "209",
+   "neg": "208",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 31.5,
+     "b": 34.5,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 85,
+   "a": 36.5,
+   "b": 45.5,
    "pos": "207",
    "neg": "208",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 81,
-     "b": 84,
+     "a": 41,
+     "b": 44,
+     "k": "door",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 85,
+   "a": 45.5,
+   "b": 49,
+   "pos": "207",
+   "neg": "213",
+   "ext": false,
+   "h": 10,
+   "feats": [
+    {
+     "a": 45.75,
+     "b": 48.75,
      "k": "door",
      "x": null
     }
@@ -1466,26 +1554,41 @@
   },
   {
    "o": "h",
-   "c": 35,
+   "c": 30,
    "a": 78,
-   "b": 98,
+   "b": 85,
    "pos": "208",
-   "neg": "209",
+   "neg": "212",
    "ext": false,
    "h": 10,
-   "feats": [
-    {
-     "a": 81,
-     "b": 84,
-     "k": "door",
-     "x": null
-    }
-   ]
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 45.5,
+   "a": 78,
+   "b": 85,
+   "pos": "213",
+   "neg": "208",
+   "ext": false,
+   "h": 10,
+   "feats": []
   },
   {
    "o": "h",
    "c": 24,
    "a": 78,
+   "b": 85,
+   "pos": "212",
+   "neg": "210",
+   "ext": false,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 24,
+   "a": 85,
    "b": 88,
    "pos": "209",
    "neg": "210",
@@ -1508,12 +1611,18 @@
    "o": "h",
    "c": 22,
    "a": 4,
-   "b": 10,
+   "b": 18,
    "pos": null,
    "neg": "407",
    "ext": true,
    "h": 14,
    "feats": [
+    {
+     "a": 14,
+     "b": 18,
+     "k": "exdoor",
+     "x": null
+    },
     {
      "a": 5,
      "b": 9,
@@ -1528,27 +1637,9 @@
   {
    "o": "h",
    "c": 22,
-   "a": 10,
-   "b": 22,
-   "pos": "405",
-   "neg": "407",
-   "ext": false,
-   "h": 14,
-   "feats": [
-    {
-     "a": 14,
-     "b": 18,
-     "k": "door",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "h",
-   "c": 22,
-   "a": 22,
+   "a": 18,
    "b": 28,
-   "pos": "406",
+   "pos": "405",
    "neg": "407",
    "ext": false,
    "h": 14,
@@ -1565,6 +1656,28 @@
    "o": "h",
    "c": 22,
    "a": 28,
+   "b": 30,
+   "pos": "405",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 30,
+   "b": 36,
+   "pos": "406",
+   "neg": "302",
+   "ext": false,
+   "h": 12,
+   "feats": []
+  },
+  {
+   "o": "h",
+   "c": 22,
+   "a": 36,
    "b": 50,
    "pos": "301",
    "neg": "302",
@@ -1611,7 +1724,7 @@
   {
    "o": "h",
    "c": 27,
-   "a": 28,
+   "a": 36,
    "b": 72,
    "pos": null,
    "neg": "301",
@@ -1619,56 +1732,9 @@
    "h": 10,
    "feats": [
     {
-     "a": 28.5,
-     "b": 71.5,
-     "k": "glass",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 28,
-   "a": 0,
-   "b": 22,
-   "pos": "302",
-   "neg": "407",
-   "ext": false,
-   "h": 14,
-   "feats": []
-  },
-  {
-   "o": "v",
-   "c": 28,
-   "a": 22,
-   "b": 27,
-   "pos": "301",
-   "neg": "406",
-   "ext": false,
-   "h": 10,
-   "feats": [
-    {
-     "a": 22,
-     "b": 27,
+     "a": 36,
+     "b": 72,
      "k": "open",
-     "x": null
-    }
-   ]
-  },
-  {
-   "o": "v",
-   "c": 28,
-   "a": 27,
-   "b": 60,
-   "pos": null,
-   "neg": "406",
-   "ext": true,
-   "h": 10,
-   "feats": [
-    {
-     "a": 27.5,
-     "b": 59.5,
-     "k": "glass",
      "x": null
     }
    ]
@@ -1761,32 +1827,14 @@
   },
   {
    "o": "v",
-   "c": 50,
+   "c": 28,
    "a": 0,
-   "b": 9,
-   "pos": "304",
-   "neg": "302",
-   "ext": false,
-   "h": 12,
-   "feats": []
-  },
-  {
-   "o": "v",
-   "c": 50,
-   "a": 9,
    "b": 22,
-   "pos": "303",
-   "neg": "302",
+   "pos": "302",
+   "neg": "407",
    "ext": false,
-   "h": 12,
-   "feats": [
-    {
-     "a": 12,
-     "b": 15,
-     "k": "door",
-     "x": null
-    }
-   ]
+   "h": 14,
+   "feats": []
   },
   {
    "o": "h",
@@ -1866,17 +1914,17 @@
   },
   {
    "o": "h",
-   "c": 48,
-   "a": 10,
-   "b": 16,
+   "c": 46,
+   "a": 18,
+   "b": 24,
    "pos": "401",
    "neg": "402",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 11,
-     "b": 15,
+     "a": 19,
+     "b": 23,
      "k": "door",
      "x": null
     }
@@ -1884,9 +1932,9 @@
   },
   {
    "o": "h",
-   "c": 48,
-   "a": 16,
-   "b": 22,
+   "c": 46,
+   "a": 24,
+   "b": 30,
    "pos": "401",
    "neg": "403",
    "ext": false,
@@ -1895,7 +1943,68 @@
   },
   {
    "o": "v",
-   "c": 22,
+   "c": 18,
+   "a": 22,
+   "b": 28,
+   "pos": "405",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 18,
+   "a": 28,
+   "b": 40,
+   "pos": "404",
+   "neg": null,
+   "ext": true,
+   "h": 9,
+   "feats": [
+    {
+     "a": 31,
+     "b": 37,
+     "k": "window",
+     "x": [
+      1.2,
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 18,
+   "a": 40,
+   "b": 46,
+   "pos": "402",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": []
+  },
+  {
+   "o": "v",
+   "c": 18,
+   "a": 46,
+   "b": 55,
+   "pos": "401",
+   "neg": null,
+   "ext": true,
+   "h": 10,
+   "feats": [
+    {
+     "a": 49,
+     "b": 53,
+     "k": "front",
+     "x": null
+    }
+   ]
+  },
+  {
+   "o": "v",
+   "c": 30,
    "a": 22,
    "b": 28,
    "pos": "406",
@@ -1913,9 +2022,9 @@
   },
   {
    "o": "v",
-   "c": 22,
+   "c": 30,
    "a": 28,
-   "b": 41,
+   "b": 40,
    "pos": "406",
    "neg": "404",
    "ext": false,
@@ -1923,7 +2032,7 @@
    "feats": [
     {
      "a": 30,
-     "b": 39,
+     "b": 38,
      "k": "slide",
      "x": null
     }
@@ -1931,17 +2040,17 @@
   },
   {
    "o": "v",
-   "c": 22,
-   "a": 41,
-   "b": 48,
+   "c": 30,
+   "a": 40,
+   "b": 46,
    "pos": "406",
    "neg": "403",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 43,
-     "b": 45.5,
+     "a": 41.5,
+     "b": 44,
      "k": "door",
      "x": null
     }
@@ -1949,17 +2058,17 @@
   },
   {
    "o": "v",
-   "c": 22,
-   "a": 48,
-   "b": 60,
+   "c": 30,
+   "a": 46,
+   "b": 55,
    "pos": "406",
    "neg": "401",
    "ext": false,
    "h": 10,
    "feats": [
     {
-     "a": 50,
-     "b": 58,
+     "a": 47,
+     "b": 54,
      "k": "open",
      "x": null
     }
@@ -1967,9 +2076,9 @@
   },
   {
    "o": "h",
-   "c": 41,
-   "a": 10,
-   "b": 16,
+   "c": 40,
+   "a": 18,
+   "b": 24,
    "pos": "402",
    "neg": "404",
    "ext": false,
@@ -1978,9 +2087,9 @@
   },
   {
    "o": "h",
-   "c": 41,
-   "a": 16,
-   "b": 22,
+   "c": 40,
+   "a": 24,
+   "b": 30,
    "pos": "403",
    "neg": "404",
    "ext": false,
@@ -1989,9 +2098,9 @@
   },
   {
    "o": "v",
-   "c": 16,
-   "a": 41,
-   "b": 48,
+   "c": 24,
+   "a": 40,
+   "b": 46,
    "pos": "403",
    "neg": "402",
    "ext": false,
@@ -2001,8 +2110,8 @@
   {
    "o": "h",
    "c": 28,
-   "a": 10,
-   "b": 22,
+   "a": 18,
+   "b": 30,
    "pos": "404",
    "neg": "405",
    "ext": false,
@@ -2035,10 +2144,10 @@
   {
    "room": "101",
    "label": "Marble island 10' (seats five)",
-   "x0": 13,
-   "y0": 69,
-   "x1": 23,
-   "y1": 73.5,
+   "x0": 23,
+   "y0": 64,
+   "x1": 33,
+   "y1": 68.5,
    "h": 3,
    "z0": 0,
    "color": "mat:marble",
@@ -2047,10 +2156,10 @@
   {
    "room": "101",
    "label": "Stools",
-   "x0": 14,
-   "y0": 67.3,
-   "x1": 22,
-   "y1": 68.5,
+   "x0": 24,
+   "y0": 62.3,
+   "x1": 32,
+   "y1": 63.5,
    "h": 2.5,
    "z0": 0,
    "color": "#6b4a33",
@@ -2059,10 +2168,10 @@
   {
    "room": "101",
    "label": "White handleless base cabinets",
-   "x0": 12.6,
-   "y0": 81.4,
-   "x1": 25.6,
-   "y1": 83.6,
+   "x0": 22.6,
+   "y0": 76.4,
+   "x1": 35.6,
+   "y1": 78.6,
    "h": 2.85,
    "z0": 0,
    "color": "mat:lacq",
@@ -2071,10 +2180,10 @@
   {
    "room": "101",
    "label": "Black stone counter",
-   "x0": 12.5,
-   "y0": 81.3,
-   "x1": 25.7,
-   "y1": 83.7,
+   "x0": 22.5,
+   "y0": 76.3,
+   "x1": 35.7,
+   "y1": 78.7,
    "h": 0.15,
    "z0": 2.85,
    "color": "mat:blackstone",
@@ -2083,10 +2192,10 @@
   {
    "room": "101",
    "label": "Green zellige backsplash",
-   "x0": 12.6,
-   "y0": 83.45,
-   "x1": 25.6,
-   "y1": 83.62,
+   "x0": 22.6,
+   "y0": 78.45,
+   "x1": 35.6,
+   "y1": 78.62,
    "h": 1.5,
    "z0": 3.0,
    "color": "mat:zellige",
@@ -2095,10 +2204,10 @@
   {
    "room": "101",
    "label": "Green zellige range wall",
-   "x0": 12.6,
-   "y0": 83.45,
-   "x1": 18,
-   "y1": 83.62,
+   "x0": 22.6,
+   "y0": 78.45,
+   "x1": 28,
+   "y1": 78.62,
    "h": 4.5,
    "z0": 4.5,
    "color": "mat:zellige",
@@ -2107,10 +2216,10 @@
   {
    "room": "101",
    "label": "Stainless range 36\"",
-   "x0": 13.8,
-   "y0": 81.15,
-   "x1": 16.8,
-   "y1": 83.4,
+   "x0": 23.8,
+   "y0": 76.15,
+   "x1": 26.8,
+   "y1": 78.4,
    "h": 3.02,
    "z0": 0,
    "color": "mat:steel",
@@ -2119,10 +2228,10 @@
   {
    "room": "101",
    "label": "Glass chimney hood",
-   "x0": 13.6,
-   "y0": 81.8,
-   "x1": 17,
-   "y1": 83.4,
+   "x0": 23.6,
+   "y0": 76.8,
+   "x1": 27,
+   "y1": 78.4,
    "h": 0.2,
    "z0": 6.6,
    "color": "#cfe3e6",
@@ -2131,10 +2240,10 @@
   {
    "room": "101",
    "label": "White apron sink + brass faucet",
-   "x0": 20,
-   "y0": 81.2,
-   "x1": 22.6,
-   "y1": 83.4,
+   "x0": 30,
+   "y0": 76.2,
+   "x1": 32.6,
+   "y1": 78.4,
    "h": 0.9,
    "z0": 2.05,
    "color": "#f6f4ef",
@@ -2143,10 +2252,10 @@
   {
    "room": "101",
    "label": "Open wood shelves",
-   "x0": 10.25,
-   "y0": 79.6,
-   "x1": 11.1,
-   "y1": 83.6,
+   "x0": 20.25,
+   "y0": 74.6,
+   "x1": 21.1,
+   "y1": 78.6,
    "h": 3.2,
    "z0": 4.4,
    "color": "mat:honey",
@@ -2155,10 +2264,10 @@
   {
    "room": "101",
    "label": "Open wood shelves",
-   "x0": 10.25,
-   "y0": 60.6,
-   "x1": 11.1,
-   "y1": 63.6,
+   "x0": 20.25,
+   "y0": 55.6,
+   "x1": 21.1,
+   "y1": 58.6,
    "h": 3.2,
    "z0": 4.4,
    "color": "mat:honey",
@@ -2167,10 +2276,10 @@
   {
    "room": "101",
    "label": "Integrated fridge + ovens (handleless)",
-   "x0": 10.4,
-   "y0": 68.5,
-   "x1": 12.6,
-   "y1": 75,
+   "x0": 20.4,
+   "y0": 63.5,
+   "x1": 22.6,
+   "y1": 70,
    "h": 8.5,
    "z0": 0,
    "color": "mat:lacq",
@@ -2179,190 +2288,22 @@
   {
    "room": "101",
    "label": "Pendants",
-   "x0": 14,
-   "y0": 70.6,
-   "x1": 22,
-   "y1": 71.9,
+   "x0": 24,
+   "y0": 65.6,
+   "x1": 32,
+   "y1": 66.9,
    "h": 0.7,
    "z0": 7.4,
    "color": "#efe6d3",
    "shape": "pendants"
   },
   {
-   "room": "102",
-   "label": "Honey-oak dining table (10)",
-   "x0": 30,
-   "y0": 69,
-   "x1": 40,
-   "y1": 73,
-   "h": 2.5,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "table"
-  },
-  {
-   "room": "102",
-   "label": "Chairs",
-   "x0": 30.5,
-   "y0": 67.4,
-   "x1": 39.5,
-   "y1": 68.6,
-   "h": 1.5,
-   "z0": 0,
-   "color": "#d9cbb5",
-   "shape": "chairs"
-  },
-  {
-   "room": "102",
-   "label": "Chairs",
-   "x0": 30.5,
-   "y0": 73.4,
-   "x1": 39.5,
-   "y1": 74.6,
-   "h": 1.5,
-   "z0": 0,
-   "color": "#d9cbb5",
-   "shape": "chairs"
-  },
-  {
-   "room": "102",
-   "label": "Paper lantern",
-   "x0": 33,
-   "y0": 69.5,
-   "x1": 37,
-   "y1": 72.5,
-   "h": 2.4,
-   "z0": 6.6,
-   "color": "#f4ecdc",
-   "shape": "lantern"
-  },
-  {
-   "room": "102",
-   "label": "Shoji screens",
-   "x0": 43.7,
-   "y0": 77.5,
-   "x1": 44.0,
-   "y1": 83.8,
-   "h": 8,
-   "z0": 0,
-   "color": "#f4ecdc",
-   "shape": "shoji"
-  },
-  {
-   "room": "103",
-   "label": "Conversation pit (18\" down)",
-   "x0": 49,
-   "y0": 66,
-   "x1": 65,
-   "y1": 78,
-   "h": -1.5,
-   "z0": 0,
-   "color": "#e6dfd2",
-   "shape": "pit"
-  },
-  {
-   "room": "103",
-   "label": "Low modular sofa (pit)",
-   "x0": 49.3,
-   "y0": 66.3,
-   "x1": 64.7,
-   "y1": 68.6,
-   "h": 1.0,
-   "z0": -1.5,
-   "color": "mat:linen",
-   "shape": "sofa"
-  },
-  {
-   "room": "103",
-   "label": "Low modular sofa (pit)",
-   "x0": 49.3,
-   "y0": 75.4,
-   "x1": 64.7,
-   "y1": 77.7,
-   "h": 1.0,
-   "z0": -1.5,
-   "color": "mat:linen",
-   "shape": "sofa"
-  },
-  {
-   "room": "103",
-   "label": "Low modular sofa (pit)",
-   "x0": 49.3,
-   "y0": 68.6,
-   "x1": 51.6,
-   "y1": 75.4,
-   "h": 1.0,
-   "z0": -1.5,
-   "color": "mat:linen",
-   "shape": "sofa"
-  },
-  {
-   "room": "103",
-   "label": "Coffee table",
-   "x0": 54,
-   "y0": 70.2,
-   "x1": 60,
-   "y1": 73.8,
-   "h": 0.8,
-   "z0": -1.5,
-   "color": "#6b4a33",
-   "shape": "box"
-  },
-  {
-   "room": "103",
-   "label": "Paper lanterns",
-   "x0": 53,
-   "y0": 69,
-   "x1": 61,
-   "y1": 75,
-   "h": 2.0,
-   "z0": 7.0,
-   "color": "#f4ecdc",
-   "shape": "lanterns"
-  },
-  {
-   "room": "103",
-   "label": "Linear gas fire in plaster plinth",
-   "x0": 67,
-   "y0": 66,
-   "x1": 69,
-   "y1": 78,
-   "h": 1.6,
-   "z0": 0,
-   "color": "mat:plaster",
-   "shape": "fire"
-  },
-  {
-   "room": "103",
-   "label": "Leather lounge chair",
-   "x0": 45.4,
-   "y0": 78.6,
-   "x1": 48.6,
-   "y1": 82,
-   "h": 2.6,
-   "z0": 0,
-   "color": "#8a5a34",
-   "shape": "lounge"
-  },
-  {
-   "room": "103",
-   "label": "Wall-mounted art",
-   "x0": 71.4,
-   "y0": 69,
-   "x1": 71.6,
-   "y1": 76,
-   "h": 4.2,
-   "z0": 3.8,
-   "color": "#c9b48e",
-   "shape": "art"
-  },
-  {
    "room": "104",
    "label": "Pantry shelving",
-   "x0": 0.4,
-   "y0": 73,
-   "x1": 1.8,
-   "y1": 83.6,
+   "x0": 10.4,
+   "y0": 68,
+   "x1": 11.8,
+   "y1": 78.6,
    "h": 7.5,
    "z0": 0,
    "color": "mat:honey",
@@ -2371,10 +2312,10 @@
   {
    "room": "104",
    "label": "Pantry shelving",
-   "x0": 8.2,
-   "y0": 77,
-   "x1": 9.6,
-   "y1": 83.6,
+   "x0": 18.2,
+   "y0": 72,
+   "x1": 19.6,
+   "y1": 78.6,
    "h": 7.5,
    "z0": 0,
    "color": "mat:honey",
@@ -2383,10 +2324,10 @@
   {
    "room": "105",
    "label": "Cubbies + bench",
-   "x0": 0.4,
-   "y0": 67.5,
-   "x1": 2,
-   "y1": 71.6,
+   "x0": 10.4,
+   "y0": 62.5,
+   "x1": 12,
+   "y1": 66.6,
    "h": 7,
    "z0": 0,
    "color": "mat:honey",
@@ -2395,10 +2336,10 @@
   {
    "room": "105",
    "label": "Dog wash",
-   "x0": 6.5,
-   "y0": 60.4,
-   "x1": 9.6,
-   "y1": 63,
+   "x0": 16.5,
+   "y0": 55.4,
+   "x1": 19.6,
+   "y1": 58,
    "h": 2.6,
    "z0": 0,
    "color": "mat:stone",
@@ -2408,9 +2349,9 @@
    "room": "201",
    "label": "Low linen-wrapped bed (king)",
    "x0": 76,
-   "y0": 74.4,
+   "y0": 69.4,
    "x1": 82.6,
-   "y1": 81,
+   "y1": 76,
    "h": 1.6,
    "z0": 0,
    "color": "mat:linen",
@@ -2420,9 +2361,9 @@
    "room": "201",
    "label": "Lime-plaster headwall ledge",
    "x0": 75,
-   "y0": 73.4,
+   "y0": 68.4,
    "x1": 83.6,
-   "y1": 74.4,
+   "y1": 69.4,
    "h": 3.4,
    "z0": 0,
    "color": "mat:plaster",
@@ -2432,9 +2373,9 @@
    "room": "201",
    "label": "Pair of lounge chairs",
    "x0": 74,
-   "y0": 83.4,
+   "y0": 78.4,
    "x1": 80.6,
-   "y1": 86.2,
+   "y1": 81.2,
    "h": 2.5,
    "z0": 0,
    "color": "#b9a27e",
@@ -2444,9 +2385,9 @@
    "room": "201",
    "label": "Sheer linen curtains",
    "x0": 73,
-   "y0": 87.3,
+   "y0": 82.3,
    "x1": 85,
-   "y1": 87.5,
+   "y1": 82.5,
    "h": 10.3,
    "z0": 0.1,
    "color": "#f6f1e6",
@@ -2456,9 +2397,9 @@
    "room": "201",
    "label": "Big fan under wood ceiling",
    "x0": 76.5,
-   "y0": 74.5,
+   "y0": 69.5,
    "x1": 82.5,
-   "y1": 80.5,
+   "y1": 75.5,
    "h": 0.6,
    "z0": 9.6,
    "color": "#6b4a33",
@@ -2468,9 +2409,9 @@
    "room": "201",
    "label": "Cove lighting",
    "x0": 72.3,
-   "y0": 64.3,
+   "y0": 59.3,
    "x1": 85.7,
-   "y1": 87.7,
+   "y1": 82.7,
    "h": 0.12,
    "z0": 10.2,
    "color": "#ffd9a0",
@@ -2480,9 +2421,9 @@
    "room": "201",
    "label": "Rug",
    "x0": 75,
-   "y0": 72.2,
+   "y0": 67.2,
    "x1": 84,
-   "y1": 83,
+   "y1": 78,
    "h": 0.05,
    "z0": 0,
    "color": "#cdbfa6",
@@ -2492,9 +2433,9 @@
    "room": "202",
    "label": "Deep hinoki soaking tub by the window",
    "x0": 93,
-   "y0": 83,
+   "y0": 78,
    "x1": 97.4,
-   "y1": 87.4,
+   "y1": 82.4,
    "h": 2.3,
    "z0": 0,
    "color": "#e2c894",
@@ -2504,9 +2445,9 @@
    "room": "202",
    "label": "Walk-in rain shower",
    "x0": 86.6,
-   "y0": 80.4,
+   "y0": 75.4,
    "x1": 92,
-   "y1": 87.4,
+   "y1": 82.4,
    "h": 0.12,
    "z0": 0,
    "color": "mat:blackstone",
@@ -2516,9 +2457,9 @@
    "room": "202",
    "label": "Black stone shower wall",
    "x0": 86.6,
-   "y0": 79.9,
+   "y0": 74.9,
    "x1": 91.2,
-   "y1": 80.4,
+   "y1": 75.4,
    "h": 7.5,
    "z0": 0,
    "color": "mat:blackstone",
@@ -2528,9 +2469,9 @@
    "room": "202",
    "label": "Floating oak vanity, integrated basins",
    "x0": 95.4,
-   "y0": 74.6,
+   "y0": 69.6,
    "x1": 97.4,
-   "y1": 81.5,
+   "y1": 76.5,
    "h": 1.5,
    "z0": 1.4,
    "color": "mat:honey",
@@ -2540,9 +2481,9 @@
    "room": "202",
    "label": "WC",
    "x0": 87,
-   "y0": 74.6,
+   "y0": 69.6,
    "x1": 89,
-   "y1": 77,
+   "y1": 72,
    "h": 1.4,
    "z0": 0,
    "color": "#f3f1ec",
@@ -2552,9 +2493,9 @@
    "room": "203",
    "label": "Closet millwork",
    "x0": 86.4,
-   "y0": 64.4,
+   "y0": 59.4,
    "x1": 88.4,
-   "y1": 73.6,
+   "y1": 68.6,
    "h": 7.5,
    "z0": 0,
    "color": "mat:honey",
@@ -2564,9 +2505,9 @@
    "room": "203",
    "label": "Closet millwork",
    "x0": 95.6,
-   "y0": 64.4,
+   "y0": 59.4,
    "x1": 97.6,
-   "y1": 73.6,
+   "y1": 68.6,
    "h": 7.5,
    "z0": 0,
    "color": "mat:honey",
@@ -2576,289 +2517,13 @@
    "room": "203",
    "label": "Island",
    "x0": 90.5,
-   "y0": 67,
+   "y0": 62,
    "x1": 93.5,
-   "y1": 71,
+   "y1": 66,
    "h": 3,
    "z0": 0,
    "color": "mat:honey",
    "shape": "box"
-  },
-  {
-   "room": "204",
-   "label": "Low bench",
-   "x0": 76.8,
-   "y0": 30,
-   "x1": 77.6,
-   "y1": 58,
-   "h": 1.5,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "204",
-   "label": "Wall-mounted art",
-   "x0": 77.55,
-   "y0": 40,
-   "x1": 77.75,
-   "y1": 46,
-   "h": 3.5,
-   "z0": 4,
-   "color": "#a7b39a",
-   "shape": "art"
-  },
-  {
-   "room": "205",
-   "label": "Washer/dryer",
-   "x0": 78.4,
-   "y0": 61.2,
-   "x1": 82.6,
-   "y1": 63.6,
-   "h": 3,
-   "z0": 0,
-   "color": "#f3f1ec",
-   "shape": "box"
-  },
-  {
-   "room": "205",
-   "label": "Fold counter",
-   "x0": 83,
-   "y0": 61.6,
-   "x1": 87.6,
-   "y1": 63.6,
-   "h": 3,
-   "z0": 0,
-   "color": "mat:lacq",
-   "shape": "box"
-  },
-  {
-   "room": "206",
-   "label": "Air handler + ERV",
-   "x0": 94,
-   "y0": 59,
-   "x1": 97.6,
-   "y1": 63.6,
-   "h": 6,
-   "z0": 0,
-   "color": "mat:steel",
-   "shape": "box"
-  },
-  {
-   "room": "206",
-   "label": "Linen shelves",
-   "x0": 88.4,
-   "y0": 54.4,
-   "x1": 92,
-   "y1": 56,
-   "h": 7,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "207",
-   "label": "Window-seat reading nook",
-   "x0": 96.2,
-   "y0": 45,
-   "x1": 97.8,
-   "y1": 52,
-   "h": 1.6,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "seat"
-  },
-  {
-   "room": "207",
-   "label": "Twin bed",
-   "x0": 83,
-   "y0": 47,
-   "x1": 86.6,
-   "y1": 53.6,
-   "h": 1.4,
-   "z0": 0,
-   "color": "mat:linen",
-   "shape": "bed"
-  },
-  {
-   "room": "207",
-   "label": "Desk by the window",
-   "x0": 92,
-   "y0": 43.4,
-   "x1": 96,
-   "y1": 45,
-   "h": 2.5,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "table"
-  },
-  {
-   "room": "207",
-   "label": "Low cube shelves + bins",
-   "x0": 85.5,
-   "y0": 43.3,
-   "x1": 91.5,
-   "y1": 44.6,
-   "h": 2.4,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "cubes"
-  },
-  {
-   "room": "207",
-   "label": "Beanbags",
-   "x0": 87,
-   "y0": 45.6,
-   "x1": 91,
-   "y1": 48,
-   "h": 1.3,
-   "z0": 0,
-   "color": "#c98f6a",
-   "shape": "beanbags"
-  },
-  {
-   "room": "207",
-   "label": "Small bouldering wall + mat",
-   "x0": 78.25,
-   "y0": 43.4,
-   "x1": 78.6,
-   "y1": 49.4,
-   "h": 8,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "kidwall"
-  },
-  {
-   "room": "207",
-   "label": "Closet",
-   "x0": 89,
-   "y0": 53,
-   "x1": 95,
-   "y1": 53.7,
-   "h": 7,
-   "z0": 0,
-   "color": "mat:lacq",
-   "shape": "box"
-  },
-  {
-   "room": "208",
-   "label": "Vanity 1",
-   "x0": 81,
-   "y0": 41.4,
-   "x1": 86,
-   "y1": 42.7,
-   "h": 2.8,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "208",
-   "label": "Vanity 2",
-   "x0": 81,
-   "y0": 35.3,
-   "x1": 86,
-   "y1": 36.6,
-   "h": 2.8,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "208",
-   "label": "Tub-shower",
-   "x0": 91.5,
-   "y0": 35.4,
-   "x1": 97.6,
-   "y1": 38.5,
-   "h": 1.8,
-   "z0": 0,
-   "color": "#f3f1ec",
-   "shape": "box"
-  },
-  {
-   "room": "208",
-   "label": "WC",
-   "x0": 95,
-   "y0": 40,
-   "x1": 97,
-   "y1": 42.6,
-   "h": 1.4,
-   "z0": 0,
-   "color": "#f3f1ec",
-   "shape": "box"
-  },
-  {
-   "room": "209",
-   "label": "Window-seat reading nook",
-   "x0": 96.2,
-   "y0": 26,
-   "x1": 97.8,
-   "y1": 33,
-   "h": 1.6,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "seat"
-  },
-  {
-   "room": "209",
-   "label": "Queen bed (guest)",
-   "x0": 85.2,
-   "y0": 24.3,
-   "x1": 90.4,
-   "y1": 31,
-   "h": 1.6,
-   "z0": 0,
-   "color": "mat:linen",
-   "shape": "bed"
-  },
-  {
-   "room": "209",
-   "label": "Desk by the window",
-   "x0": 92,
-   "y0": 33.4,
-   "x1": 96,
-   "y1": 34.9,
-   "h": 2.5,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "table"
-  },
-  {
-   "room": "209",
-   "label": "Low cube shelves + bins",
-   "x0": 78.3,
-   "y0": 31,
-   "x1": 79.6,
-   "y1": 34.7,
-   "h": 2.4,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "cubes"
-  },
-  {
-   "room": "209",
-   "label": "Beanbag",
-   "x0": 81,
-   "y0": 32,
-   "x1": 83,
-   "y1": 34,
-   "h": 1.3,
-   "z0": 0,
-   "color": "#8ea06a",
-   "shape": "beanbags"
-  },
-  {
-   "room": "209",
-   "label": "Small climbing wall + mat",
-   "x0": 79,
-   "y0": 24.25,
-   "x1": 84.4,
-   "y1": 24.6,
-   "h": 8,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "kidwall"
   },
   {
    "room": "210",
@@ -3149,131 +2814,11 @@
    "shape": "box"
   },
   {
-   "room": "401",
-   "label": "Genkan bench",
-   "x0": 18,
-   "y0": 58.6,
-   "x1": 21.6,
-   "y1": 59.6,
-   "h": 1.5,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "401",
-   "label": "Rammed earth wall",
-   "x0": 10.5,
-   "y0": 48.6,
-   "x1": 11.2,
-   "y1": 51.6,
-   "h": 9,
-   "z0": 0,
-   "color": "mat:rammed",
-   "shape": "box"
-  },
-  {
-   "room": "401",
-   "label": "Wall-mounted art",
-   "x0": 21.55,
-   "y0": 50,
-   "x1": 21.75,
-   "y1": 56,
-   "h": 4,
-   "z0": 3.5,
-   "color": "#b8836a",
-   "shape": "art"
-  },
-  {
-   "room": "402",
-   "label": "Coats",
-   "x0": 10.4,
-   "y0": 41.4,
-   "x1": 11.6,
-   "y1": 47.6,
-   "h": 7,
-   "z0": 0,
-   "color": "mat:honey",
-   "shape": "box"
-  },
-  {
-   "room": "403",
-   "label": "Integrated stone vanity",
-   "x0": 20.6,
-   "y0": 44.5,
-   "x1": 21.6,
-   "y1": 47.6,
-   "h": 2.8,
-   "z0": 0,
-   "color": "mat:stone",
-   "shape": "box"
-  },
-  {
-   "room": "403",
-   "label": "WC",
-   "x0": 16.4,
-   "y0": 41.4,
-   "x1": 18.6,
-   "y1": 43.4,
-   "h": 1.4,
-   "z0": 0,
-   "color": "#f3f1ec",
-   "shape": "box"
-  },
-  {
-   "room": "404",
-   "label": "Tokonoma",
-   "x0": 10.4,
-   "y0": 33,
-   "x1": 12,
-   "y1": 38,
-   "h": 1.0,
-   "z0": 0,
-   "color": "#6b4a33",
-   "shape": "box"
-  },
-  {
-   "room": "404",
-   "label": "Low table + zabuton",
-   "x0": 14.5,
-   "y0": 32.5,
-   "x1": 18.5,
-   "y1": 36.5,
-   "h": 1.2,
-   "z0": 0,
-   "color": "#6b4a33",
-   "shape": "lowtable"
-  },
-  {
-   "room": "404",
-   "label": "Paper andon lantern",
-   "x0": 19.5,
-   "y0": 38.6,
-   "x1": 20.5,
-   "y1": 39.6,
-   "h": 2.2,
-   "z0": 0,
-   "color": "#f4ecdc",
-   "shape": "andon"
-  },
-  {
-   "room": "404",
-   "label": "Shoji screens",
-   "x0": 21.55,
-   "y0": 30,
-   "x1": 21.75,
-   "y1": 34.5,
-   "h": 8,
-   "z0": 0,
-   "color": "#f4ecdc",
-   "shape": "shoji"
-  },
-  {
    "room": "405",
    "label": "Gear racks",
-   "x0": 10.4,
+   "x0": 18.4,
    "y0": 22.4,
-   "x1": 21.6,
+   "x1": 29.6,
    "y1": 24,
    "h": 7,
    "z0": 0,
@@ -3459,15 +3004,579 @@
    "z0": 0,
    "color": "#cdbfa6",
    "shape": "box"
+  },
+  {
+   "room": "102",
+   "label": "Honey-oak dining table (8)",
+   "x0": 39,
+   "y0": 64,
+   "x1": 47,
+   "y1": 68,
+   "h": 2.5,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "table"
+  },
+  {
+   "room": "102",
+   "label": "Chairs",
+   "x0": 39.5,
+   "y0": 62.4,
+   "x1": 46.5,
+   "y1": 63.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#d9cbb5",
+   "shape": "chairs"
+  },
+  {
+   "room": "102",
+   "label": "Chairs",
+   "x0": 39.5,
+   "y0": 68.4,
+   "x1": 46.5,
+   "y1": 69.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "#d9cbb5",
+   "shape": "chairs"
+  },
+  {
+   "room": "102",
+   "label": "Paper lantern",
+   "x0": 41,
+   "y0": 64.5,
+   "x1": 45,
+   "y1": 67.5,
+   "h": 2.4,
+   "z0": 6.6,
+   "color": "#f4ecdc",
+   "shape": "lantern"
+  },
+  {
+   "room": "102",
+   "label": "Shoji screens",
+   "x0": 49.7,
+   "y0": 72.5,
+   "x1": 50.0,
+   "y1": 78.8,
+   "h": 8,
+   "z0": 0,
+   "color": "#f4ecdc",
+   "shape": "shoji"
+  },
+  {
+   "room": "103",
+   "label": "Conversation pit (18\" down)",
+   "x0": 51.5,
+   "y0": 61,
+   "x1": 67.5,
+   "y1": 73,
+   "h": -1.5,
+   "z0": 0,
+   "color": "#e6dfd2",
+   "shape": "pit"
+  },
+  {
+   "room": "103",
+   "label": "Low modular sofa (pit)",
+   "x0": 51.8,
+   "y0": 61.3,
+   "x1": 67.2,
+   "y1": 63.6,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "mat:linen",
+   "shape": "sofa"
+  },
+  {
+   "room": "103",
+   "label": "Low modular sofa (pit)",
+   "x0": 51.8,
+   "y0": 70.4,
+   "x1": 67.2,
+   "y1": 72.7,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "mat:linen",
+   "shape": "sofa"
+  },
+  {
+   "room": "103",
+   "label": "Low modular sofa (pit)",
+   "x0": 51.8,
+   "y0": 63.6,
+   "x1": 54.1,
+   "y1": 70.4,
+   "h": 1.0,
+   "z0": -1.5,
+   "color": "mat:linen",
+   "shape": "sofa"
+  },
+  {
+   "room": "103",
+   "label": "Coffee table",
+   "x0": 57,
+   "y0": 65.2,
+   "x1": 63,
+   "y1": 68.8,
+   "h": 0.8,
+   "z0": -1.5,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "103",
+   "label": "Paper lanterns",
+   "x0": 55.5,
+   "y0": 64,
+   "x1": 63.5,
+   "y1": 70,
+   "h": 2.0,
+   "z0": 7.0,
+   "color": "#f4ecdc",
+   "shape": "lanterns"
+  },
+  {
+   "room": "103",
+   "label": "Linear gas fire in plaster plinth",
+   "x0": 69.4,
+   "y0": 61,
+   "x1": 71.4,
+   "y1": 73,
+   "h": 1.6,
+   "z0": 0,
+   "color": "mat:plaster",
+   "shape": "fire"
+  },
+  {
+   "room": "103",
+   "label": "Leather lounge chair",
+   "x0": 52,
+   "y0": 74.6,
+   "x1": 55.2,
+   "y1": 78,
+   "h": 2.6,
+   "z0": 0,
+   "color": "#8a5a34",
+   "shape": "lounge"
+  },
+  {
+   "room": "103",
+   "label": "Wall-mounted art",
+   "x0": 71.4,
+   "y0": 64,
+   "x1": 71.6,
+   "y1": 71,
+   "h": 4.2,
+   "z0": 3.8,
+   "color": "#c9b48e",
+   "shape": "art"
+  },
+  {
+   "room": "204",
+   "label": "Low bench",
+   "x0": 76.8,
+   "y0": 29.5,
+   "x1": 77.6,
+   "y1": 44.5,
+   "h": 1.5,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "204",
+   "label": "Wall-mounted art",
+   "x0": 77.55,
+   "y0": 34,
+   "x1": 77.75,
+   "y1": 40,
+   "h": 3.5,
+   "z0": 4,
+   "color": "#a7b39a",
+   "shape": "art"
+  },
+  {
+   "room": "205",
+   "label": "Washer/dryer",
+   "x0": 79,
+   "y0": 56.6,
+   "x1": 83.2,
+   "y1": 58.6,
+   "h": 3,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "205",
+   "label": "Fold counter",
+   "x0": 83.6,
+   "y0": 56.6,
+   "x1": 87.6,
+   "y1": 58.6,
+   "h": 3,
+   "z0": 0,
+   "color": "mat:lacq",
+   "shape": "box"
+  },
+  {
+   "room": "206",
+   "label": "Air handler + ERV",
+   "x0": 94,
+   "y0": 55,
+   "x1": 97.6,
+   "y1": 58.6,
+   "h": 6,
+   "z0": 0,
+   "color": "mat:steel",
+   "shape": "box"
+  },
+  {
+   "room": "206",
+   "label": "Linen shelves",
+   "x0": 88.4,
+   "y0": 49.4,
+   "x1": 92,
+   "y1": 51,
+   "h": 7,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "207",
+   "label": "Window-seat reading nook",
+   "x0": 96.2,
+   "y0": 39,
+   "x1": 97.8,
+   "y1": 45,
+   "h": 1.6,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "seat"
+  },
+  {
+   "room": "207",
+   "label": "Twin bed",
+   "x0": 89.5,
+   "y0": 42,
+   "x1": 93.1,
+   "y1": 48.6,
+   "h": 1.4,
+   "z0": 0,
+   "color": "mat:linen",
+   "shape": "bed"
+  },
+  {
+   "room": "207",
+   "label": "Desk by the window",
+   "x0": 94,
+   "y0": 36.9,
+   "x1": 97.8,
+   "y1": 38.5,
+   "h": 2.5,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "table"
+  },
+  {
+   "room": "207",
+   "label": "Wardrobe",
+   "x0": 85.3,
+   "y0": 36.9,
+   "x1": 87.3,
+   "y1": 39.6,
+   "h": 7,
+   "z0": 0,
+   "color": "mat:lacq",
+   "shape": "box"
+  },
+  {
+   "room": "207",
+   "label": "Low cube shelves + bins",
+   "x0": 87.6,
+   "y0": 36.9,
+   "x1": 91.6,
+   "y1": 38.2,
+   "h": 2.4,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "cubes"
+  },
+  {
+   "room": "207",
+   "label": "Beanbag",
+   "x0": 90,
+   "y0": 39,
+   "x1": 92.5,
+   "y1": 41.5,
+   "h": 1.3,
+   "z0": 0,
+   "color": "#c98f6a",
+   "shape": "beanbags"
+  },
+  {
+   "room": "207",
+   "label": "Small bouldering wall + mat",
+   "x0": 93.5,
+   "y0": 48.65,
+   "x1": 97.8,
+   "y1": 48.95,
+   "h": 8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "kidwall"
+  },
+  {
+   "room": "208",
+   "label": "Tub-shower",
+   "x0": 78.4,
+   "y0": 30.4,
+   "x1": 84.6,
+   "y1": 33,
+   "h": 1.8,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "Vanity 1",
+   "x0": 78.4,
+   "y0": 35,
+   "x1": 79.7,
+   "y1": 39.5,
+   "h": 2.8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "Vanity 2",
+   "x0": 83.3,
+   "y0": 36,
+   "x1": 84.6,
+   "y1": 40,
+   "h": 2.8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "208",
+   "label": "WC",
+   "x0": 78.4,
+   "y0": 41.5,
+   "x1": 80.4,
+   "y1": 43.5,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "209",
+   "label": "Window-seat reading nook",
+   "x0": 96.2,
+   "y0": 28,
+   "x1": 97.8,
+   "y1": 34,
+   "h": 1.6,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "seat"
+  },
+  {
+   "room": "209",
+   "label": "Queen bed (guest)",
+   "x0": 88.5,
+   "y0": 29.6,
+   "x1": 93.7,
+   "y1": 36.3,
+   "h": 1.6,
+   "z0": 0,
+   "color": "mat:linen",
+   "shape": "bed"
+  },
+  {
+   "room": "209",
+   "label": "Desk by the window",
+   "x0": 94,
+   "y0": 24.4,
+   "x1": 97.8,
+   "y1": 26,
+   "h": 2.5,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "table"
+  },
+  {
+   "room": "209",
+   "label": "Low cube shelves + bins",
+   "x0": 94.4,
+   "y0": 35.1,
+   "x1": 97.8,
+   "y1": 36.3,
+   "h": 2.4,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "cubes"
+  },
+  {
+   "room": "209",
+   "label": "Small climbing wall + mat",
+   "x0": 86,
+   "y0": 24.25,
+   "x1": 93.5,
+   "y1": 24.6,
+   "h": 8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "kidwall"
+  },
+  {
+   "room": "212",
+   "label": "Wardrobe",
+   "x0": 79,
+   "y0": 27.8,
+   "x1": 84.6,
+   "y1": 29.8,
+   "h": 7,
+   "z0": 0,
+   "color": "mat:lacq",
+   "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Genkan bench",
+   "x0": 26,
+   "y0": 53.6,
+   "x1": 29.6,
+   "y1": 54.6,
+   "h": 1.5,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Rammed earth wall",
+   "x0": 19,
+   "y0": 54.3,
+   "x1": 25,
+   "y1": 54.8,
+   "h": 9,
+   "z0": 0,
+   "color": "mat:rammed",
+   "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Wall-mounted art",
+   "x0": 25,
+   "y0": 46.25,
+   "x1": 29,
+   "y1": 46.45,
+   "h": 4,
+   "z0": 3.5,
+   "color": "#b8836a",
+   "shape": "art"
+  },
+  {
+   "room": "402",
+   "label": "Coats",
+   "x0": 18.4,
+   "y0": 40.4,
+   "x1": 19.6,
+   "y1": 45.6,
+   "h": 7,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "box"
+  },
+  {
+   "room": "403",
+   "label": "Integrated stone vanity",
+   "x0": 25.5,
+   "y0": 40.3,
+   "x1": 28.5,
+   "y1": 41.3,
+   "h": 2.8,
+   "z0": 0,
+   "color": "mat:stone",
+   "shape": "box"
+  },
+  {
+   "room": "403",
+   "label": "WC",
+   "x0": 24.4,
+   "y0": 43.6,
+   "x1": 26.4,
+   "y1": 45.6,
+   "h": 1.4,
+   "z0": 0,
+   "color": "#f3f1ec",
+   "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Tokonoma",
+   "x0": 18.4,
+   "y0": 32,
+   "x1": 20,
+   "y1": 37,
+   "h": 1.0,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Low table + zabuton",
+   "x0": 22.5,
+   "y0": 32,
+   "x1": 26.5,
+   "y1": 36,
+   "h": 1.2,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "lowtable"
+  },
+  {
+   "room": "404",
+   "label": "Paper andon lantern",
+   "x0": 27.5,
+   "y0": 37.6,
+   "x1": 28.5,
+   "y1": 38.6,
+   "h": 2.2,
+   "z0": 0,
+   "color": "#f4ecdc",
+   "shape": "andon"
+  },
+  {
+   "room": "404",
+   "label": "Shoji screens",
+   "x0": 29.55,
+   "y0": 30,
+   "x1": 29.75,
+   "y1": 34.5,
+   "h": 8,
+   "z0": 0,
+   "color": "#f4ecdc",
+   "shape": "shoji"
   }
  ],
  "roofs": [
   {
    "id": "living",
-   "x0": 0,
-   "y0": 60,
+   "x0": 10,
+   "y0": 55,
    "x1": 72,
-   "y1": 84,
+   "y1": 79,
    "oh": {
     "n": 8,
     "s": 6,
@@ -3475,7 +3584,7 @@
     "e": 0
    },
    "type": "butterfly",
-   "valley": 72,
+   "valley": 67,
    "hv": 12.6,
    "he": 14.6,
    "wall": 12
@@ -3483,9 +3592,9 @@
   {
    "id": "master",
    "x0": 72,
-   "y0": 64,
+   "y0": 59,
    "x1": 98,
-   "y1": 88,
+   "y1": 83,
    "oh": {
     "n": 6,
     "s": 0,
@@ -3499,9 +3608,9 @@
    "holes": [
     [
      93,
-     83,
+     78,
      97,
-     87
+     82
     ]
    ]
   },
@@ -3510,7 +3619,7 @@
    "x0": 72,
    "y0": 14,
    "x1": 98,
-   "y1": 64,
+   "y1": 59,
    "oh": {
     "n": 0,
     "s": 4,
@@ -3566,10 +3675,10 @@
   },
   {
    "id": "west",
-   "x0": 10,
+   "x0": 18,
    "y0": 22,
-   "x1": 28,
-   "y1": 60,
+   "x1": 36,
+   "y1": 55,
    "oh": {
     "n": 0,
     "s": 0,
@@ -3590,10 +3699,10 @@
    "y1": 150
   },
   "courtyard": {
-   "x0": 28,
+   "x0": 36,
    "y0": 27,
    "x1": 72,
-   "y1": 60
+   "y1": 55
   },
   "pool": {
    "x0": 54,
@@ -3623,17 +3732,17 @@
    "label": "Outdoor Shower"
   },
   "veg": {
-   "x0": -36,
-   "y0": 66,
-   "x1": -12,
-   "y1": 88,
+   "x0": -30,
+   "y0": 64,
+   "x1": -6,
+   "y1": 86,
    "label": "Vegetable Garden"
   },
   "bikes": {
-   "x0": -5,
-   "y0": 61,
-   "x1": -1.5,
-   "y1": 71,
+   "x0": 4,
+   "y0": 62,
+   "x1": 7.5,
+   "y1": 72,
    "label": "Bike Racks"
   },
   "carport": {
@@ -3646,84 +3755,84 @@
   "entrycourt": {
    "x0": -20,
    "y0": 26,
-   "x1": 10,
-   "y1": 60
+   "x1": 18,
+   "y1": 55
   },
   "pergola": {
-   "x0": 8,
-   "y0": 86,
-   "x1": 26,
-   "y1": 100,
+   "x0": 19,
+   "y0": 81,
+   "x1": 37,
+   "y1": 95,
    "label": "Pergola Dining"
   },
   "veranda": {
-   "x0": 26,
-   "y0": 84,
+   "x0": 36,
+   "y0": 79,
    "x1": 72,
-   "y1": 92,
+   "y1": 87,
    "label": "Covered Veranda"
   },
   "firepit": {
    "cx": 58,
-   "cy": 104,
+   "cy": 99,
    "r": 7,
    "label": "Round Stone Fire Pit"
   },
   "zen": {
-   "x0": 34,
-   "y0": 33,
-   "x1": 50,
-   "y1": 44,
+   "x0": 39,
+   "y0": 30,
+   "x1": 52,
+   "y1": 40,
    "label": "Raked Gravel"
   },
   "water": {
-   "x0": 55,
-   "y0": 35,
-   "x1": 66,
-   "y1": 44,
+   "x0": 57,
+   "y0": 31,
+   "x1": 68,
+   "y1": 39,
    "label": "Planted Water Court"
   },
   "lawn": {
-   "x0": 34,
-   "y0": 46,
-   "x1": 66,
-   "y1": 54
+   "x0": 39,
+   "y0": 42,
+   "x1": 69,
+   "y1": 50
   },
   "shadetree": {
-   "cx": 46,
-   "cy": 48,
-   "r": 8
+   "cx": 53,
+   "cy": 45,
+   "r": 6
   },
   "maples": [
    [
+    66.5,
+    47.5
+   ],
+   [
+    40.5,
+    46.5
+   ],
+   [
+    39,
+    52.3
+   ],
+   [
     62,
-    50
-   ],
-   [
-    37,
-    50.5
-   ],
-   [
-    67.5,
-    33
-   ],
-   [
-    58.5,
-    51.5
+    51.8
    ]
   ],
   "lanterns": [
    [
-    53.5,
-    45
+    55,
+    40.6
    ],
    [
-    33.5,
-    45
+    38.5,
+    41
    ],
    [
-    66.5,
-    46.5
+    69.5,
+    42
    ]
   ],
   "cshower": {
@@ -3750,61 +3859,61 @@
   },
   "orchard": [
    [
-    -62,
-    72
+    -56,
+    70
    ],
    [
-    -52,
-    72
+    -46,
+    70
    ],
    [
-    -62,
-    82
+    -56,
+    80
    ],
    [
-    -52,
-    82
+    -46,
+    80
    ],
    [
-    -62,
-    92
+    -56,
+    90
    ],
    [
-    -52,
-    92
+    -46,
+    90
    ],
    [
-    -42,
-    96
+    -36,
+    94
    ]
   ],
   "walkway": {
    "x0": -20,
-   "y0": 51,
-   "x1": 5,
-   "y1": 57,
+   "y0": 48,
+   "x1": 13,
+   "y1": 54,
    "h": 9,
    "label": "Covered Walkway"
   },
   "frontgarden": [
    [
     -16,
-    40,
-    -4,
-    48
+    38,
+    -2,
+    46
    ],
    [
     -16,
-    59,
-    4,
-    64
+    57,
+    2,
+    62
    ]
   ],
   "bathgarden": {
    "x0": 98,
-   "y0": 74,
+   "y0": 69,
    "x1": 106,
-   "y1": 88,
+   "y1": 83,
    "label": "Bath Garden"
   },
   "meadow_label": [
@@ -3844,12 +3953,12 @@
  "cladOvr": {
   "401": "rammed"
  },
- "total": 5952,
+ "total": 5272,
  "courtyard": {
-  "x0": 28,
+  "x0": 36,
   "y0": 27,
   "x1": 72,
-  "y1": 60
+  "y1": 55
  },
  "covered": [
   {

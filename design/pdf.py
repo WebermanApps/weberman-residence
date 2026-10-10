@@ -18,7 +18,7 @@ registerFontFamily("Sans",normal="Sans",bold="SansB",italic="Sans",boldItalic="S
 INK=HexColor("#34382d"); OLIVE=HexColor("#4d593e"); MUTED=HexColor("#7d8073"); PAPER=HexColor("#f7f5ef"); LINE=HexColor("#dddcd3"); TERRA=HexColor("#a3613d")
 W,H=landscape(letter); M=36
 OUT="/workspace/dreamhome/v2/Weberman_Residence_Plan.pdf"
-S="/workspace/dreamhome/v2/shots/"; S4=S+"v4/"; D="/workspace/dreamhome/v2/out/"
+S="/workspace/dreamhome/v2/shots/"; S4=S+"v5/"; D="/workspace/dreamhome/v2/out/"
 URL="https://webermanapps.github.io/weberman-residence/"; REPO="https://github.com/WebermanApps/weberman-residence"
 c=canvas.Canvas(OUT,pagesize=(W,H)); c.setTitle("Weberman Residence: Spatial Study"); c.setAuthor("Grok Bot for Max Weberman")
 body=ParagraphStyle("b",fontName="Sans",fontSize=10,leading=14.2,textColor=INK,spaceAfter=9)
@@ -55,7 +55,7 @@ c.setFillColor(OLIVE); c.setFont("SansB",8); c.drawString(x0,H-M-10,"A MOUNTAIN 
 c.setFillColor(INK); c.setFont("Serif",30); c.drawString(x0,H-M-50,"Weberman"); c.drawString(x0,H-M-84,"Residence:")
 c.setFillColor(HexColor("#75805f")); c.drawString(x0,H-M-118,"Spatial Study")
 c.setFillColor(INK)
-stats=[("Conditioned Area",f"{T:,} SF  ·  {T*SF2M2:,.0f} m²"),("Levels","One (single-level courtyard plan)"),("Footprint","98' × 88'  ·  29.9 × 26.8 m"),("Courtyard","44' × 33'  ·  13.4 × 10.1 m"),
+stats=[("Conditioned Area",f"{T:,} SF  ·  {T*SF2M2:,.0f} m²"),("Levels","One (single-level courtyard plan)"),("Footprint","94' × 83'  ·  28.7 × 25.3 m"),("Courtyard","36' × 28'  ·  11.0 × 8.5 m"),
        ("Bedrooms / Baths","3 bedrooms  ·  3.5 baths"),("Prepared","October 9, 2026  ·  for Max Weberman")]
 y=H-M-160
 for k,v in stats:
@@ -67,14 +67,14 @@ c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(M,M+20,"Aerial view f
 page("Design Concept","01 · Concept")
 cw=(W-2*M-30)/2
 para([
-"<b>One low house around one garden.</b> Four single-storey pavilions wrap a 44 × 33 ft courtyard, the heart of the house. The <b>Living Pavilion</b> faces north to the mountains, the <b>Sleeping Wing</b> runs along the quiet east side, the <b>Wellness + Gym Wing</b> sits on the sunny south side next to the pool, and <b>Studio + Arrival</b> on the west holds the entry, tatami room and office / music loft. A glazed engawa ties them together, so every trip through the house runs along the garden.",
+"<b>One low house around one garden.</b> Four single-storey pavilions wrap a 36 × 28 ft courtyard, the heart of the house. The <b>Living Pavilion</b> faces north to the mountains, the <b>Sleeping Wing</b> runs along the quiet east side, the <b>Wellness + Gym Wing</b> sits on the sunny south side next to the pool, and <b>Studio + Arrival</b> on the west holds the entry, tatami room and office / music loft. A glazed engawa ties them together, so every trip through the house runs along the garden.",
 "<b>Warm, low, open resort-modern.</b> Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, and low standing-seam roofs elsewhere. Outside it is a black timber house: shou sugi ban cladding under standing-seam metal roofs, with a rammed-earth wall at the entry, flagstone terraces and a gravel drive. Inside: lime plaster, honey oak and oak herringbone, black stone, marble, green zellige, cedar and aspen. The room-by-room swipe decks removed white render, glass at the entry, timber decks, slat enclosures, flat roofs, wood-burning stoves, white hammams, glass shower enclosures, brass taps in the bath, bunk beds and wood headboards. No gables, logs, stone fireplaces, clay tile, freestanding tubs or koi ponds.",
 "<b>Fine, not showy.</b> The craft is in the details: pocketing glass that disappears into the walls, slim black frames, a hinoki soaking tub under a skylight, cedar soffits, a 10-ft marble island against green zellige, and a sculpted wood ceiling over the music loft. There is one big mountain window rather than walls of glass everywhere.",
 ],M,M+30,cw,H-2*M-100)
 rows=[["Loved in the swipe test","Where it lives in the plan"],
-["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa on three sides; flagstone terrace under the eaves (no timber deck)"],
+["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa on the east and west, an open-air covered walkway on the south, and a flagstone terrace under the eaves"],
 ["Deep eaves","6' to 8' overhangs, cedar soffits"],["Disappearing glass walls","Pocketing sliders from the living, dining and galleries to the courtyard"],
-["Big mountain-view window","28-ft fixed window in the living room; full-height glass in the master"],["Tatami room","8-mat room with a tokonoma, off the west engawa"],
+["Big mountain-view window","20-ft fixed window in the living room; full-height glass in the master"],["Tatami room","8-mat room with a tokonoma, off the west engawa"],
 ["Japanese soaking tub","Hinoki tub at the master bath corner window"],["Loft-like office","24' × 22' office / music loft with a 14' ceiling"],
 ["Sauna + outdoor shower","Cedar sauna with backlit aspen benches and an electric heater, stone steam room, zellige plunge, pool and courtyard showers"],["Climbing wall","Kids' bouldering wall in an open-air Climbing Pavilion by the gym, sprint lane and bike rack"],
 ["Liked: conversation pit, butterfly roof, pergola, fire pit, meadow","Sunken pit with a low modular sofa, butterfly roof, pergola dining, round stone fire pit, bale pavilion, meadow, vegetable garden and fruit trees"]]
@@ -103,7 +103,7 @@ cols=[[],[]]
 for i,w in enumerate(wings):
     rs=[r for r in rooms if r['wing']==w]
     data=[[w,"","Size","SF","m²"]]+[[r['id'],r['name']+("" if r['cond'] else " (uncond.)"),f"{r['w']}' × {r['d']}'",f"{r['area']:,}",f"{r['area']*SF2M2:.1f}"] for r in rs]
-    tot=sum(r['area'] for r in rs if r['cond']); data.append(["","Subtotal (conditioned)","",f"{tot:,}",f"{tot*SF2M2:.1f}"])
+    tot=sum(r['area'] for r in rs if r['cond']); tot=int(tot) if tot==int(tot) else tot; data.append(["","Subtotal (conditioned)","",f"{tot:,}",f"{tot*SF2M2:.1f}"])
     cols[i//2].append(data)
 cols[1].append([["Covered Outdoor (Not Conditioned)","","Size","SF","m²"]]+[[cv['id'],cv['name'],f"{cv['w']}' × {cv['d']}'",f"{cv['area']:,}",f"{cv['area']*SF2M2:.1f}"] for cv in COVERED]+[["","Subtotal (covered, open-air)","",f"{sum(cv['area'] for cv in COVERED):,}",f"{sum(cv['area'] for cv in COVERED)*SF2M2:.1f}"]])
 colw=(W-2*M-30)/2
@@ -117,13 +117,29 @@ for ci,col in enumerate(cols):
         _,th=t.wrapOn(c,colw,500); t.drawOn(c,M+ci*(colw+30),y-th); y-=th+16
 c.setFillColor(HexColor("#e0e6d5")); c.rect(M+colw+30,M+30,colw,34,fill=1,stroke=0)
 c.setFillColor(OLIVE); c.setFont("SansB",11); c.drawString(M+colw+40,M+43,"Total Conditioned"); c.drawRightString(M+2*colw+20,M+43,f"{T:,} SF  ·  {T*SF2M2:,.0f} m²")
-c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(M+colw+30,M+18,"Excludes the Climbing Pavilion (covered outdoor), pool equipment room, carport, veranda, pergola and courtyard.")
+c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(M+colw+30,M+18,"Excludes the Climbing Pavilion and South Covered Walkway (covered outdoor), pool equipment room, carport, veranda, pergola and courtyard.")
 # 6 screenshots
 page("Interactive Model Screenshots","05 · Live model  ·  "+URL)
 gw=(W-2*M-20)/2; gh=(H-2*M-130)/3
 for i,(f,cap) in enumerate([("desktop_aerial","Aerial: black timber pavilions under standing-seam roofs"),("desktop_courtyard","Courtyard: shade tree, teak bench, maples, lanterns, water court"),("desktop_kitchen_living","Kitchen + living: marble island, zellige, herringbone, conversation pit"),("desktop_office","Office / music loft: sit-stand desk to the garden, studio desk, guitar wall"),("desktop_gym","Gym: rig with rings and rope, Cadillac, reformer, rower, mirror wall"),("desktop_master_bath","Master bath: hinoki tub by the window, black stone, skylight")]):
     x=M+(i%2)*(gw+20); y=H-M-62-(i//2+1)*gh-(i//2)*20
     img(S4+f+".png",x,y,gw,gh-6); c.setFont("Sans",7.2); c.setFillColor(MUTED); c.drawString(x,y-9,cap)
+page("Size Reduction","04b · Revision 10.10.26  ·  5,952 SF to %s SF conditioned" % f"{T:,}")
+from design import rooms as _R
+BEFORE={"102":("Dining","18' × 24'",432),"103":("Living + Conversation Pit","28' × 24'",672),"207":("Kids' Room 1","20' × 11'",220),"208":("Jack-and-Jill Bath","20' × 8'",160),"209":("Kids' Room 2 / Guest","20' × 11'",220),
+ "204":("East Engawa Gallery","6' × 50'",300),"406":("West Engawa Gallery","6' × 38'",228),"301":("South Engawa Gallery","44' × 5'",220),"401":("Entry Genkan","12' × 12'",144),"402":("Coat + Shoe Closet","6' × 7'",42),"403":("Powder Room","6' × 7'",42),"404":("Tatami Room","12' × 13'",156),
+ "212":("(new) Kids' Entry + Closet","-",0),"213":("(new) Kids' Entry","-",0)}
+def _ft(v): return (f"{v:g}'")
+rr=[["Room","Before","SF","After","SF","Change"]]
+for rid,(nm,bs,ba) in BEFORE.items():
+    r=[x for x in _R if x['id']==rid][0]; a=r['area'] if r['cond'] else 0
+    rr.append([f"{rid}  {r['name']}"+("" if r['cond'] else " (now open-air)"),bs,f"{ba:g}",f"{_ft(r['w'])} × {_ft(r['d'])}",f"{a:g}",f"{a-ba:+g}"])
+rr.append(["Courtyard (open to sky)","44' × 33'","1,452","36' × 28'","1,008","-444"])
+rr.append(["Total conditioned","","5,952","",f"{T:,}",f"{T-5952:+,}"])
+tt=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(rr)],colWidths=[(W-2*M)*k for k in (0.34,0.13,0.09,0.13,0.09,0.09)])
+tt.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("TOPPADDING",(0,0),(-1,-1),2.6),("BOTTOMPADDING",(0,0),(-1,-1),2.6),("BACKGROUND",(0,-1),(-1,-1),HexColor("#e0e6d5"))]))
+_,th=tt.wrapOn(c,W-2*M,800); tt.drawOn(c,M,H-M-62-th)
+para(["<b>What stayed the same.</b> The master suite, office / music loft, exercise room and wellness wing (wet room, sauna, steam room, changing) keep their sizes. The master suite moved 5 ft south with the living pavilion, and the west wing moved 8 ft east to close up the courtyard. Kitchen (16 × 24) and the 16 × 12 conversation pit are unchanged. The galleries shortened with the courtyard; the west wing rooms lost 5 ft of length to match (tatami is now a true 12 × 12 eight-mat room). The south gallery became an open-air covered walkway under the wellness-wing eave."],M,M+20,W-2*M,H-2*M-90-th,bodys)
 page("Climbing Pavilion","05b · Revision 10.10.26  ·  climbing wall moved outdoors")
 img(S+"desktop_climb.png",M,M+120,W-2*M,H-2*M-182)
 para(["<b>What changed.</b> The kids' climbing wall left the exercise room and now has its own open-air pavilion, 18 × 18 ft (324 SF covered, not conditioned). It has a fir post-and-beam frame, a standing-seam roof with 5-ft eaves and a charred-timber fascia to match the house, and a poured-rubber soft-fall surface. A 16-ft-wide, 12-ft-high bouldering wall faces south onto the sprint lane, with a crash pad and a 4-bike rack. It sits just west of the office and exercise room, so the gym, lane, wall and bikes form one active zone. The gym's west wall is now a full-height storage wall with a wall-mounted rig and rings."],M,M+10,W-2*M,100,bodys)
@@ -153,7 +169,7 @@ while start<len(allrows):
 # 7 open questions
 page("Open Design Questions for Max","07 · Next steps")
 qs=["<b>Site and orientation.</b> Is there a real parcel? The plan assumes the mountain view is to the north and a gentle slope. A view to the west or south would mean rotating the courtyard. A steeper lot could become the gentle split (living pavilion 2 to 3 steps down).",
-"<b>Size.</b> At 5,952 SF this is generous. The three glazed engawa galleries add about 750 SF. Options: make the south engawa an open-air covered walkway (about -220 SF), trim the kids' rooms and office by 2 ft each, or drop the tatami room into the west engawa. Any of these gets toward 5,000 to 5,400 SF.",
+"<b>Size.</b> Trimmed from 5,952 to 5,272 SF (smaller kids' rooms and Jack-and-Jill, a 36 × 28 courtyard, tighter dining and living, and an open-air south walkway). Further options if needed: drop the two kids' entry vestibules into the rooms, or fold the tatami room into the west engawa. Any of these gets toward 5,000 to 5,400 SF.",
 "<b>Garage.</b> The plan shows an open two-car carport. Do you want an enclosed garage or a ski / bike workshop? It would sit beside the mudroom.",
 "<b>Guest strategy.</b> Kids' Room 2 is the guest room and uses the Guest / Pool Bath across the engawa. Do you want a separate guest suite instead (for example, the tatami room with its own bath), or a casita by the pool?",
 "<b>Music room acoustics.</b> How loud do you play, and do you record? Full isolation (room-in-room, floated floor, sound-lock vestibule) costs more than the double-stud walls assumed here.",
