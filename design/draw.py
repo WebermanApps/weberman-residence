@@ -109,25 +109,28 @@ def courtyard_art(ax, lw=1):
     c=COURTYARD
     ax.add_patch(Rectangle((c['x0'],c['y0']),c['x1']-c['x0'],c['y1']-c['y0'],fc="#efeadf",ec="none",zorder=1))
     # engawa deck under eaves (4 ft)
-    for (x,y,w,h) in [(c['x0'],c['y1']-4,c['x1']-c['x0'],4),(c['x0'],c['y0'],c['x1']-c['x0'],4),(c['x0'],c['y0']+4,4,c['y1']-c['y0']-8),(c['x1']-4,c['y0']+4,4,c['y1']-c['y0']-8)]:
-        ax.add_patch(Rectangle((x,y),w,h,fc="#e2d2b8",ec="#c2ab88",lw=0.3*lw,zorder=1.5))
-        # board lines
-        if w>h:
-            for yy in [y+i*0.5 for i in range(1,int(h/0.5))]: ax.plot([x,x+w],[yy,yy],color="#d3bf9f",lw=0.15*lw,zorder=1.6)
-        else:
-            for xx in [x+i*0.5 for i in range(1,int(w/0.5))]: ax.plot([xx,xx],[y,y+h],color="#d3bf9f",lw=0.15*lw,zorder=1.6)
+    ax.add_patch(Rectangle((c['x0'],c['y0']),c['x1']-c['x0'],c['y1']-c['y0'],fc="#e4ded2",ec="#b9b1a3",lw=0.3*lw,zorder=1.4))
+    for i in range(70):  # flagstone joints hint
+        x=c['x0']+((i*37)%100)/100*(c['x1']-c['x0']); y=c['y0']+((i*61)%100)/100*(c['y1']-c['y0'])
+        ax.plot([x,x+1.6],[y,y+0.7],color="#cbc3b5",lw=0.2*lw,zorder=1.45)
+    lw_=SITE['lawn']; ax.add_patch(Rectangle((lw_['x0'],lw_['y0']),lw_['x1']-lw_['x0'],lw_['y1']-lw_['y0'],fc="#cfdcb4",ec="#8ea06a",lw=0.3*lw,zorder=1.6))
     z=SITE['zen']
     ax.add_patch(Rectangle((z['x0'],z['y0']),z['x1']-z['x0'],z['y1']-z['y0'],fc="#ebe6dc",ec="#a9a395",lw=0.5*lw,zorder=1.7))
     for i in range(1,12):
         yy=z['y0']+i*(z['y1']-z['y0'])/12
         ax.plot([z['x0']+0.5,z['x1']-0.5],[yy,yy],color="#cfc8b9",lw=0.3*lw,zorder=1.8)
-    for (sx,sy,r) in [(41,44,1.6),(52,39,1.2),(54,46,0.9)]:
+    for (sx,sy,r) in [(38,37,1.6),(45.5,40.5,1.2),(47.5,36,0.9)]:
         ax.add_patch(Circle((sx,sy),r,fc="#9a958a",ec="#6d695f",lw=0.4*lw,zorder=2))
         ax.add_patch(Circle((sx,sy),r+0.9,fc="none",ec="#cfc8b9",lw=0.3*lw,zorder=1.9))
-    m=SITE['maple']; ax.add_patch(Circle((m['cx'],m['cy']),m['r'],fc="#d9a37e",ec="#a86a45",lw=0.5*lw,alpha=0.7,zorder=2))
-    for (sx,sy) in [(64,32.5),(66,36),(65,52),(62,55.5),(60,40.5)]:
-        ax.add_patch(Rectangle((sx-1,sy-0.7),2,1.4,fc="#c9c2b4",ec="#8e897e",lw=0.3*lw,zorder=2))
-    ax.add_patch(Circle((47,54),1.0,fc="#bcd6de",ec="#6d695f",lw=0.4*lw,zorder=2))
+    w_=SITE['water']; ax.add_patch(Rectangle((w_['x0'],w_['y0']),w_['x1']-w_['x0'],w_['y1']-w_['y0'],fc="#bcd6de",ec="#3a3b3b",lw=0.6*lw,zorder=1.8))
+    for i in range(10): ax.add_patch(Circle((w_['x0']+1+((i*41)%100)/100*9,w_['y0']+1+((i*67)%100)/100*7),0.45,fc="#8ea06a",ec="none",zorder=1.9))
+    ax.add_patch(Circle((w_['x0']-1.8,w_['y0']+2.5),1.2,fc="#c9c2b4",ec="#6d695f",lw=0.4*lw,zorder=2))
+    st=SITE['shadetree']; ax.add_patch(Circle((st['cx'],st['cy']),st['r'],fc="#a9bb84",ec="#6f8550",lw=0.5*lw,alpha=0.55,zorder=2.2))
+    from matplotlib.patches import Arc
+    ax.add_patch(Arc((st['cx'],st['cy']),12.4,12.4,theta1=189,theta2=279,color="#9c6a3c",lw=2.2*lw,zorder=2.3))
+    for (mx,my) in SITE['maples']: ax.add_patch(Circle((mx,my),2.6,fc="#d9a37e",ec="#a86a45",lw=0.4*lw,alpha=0.75,zorder=2.2))
+    for (lx,ly) in SITE['lanterns']: ax.add_patch(Rectangle((lx-0.5,ly-0.5),1,1,fc="#8e897e",ec=INK,lw=0.3*lw,zorder=2.3))
+    cs=SITE['cshower']; ax.add_patch(Rectangle((cs['x0'],cs['y0']),cs['x1']-cs['x0'],cs['y1']-cs['y0'],fc="#55524c",ec=INK,lw=0.4*lw,zorder=2))
 
 def room_labels(ax, fs=6.2, small=4.6):
     for r in rooms:
@@ -217,9 +220,11 @@ def floor_plan(path, overlay=False):
     climb_art(ax)
     ax.text(50,43.5,"COURTYARD",ha='center',fontsize=9,color=OLIVE,weight='bold',zorder=9,family=SERIF)
     ax.text(50,41.3,"44' × 33'  ·  1,452 SF open to sky",ha='center',fontsize=5.2,color=MUTED,zorder=9)
-    ax.text(47,36,"ZEN GARDEN",ha='center',fontsize=4.6,color=MUTED,zorder=9)
-    ax.text(63,49.8,"MAPLE",ha='center',fontsize=4.4,color="#a86a45",zorder=9)
-    ax.text(50,57.8,"ENGAWA DECK UNDER 6' EAVES",ha='center',fontsize=4.2,color="#8f7650",zorder=9)
+    ax.text(42,34.2,"RAKED GRAVEL",ha='center',fontsize=4.4,color=MUTED,zorder=9)
+    ax.text(60.5,39.5,"PLANTED\nWATER COURT",ha='center',va='center',fontsize=4.2,color="#2e6b80",zorder=9)
+    ax.text(46,51.5,"SHADE TREE + TEAK BENCH",ha='center',fontsize=4.2,color="#4e5f2f",zorder=9)
+    ax.text(50,57.8,"FLAGSTONE TERRACE UNDER 6' EAVES",ha='center',fontsize=4.2,color="#8f7650",zorder=9)
+    ax.text(69,26.3,"CRT. SHOWER",ha='center',fontsize=3.4,color=MUTED,zorder=9)
     draw_walls(ax)
     room_labels(ax)
     # dims
@@ -313,8 +318,12 @@ def site_plan(path):
     # outdoor program
     s=SITE
     d=s['pooldeck']; ax.add_patch(Rectangle((d['x0'],d['y0']),d['x1']-d['x0'],d['y1']-d['y0'],fc="#e6e0d2",ec="#b3ab98",lw=0.5,zorder=1))
-    p=s['pool']; ax.add_patch(Rectangle((p['x0'],p['y0']),p['x1']-p['x0'],p['y1']-p['y0'],fc="#bfdde6",ec="#4f8ea3",lw=0.8,zorder=1.2))
+    p=s['pool']; ax.add_patch(Rectangle((p['x0'],p['y0']),p['x1']-p['x0'],p['y1']-p['y0'],fc="#a9d1c6",ec="#3f7a6e",lw=0.8,zorder=1.2))
     ax.text(71,-16,"POOL\n34' × 12' (10.4 × 3.7 m)",ha='center',va='center',fontsize=8.0,color="#2e6b80",zorder=7)
+    ba=s['bale']; ax.add_patch(Rectangle((ba['x0']-3,ba['y0']-3),ba['x1']-ba['x0']+6,ba['y1']-ba['y0']+6,fc="#d6d0c3",ec=INK,lw=0.6,zorder=1.3)); ax.text((ba['x0']+ba['x1'])/2,ba['y0']-6,"BALE",ha='center',fontsize=6.5,zorder=7)
+    for (ox,oy) in s['orchard']: ax.add_patch(Circle((ox,oy),3.2,fc="#a9bb84",ec="#6f8550",lw=0.5,zorder=1.3))
+    ax.text(-52,100,"FRUIT TREES",ha='center',fontsize=6.5,zorder=7)
+    wk=s['walkway']; ax.add_patch(Rectangle((wk['x0'],wk['y0']),wk['x1']-wk['x0'],wk['y1']-wk['y0'],fc="#2e2c29",ec=INK,lw=0.5,alpha=0.85,zorder=1.35))
     l=s['lane']; ax.add_patch(Rectangle((l['x0'],l['y0']),l['x1']-l['x0'],l['y1']-l['y0'],fc="#a9c27c",ec="#6f8a45",lw=0.6,zorder=1.2))
     for i in range(0,21,5):
         x=l['x0']+i*3; ax.plot([x,x],[l['y0'],l['y1']],color="white",lw=0.8,zorder=1.3); ax.text(x,l['y0']-2.4,f"{i}",ha='center',fontsize=6.5,color="#4e5f2f",zorder=7)
@@ -329,7 +338,7 @@ def site_plan(path):
     pg=s['pergola']; ax.add_patch(Rectangle((pg['x0'],pg['y0']),pg['x1']-pg['x0'],pg['y1']-pg['y0'],fc="none",ec=INK,lw=0.6,ls=(0,(3,1.5)),zorder=3))
     ax.text(17,101.8,"PERGOLA DINING",ha='center',fontsize=7.2,zorder=7)
     f=s['firepit']; ax.add_patch(Circle((f['cx'],f['cy']),f['r'],fc="#d8cfbf",ec=INK,lw=0.6,zorder=3)); ax.add_patch(Circle((f['cx'],f['cy']),1.6,fc="#a3613d",ec="none",zorder=3.1))
-    ax.text(f['cx']+9,f['cy'],"SUNKEN FIRE PIT\n14' dia.",fontsize=7.2,va='center',zorder=7)
+    ax.text(f['cx']+9,f['cy'],"ROUND STONE FIRE PIT\n14' dia.",fontsize=7.2,va='center',zorder=7)
     ax.text(49,94.3,"COVERED VERANDA",ha='center',fontsize=7.0,zorder=7)
     ax.text(104,82,"BATH\nGARDEN",fontsize=6.4,ha='left',zorder=7)
     ax.text(100,-40,"WILDFLOWER MEADOW",fontsize=11.6,color="#7a6a3a",family=SERIF,zorder=7)
@@ -356,9 +365,9 @@ def site_plan(path):
            ("Conditioned area",f"{total_conditioned():,} SF · {total_conditioned()*SF2M2:,.0f} m²"),
            ("Courtyard","44' × 33' · 13.4 × 10.1 m"),("Pool","34' × 12' · 10.4 × 3.7 m, 4'-5' deep"),
            ("Turf sprint lane","75' × 8' · 22.9 × 2.4 m (20 yd + run-out)"),("Vegetable garden","24' × 22' · 4 raised beds"),
-           ("Carport","24' × 24' · open, standing seam"),("Fire pit","14' dia. sunken, north terrace"),
+           ("Carport","24' × 24' · modern black steel, covered walkway"),("Fire pit","Round stone, 14' dia., north terrace"),
            ("Pergola dining","18' × 14' off the kitchen"),("Bike racks","6 at mudroom door + 4 at climbing pavilion"),("Climbing pavilion","18' × 18' covered, open-air · soft-fall · not conditioned"),
-           ("Outdoor shower","By the pool, slat-screened"),]
+           ("Outdoor showers","By the pool + in the courtyard, charred-timber walls"),("Pool + bale","Green stone tile, flagstone deck, bale pavilion"),]
     for k,v in items:
         fig.text(sx,y,k.upper(),fontsize=6.5,weight='bold',color=OLIVE); fig.text(sx,y-0.013,v,fontsize=7,color=INK); y-=0.034
     y-=0.01

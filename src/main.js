@@ -2,6 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
+import { setQuality } from './textures.js';
 import { buildAll, pickMeshes, cutPlane, W, CX, CY, OUTDOOR, P } from './build.js';
 
 const $ = (id) => document.getElementById(id);
@@ -21,7 +22,7 @@ host.appendChild(renderer.domElement);
 const labelR = new CSS2DRenderer(); labelR.domElement.style.position = 'absolute'; labelR.domElement.style.inset = '0'; labelR.domElement.style.pointerEvents = 'none'; host.appendChild(labelR.domElement);
 
 const scene = new THREE.Scene();
-const groups = {}; for (const k of ['walls', 'glass', 'roof', 'floors', 'furn', 'site', 'ground', 'mtn', 'pick', 'labels', 'fx']) { groups[k] = new THREE.Group(); groups[k].name = k; scene.add(groups[k]); }
+const groups = {}; for (const k of ['walls', 'glass', 'roof', 'floors', 'furn', 'detail', 'site', 'ground', 'mtn', 'pick', 'labels', 'fx']) { groups[k] = new THREE.Group(); groups[k].name = k; scene.add(groups[k]); }
 groups.pick.visible = true;
 
 // sky dome
@@ -42,7 +43,9 @@ scene.add(sun); scene.add(sun.target);
 const interiorLights = [];
 
 // ---------- build ----------
+setQuality(isMobile() ? 0.5 : 1);
 const { M, blocking, roofUnder } = buildAll(groups);
+const lampMats = new Set(); scene.traverse(o => { if (o.material && o.material.name === 'lamp') lampMats.add(o.material); });
 let fireMat = null; groups.site.traverse(o => { if (o.material && o.material.name === 'fire') fireMat = o.material; });
 for (const r of P.rooms) {
   if (r.area < 90 || !r.cond) continue;
@@ -78,11 +81,14 @@ pcontrols.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }; pcontr
 
 const VIEWS = {
   aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: true, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
-  courtyard: { name: 'Courtyard', cam: [35.5, 34.5, 5.6], tgt: [60, 64, 5.0], roof: true, title: 'The courtyard.', kicker: 'VIEW · ENGAWA DECK, LOOKING NORTH-EAST', fov: 62 },
+  courtyard: { name: 'Courtyard', cam: [31.5, 30.5, 6.2], tgt: [58, 52, 6.5], roof: true, title: 'The courtyard.', kicker: 'VIEW · ENGAWA DECK, LOOKING NORTH-EAST', fov: 62 },
   living: { name: 'Living', cam: [44, 22, 56], tgt: [56, 72, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
   office: { name: 'Office', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Office / music loft.', kicker: 'ROOM 407 · ROOF HIDDEN' },
   wellness: { name: 'Wellness', cam: [70, -44, 58], tgt: [52, 8, 0], roof: false, cut: 8, title: 'Wellness + gym wing.', kicker: 'ROOMS 301-306 · ON THE POOL · ROOF HIDDEN' },
+  bath: { name: 'Bath', cam: [93, 71, 22], tgt: [93.8, 83, 0], roof: false, cut: 8, title: 'Master bath.', kicker: 'ROOM 202 · HINOKI SOAKING TUB BY THE WINDOW, SKYLIGHT', fov: 55 },
   climb: { name: 'Climbing', cam: [-4, -30, 8], tgt: [-13, 14, 6], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
+  kitchen: { name: 'Kitchen', cam: [20, 48, 27], tgt: [30, 75, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · MARBLE ISLAND, ZELLIGE, CONVERSATION PIT', fov: 50 },
+  gym: { name: 'Gym', cam: [52, -12, 24], tgt: [38, 11, 2], roof: false, cut: 8, title: 'Exercise room.', kicker: 'ROOM 302 · CALM STUDIO, RIG, CADILLAC, ROWER', fov: 50 },
   master: { name: 'Master', cam: [124, 38, 64], tgt: [86, 76, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
 };
 
@@ -173,7 +179,8 @@ function select(id, fly) {
   $('info-size').textContent = `${fmtFt(w)} × ${fmtFt(d)}  (${(w * FT2M).toFixed(1)} × ${(d * FT2M).toFixed(1)} m)`;
   $('info-area').textContent = `${area.toLocaleString()} SF · ${(area * SF2M2).toFixed(1)} m²${!outdoor && !it.cond ? ' (unconditioned)' : ''}${it.cov ? ' covered (not conditioned)' : ''}`;
   $('info-ceil').parentElement.hidden = outdoor; $('info-ceil').textContent = outdoor ? '' : `${fmtFt(it.h)} (roof deck ${fmtFt(Math.round(h * 2) / 2)})`;
-  $('info-floor').textContent = outdoor ? it.floor : ({ oak: 'Wide-plank white oak', stone: 'Honed limestone', tatami: 'Tatami (8 mats)', rubber: 'Rubber training floor', cedar: 'Cedar duckboard', concrete: 'Sealed concrete' }[it.floor] || it.floor);
+  $('info-floor').textContent = outdoor ? it.floor : (it.floorName || it.floor);
+  $('info-fin').textContent = it.fin || '';  $('info-fin').parentElement.hidden = !it.fin;
   const eq = it.equip || [...new Set(P.furn.filter(f => f.room === id && f.shape !== 'pit').map(f => f.label))];
   $('info-equip').innerHTML = eq.map(e => `<span>${e}</span>`).join('');
   $('info-walk').parentElement.hidden = outdoor && id !== 'C';
@@ -200,7 +207,7 @@ $('btn-roof').onclick = () => setRoof(!state.roof);
 $('ly-roof').onchange = (e) => setRoof(e.target.checked);
 $('ly-cut').onchange = (e) => setCut(e.target.checked);
 $('cut-h').oninput = (e) => setCut(true, parseFloat(e.target.value));
-$('ly-furn').onchange = (e) => { state.furn = e.target.checked; groups.furn.visible = state.furn; };
+$('ly-furn').onchange = (e) => { state.furn = e.target.checked; groups.furn.visible = state.furn; groups.detail.visible = state.furn; };
 $('ly-labels').onchange = (e) => { state.labels = e.target.checked; host.classList.toggle('labels-off', !state.labels); };
 $('ly-overlay').onchange = (e) => setOverlay(e.target.checked);
 $('ov-op').oninput = (e) => { ovMat.opacity = parseFloat(e.target.value); $('ov-val').textContent = Math.round(ovMat.opacity * 100) + '%'; };
@@ -220,6 +227,7 @@ function setLight(l) {
   sun.intensity = day ? 2.6 : 0.9; sun.color.set(day ? 0xfff1dc : 0xff9a5a);
   const sd = day ? new THREE.Vector3(-0.55, 0.78, 0.62) : new THREE.Vector3(0.85, 0.16, 0.35); sun.position.copy(sd.normalize().multiplyScalar(400)); sun.target.position.set(0, 0, 0);
   interiorLights.forEach(L => L.intensity = day ? 0 : 260);
+  lampMats.forEach(m => m.emissiveIntensity = day ? (m.color.r > 0.97 ? 0.5 : 0.2) : 1.8);
   M.glass.emissive?.set(day ? 0x000000 : 0x3a2a14); M.c.glass.emissive?.set(day ? 0x000000 : 0x5a3c18);
   if (fireMat) fireMat.emissiveIntensity = day ? 1.2 : 4;
   renderer.toneMappingExposure = day ? 1.05 : 1.25;
@@ -338,6 +346,9 @@ function loop(now) {
     if (t >= 1) tween = null;
   }
   if (state.mode === 'orbit') controls.update(); else if (state.mode === 'plan') pcontrols.update(); else walkStep(dt);
+  // LOD: small detail (holds, dishes, dumbbells, path lights, fruit) only when close enough to read it
+  const camDist = state.mode === 'orbit' ? persp.position.distanceTo(controls.target) : state.mode === 'plan' ? 999 : 0;
+  groups.detail.visible = state.furn && camDist < (isMobile() ? 150 : 240);
   renderer.render(scene, camera); labelR.render(scene, camera);
   if (++frames === 3) { $('loading').classList.add('done'); window.__ready = true; }
   requestAnimationFrame(loop);

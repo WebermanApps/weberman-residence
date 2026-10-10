@@ -167,3 +167,5 @@ svg{width:18px;height:18px;flex-shrink:0}
   .rlabel:not(.key):not(.on){display:none}
   .roof-on .rlabel:not(.key2):not(.on){display:none}
 }
+
+.info-row.fin{align-items:flex-start;gap:14px}.info-row.fin b{font-weight:500;text-align:right;line-height:1.35;font-size:12px;max-width:72%}

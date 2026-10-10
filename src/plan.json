@@ -9,9 +9,11 @@
    "x1": 26,
    "y1": 84,
    "h": 12,
-   "floor": "oak",
+   "floor": "stonetile",
    "cond": true,
-   "notes": "Bright, sleek kitchen: 10' honed Calacatta marble island with seating for four, flat-panel rift oak cabinetry, open oak shelving on the north wall under a ribbon window, integrated appliances.",
+   "notes": "Bright, sleek kitchen: white handleless cabinets, black stone counters and a green zellige backsplash. A 10-ft marble island seats five on stools. Stainless range under a glass chimney hood, white apron sink with a brass faucet, open honey-oak shelves.",
+   "fin": "Large stone tiles; lime plaster; white handleless cabinets; black stone counters; green zellige backsplash; marble island; honey-oak open shelves; stainless range; glass chimney hood; white apron sink; brass faucet",
+   "floorName": "Large-format limestone tiles",
    "w": 16,
    "d": 24,
    "area": 384
@@ -25,9 +27,11 @@
    "x1": 44,
    "y1": 84,
    "h": 12,
-   "floor": "oak",
+   "floor": "herring",
    "cond": true,
-   "notes": "Seats ten under exposed fir beams. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
+   "notes": "Seats ten under exposed fir beams and a big paper lantern. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
+   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; honey-oak table; paper lantern",
+   "floorName": "Oak herringbone",
    "w": 18,
    "d": 24,
    "area": 432
@@ -41,9 +45,11 @@
    "x1": 72,
    "y1": 84,
    "h": 12,
-   "floor": "oak",
+   "floor": "herring",
    "cond": true,
-   "notes": "The heart of the house. 16-ft sunken conversation pit (18\" down), big fixed mountain-view window to the north, 28 ft of pocketing glass to the courtyard. No stone fireplace: a slim linear gas fire set in a plaster plinth.",
+   "notes": "The heart of the house, fully open to the garden: 28 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. 16-ft sunken conversation pit with a low modular sofa, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
+   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; linen pit upholstery; cognac leather; paper lanterns; shoji screens; art wall",
+   "floorName": "Oak herringbone",
    "w": 28,
    "d": 24,
    "area": 672
@@ -57,9 +63,11 @@
    "x1": 10,
    "y1": 84,
    "h": 10,
-   "floor": "stone",
+   "floor": "stonetile",
    "cond": true,
-   "notes": "Floor-to-ceiling open shelving, second fridge, appliance counter.",
+   "notes": "Floor-to-ceiling open honey-oak shelving, second fridge, appliance counter.",
+   "fin": "Large stone tiles; lime plaster; honey-oak open shelving",
+   "floorName": "Large-format limestone tiles",
    "w": 10,
    "d": 12,
    "area": 120
@@ -73,9 +81,11 @@
    "x1": 10,
    "y1": 72,
    "h": 10,
-   "floor": "stone",
+   "floor": "stonetile",
    "cond": true,
    "notes": "Side entry from the bike racks and kitchen garden. Cubbies, boot bench, ski and helmet wall, dog wash.",
+   "fin": "Large stone tiles; lime plaster; honey-oak cubbies; stone dog wash",
+   "floorName": "Large-format limestone tiles",
    "w": 10,
    "d": 12,
    "area": 120
@@ -89,9 +99,11 @@
    "x1": 86,
    "y1": 88,
    "h": 11,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "Pushed north for the best mountain view, full-height glass on the north. Private, at the end of the east engawa.",
+   "notes": "Floor-to-ceiling glass to the mountains with sheer linen curtains, cove lighting, and a big fan under a wood ceiling. Low linen-wrapped bed against a lime-plaster headwall ledge (no wood platform or headboard), and a pair of lounge chairs at the view window.",
+   "fin": "Honey-oak floor; lime plaster; wood ceiling with cove lighting; sheer linen curtains; big ceiling fan; linen bed",
+   "floorName": "Wide-plank honey oak",
    "w": 14,
    "d": 24,
    "area": 336
@@ -105,9 +117,11 @@
    "x1": 98,
    "y1": 88,
    "h": 10,
-   "floor": "stone",
+   "floor": "blackstone",
    "cond": true,
-   "notes": "Japanese hinoki soaking tub at the corner window, 8-ft walk-in rain shower, double floating vanity, WC room. Opens to a walled bath garden.",
+   "notes": "Deep Japanese hinoki soaking tub at the corner window under a skylight. Open walk-in rain shower behind a black-stone wall (no glass enclosure), one long floating oak vanity with integrated stone basins and matte black taps, and a WC room. Opens to a walled bath garden.",
+   "fin": "Black stone floor and shower wall; lime plaster; hinoki soaking tub; floating oak vanity, integrated basins; matte black taps; skylight",
+   "floorName": "Honed black stone",
    "w": 12,
    "d": 14,
    "area": 168
@@ -121,9 +135,11 @@
    "x1": 98,
    "y1": 74,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "Walk-in closet with oak millwork.",
+   "notes": "Walk-in closet with honey-oak millwork and a center island.",
+   "fin": "Honey-oak floor and millwork; lime plaster",
+   "floorName": "Wide-plank honey oak",
    "w": 12,
    "d": 10,
    "area": 120
@@ -137,9 +153,11 @@
    "x1": 78,
    "y1": 64,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "Glazed engawa along the courtyard: oak floor, shoji-style sliding glass, built-in bench and book wall. Links living, bedrooms and the wellness wing.",
+   "notes": "Glazed engawa along the courtyard: honey-oak floor, sliding glass, a long low bench and wall-mounted art. Links living, bedrooms and the wellness wing.",
+   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
+   "floorName": "Wide-plank honey oak",
    "w": 6,
    "d": 50,
    "area": 300
@@ -156,6 +174,8 @@
    "floor": "stone",
    "cond": true,
    "notes": "Next to the bedrooms. Stacked W/D pair, folding counter, drying rack.",
+   "fin": "Honed limestone; lime plaster; white cabinets",
+   "floorName": "Honed limestone",
    "w": 10,
    "d": 10,
    "area": 100
@@ -169,9 +189,11 @@
    "x1": 98,
    "y1": 64,
    "h": 10,
-   "floor": "stone",
+   "floor": "concrete",
    "cond": true,
    "notes": "Linen storage, heat pump air handler, ERV, water heating.",
+   "fin": "Sealed concrete; painted plaster",
+   "floorName": "Sealed concrete",
    "w": 10,
    "d": 10,
    "area": 100
@@ -185,9 +207,11 @@
    "x1": 98,
    "y1": 54,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "20 x 11 ft with a bed alcove, desk and built-in closet; east window to the meadow.",
+   "notes": "Calm white room with a window-seat reading nook on the east window, a desk by the window, low cube shelves with bins and beanbags, and a small bouldering wall with a crash mat.",
+   "fin": "Honey-oak floor; calm white lime plaster; oak window seat with linen cushion; cube bins; bouldering panel",
+   "floorName": "Wide-plank honey oak",
    "w": 20,
    "d": 11,
    "area": 220
@@ -203,7 +227,9 @@
    "h": 10,
    "floor": "stone",
    "cond": true,
-   "notes": "Shared by the kids' rooms: two vanities, WC and tub-shower in the middle room, lockable from each side.",
+   "notes": "Shared by the kids' rooms: two vanities, WC and a tiled tub-shower in the middle room, lockable from each side.",
+   "fin": "Honed limestone; white tile tub-shower; oak vanities",
+   "floorName": "Honed limestone",
    "w": 20,
    "d": 8,
    "area": 160
@@ -217,9 +243,11 @@
    "x1": 98,
    "y1": 35,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "Fits a queen bed. Doubles as the guest room; the Guest / Pool Bath is just across the engawa.",
+   "notes": "Fits a queen bed, so it doubles as the guest room. Window-seat nook, desk by the window, cube shelves and a beanbag, and a small climbing wall feature. The Guest / Pool Bath is just across the engawa.",
+   "fin": "Honey-oak floor; calm white lime plaster; oak window seat; cube bins; climbing panel",
+   "floorName": "Wide-plank honey oak",
    "w": 20,
    "d": 11,
    "area": 220
@@ -236,6 +264,8 @@
    "floor": "stone",
    "cond": true,
    "notes": "Guest-capable full bath (walk-in shower, vanity, WC) reached from the engawa, also serving the pool and Kids' Room 2 when it hosts guests.",
+   "fin": "Honed limestone; tiled walk-in shower; oak vanity",
+   "floorName": "Honed limestone",
    "w": 10,
    "d": 10,
    "area": 100
@@ -252,6 +282,8 @@
    "floor": "concrete",
    "cond": false,
    "notes": "Unconditioned. Pool pump and filter, outdoor storage, exterior access only.",
+   "fin": "Sealed concrete",
+   "floorName": "Sealed concrete",
    "w": 10,
    "d": 10,
    "area": 100
@@ -265,9 +297,11 @@
    "x1": 72,
    "y1": 27,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
    "notes": "Glazed engawa that closes the courtyard ring. Lets you reach the gym and wellness rooms in winter without going outside.",
+   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
+   "floorName": "Wide-plank honey oak",
    "w": 44,
    "d": 5,
    "area": 220
@@ -281,9 +315,11 @@
    "x1": 50,
    "y1": 22,
    "h": 12,
-   "floor": "rubber",
+   "floor": "honey",
    "cond": true,
-   "notes": "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors. The west wall is a full-height storage wall with a wall-mounted rig. Glass slides open to the turf sprint lane.",
+   "notes": "Calm studio look: honey-oak floor with a rubber lifting area, a high wood ceiling, and a mirror wall. Free-standing rig with wood rings and a climbing rope, Pilates Cadillac and reformer, wood water rower, treadmill, kettlebell and dumbbell rack, and a bars-and-bands wall. Glass slides open to the sprint lane and an outdoor pull-up station.",
+   "fin": "Honey-oak floor; rubber lifting tiles; lime plaster; high wood ceiling; mirror wall; black steel rig; wood rings",
+   "floorName": "Wide-plank honey oak",
    "w": 22,
    "d": 22,
    "area": 484
@@ -297,9 +333,11 @@
    "x1": 66,
    "y1": 22,
    "h": 10,
-   "floor": "stone",
+   "floor": "blackstone",
    "cond": true,
-   "notes": "Stone wet room: two rain showers, a sunken cold plunge (39-50 F), teak bench. Serves the sauna and hammam.",
+   "notes": "Black-stone wet room: two rain showers, a built-in cold plunge lined in green zellige (39-50 F), teak bench. Serves the sauna and steam room.",
+   "fin": "Black stone floor and walls; green zellige plunge; teak bench",
+   "floorName": "Honed black stone",
    "w": 16,
    "d": 13,
    "area": 208
@@ -313,25 +351,29 @@
    "x1": 58,
    "y1": 9,
    "h": 8,
-   "floor": "cedar",
+   "floor": "aspen",
    "cond": true,
-   "notes": "Cedar sauna for 4 to 5 people, with a low window toward the pool and meadow.",
+   "notes": "Warm cedar walls with tiered pale-aspen benches, backlit underneath, and an electric rock heater (no wood stove). Low window toward the pool and meadow.",
+   "fin": "Cedar walls and ceiling; pale aspen tiered benches, backlit; aspen duckboard floor; electric rock heater",
+   "floorName": "Aspen duckboard",
    "w": 8,
    "d": 9,
    "area": 72
   },
   {
    "id": "305",
-   "name": "Hammam",
+   "name": "Steam Room",
    "wing": "Wellness + Gym Wing",
    "x0": 58,
    "y0": 0,
    "x1": 66,
    "y1": 9,
    "h": 8,
-   "floor": "stone",
+   "floor": "blackstone",
    "cond": true,
-   "notes": "Marble steam room with a heated bench and a vaulted ceiling.",
+   "notes": "Stone steam room (not a white hammam): honed black stone on the walls, floor and heated bench.",
+   "fin": "Honed black stone floor, walls and heated bench",
+   "floorName": "Honed black stone",
    "w": 8,
    "d": 9,
    "area": 72
@@ -347,7 +389,9 @@
    "h": 10,
    "floor": "stone",
    "cond": true,
-   "notes": "Towels, robes, lockers. Door to the pool deck and outdoor shower.",
+   "notes": "Towels, robes, honey-oak lockers. Door to the pool deck and outdoor shower.",
+   "fin": "Honed limestone; lime plaster; honey-oak lockers",
+   "floorName": "Honed limestone",
    "w": 6,
    "d": 22,
    "area": 132
@@ -361,9 +405,11 @@
    "x1": 22,
    "y1": 60,
    "h": 10,
-   "floor": "stone",
+   "floor": "stonetile",
    "cond": true,
-   "notes": "Stone genkan with a step-up to the oak floor and a rammed-earth feature wall. The first view lines up across the engawa into the courtyard.",
+   "notes": "Stone genkan with a step-up to the oak floor, a rammed-earth feature wall and one large artwork. Solid charred-oak pivot door (no glass entry). The first view lines up across the engawa into the courtyard.",
+   "fin": "Large stone tiles; rammed-earth feature wall; lime plaster; charred-oak pivot door",
+   "floorName": "Large-format limestone tiles",
    "w": 12,
    "d": 12,
    "area": 144
@@ -377,9 +423,11 @@
    "x1": 16,
    "y1": 48,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
    "notes": "Coat and shoe storage.",
+   "fin": "Honey-oak floor; oak millwork",
+   "floorName": "Wide-plank honey oak",
    "w": 6,
    "d": 7,
    "area": 42
@@ -395,7 +443,9 @@
    "h": 10,
    "floor": "stone",
    "cond": true,
-   "notes": "Powder room by the entry: stone vessel sink, plaster walls.",
+   "notes": "Powder room by the entry: integrated stone basin, lime-plaster walls.",
+   "fin": "Honed limestone; lime plaster; integrated stone basin",
+   "floorName": "Honed limestone",
    "w": 6,
    "d": 7,
    "area": 42
@@ -411,7 +461,9 @@
    "h": 9,
    "floor": "tatami",
    "cond": true,
-   "notes": "8-mat tatami room with a tokonoma alcove. Shoji slide open to the engawa and courtyard, and a low garden window. Used for tea, meditation, or as an overflow guest room.",
+   "notes": "8-mat tatami room (loved) with a tokonoma alcove, low table, zabuton and a paper andon lantern. Shoji slide open to the engawa and courtyard; low garden window. Used for tea, meditation, or as an overflow guest room.",
+   "fin": "Tatami; lime plaster; shoji; walnut tokonoma",
+   "floorName": "Tatami (8 mats)",
    "w": 12,
    "d": 13,
    "area": 156
@@ -425,9 +477,11 @@
    "x1": 22,
    "y1": 28,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
    "notes": "Cases, cables, rack gear and the network closet. Opens to the office.",
+   "fin": "Honey-oak floor; painted plaster",
+   "floorName": "Wide-plank honey oak",
    "w": 12,
    "d": 6,
    "area": 72
@@ -441,9 +495,11 @@
    "x1": 28,
    "y1": 60,
    "h": 10,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
    "notes": "Glazed engawa from the entry to the office and great room.",
+   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
+   "floorName": "Wide-plank honey oak",
    "w": 6,
    "d": 38,
    "area": 228
@@ -457,9 +513,11 @@
    "x1": 28,
    "y1": 22,
    "h": 14,
-   "floor": "oak",
+   "floor": "honey",
    "cond": true,
-   "notes": "Loft-like 24 x 22 ft room with a 14-ft ceiling, clerestory and acoustic slat ceiling. Work desk and computer with the MPC, digital piano, e-drum kit, acoustic-electric guitar, mic, PA speakers and mixer. Double-stud walls keep it acoustically separate; it sits as far from the bedrooms as possible.",
+   "notes": "Loft-like room with a 14-ft sculpted wood ceiling, acoustic ceiling clouds and a skylight. Sit-stand desk facing the garden glass, studio desk with the mixer, monitors and MPC, digital piano, e-drum kit, a guitar wall, mic, PA speakers, fabric acoustic panels on lime-plaster walls, layered pendants and an RGB light strip. Double-stud walls keep it acoustically separate from the bedrooms.",
+   "fin": "Honey-oak floor; lime plaster; fabric acoustic panels; acoustic ceiling clouds; sculpted wood ceiling; skylight; layered pendants",
+   "floorName": "Wide-plank honey oak",
    "w": 24,
    "d": 22,
    "area": 528
@@ -592,11 +650,11 @@
    "h": 12,
    "feats": [
     {
-     "a": 11,
+     "a": 18,
      "b": 25,
      "k": "window",
      "x": [
-      3.5,
+      4.5,
       8
      ]
     }
@@ -695,18 +753,6 @@
      "a": 52,
      "b": 56,
      "k": "front",
-     "x": null
-    },
-    {
-     "a": 49,
-     "b": 51.5,
-     "k": "fixed",
-     "x": null
-    },
-    {
-     "a": 56.5,
-     "b": 59,
-     "k": "fixed",
      "x": null
     }
    ]
@@ -1988,75 +2034,171 @@
  "furn": [
   {
    "room": "101",
-   "label": "Marble island 10'",
+   "label": "Marble island 10' (seats five)",
    "x0": 13,
    "y0": 69,
    "x1": 23,
    "y1": 73.5,
    "h": 3,
    "z0": 0,
-   "color": "#ece8e1",
-   "shape": "box"
+   "color": "mat:marble",
+   "shape": "island"
   },
   {
    "room": "101",
-   "label": "Back counter + range",
+   "label": "Stools",
+   "x0": 14,
+   "y0": 67.3,
+   "x1": 22,
+   "y1": 68.5,
+   "h": 2.5,
+   "z0": 0,
+   "color": "#6b4a33",
+   "shape": "stools"
+  },
+  {
+   "room": "101",
+   "label": "White handleless base cabinets",
    "x0": 12.6,
    "y0": 81.4,
    "x1": 25.6,
    "y1": 83.6,
-   "h": 3,
+   "h": 2.85,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:lacq",
    "shape": "box"
   },
   {
    "room": "101",
-   "label": "Open oak shelving",
-   "x0": 10.3,
-   "y0": 60.8,
-   "x1": 11.2,
+   "label": "Black stone counter",
+   "x0": 12.5,
+   "y0": 81.3,
+   "x1": 25.7,
+   "y1": 83.7,
+   "h": 0.15,
+   "z0": 2.85,
+   "color": "mat:blackstone",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Green zellige backsplash",
+   "x0": 12.6,
+   "y0": 83.45,
+   "x1": 25.6,
+   "y1": 83.62,
+   "h": 1.5,
+   "z0": 3.0,
+   "color": "mat:zellige",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Green zellige range wall",
+   "x0": 12.6,
+   "y0": 83.45,
+   "x1": 18,
+   "y1": 83.62,
+   "h": 4.5,
+   "z0": 4.5,
+   "color": "mat:zellige",
+   "shape": "box"
+  },
+  {
+   "room": "101",
+   "label": "Stainless range 36\"",
+   "x0": 13.8,
+   "y0": 81.15,
+   "x1": 16.8,
+   "y1": 83.4,
+   "h": 3.02,
+   "z0": 0,
+   "color": "mat:steel",
+   "shape": "range"
+  },
+  {
+   "room": "101",
+   "label": "Glass chimney hood",
+   "x0": 13.6,
+   "y0": 81.8,
+   "x1": 17,
+   "y1": 83.4,
+   "h": 0.2,
+   "z0": 6.6,
+   "color": "#cfe3e6",
+   "shape": "hood"
+  },
+  {
+   "room": "101",
+   "label": "White apron sink + brass faucet",
+   "x0": 20,
+   "y0": 81.2,
+   "x1": 22.6,
+   "y1": 83.4,
+   "h": 0.9,
+   "z0": 2.05,
+   "color": "#f6f4ef",
+   "shape": "sink"
+  },
+  {
+   "room": "101",
+   "label": "Open wood shelves",
+   "x0": 10.25,
+   "y0": 79.6,
+   "x1": 11.1,
+   "y1": 83.6,
+   "h": 3.2,
+   "z0": 4.4,
+   "color": "mat:honey",
+   "shape": "shelves"
+  },
+  {
+   "room": "101",
+   "label": "Open wood shelves",
+   "x0": 10.25,
+   "y0": 60.6,
+   "x1": 11.1,
    "y1": 63.6,
-   "h": 7,
-   "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "h": 3.2,
+   "z0": 4.4,
+   "color": "mat:honey",
+   "shape": "shelves"
   },
   {
    "room": "101",
-   "label": "Tall appliance wall",
+   "label": "Integrated fridge + ovens (handleless)",
    "x0": 10.4,
    "y0": 68.5,
    "x1": 12.6,
    "y1": 75,
    "h": 8.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:lacq",
    "shape": "box"
   },
   {
    "room": "101",
-   "label": "Stools",
+   "label": "Pendants",
    "x0": 14,
-   "y0": 67.2,
+   "y0": 70.6,
    "x1": 22,
-   "y1": 68.6,
-   "h": 2.5,
-   "z0": 0,
-   "color": "#6b4a33",
-   "shape": "box"
+   "y1": 71.9,
+   "h": 0.7,
+   "z0": 7.4,
+   "color": "#efe6d3",
+   "shape": "pendants"
   },
   {
    "room": "102",
-   "label": "Dining table (10)",
+   "label": "Honey-oak dining table (10)",
    "x0": 30,
    "y0": 69,
    "x1": 40,
    "y1": 73,
    "h": 2.5,
    "z0": 0,
-   "color": "#6b4a33",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "table"
   },
   {
    "room": "102",
@@ -2068,7 +2210,7 @@
    "h": 1.5,
    "z0": 0,
    "color": "#d9cbb5",
-   "shape": "box"
+   "shape": "chairs"
   },
   {
    "room": "102",
@@ -2080,19 +2222,31 @@
    "h": 1.5,
    "z0": 0,
    "color": "#d9cbb5",
-   "shape": "box"
+   "shape": "chairs"
   },
   {
    "room": "102",
-   "label": "Sideboard",
-   "x0": 29,
-   "y0": 82.6,
-   "x1": 41,
-   "y1": 83.6,
-   "h": 2.8,
+   "label": "Paper lantern",
+   "x0": 33,
+   "y0": 69.5,
+   "x1": 37,
+   "y1": 72.5,
+   "h": 2.4,
+   "z0": 6.6,
+   "color": "#f4ecdc",
+   "shape": "lantern"
+  },
+  {
+   "room": "102",
+   "label": "Shoji screens",
+   "x0": 43.7,
+   "y0": 77.5,
+   "x1": 44.0,
+   "y1": 83.8,
+   "h": 8,
    "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "color": "#f4ecdc",
+   "shape": "shoji"
   },
   {
    "room": "103",
@@ -2108,39 +2262,39 @@
   },
   {
    "room": "103",
-   "label": "Pit banquette",
+   "label": "Low modular sofa (pit)",
    "x0": 49.3,
    "y0": 66.3,
    "x1": 64.7,
-   "y1": 68.3,
+   "y1": 68.6,
    "h": 1.0,
    "z0": -1.5,
-   "color": "#d9cbb5",
-   "shape": "box"
+   "color": "mat:linen",
+   "shape": "sofa"
   },
   {
    "room": "103",
-   "label": "Pit banquette",
+   "label": "Low modular sofa (pit)",
    "x0": 49.3,
-   "y0": 75.7,
+   "y0": 75.4,
    "x1": 64.7,
    "y1": 77.7,
    "h": 1.0,
    "z0": -1.5,
-   "color": "#d9cbb5",
-   "shape": "box"
+   "color": "mat:linen",
+   "shape": "sofa"
   },
   {
    "room": "103",
-   "label": "Pit banquette",
+   "label": "Low modular sofa (pit)",
    "x0": 49.3,
-   "y0": 68.3,
-   "x1": 51.3,
-   "y1": 75.7,
+   "y0": 68.6,
+   "x1": 51.6,
+   "y1": 75.4,
    "h": 1.0,
    "z0": -1.5,
-   "color": "#d9cbb5",
-   "shape": "box"
+   "color": "mat:linen",
+   "shape": "sofa"
   },
   {
    "room": "103",
@@ -2156,27 +2310,51 @@
   },
   {
    "room": "103",
-   "label": "Linear fire plinth",
+   "label": "Paper lanterns",
+   "x0": 53,
+   "y0": 69,
+   "x1": 61,
+   "y1": 75,
+   "h": 2.0,
+   "z0": 7.0,
+   "color": "#f4ecdc",
+   "shape": "lanterns"
+  },
+  {
+   "room": "103",
+   "label": "Linear gas fire in plaster plinth",
    "x0": 67,
    "y0": 66,
    "x1": 69,
    "y1": 78,
    "h": 1.6,
    "z0": 0,
-   "color": "#f3f1ec",
-   "shape": "box"
+   "color": "mat:plaster",
+   "shape": "fire"
   },
   {
    "room": "103",
-   "label": "Lounge chairs",
-   "x0": 45.5,
-   "y0": 79,
-   "x1": 48.5,
+   "label": "Leather lounge chair",
+   "x0": 45.4,
+   "y0": 78.6,
+   "x1": 48.6,
    "y1": 82,
-   "h": 2.4,
+   "h": 2.6,
    "z0": 0,
-   "color": "#6f7a55",
-   "shape": "box"
+   "color": "#8a5a34",
+   "shape": "lounge"
+  },
+  {
+   "room": "103",
+   "label": "Wall-mounted art",
+   "x0": 71.4,
+   "y0": 69,
+   "x1": 71.6,
+   "y1": 76,
+   "h": 4.2,
+   "z0": 3.8,
+   "color": "#c9b48e",
+   "shape": "art"
   },
   {
    "room": "104",
@@ -2187,7 +2365,7 @@
    "y1": 83.6,
    "h": 7.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2199,7 +2377,7 @@
    "y1": 83.6,
    "h": 7.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2211,7 +2389,7 @@
    "y1": 71.6,
    "h": 7,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2223,74 +2401,86 @@
    "y1": 63,
    "h": 2.6,
    "z0": 0,
-   "color": "#b9b1a3",
+   "color": "mat:stone",
    "shape": "box"
   },
   {
    "room": "201",
-   "label": "King bed",
+   "label": "Low linen-wrapped bed (king)",
    "x0": 76,
-   "y0": 74,
+   "y0": 74.4,
    "x1": 82.6,
    "y1": 81,
-   "h": 2,
+   "h": 1.6,
    "z0": 0,
-   "color": "#e6dfd2",
+   "color": "mat:linen",
+   "shape": "bed"
+  },
+  {
+   "room": "201",
+   "label": "Lime-plaster headwall ledge",
+   "x0": 75,
+   "y0": 73.4,
+   "x1": 83.6,
+   "y1": 74.4,
+   "h": 3.4,
+   "z0": 0,
+   "color": "mat:plaster",
    "shape": "box"
   },
   {
    "room": "201",
-   "label": "Headboard",
-   "x0": 75.6,
-   "y0": 74,
-   "x1": 82.9,
-   "y1": 74.6,
-   "h": 3.6,
+   "label": "Pair of lounge chairs",
+   "x0": 74,
+   "y0": 83.4,
+   "x1": 80.6,
+   "y1": 86.2,
+   "h": 2.5,
    "z0": 0,
+   "color": "#b9a27e",
+   "shape": "lounge2"
+  },
+  {
+   "room": "201",
+   "label": "Sheer linen curtains",
+   "x0": 73,
+   "y0": 87.3,
+   "x1": 85,
+   "y1": 87.5,
+   "h": 10.3,
+   "z0": 0.1,
+   "color": "#f6f1e6",
+   "shape": "curtain"
+  },
+  {
+   "room": "201",
+   "label": "Big fan under wood ceiling",
+   "x0": 76.5,
+   "y0": 74.5,
+   "x1": 82.5,
+   "y1": 80.5,
+   "h": 0.6,
+   "z0": 9.6,
    "color": "#6b4a33",
-   "shape": "box"
+   "shape": "fan"
   },
   {
    "room": "201",
-   "label": "Nightstands",
-   "x0": 74.4,
-   "y0": 74.2,
-   "x1": 75.6,
-   "y1": 75.8,
-   "h": 1.8,
-   "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
-  },
-  {
-   "room": "201",
-   "label": "Nightstands",
-   "x0": 82.9,
-   "y0": 74.2,
-   "x1": 84.1,
-   "y1": 75.8,
-   "h": 1.8,
-   "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
-  },
-  {
-   "room": "201",
-   "label": "Reading chairs",
-   "x0": 74.5,
-   "y0": 84.5,
-   "x1": 77.5,
-   "y1": 87,
-   "h": 2.4,
-   "z0": 0,
-   "color": "#6f7a55",
-   "shape": "box"
+   "label": "Cove lighting",
+   "x0": 72.3,
+   "y0": 64.3,
+   "x1": 85.7,
+   "y1": 87.7,
+   "h": 0.12,
+   "z0": 10.2,
+   "color": "#ffd9a0",
+   "shape": "cove"
   },
   {
    "room": "201",
    "label": "Rug",
    "x0": 75,
-   "y0": 72.5,
+   "y0": 72.2,
    "x1": 84,
    "y1": 83,
    "h": 0.05,
@@ -2300,39 +2490,51 @@
   },
   {
    "room": "202",
-   "label": "Hinoki soaking tub",
+   "label": "Deep hinoki soaking tub by the window",
    "x0": 93,
    "y0": 83,
    "x1": 97.4,
    "y1": 87.4,
-   "h": 2.2,
+   "h": 2.3,
    "z0": 0,
    "color": "#e2c894",
-   "shape": "box"
+   "shape": "tub"
   },
   {
    "room": "202",
    "label": "Walk-in rain shower",
    "x0": 86.6,
-   "y0": 80,
+   "y0": 80.4,
    "x1": 92,
    "y1": 87.4,
-   "h": 0.2,
+   "h": 0.12,
    "z0": 0,
-   "color": "#55524c",
+   "color": "mat:blackstone",
    "shape": "box"
   },
   {
    "room": "202",
-   "label": "Double vanity",
-   "x0": 94.4,
+   "label": "Black stone shower wall",
+   "x0": 86.6,
+   "y0": 79.9,
+   "x1": 91.2,
+   "y1": 80.4,
+   "h": 7.5,
+   "z0": 0,
+   "color": "mat:blackstone",
+   "shape": "box"
+  },
+  {
+   "room": "202",
+   "label": "Floating oak vanity, integrated basins",
+   "x0": 95.4,
    "y0": 74.6,
    "x1": 97.4,
    "y1": 81.5,
-   "h": 2.9,
-   "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "h": 1.5,
+   "z0": 1.4,
+   "color": "mat:honey",
+   "shape": "vanity"
   },
   {
    "room": "202",
@@ -2355,7 +2557,7 @@
    "y1": 73.6,
    "h": 7.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2367,7 +2569,7 @@
    "y1": 73.6,
    "h": 7.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2379,20 +2581,32 @@
    "y1": 71,
    "h": 3,
    "z0": 0,
-   "color": "#6b4a33",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
    "room": "204",
-   "label": "Engawa bench + books",
+   "label": "Low bench",
    "x0": 76.8,
    "y0": 30,
    "x1": 77.6,
    "y1": 58,
    "h": 1.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
+  },
+  {
+   "room": "204",
+   "label": "Wall-mounted art",
+   "x0": 77.55,
+   "y0": 40,
+   "x1": 77.75,
+   "y1": 46,
+   "h": 3.5,
+   "z0": 4,
+   "color": "#a7b39a",
+   "shape": "art"
   },
   {
    "room": "205",
@@ -2415,7 +2629,7 @@
    "y1": 63.6,
    "h": 3,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:lacq",
    "shape": "box"
   },
   {
@@ -2427,7 +2641,7 @@
    "y1": 63.6,
    "h": 6,
    "z0": 0,
-   "color": "#9aa0a3",
+   "color": "mat:steel",
    "shape": "box"
   },
   {
@@ -2439,43 +2653,91 @@
    "y1": 56,
    "h": 7,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
    "room": "207",
-   "label": "Bed (alcove)",
-   "x0": 92,
-   "y0": 46,
-   "x1": 97.6,
-   "y1": 53.6,
-   "h": 2,
+   "label": "Window-seat reading nook",
+   "x0": 96.2,
+   "y0": 45,
+   "x1": 97.8,
+   "y1": 52,
+   "h": 1.6,
    "z0": 0,
-   "color": "#e6dfd2",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "seat"
   },
   {
    "room": "207",
-   "label": "Desk",
-   "x0": 79,
+   "label": "Twin bed",
+   "x0": 83,
+   "y0": 47,
+   "x1": 86.6,
+   "y1": 53.6,
+   "h": 1.4,
+   "z0": 0,
+   "color": "mat:linen",
+   "shape": "bed"
+  },
+  {
+   "room": "207",
+   "label": "Desk by the window",
+   "x0": 92,
    "y0": 43.4,
-   "x1": 84,
-   "y1": 45.4,
+   "x1": 96,
+   "y1": 45,
    "h": 2.5,
    "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "table"
+  },
+  {
+   "room": "207",
+   "label": "Low cube shelves + bins",
+   "x0": 85.5,
+   "y0": 43.3,
+   "x1": 91.5,
+   "y1": 44.6,
+   "h": 2.4,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "cubes"
+  },
+  {
+   "room": "207",
+   "label": "Beanbags",
+   "x0": 87,
+   "y0": 45.6,
+   "x1": 91,
+   "y1": 48,
+   "h": 1.3,
+   "z0": 0,
+   "color": "#c98f6a",
+   "shape": "beanbags"
+  },
+  {
+   "room": "207",
+   "label": "Small bouldering wall + mat",
+   "x0": 78.25,
+   "y0": 43.4,
+   "x1": 78.6,
+   "y1": 49.4,
+   "h": 8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "kidwall"
   },
   {
    "room": "207",
    "label": "Closet",
-   "x0": 88,
+   "x0": 89,
    "y0": 53,
-   "x1": 92,
+   "x1": 95,
    "y1": 53.7,
    "h": 7,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:lacq",
    "shape": "box"
   },
   {
@@ -2487,7 +2749,7 @@
    "y1": 42.7,
    "h": 2.8,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2499,7 +2761,7 @@
    "y1": 36.6,
    "h": 2.8,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2528,39 +2790,75 @@
   },
   {
    "room": "209",
-   "label": "Queen bed (guest)",
-   "x0": 90.5,
-   "y0": 26.5,
-   "x1": 97.6,
-   "y1": 32.5,
-   "h": 2,
+   "label": "Window-seat reading nook",
+   "x0": 96.2,
+   "y0": 26,
+   "x1": 97.8,
+   "y1": 33,
+   "h": 1.6,
    "z0": 0,
-   "color": "#e6dfd2",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "seat"
   },
   {
    "room": "209",
-   "label": "Desk",
-   "x0": 79,
-   "y0": 32.6,
-   "x1": 84,
-   "y1": 34.6,
+   "label": "Queen bed (guest)",
+   "x0": 85.2,
+   "y0": 24.3,
+   "x1": 90.4,
+   "y1": 31,
+   "h": 1.6,
+   "z0": 0,
+   "color": "mat:linen",
+   "shape": "bed"
+  },
+  {
+   "room": "209",
+   "label": "Desk by the window",
+   "x0": 92,
+   "y0": 33.4,
+   "x1": 96,
+   "y1": 34.9,
    "h": 2.5,
    "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "table"
   },
   {
    "room": "209",
-   "label": "Closet",
-   "x0": 84,
-   "y0": 24.3,
-   "x1": 89,
-   "y1": 25,
-   "h": 7,
+   "label": "Low cube shelves + bins",
+   "x0": 78.3,
+   "y0": 31,
+   "x1": 79.6,
+   "y1": 34.7,
+   "h": 2.4,
    "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "cubes"
+  },
+  {
+   "room": "209",
+   "label": "Beanbag",
+   "x0": 81,
+   "y0": 32,
+   "x1": 83,
+   "y1": 34,
+   "h": 1.3,
+   "z0": 0,
+   "color": "#8ea06a",
+   "shape": "beanbags"
+  },
+  {
+   "room": "209",
+   "label": "Small climbing wall + mat",
+   "x0": 79,
+   "y0": 24.25,
+   "x1": 84.4,
+   "y1": 24.6,
+   "h": 8,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "kidwall"
   },
   {
    "room": "210",
@@ -2569,9 +2867,9 @@
    "y0": 14.4,
    "x1": 87.6,
    "y1": 18.4,
-   "h": 0.2,
+   "h": 0.12,
    "z0": 0,
-   "color": "#55524c",
+   "color": "mat:stone",
    "shape": "box"
   },
   {
@@ -2583,7 +2881,7 @@
    "y1": 19,
    "h": 2.8,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2607,8 +2905,32 @@
    "y1": 18,
    "h": 3,
    "z0": 0,
-   "color": "#9aa0a3",
+   "color": "mat:steel",
    "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Rubber lifting area",
+   "x0": 30,
+   "y0": 1,
+   "x1": 40,
+   "y1": 11.5,
+   "h": 0.06,
+   "z0": 0,
+   "color": "mat:rubber",
+   "shape": "box"
+  },
+  {
+   "room": "302",
+   "label": "Free-standing rig, wood rings + climbing rope",
+   "x0": 30.8,
+   "y0": 3,
+   "x1": 35.8,
+   "y1": 9,
+   "h": 9.5,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "rig"
   },
   {
    "room": "302",
@@ -2619,31 +2941,91 @@
    "y1": 16.6,
    "h": 6.8,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "frame"
   },
   {
    "room": "302",
-   "label": "Pull-up rig",
-   "x0": 29.2,
-   "y0": 16,
-   "x1": 31.4,
-   "y1": 21.5,
-   "h": 8.5,
+   "label": "Pilates reformer",
+   "x0": 40,
+   "y0": 18.4,
+   "x1": 48,
+   "y1": 20.0,
+   "h": 1.3,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "reformer"
+  },
+  {
+   "room": "302",
+   "label": "Wood water rower",
+   "x0": 41,
+   "y0": 3.4,
+   "x1": 48.5,
+   "y1": 5.2,
+   "h": 1.7,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "rower"
+  },
+  {
+   "room": "302",
+   "label": "Treadmill",
+   "x0": 41,
+   "y0": 7.5,
+   "x1": 47.5,
+   "y1": 10.6,
+   "h": 4.4,
    "z0": 0,
    "color": "#2a2a2a",
-   "shape": "frame"
+   "shape": "treadmill"
   },
   {
    "room": "302",
-   "label": "Dumbbell rack",
-   "x0": 44,
-   "y0": 20.8,
-   "x1": 49.2,
+   "label": "Kettlebell + dumbbell rack",
+   "x0": 42.6,
+   "y0": 20.7,
+   "x1": 49.4,
    "y1": 21.8,
    "h": 3,
    "z0": 0,
    "color": "#2a2a2a",
+   "shape": "krack"
+  },
+  {
+   "room": "302",
+   "label": "Bars-and-bands wall",
+   "x0": 28.3,
+   "y0": 10.5,
+   "x1": 29.2,
+   "y1": 20.5,
+   "h": 8,
+   "z0": 0,
+   "color": "#2a2a2a",
+   "shape": "bands"
+  },
+  {
+   "room": "302",
+   "label": "Mirror wall",
+   "x0": 49.58,
+   "y0": 1,
+   "x1": 49.74,
+   "y1": 11.5,
+   "h": 7.5,
+   "z0": 0.3,
+   "color": "#dfe7ea",
+   "shape": "mirror"
+  },
+  {
+   "room": "302",
+   "label": "Storage wall (mats, plyo boxes)",
+   "x0": 28.3,
+   "y0": 1,
+   "x1": 29.7,
+   "y1": 9.5,
+   "h": 8,
+   "z0": 0,
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2655,7 +3037,7 @@
    "y1": 20.5,
    "h": 2,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2667,80 +3049,32 @@
    "y1": 20.6,
    "h": 1.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
    "room": "302",
    "label": "Balance boards",
-   "x0": 38,
-   "y0": 19.8,
-   "x1": 41,
-   "y1": 21.2,
+   "x0": 30.5,
+   "y0": 13,
+   "x1": 33.5,
+   "y1": 14.4,
    "h": 0.4,
    "z0": 0,
    "color": "#6b4a33",
    "shape": "box"
   },
   {
-   "room": "302",
-   "label": "Band anchor post",
-   "x0": 49,
-   "y0": 8,
-   "x1": 49.6,
-   "y1": 10,
-   "h": 7,
-   "z0": 0,
-   "color": "#2a2a2a",
-   "shape": "box"
-  },
-  {
-   "room": "302",
-   "label": "Training mats",
-   "x0": 33,
-   "y0": 4,
-   "x1": 45,
-   "y1": 11,
-   "h": 0.1,
-   "z0": 0,
-   "color": "#6f7a55",
-   "shape": "box"
-  },
-  {
-   "room": "302",
-   "label": "Storage wall (bands, mats, kettlebells)",
-   "x0": 28.3,
-   "y0": 1,
-   "x1": 30.3,
-   "y1": 9.5,
-   "h": 8,
-   "z0": 0,
-   "color": "#c39a6b",
-   "shape": "box"
-  },
-  {
-   "room": "302",
-   "label": "Wall-mount rig + rings",
-   "x0": 28.3,
-   "y0": 10.5,
-   "x1": 29.4,
-   "y1": 15.5,
-   "h": 8.5,
-   "z0": 0,
-   "color": "#2a2a2a",
-   "shape": "box"
-  },
-  {
    "room": "303",
-   "label": "Cold plunge",
+   "label": "Built-in cold plunge (green zellige)",
    "x0": 60,
    "y0": 17,
    "x1": 65.4,
    "y1": 21.4,
-   "h": 0.4,
+   "h": 0.5,
    "z0": 0,
-   "color": "#5fa3b5",
-   "shape": "box"
+   "color": "mat:zellige",
+   "shape": "plunge"
   },
   {
    "room": "303",
@@ -2749,9 +3083,9 @@
    "y0": 18.2,
    "x1": 56,
    "y1": 21.6,
-   "h": 0.15,
+   "h": 0.12,
    "z0": 0,
-   "color": "#55524c",
+   "color": "mat:blackstone",
    "shape": "box"
   },
   {
@@ -2763,43 +3097,43 @@
    "y1": 11.4,
    "h": 1.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "#9c6a3c",
    "shape": "box"
   },
   {
    "room": "304",
-   "label": "Sauna benches",
+   "label": "Tiered aspen benches, backlit",
    "x0": 50.4,
-   "y0": 4.6,
-   "x1": 57.6,
-   "y1": 8.6,
-   "h": 1.5,
-   "z0": 0,
-   "color": "#c08552",
-   "shape": "box"
-  },
-  {
-   "room": "304",
-   "label": "Upper bench",
-   "x0": 50.4,
-   "y0": 6.8,
+   "y0": 4.4,
    "x1": 57.6,
    "y1": 8.6,
    "h": 3,
    "z0": 0,
-   "color": "#c08552",
-   "shape": "box"
+   "color": "mat:aspen",
+   "shape": "benches"
+  },
+  {
+   "room": "304",
+   "label": "Electric rock heater",
+   "x0": 56.2,
+   "y0": 0.6,
+   "x1": 57.6,
+   "y1": 2.4,
+   "h": 2.6,
+   "z0": 0,
+   "color": "#2f2c29",
+   "shape": "heater"
   },
   {
    "room": "305",
-   "label": "Heated marble bench",
+   "label": "Heated black-stone bench",
    "x0": 58.4,
    "y0": 5.8,
    "x1": 65.6,
    "y1": 8.6,
    "h": 1.6,
    "z0": 0,
-   "color": "#ece8e1",
+   "color": "mat:blackstone",
    "shape": "box"
   },
   {
@@ -2811,7 +3145,7 @@
    "y1": 12,
    "h": 7,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2823,7 +3157,7 @@
    "y1": 59.6,
    "h": 1.5,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
@@ -2832,11 +3166,23 @@
    "x0": 10.5,
    "y0": 48.6,
    "x1": 11.2,
-   "y1": 51,
+   "y1": 51.6,
    "h": 9,
    "z0": 0,
-   "color": "#b98d6c",
+   "color": "mat:rammed",
    "shape": "box"
+  },
+  {
+   "room": "401",
+   "label": "Wall-mounted art",
+   "x0": 21.55,
+   "y0": 50,
+   "x1": 21.75,
+   "y1": 56,
+   "h": 4,
+   "z0": 3.5,
+   "color": "#b8836a",
+   "shape": "art"
   },
   {
    "room": "402",
@@ -2847,19 +3193,19 @@
    "y1": 47.6,
    "h": 7,
    "z0": 0,
-   "color": "#c39a6b",
+   "color": "mat:honey",
    "shape": "box"
   },
   {
    "room": "403",
-   "label": "Vanity",
+   "label": "Integrated stone vanity",
    "x0": 20.6,
    "y0": 44.5,
    "x1": 21.6,
    "y1": 47.6,
    "h": 2.8,
    "z0": 0,
-   "color": "#b9b1a3",
+   "color": "mat:stone",
    "shape": "box"
   },
   {
@@ -2876,18 +3222,6 @@
   },
   {
    "room": "404",
-   "label": "Tatami mats",
-   "x0": 11,
-   "y0": 29,
-   "x1": 21,
-   "y1": 40,
-   "h": 0.15,
-   "z0": 0,
-   "color": "#d8cf9a",
-   "shape": "box"
-  },
-  {
-   "room": "404",
    "label": "Tokonoma",
    "x0": 10.4,
    "y0": 33,
@@ -2900,15 +3234,39 @@
   },
   {
    "room": "404",
-   "label": "Low table",
-   "x0": 15,
-   "y0": 33,
-   "x1": 18,
-   "y1": 36,
+   "label": "Low table + zabuton",
+   "x0": 14.5,
+   "y0": 32.5,
+   "x1": 18.5,
+   "y1": 36.5,
    "h": 1.2,
    "z0": 0,
    "color": "#6b4a33",
-   "shape": "box"
+   "shape": "lowtable"
+  },
+  {
+   "room": "404",
+   "label": "Paper andon lantern",
+   "x0": 19.5,
+   "y0": 38.6,
+   "x1": 20.5,
+   "y1": 39.6,
+   "h": 2.2,
+   "z0": 0,
+   "color": "#f4ecdc",
+   "shape": "andon"
+  },
+  {
+   "room": "404",
+   "label": "Shoji screens",
+   "x0": 21.55,
+   "y0": 30,
+   "x1": 21.75,
+   "y1": 34.5,
+   "h": 8,
+   "z0": 0,
+   "color": "#f4ecdc",
+   "shape": "shoji"
   },
   {
    "room": "405",
@@ -2919,44 +3277,32 @@
    "y1": 24,
    "h": 7,
    "z0": 0,
-   "color": "#9aa0a3",
+   "color": "mat:steel",
    "shape": "box"
   },
   {
    "room": "407",
-   "label": "Work desk + computer",
-   "x0": 18,
-   "y0": 2,
-   "x1": 26,
-   "y1": 4.6,
+   "label": "Sit-stand desk facing the garden",
+   "x0": 11,
+   "y0": 2.6,
+   "x1": 17,
+   "y1": 5,
+   "h": 2.4,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "standdesk"
+  },
+  {
+   "room": "407",
+   "label": "Studio desk + mixer, monitors, MPC",
+   "x0": 18.5,
+   "y0": 2.2,
+   "x1": 26.5,
+   "y1": 4.8,
    "h": 2.5,
    "z0": 0,
-   "color": "#6b4a33",
-   "shape": "box"
-  },
-  {
-   "room": "407",
-   "label": "Monitors",
-   "x0": 19,
-   "y0": 3.4,
-   "x1": 25,
-   "y1": 3.8,
-   "h": 1.5,
-   "z0": 2.5,
-   "color": "#2a2a2a",
-   "shape": "box"
-  },
-  {
-   "room": "407",
-   "label": "MPC",
-   "x0": 25,
-   "y0": 3,
-   "x1": 26,
-   "y1": 4,
-   "h": 0.3,
-   "z0": 2.5,
-   "color": "#2a2a2a",
-   "shape": "box"
+   "color": "mat:honey",
+   "shape": "studio"
   },
   {
    "room": "407",
@@ -2965,10 +3311,10 @@
    "y0": 8,
    "x1": 6.8,
    "y1": 13,
-   "h": 3,
+   "h": 2.6,
    "z0": 0,
-   "color": "#2a2a2a",
-   "shape": "box"
+   "color": "#1f1f1f",
+   "shape": "piano"
   },
   {
    "room": "407",
@@ -2984,15 +3330,15 @@
   },
   {
    "room": "407",
-   "label": "Guitar stand",
-   "x0": 13,
-   "y0": 19.8,
-   "x1": 14.5,
-   "y1": 21,
-   "h": 4,
-   "z0": 0,
-   "color": "#b0684a",
-   "shape": "box"
+   "label": "Guitar wall",
+   "x0": 18.4,
+   "y0": 21.55,
+   "x1": 22.8,
+   "y1": 21.75,
+   "h": 7.2,
+   "z0": 3,
+   "color": "#a8743f",
+   "shape": "guitarwall"
   },
   {
    "room": "407",
@@ -3032,15 +3378,63 @@
   },
   {
    "room": "407",
-   "label": "Mixer rack",
-   "x0": 9,
-   "y0": 1,
-   "x1": 13,
-   "y1": 2.6,
-   "h": 3.2,
-   "z0": 0,
-   "color": "#55524c",
-   "shape": "box"
+   "label": "Fabric acoustic panels",
+   "x0": 27.6,
+   "y0": 2,
+   "x1": 27.8,
+   "y1": 20,
+   "h": 4.5,
+   "z0": 3,
+   "color": "#8d8a72",
+   "shape": "apanels"
+  },
+  {
+   "room": "407",
+   "label": "Acoustic ceiling clouds",
+   "x0": 8,
+   "y0": 5,
+   "x1": 24,
+   "y1": 18,
+   "h": 0.3,
+   "z0": 11.2,
+   "color": "#e8e2d6",
+   "shape": "clouds"
+  },
+  {
+   "room": "407",
+   "label": "Sculpted wood ceiling",
+   "x0": 4.3,
+   "y0": 0.3,
+   "x1": 27.7,
+   "y1": 21.7,
+   "h": 0.8,
+   "z0": 13.1,
+   "color": "mat:honey",
+   "shape": "ribs"
+  },
+  {
+   "room": "407",
+   "label": "Layered pendants",
+   "x0": 12.5,
+   "y0": 3,
+   "x1": 15.5,
+   "y1": 4.6,
+   "h": 1.2,
+   "z0": 7.2,
+   "color": "#efe6d3",
+   "shape": "layered"
+  },
+  {
+   "room": "407",
+   "label": "RGB studio light strip",
+   "x0": 18.5,
+   "y0": 21.6,
+   "x1": 26.5,
+   "y1": 21.7,
+   "h": 0.1,
+   "z0": 9.2,
+   "color": "#b04de0",
+   "shape": "rgb"
   },
   {
    "room": "407",
@@ -3052,7 +3446,7 @@
    "h": 2.6,
    "z0": 0,
    "color": "#6f7a55",
-   "shape": "box"
+   "shape": "sofa"
   },
   {
    "room": "407",
@@ -3098,8 +3492,18 @@
     "w": 0,
     "e": 4
    },
-   "type": "flat",
-   "h": 11.6
+   "type": "shed",
+   "axis": "y",
+   "h0": 11.6,
+   "h1": 13.4,
+   "holes": [
+    [
+     93,
+     83,
+     97,
+     87
+    ]
+   ]
   },
   {
    "id": "east",
@@ -3113,8 +3517,10 @@
     "w": 6,
     "e": 4
    },
-   "type": "flat",
-   "h": 10.6
+   "type": "shed",
+   "axis": "x",
+   "h0": 11.8,
+   "h1": 10.6
   },
   {
    "id": "south",
@@ -3128,8 +3534,10 @@
     "w": 0,
     "e": 0
    },
-   "type": "flat",
-   "h": 12.6
+   "type": "shed",
+   "axis": "y",
+   "h0": 14.0,
+   "h1": 12.6
   },
   {
    "id": "office",
@@ -3143,8 +3551,18 @@
     "w": 4,
     "e": 1
    },
-   "type": "flat",
-   "h": 14.6
+   "type": "shed",
+   "axis": "y",
+   "h0": 16.0,
+   "h1": 14.6,
+   "holes": [
+    [
+     13,
+     9,
+     19,
+     14
+    ]
+   ]
   },
   {
    "id": "west",
@@ -3158,8 +3576,10 @@
     "w": 5,
     "e": 6
    },
-   "type": "flat",
-   "h": 10.6
+   "type": "shed",
+   "axis": "x",
+   "h0": 11.8,
+   "h1": 10.6
   }
  ],
  "site": {
@@ -3247,20 +3667,139 @@
    "cx": 58,
    "cy": 104,
    "r": 7,
-   "label": "Sunken Fire Pit"
+   "label": "Round Stone Fire Pit"
   },
   "zen": {
-   "x0": 36,
+   "x0": 34,
    "y0": 33,
-   "x1": 58,
-   "y1": 50,
-   "label": "Zen Garden"
+   "x1": 50,
+   "y1": 44,
+   "label": "Raked Gravel"
   },
-  "maple": {
-   "cx": 63,
-   "cy": 44,
-   "r": 5
+  "water": {
+   "x0": 55,
+   "y0": 35,
+   "x1": 66,
+   "y1": 44,
+   "label": "Planted Water Court"
   },
+  "lawn": {
+   "x0": 34,
+   "y0": 46,
+   "x1": 66,
+   "y1": 54
+  },
+  "shadetree": {
+   "cx": 46,
+   "cy": 48,
+   "r": 8
+  },
+  "maples": [
+   [
+    62,
+    50
+   ],
+   [
+    37,
+    50.5
+   ],
+   [
+    67.5,
+    33
+   ],
+   [
+    58.5,
+    51.5
+   ]
+  ],
+  "lanterns": [
+   [
+    53.5,
+    45
+   ],
+   [
+    33.5,
+    45
+   ],
+   [
+    66.5,
+    46.5
+   ]
+  ],
+  "cshower": {
+   "x0": 66.5,
+   "y0": 27.5,
+   "x1": 71.5,
+   "y1": 31.5,
+   "label": "Courtyard Shower"
+  },
+  "bale": {
+   "x0": 90,
+   "y0": -27,
+   "x1": 97,
+   "y1": -19,
+   "h": 9,
+   "label": "Bale Pavilion"
+  },
+  "pullup": {
+   "x0": 45,
+   "y0": -7,
+   "x1": 48.5,
+   "y1": -5,
+   "label": "Outdoor Pull-Up Station"
+  },
+  "orchard": [
+   [
+    -62,
+    72
+   ],
+   [
+    -52,
+    72
+   ],
+   [
+    -62,
+    82
+   ],
+   [
+    -52,
+    82
+   ],
+   [
+    -62,
+    92
+   ],
+   [
+    -52,
+    92
+   ],
+   [
+    -42,
+    96
+   ]
+  ],
+  "walkway": {
+   "x0": -20,
+   "y0": 51,
+   "x1": 5,
+   "y1": 57,
+   "h": 9,
+   "label": "Covered Walkway"
+  },
+  "frontgarden": [
+   [
+    -16,
+    40,
+    -4,
+    48
+   ],
+   [
+    -16,
+    59,
+    4,
+    64
+   ]
+  ],
   "bathgarden": {
    "x0": 98,
    "y0": 74,
@@ -3297,18 +3836,13 @@
   }
  },
  "clad": {
-  "Living Pavilion": "stucco",
-  "Sleeping Wing": "stucco",
-  "Wellness + Gym Wing": "rammed",
+  "Living Pavilion": "charred",
+  "Sleeping Wing": "charred",
+  "Wellness + Gym Wing": "charred",
   "Studio + Arrival": "charred"
  },
  "cladOvr": {
-  "401": "rammed",
-  "407": "charred",
-  "104": "charred",
-  "105": "charred",
-  "304": "rammed",
-  "305": "rammed"
+  "401": "rammed"
  },
  "total": 5952,
  "courtyard": {
