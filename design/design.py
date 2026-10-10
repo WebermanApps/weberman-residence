@@ -363,6 +363,16 @@ SITE = dict(
 COVERED = [dict(id="C1",name="Climbing Pavilion",x0=-22,y0=0,x1=-4,y1=18,w=18,d=18,area=324,
   notes="Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. 16-ft-wide, 12-ft-high kids' bouldering wall on the north side facing the sprint lane, over a 12-inch poured-rubber soft-fall surface. Sits in the active zone with the gym, sprint lane and a second bike rack.")]
 
+OUTDOOR_FIN = [
+ ("Exterior","Flagstone terraces","Black charred-timber (shou sugi ban) cladding; standing-seam metal roofs, low mono-pitch and butterfly; rammed-earth entry wall; solid charred-oak pivot door"),
+ ("Courtyard","Flagstone, lawn, raked gravel","Big shade tree; Japanese maples; planted water court; stone lanterns; stone water basin; curved teak bench; lit path lights; courtyard shower"),
+ ("Pool + bale","Flagstone deck","Green stone pool tile; teak and linen loungers; bale pavilion with honey-oak platform and standing-seam roof"),
+ ("Landscape","Meadow, gravel","Wildflower meadow; vegetable garden in cedar beds; fruit trees; round stone fire pit; front garden beds"),
+ ("Arrival","Gravel drive, flagstone","Modern black steel carport; covered walkway to the front door"),
+ ("Climbing Pavilion","Poured-rubber soft-fall","Fir frame; standing-seam roof; 16 x 12 ft bouldering wall"),
+ ("Active zone","Turf","Sprint lane; outdoor pull-up station in black steel"),
+]
+
 def total_conditioned():
     return sum(r['area'] for r in rooms if r['cond'])
 

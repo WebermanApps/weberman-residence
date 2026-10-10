@@ -18,7 +18,7 @@ registerFontFamily("Sans",normal="Sans",bold="SansB",italic="Sans",boldItalic="S
 INK=HexColor("#34382d"); OLIVE=HexColor("#4d593e"); MUTED=HexColor("#7d8073"); PAPER=HexColor("#f7f5ef"); LINE=HexColor("#dddcd3"); TERRA=HexColor("#a3613d")
 W,H=landscape(letter); M=36
 OUT="/workspace/dreamhome/v2/Weberman_Residence_Plan.pdf"
-S="/workspace/dreamhome/v2/shots/"; D="/workspace/dreamhome/v2/out/"
+S="/workspace/dreamhome/v2/shots/"; S4=S+"v4/"; D="/workspace/dreamhome/v2/out/"
 URL="https://webermanapps.github.io/weberman-residence/"; REPO="https://github.com/WebermanApps/weberman-residence"
 c=canvas.Canvas(OUT,pagesize=(W,H)); c.setTitle("Weberman Residence: Spatial Study"); c.setAuthor("Grok Bot for Max Weberman")
 body=ParagraphStyle("b",fontName="Sans",fontSize=10,leading=14.2,textColor=INK,spaceAfter=9)
@@ -49,7 +49,7 @@ T=total_conditioned()
 # 1 cover
 pg[0]+=1
 c.setFillColor(PAPER); c.rect(0,0,W,H,fill=1,stroke=0)
-img(S+"desktop_aerial.png",M,M+40,W*0.62,H-2*M-40)
+img(S4+"desktop_aerial.png",M,M+40,W*0.62,H-2*M-40)
 x0=M+W*0.62+20; tw=W-x0-M
 c.setFillColor(OLIVE); c.setFont("SansB",8); c.drawString(x0,H-M-10,"A MOUNTAIN COURTYARD HOUSE")
 c.setFillColor(INK); c.setFont("Serif",30); c.drawString(x0,H-M-50,"Weberman"); c.drawString(x0,H-M-84,"Residence:")
@@ -68,23 +68,23 @@ page("Design Concept","01 · Concept")
 cw=(W-2*M-30)/2
 para([
 "<b>One low house around one garden.</b> Four single-storey pavilions wrap a 44 × 33 ft courtyard, the heart of the house. The <b>Living Pavilion</b> faces north to the mountains, the <b>Sleeping Wing</b> runs along the quiet east side, the <b>Wellness + Gym Wing</b> sits on the sunny south side next to the pool, and <b>Studio + Arrival</b> on the west holds the entry, tatami room and office / music loft. A glazed engawa ties them together, so every trip through the house runs along the garden.",
-"<b>Warm, low, open resort-modern.</b> Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, and low standing-seam roofs elsewhere. Walls are white stucco, shou sugi ban, rammed earth and natural stone. Inside: wide-plank white oak, exposed fir beams, and plaster. There are no gables, logs, stone fireplaces, clay tile, freestanding tubs or koi ponds.",
-"<b>Fine, not showy.</b> The craft is in the details: pocketing glass that disappears into the walls, slim bronze frames, a hinoki soaking tub, cedar soffits, a 10-ft honed marble island, and timber slat screens. There is one big mountain window rather than walls of glass everywhere.",
+"<b>Warm, low, open resort-modern.</b> Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, and low standing-seam roofs elsewhere. Outside it is a black timber house: shou sugi ban cladding under standing-seam metal roofs, with a rammed-earth wall at the entry, flagstone terraces and a gravel drive. Inside: lime plaster, honey oak and oak herringbone, black stone, marble, green zellige, cedar and aspen. The room-by-room swipe decks removed white render, glass at the entry, timber decks, slat enclosures, flat roofs, wood-burning stoves, white hammams, glass shower enclosures, brass taps in the bath, bunk beds and wood headboards. No gables, logs, stone fireplaces, clay tile, freestanding tubs or koi ponds.",
+"<b>Fine, not showy.</b> The craft is in the details: pocketing glass that disappears into the walls, slim black frames, a hinoki soaking tub under a skylight, cedar soffits, a 10-ft marble island against green zellige, and a sculpted wood ceiling over the music loft. There is one big mountain window rather than walls of glass everywhere.",
 ],M,M+30,cw,H-2*M-100)
 rows=[["Loved in the swipe test","Where it lives in the plan"],
-["Central courtyard as the heart","44' × 33' Zen courtyard with a maple and a stone basin"],["Engawa walkway","Glazed engawa on three sides plus a timber deck under the eaves"],
+["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa on three sides; flagstone terrace under the eaves (no timber deck)"],
 ["Deep eaves","6' to 8' overhangs, cedar soffits"],["Disappearing glass walls","Pocketing sliders from the living, dining and galleries to the courtyard"],
 ["Big mountain-view window","28-ft fixed window in the living room; full-height glass in the master"],["Tatami room","8-mat room with a tokonoma, off the west engawa"],
 ["Japanese soaking tub","Hinoki tub at the master bath corner window"],["Loft-like office","24' × 22' office / music loft with a 14' ceiling"],
-["Sauna + outdoor shower","Cedar sauna, hammam, cold plunge, slat-screened shower"],["Climbing wall","Kids' bouldering wall in an open-air Climbing Pavilion by the gym, sprint lane and bike rack"],
-["Liked: conversation pit, butterfly roof, pergola, fire pit, meadow","Sunken pit in the living room, butterfly roof, pergola dining, sunken fire pit, wildflower meadow"]]
+["Sauna + outdoor shower","Cedar sauna with backlit aspen benches and an electric heater, stone steam room, zellige plunge, pool and courtyard showers"],["Climbing wall","Kids' bouldering wall in an open-air Climbing Pavilion by the gym, sprint lane and bike rack"],
+["Liked: conversation pit, butterfly roof, pergola, fire pit, meadow","Sunken pit with a low modular sofa, butterfly roof, pergola dining, round stone fire pit, bale pavilion, meadow, vegetable garden and fruit trees"]]
 rows=[[Paragraph(a,cellh if i==0 else cell),Paragraph(b,cellh if i==0 else cell)] for i,(a,b) in enumerate(rows)]
 t=Table(rows,colWidths=[cw*0.40,cw*0.60])
 t.setStyle(TableStyle([("FONT",(0,0),(-1,-1),"Sans",8.4),("FONT",(0,0),(-1,0),"SansB",8.4),("TEXTCOLOR",(0,0),(-1,0),OLIVE),("TEXTCOLOR",(0,1),(-1,-1),INK),
   ("LINEBELOW",(0,0),(-1,-1),0.4,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("BOTTOMPADDING",(0,0),(-1,-1),4.5),("TOPPADDING",(0,0),(-1,-1),4.5),("LEFTPADDING",(0,0),(-1,-1),2)]))
 tw_,th_=t.wrapOn(c,cw,400); t.drawOn(c,M+cw+30,H-M-60-th_)
 # materials swatches
-sw=[("White stucco","#efebe3"),("Shou sugi ban","#2f2a26"),("Rammed earth","#b98d6c"),("Natural stone","#b9b1a3"),("White oak","#c9a57a"),("Cedar soffit","#b8814f"),("Bronze metal","#6a645c"),("Calacatta marble","#ece8e1")]
+sw=[("Lime plaster","#efe9de"),("Shou sugi ban","#2f2a26"),("Honey oak","#c88f4e"),("Black stone","#2b2c2c"),("Green zellige","#2f7a5c"),("Marble","#ece8e1"),("Flagstone","#a79d8c"),("Standing seam","#6a645c")]
 y=M+40; x=M+cw+30
 c.setFont("SansB",7.5); c.setFillColor(OLIVE); c.drawString(x,y+44,"MATERIAL PALETTE")
 for i,(n,col) in enumerate(sw):
@@ -117,20 +117,39 @@ for ci,col in enumerate(cols):
         _,th=t.wrapOn(c,colw,500); t.drawOn(c,M+ci*(colw+30),y-th); y-=th+16
 c.setFillColor(HexColor("#e0e6d5")); c.rect(M+colw+30,M+30,colw,34,fill=1,stroke=0)
 c.setFillColor(OLIVE); c.setFont("SansB",11); c.drawString(M+colw+40,M+43,"Total Conditioned"); c.drawRightString(M+2*colw+20,M+43,f"{T:,} SF  ·  {T*SF2M2:,.0f} m²")
-c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(M+colw+30,M+18,"Excludes the Climbing Pavilion (covered outdoor), pool equipment room, carport, covered veranda, pergola and courtyard (1,452 SF open to the sky).")
+c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(M+colw+30,M+18,"Excludes the Climbing Pavilion (covered outdoor), pool equipment room, carport, veranda, pergola and courtyard.")
 # 6 screenshots
 page("Interactive Model Screenshots","05 · Live model  ·  "+URL)
-gw=(W-2*M-20)/2; gh=(H-2*M-110)/2
-for i,(f,cap) in enumerate([("desktop_aerial","Aerial, desktop"),("desktop_courtyard","Courtyard view: engawa deck looking north-east to the living pavilion and peaks"),("desktop_plan","Plan view: 2D drawing overlaid on a 3D cut at 4' 6\""),("desktop_office_info","Click-a-room info panel: Office / Music Loft (roof hidden, walls cut at 8')")]):
-    x=M+(i%2)*(gw+20); y=H-M-62-(i//2+1)*gh-(i//2)*22
-    img(S+f+".png",x,y,gw,gh); c.setFont("Sans",7.5); c.setFillColor(MUTED); c.drawString(x,y-11,cap)
+gw=(W-2*M-20)/2; gh=(H-2*M-130)/3
+for i,(f,cap) in enumerate([("desktop_aerial","Aerial: black timber pavilions under standing-seam roofs"),("desktop_courtyard","Courtyard: shade tree, teak bench, maples, lanterns, water court"),("desktop_kitchen_living","Kitchen + living: marble island, zellige, herringbone, conversation pit"),("desktop_office","Office / music loft: sit-stand desk to the garden, studio desk, guitar wall"),("desktop_gym","Gym: rig with rings and rope, Cadillac, reformer, rower, mirror wall"),("desktop_master_bath","Master bath: hinoki tub by the window, black stone, skylight")]):
+    x=M+(i%2)*(gw+20); y=H-M-62-(i//2+1)*gh-(i//2)*20
+    img(S4+f+".png",x,y,gw,gh-6); c.setFont("Sans",7.2); c.setFillColor(MUTED); c.drawString(x,y-9,cap)
 page("Climbing Pavilion","05b · Revision 10.10.26  ·  climbing wall moved outdoors")
 img(S+"desktop_climb.png",M,M+120,W-2*M,H-2*M-182)
 para(["<b>What changed.</b> The kids' climbing wall left the exercise room and now has its own open-air pavilion, 18 × 18 ft (324 SF covered, not conditioned). It has a fir post-and-beam frame, a standing-seam roof with 5-ft eaves and a charred-timber fascia to match the house, and a poured-rubber soft-fall surface. A 16-ft-wide, 12-ft-high bouldering wall faces south onto the sprint lane, with a crash pad and a 4-bike rack. It sits just west of the office and exercise room, so the gym, lane, wall and bikes form one active zone. The gym's west wall is now a full-height storage wall with a wall-mounted rig and rings."],M,M+10,W-2*M,100,bodys)
 page("Mobile Viewport","06 · Live model on a 390 × 844 phone viewport")
 mw=(W-2*M-40)/3
-for i,(f,cap) in enumerate([("mobile_aerial","Aerial"),("mobile_courtyard","Courtyard"),("mobile_plan","Plan")]):
-    x=M+i*(mw+20); img(S+f+".png",x,M+30,mw,H-2*M-100); c.setFont("Sans",8); c.setFillColor(MUTED); c.drawCentredString(x+mw/2,M+16,cap)
+for i,(f,cap) in enumerate([("mobile_aerial","Aerial"),("mobile_kitchen_living","Kitchen + living"),("mobile_master_bath","Master bath")]):
+    x=M+i*(mw+20); img(S4+f+".png",x,M+30,mw,H-2*M-100); c.setFont("Sans",8); c.setFillColor(MUTED); c.drawCentredString(x+mw/2,M+16,cap)
+# finish schedule
+from design import OUTDOOR_FIN
+fs_rows=[["Room","Floor","Finishes + key fixtures (from the room-by-room swipe decks)"]]+[[f"{r['id']}  {r['name']}",r['floorName'],r['fin']] for r in rooms]+[[n,fl,fi] for (n,fl,fi) in OUTDOOR_FIN]
+fst=ParagraphStyle('fs',fontName='Sans',fontSize=6.9,leading=8.3,textColor=INK); fsh=ParagraphStyle('fsh',fontName='SansB',fontSize=7.2,leading=8.6,textColor=OLIVE)
+allrows=[[Paragraph(str(v),fsh if i==0 else fst) for v in row] for i,row in enumerate(fs_rows)]
+fw=W-2*M; cols=[fw*0.22,fw*0.16,fw*0.62]
+def fstable(rows):
+    t=Table(rows,colWidths=cols,repeatRows=1); t.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("TOPPADDING",(0,0),(-1,-1),2.4),("BOTTOMPADDING",(0,0),(-1,-1),2.4),("LEFTPADDING",(0,0),(-1,-1),2)])); return t
+avail=H-2*M-95; start=1; fpg=1
+while start<len(allrows):
+    end=start+1
+    while end<=len(allrows):
+        t=fstable([allrows[0]]+allrows[start:end]); _,th=t.wrapOn(c,fw,2000)
+        if th>avail: end-=1; break
+        end+=1
+    end=min(end,len(allrows))
+    page("Finish Schedule" if fpg==1 else "Finish Schedule (Continued)","06b · Materials and fixtures, room by room")
+    t=fstable([allrows[0]]+allrows[start:end]); _,th=t.wrapOn(c,fw,2000); t.drawOn(c,M,H-M-62-th)
+    start=end; fpg+=1
 # 7 open questions
 page("Open Design Questions for Max","07 · Next steps")
 qs=["<b>Site and orientation.</b> Is there a real parcel? The plan assumes the mountain view is to the north and a gentle slope. A view to the west or south would mean rotating the courtyard. A steeper lot could become the gentle split (living pavilion 2 to 3 steps down).",

@@ -81,7 +81,7 @@ pcontrols.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }; pcontr
 
 const VIEWS = {
   aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: true, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
-  courtyard: { name: 'Courtyard', cam: [31.5, 30.5, 6.2], tgt: [58, 52, 6.5], roof: true, title: 'The courtyard.', kicker: 'VIEW · ENGAWA DECK, LOOKING NORTH-EAST', fov: 62 },
+  courtyard: { name: 'Courtyard', cam: [31.5, 30.5, 6.2], tgt: [58, 52, 6.5], roof: true, title: 'The courtyard.', kicker: 'VIEW · FLAGSTONE TERRACE, LOOKING NORTH-EAST', fov: 62 },
   living: { name: 'Living', cam: [44, 22, 56], tgt: [56, 72, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
   office: { name: 'Office', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Office / music loft.', kicker: 'ROOM 407 · ROOF HIDDEN' },
   wellness: { name: 'Wellness', cam: [70, -44, 58], tgt: [52, 8, 0], roof: false, cut: 8, title: 'Wellness + gym wing.', kicker: 'ROOMS 301-306 · ON THE POOL · ROOF HIDDEN' },
