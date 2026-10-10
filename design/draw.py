@@ -208,11 +208,15 @@ def floor_plan(path, overlay=False):
     courtyard_art(ax)
     for r in rooms:
         ax.add_patch(Rectangle((r['x0'],r['y0']),r['w'],r['d'],fc="white" if r['cond'] else "#ece9e0",ec="none",zorder=1))
+    # isolated studio inner shell (room-within-a-room, ~14 in build-up per side)
+    t=1.17; ax.add_patch(Rectangle((4+t,0+t),24-2*t,22-2*t,fc="none",ec=TERRA,lw=0.7,ls=(0,(3,1.5)),zorder=6))
+    ax.text(16,1.9,"INNER ISOLATION SHELL · TARGET STC 60+ · 426 SF NET",ha='center',fontsize=3.6,color=TERRA,zorder=9)
+    ax.text(24,24.6,"SOUND LOCK",ha='center',fontsize=3.4,color=TERRA,zorder=9)
     # outdoor items near house
     ax.add_patch(Rectangle((36,79),36,8,fc="#e8dcc6",ec="#c2ab88",lw=0.4,zorder=0.5)); ax.text(54,84.5,"COVERED VERANDA",ha='center',fontsize=5,color=MUTED)
     ax.add_patch(Rectangle((19,81),18,14,fc="none",ec="#a39a86",lw=0.6,ls=(0,(4,2)),zorder=0.5)); ax.text(28,88,"PERGOLA\nDINING",ha='center',va='center',fontsize=5,color=MUTED)
     ax.add_patch(Rectangle((48,-16),50,16,fc="#e9e4d8",ec="none",zorder=0.4))
-    ax.add_patch(Rectangle((54,-16),34,6,fc="#cfe3ea",ec=GLASS,lw=0.6,zorder=0.5)); ax.text(71,-13,"POOL 34' × 12' (CONT.)",ha='center',va='center',fontsize=5,color="#2e6b80")
+    ax.add_patch(Rectangle((54,-16),34,6,fc="#cfe3ea",ec=GLASS,lw=0.6,zorder=0.5)); ax.text(71,-13,"SALTWATER POOL 34' × 12' (CONT.)",ha='center',va='center',fontsize=5,color="#2e6b80")
     ax.add_patch(Rectangle((72.5,4),5,6,fc="#dfe9ec",ec="#8e897e",lw=0.5,zorder=0.5)); ax.text(75,7,"OUTDOOR\nSHOWER",ha='center',va='center',fontsize=4.2,color=MUTED)
     ax.add_patch(Rectangle((-14,-16),57,8,fc="#cfdcb4",ec="#8ea06a",lw=0.5,zorder=0.5)); ax.text(14,-12,"TURF SPRINT LANE (CONT.)",ha='center',va='center',fontsize=5,color="#4e5f2f")
     ax.add_patch(Rectangle((98,69),8,14,fc="#e3e8d6",ec="#a8b08f",lw=0.5,zorder=0.5)); ax.text(102,76,"BATH\nGARDEN",ha='center',va='center',fontsize=4.2,color=MUTED)
@@ -302,7 +306,7 @@ def site_plan(path):
     ax.add_patch(Polygon([(-90,4),(-60,10),(-44,24),(-44,58),(-20,58),(-20,26),(18,26),(18,24),(-16,22),(-46,16),(-62,0),(-90,-6)],fc="#e3ddd0",ec="#b3ab98",lw=0.6,zorder=0.6))
     ax.text(-80,4,"GRAVEL DRIVE FROM ROAD",fontsize=8.0,color=MUTED,rotation=12,zorder=7)
     climb_art(ax,labels=False)
-    ax.annotate("CLIMBING PAVILION\n18' × 18' covered, open-air",(-13,9),(-78,-22),fontsize=7.3,ha='center',arrowprops=dict(arrowstyle='-',lw=0.5),zorder=7)
+    ax.annotate("CLIMBING PAVILION\n18' × 18' open-air · 12' wall",(-13,9),(-78,-22),fontsize=7.3,ha='center',arrowprops=dict(arrowstyle='-',lw=0.5),zorder=7)
     c=SITE['carport']; ax.add_patch(Rectangle((c['x0'],c['y0']),c['x1']-c['x0'],c['y1']-c['y0'],fc="#d6d0c3",ec=INK,lw=0.8,zorder=1))
     ax.text((c['x0']+c['x1'])/2,(c['y0']+c['y1'])/2,"CARPORT\n2 cars · 24' × 24'",ha='center',va='center',fontsize=8.0,zorder=7)
     ax.add_patch(Rectangle((-20,26),38,29,fc="#ddd5c6",ec="none",zorder=0.7)); ax.text(-5,36,"STONE\nENTRY\nCOURT",ha='center',va='center',fontsize=8.0,color=MUTED,zorder=7)
@@ -313,13 +317,13 @@ def site_plan(path):
         ax.add_patch(Rectangle((rm['x0'],rm['y0']),rm['w'],rm['d'],fc="#5a5850" if rm['cond'] else "#8a877e",ec="#5a5850",lw=0.3,alpha=0.25,zorder=2.5))
     cy=COURTYARD; ax.add_patch(Rectangle((cy['x0']+6,cy['y0']+5),cy['x1']-cy['x0']-12,cy['y1']-cy['y0']-11,fc="#efeadf",ec="#77756d",lw=0.5,zorder=3))
     ax.text(54,41,"COURTYARD",ha='center',fontsize=9.4,weight='bold',color=OLIVE,zorder=7,family=SERIF)
-    for name,(x,y) in {"LIVING PAVILION":(41,67),"SLEEPING WING":(91,37),"WELLNESS + GYM":(50,12),"OFFICE / MUSIC":(16,10),"STUDIO + ARRIVAL":(24,40),"MASTER":(85,72)}.items():
+    for name,(x,y) in {"LIVING PAVILION":(41,67),"SLEEPING WING":(91,37),"WELLNESS + GYM":(50,12),"ISOLATED STUDIO":(16,10),"STUDIO + ARRIVAL":(24,40),"MASTER":(85,72)}.items():
         ax.text(x,y,name,ha='center',va='center',fontsize=7.5,weight='bold',color=INK,zorder=7,rotation=90 if name in("SLEEPING WING","STUDIO + ARRIVAL") else 0)
     # outdoor program
     s=SITE
     d=s['pooldeck']; ax.add_patch(Rectangle((d['x0'],d['y0']),d['x1']-d['x0'],d['y1']-d['y0'],fc="#e6e0d2",ec="#b3ab98",lw=0.5,zorder=1))
     p=s['pool']; ax.add_patch(Rectangle((p['x0'],p['y0']),p['x1']-p['x0'],p['y1']-p['y0'],fc="#a9d1c6",ec="#3f7a6e",lw=0.8,zorder=1.2))
-    ax.text(71,-16,"POOL\n34' × 12' (10.4 × 3.7 m)",ha='center',va='center',fontsize=8.0,color="#2e6b80",zorder=7)
+    ax.text(71,-16,"SALTWATER POOL\n34' × 12' (10.4 × 3.7 m)",ha='center',va='center',fontsize=8.0,color="#2e6b80",zorder=7)
     ba=s['bale']; ax.add_patch(Rectangle((ba['x0']-3,ba['y0']-3),ba['x1']-ba['x0']+6,ba['y1']-ba['y0']+6,fc="#d6d0c3",ec=INK,lw=0.6,zorder=1.3)); ax.text((ba['x0']+ba['x1'])/2,ba['y0']-6,"BALE",ha='center',fontsize=6.5,zorder=7)
     for (ox,oy) in s['orchard']: ax.add_patch(Circle((ox,oy),3.2,fc="#a9bb84",ec="#6f8550",lw=0.5,zorder=1.3))
     ax.text(-46,98,"FRUIT TREES",ha='center',fontsize=6.5,zorder=7)
@@ -329,7 +333,7 @@ def site_plan(path):
         x=l['x0']+i*3; ax.plot([x,x],[l['y0'],l['y1']],color="white",lw=0.8,zorder=1.3); ax.text(x,l['y0']-2.4,f"{i}",ha='center',fontsize=6.5,color="#4e5f2f",zorder=7)
     ax.text((l['x0']+l['x1'])/2,l['y0']-5.5,"TURF SPRINT LANE · 20 YD (60' / 18.3 m) + 15' RUN-OUT · 8' WIDE",ha='center',fontsize=7.5,color="#4e5f2f",zorder=7)
     o=s['outdoor_shower']; ax.add_patch(Rectangle((o['x0'],o['y0']),o['x1']-o['x0'],o['y1']-o['y0'],fc="#dfe9ec",ec=INK,lw=0.5,zorder=3.5))
-    ax.annotate("OUTDOOR SHOWER",(75,4),(104,-6),fontsize=7.2,arrowprops=dict(arrowstyle='-',lw=0.4,color=INK),zorder=7)
+    ax.annotate("OUTDOOR SHOWER",(75,4),(80,-5),fontsize=7.2,arrowprops=dict(arrowstyle='-',lw=0.4,color=INK),zorder=7)
     v=s['veg']; ax.add_patch(Rectangle((v['x0'],v['y0']),v['x1']-v['x0'],v['y1']-v['y0'],fc="#ece4cf",ec="#a39a86",lw=0.5,zorder=1))
     for i in range(4): ax.add_patch(Rectangle((v['x0']+1.5+i*5.8,v['y0']+2),4,18,fc="#b7a27a",ec="#7d6c4c",lw=0.4,zorder=1.2))
     ax.text((v['x0']+v['x1'])/2,v['y1']+2.5,"VEGETABLE GARDEN\n4 raised beds 4' × 18'",ha='center',fontsize=7.5,zorder=7)
@@ -341,8 +345,26 @@ def site_plan(path):
     ax.text(f['cx']+9,f['cy'],"ROUND STONE FIRE PIT\n14' dia.",fontsize=7.2,va='center',zorder=7)
     ax.text(54,89.3,"COVERED VERANDA",ha='center',fontsize=7.0,zorder=7)
     ax.text(104,77,"BATH\nGARDEN",fontsize=6.4,ha='left',zorder=7)
-    ax.text(100,-40,"WILDFLOWER MEADOW",fontsize=11.6,color="#7a6a3a",family=SERIF,zorder=7)
-    ax.text(-75,-62,"WILDFLOWER MEADOW",fontsize=11.6,color="#7a6a3a",family=SERIF,zorder=7)
+    # service lane, utility yard, drain field, well
+    sv=s['service']
+    for (ax_,ay_),(bx_,by_) in zip(sv[:-1],sv[1:]): ax.add_patch(Rectangle((min(ax_,bx_)-5,min(ay_,by_)-5),abs(bx_-ax_)+10,abs(by_-ay_)+10,fc="#e3ddd0",ec="none",zorder=0.55))
+    ax.text(30,-41.5,"GRAVEL SERVICE LANE FROM DRIVE (12')",ha='center',fontsize=6.4,color=MUTED,zorder=7)
+    u=s['util']; ax.add_patch(Rectangle((u['x0'],u['y0']),u['x1']-u['x0'],u['y1']-u['y0'],fc="#e7e2d6",ec="#2b2a27",lw=1.6,zorder=1.5))
+    ax.add_patch(Rectangle((u['gate'][0],u['y0']-0.8),u['gate'][1]-u['gate'][0],1.6,fc="#e7e2d6",ec="none",zorder=1.55))
+    for (tx,ty,tr) in s['tanks']: ax.add_patch(Circle((tx,ty),tr,fc="#9aa892",ec=INK,lw=0.5,zorder=1.6))
+    ax.text(111.5,18,"T1  T2",ha='center',va='center',fontsize=5.6,zorder=7)
+    for k,n in [('watertreat','W'),('atu','S'),('power','G')]:
+        q=s[k]; ax.add_patch(Rectangle((q['x0'],q['y0']),q['x1']-q['x0'],q['y1']-q['y0'],fc="#d6d0c3",ec=INK,lw=0.5,zorder=1.6)); ax.text((q['x0']+q['x1'])/2,(q['y0']+q['y1'])/2,n,ha='center',va='center',fontsize=5.6,zorder=7)
+    for (cx_,cy_) in s['condensers']: ax.add_patch(Rectangle((cx_,cy_),3,3,fc="#cfccc4",ec=INK,lw=0.4,zorder=1.6))
+    ax.text(120.5,13.3,"AC",ha='center',fontsize=5,zorder=7)
+    ax.text(125,-10.5,"UTILITY YARD 36' × 30'\nCHARRED-TIMBER SCREEN + GATE",ha='left',va='top',fontsize=6.0,weight='bold',zorder=7)
+    ax.text(137.5,9,"T1-T2 RAINWATER TANKS (2 × 5,000 GAL)\nW  PUMP · SEDIMENT + CARBON · UV · SOFTENER\nS  SEPTIC + AEROBIC TREATMENT (BURIED)\nG  GENERATOR + BATTERY PAD\nAC HVAC CONDENSERS (3)\nPOOL PUMP + SALT CELL IN ROOM 211",fontsize=4.6,va='center',zorder=7,linespacing=1.35)
+    df=s['drainfield']; ax.add_patch(Rectangle((df['x0'],df['y0']),df['x1']-df['x0'],df['y1']-df['y0'],fc="none",ec="#6f8550",lw=0.7,ls=(0,(4,2)),zorder=1.2))
+    for yy in range(int(df['y0'])+3,int(df['y1']),5): ax.plot([df['x0']+2,df['x1']-2],[yy,yy],color="#8a9c66",lw=0.5,zorder=1.25)
+    ax.text((df['x0']+df['x1'])/2,df['y0']-4,"DRAIN FIELD (SIZE TO PERC TEST)",ha='center',fontsize=6.2,zorder=7)
+    wl=s['well']; ax.add_patch(Circle((wl['cx'],wl['cy']),2.2,fc="#7d7a70",ec=INK,lw=0.6,zorder=3)); ax.text(wl['cx']+4,wl['cy'],"WELL (150'+ FROM DRAIN FIELD)",fontsize=6.2,va='center',zorder=7)
+    ax.text(100,-34,"WILDFLOWER MEADOW",fontsize=11.6,color="#7a6a3a",family=SERIF,zorder=7)
+    ax.text(-80,-50,"WILDFLOWER MEADOW",fontsize=11.6,color="#7a6a3a",family=SERIF,zorder=7)
     ax.text(40,135,"Mountain View (North)",fontsize=14.5,color=OLIVE,family=SERIF,ha='center',zorder=7)
     ax.text(40,129,"Aspen + pine edge · ground rises gently to the north",fontsize=8.0,color=MUTED,ha='center',zorder=7)
     # dims
@@ -354,7 +376,7 @@ def site_plan(path):
     d2(98,30,L['x1'],30,0,"72' (21.9 m)",True,7.0)
     d2(40,88,40,L['y1'],0,"62' (18.9 m) to north line",False,7.0)
     d2(10,-16,10,L['y0'],0,"64' (19.5 m)",False,7.0)
-    scalebar(ax,40,-64,8,step=20,mstep=5); 
+    scalebar(ax,-58,-72,8,step=20,mstep=5); 
     # scale bar bigger: 50 ft
     north(ax,160,-55,5)
     sx=0.75
@@ -365,9 +387,10 @@ def site_plan(path):
            ("Conditioned area",f"{total_conditioned():,} SF · {total_conditioned()*SF2M2:,.0f} m²"),
            ("Courtyard","36' × 28' · 11.0 × 8.5 m"),("Pool","34' × 12' · 10.4 × 3.7 m, 4'-5' deep"),
            ("Turf sprint lane","75' × 8' · 22.9 × 2.4 m (20 yd + run-out)"),("Vegetable garden","24' × 22' · 4 raised beds"),
-           ("Carport","24' × 24' · modern black steel, covered walkway"),("Fire pit","Round stone, 14' dia., north terrace"),
-           ("Pergola dining","18' × 14' off the kitchen"),("Bike racks","6 at mudroom door + 4 at climbing pavilion"),("Climbing pavilion","18' × 18' covered, open-air · soft-fall · not conditioned"),
-           ("Outdoor showers","By the pool + in the courtyard, charred-timber walls"),("Pool + bale","Green stone tile, flagstone deck, bale pavilion"),]
+           ("Carport","24' × 24' open · decided, no change"),("Fire pit","Round stone, 14' dia., north terrace"),
+           ("Pergola dining","18' × 14' off the kitchen"),("Bike racks","6 at mudroom door + 4 at climbing pavilion"),("Climbing pavilion","18' × 18' · 12' wall · 17' roof · soft-fall · not conditioned"),
+           ("Outdoor showers","By the pool + in the courtyard, charred-timber walls"),("Saltwater pool + bale","Salt cell (3-5 yr), sealed flagstone, 316 fittings"),
+           ("Utility yard","36' × 30' screened · tanks, treatment, ATU, power, AC"),("Wastewater","Drain field S meadow · well up-slope NE"),]
     for k,v in items:
         fig.text(sx,y,k.upper(),fontsize=6.5,weight='bold',color=OLIVE); fig.text(sx,y-0.013,v,fontsize=7,color=INK); y-=0.034
     y-=0.01

@@ -83,10 +83,11 @@ const VIEWS = {
   aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: true, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
   courtyard: { name: 'Courtyard', cam: [39, 29.5, 6.2], tgt: [67, 43, 6], roof: true, title: 'The courtyard.', kicker: 'VIEW · FLAGSTONE TERRACE, LOOKING NORTH-EAST', fov: 62 },
   living: { name: 'Living', cam: [48, 20, 54], tgt: [58, 67, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
-  office: { name: 'Office', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Office / music loft.', kicker: 'ROOM 407 · ROOF HIDDEN' },
+  office: { name: 'Studio', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Isolated studio / office.', kicker: 'ROOM 407 · ROOM-WITHIN-A-ROOM · TARGET STC 60+' },
   wellness: { name: 'Wellness', cam: [70, -44, 58], tgt: [52, 8, 0], roof: false, cut: 8, title: 'Wellness + gym wing.', kicker: 'ROOMS 301-306 · ON THE POOL · ROOF HIDDEN' },
   bath: { name: 'Bath', cam: [93, 66, 22], tgt: [93.8, 78, 0], roof: false, cut: 8, title: 'Master bath.', kicker: 'ROOM 202 · HINOKI SOAKING TUB BY THE WINDOW, SKYLIGHT', fov: 55 },
-  climb: { name: 'Climbing', cam: [-4, -30, 8], tgt: [-13, 14, 6], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
+  utility: { name: 'Utility', cam: [126, -46, 62], tgt: [118, 9, 0], roof: false, title: 'Utility yard.', kicker: 'OUTDOORS · SCREENED SERVICE YARD · WATER, WASTEWATER, POWER, HVAC', fov: 50 },
+  climb: { name: 'Climbing', cam: [-4, -34, 9], tgt: [-13, 14, 8], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
   kitchen: { name: 'Kitchen', cam: [30, 43, 27], tgt: [39, 70, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · MARBLE ISLAND, ZELLIGE, CONVERSATION PIT', fov: 50 },
   gym: { name: 'Gym', cam: [52, -12, 24], tgt: [38, 11, 2], roof: false, cut: 8, title: 'Exercise room.', kicker: 'ROOM 302 · CALM STUDIO, RIG, CADILLAC, ROWER', fov: 50 },
   kids: { name: 'Kids', cam: [104, 20, 36], tgt: [90, 38, 0], roof: false, cut: 8, title: 'Kids\' rooms.', kicker: 'ROOMS 207-209 · WINDOW SEATS, DESKS BY THE WINDOW, CLIMBING WALLS', fov: 52 },
@@ -132,7 +133,7 @@ function buildLists() {
     P.rooms.filter(r => r.wing === w && !HIDE.has(r.id)).forEach(r => { mk(r.id, r.id, r.name, list); if (!MINOR.has(r.id)) mk(r.id, r.id, r.name, chips, true); });
   }
   const g = document.createElement('div'); g.className = 'grp'; g.textContent = 'OUTDOORS'; list.appendChild(g);
-  OUTDOOR.forEach(o => { mk(o.id, '·', o.name, list); if (['C', 'W', 'P', 'L', 'V'].includes(o.id)) mk(o.id, '·', o.name, chips, true); });
+  OUTDOOR.forEach(o => { mk(o.id, '·', o.name, list); if (['C', 'W', 'P', 'L', 'V', 'U'].includes(o.id)) mk(o.id, '·', o.name, chips, true); });
   document.querySelectorAll('[data-id="all"]').forEach(b => b.classList.add('on'));
 }
 buildLists();

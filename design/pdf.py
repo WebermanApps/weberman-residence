@@ -18,7 +18,7 @@ registerFontFamily("Sans",normal="Sans",bold="SansB",italic="Sans",boldItalic="S
 INK=HexColor("#34382d"); OLIVE=HexColor("#4d593e"); MUTED=HexColor("#7d8073"); PAPER=HexColor("#f7f5ef"); LINE=HexColor("#dddcd3"); TERRA=HexColor("#a3613d")
 W,H=landscape(letter); M=36
 OUT="/workspace/dreamhome/v2/Weberman_Residence_Plan.pdf"
-S="/workspace/dreamhome/v2/shots/"; S4=S+"v5/"; D="/workspace/dreamhome/v2/out/"
+S="/workspace/dreamhome/v2/shots/"; S4=S+"v5/"; S6=S+"v6/"; D="/workspace/dreamhome/v2/out/"
 URL="https://webermanapps.github.io/weberman-residence/"; REPO="https://github.com/WebermanApps/weberman-residence"
 c=canvas.Canvas(OUT,pagesize=(W,H)); c.setTitle("Weberman Residence: Spatial Study"); c.setAuthor("Grok Bot for Max Weberman")
 body=ParagraphStyle("b",fontName="Sans",fontSize=10,leading=14.2,textColor=INK,spaceAfter=9)
@@ -75,7 +75,7 @@ rows=[["Loved in the swipe test","Where it lives in the plan"],
 ["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa on the east and west, an open-air covered walkway on the south, and a flagstone terrace under the eaves"],
 ["Deep eaves","6' to 8' overhangs, cedar soffits"],["Disappearing glass walls","Pocketing sliders from the living, dining and galleries to the courtyard"],
 ["Big mountain-view window","20-ft fixed window in the living room; full-height glass in the master"],["Tatami room","8-mat room with a tokonoma, off the west engawa"],
-["Japanese soaking tub","Hinoki tub at the master bath corner window"],["Loft-like office","24' × 22' office / music loft with a 14' ceiling"],
+["Japanese soaking tub","Hinoki tub at the master bath corner window"],["Loft-like office","24' × 22' isolated studio / office (room-within-a-room, STC 60+) with a 14' ceiling"],
 ["Sauna + outdoor shower","Cedar sauna with backlit aspen benches and an electric heater, stone steam room, zellige plunge, pool and courtyard showers"],["Climbing wall","Kids' bouldering wall in an open-air Climbing Pavilion by the gym, sprint lane and bike rack"],
 ["Liked: conversation pit, butterfly roof, pergola, fire pit, meadow","Sunken pit with a low modular sofa, butterfly roof, pergola dining, round stone fire pit, bale pavilion, meadow, vegetable garden and fruit trees"]]
 rows=[[Paragraph(a,cellh if i==0 else cell),Paragraph(b,cellh if i==0 else cell)] for i,(a,b) in enumerate(rows)]
@@ -139,10 +139,10 @@ rr.append(["Total conditioned","","5,952","",f"{T:,}",f"{T-5952:+,}"])
 tt=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(rr)],colWidths=[(W-2*M)*k for k in (0.34,0.13,0.09,0.13,0.09,0.09)])
 tt.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("TOPPADDING",(0,0),(-1,-1),2.6),("BOTTOMPADDING",(0,0),(-1,-1),2.6),("BACKGROUND",(0,-1),(-1,-1),HexColor("#e0e6d5"))]))
 _,th=tt.wrapOn(c,W-2*M,800); tt.drawOn(c,M,H-M-62-th)
-para(["<b>What stayed the same.</b> The master suite, office / music loft, exercise room and wellness wing (wet room, sauna, steam room, changing) keep their sizes. The master suite moved 5 ft south with the living pavilion, and the west wing moved 8 ft east to close up the courtyard. Kitchen (16 × 24) and the 16 × 12 conversation pit are unchanged. The galleries shortened with the courtyard; the west wing rooms lost 5 ft of length to match (tatami is now a true 12 × 12 eight-mat room). The south gallery became an open-air covered walkway under the wellness-wing eave."],M,M+20,W-2*M,H-2*M-90-th,bodys)
-page("Climbing Pavilion","05b · Revision 10.10.26  ·  climbing wall moved outdoors")
-img(S+"desktop_climb.png",M,M+120,W-2*M,H-2*M-182)
-para(["<b>What changed.</b> The kids' climbing wall left the exercise room and now has its own open-air pavilion, 18 × 18 ft (324 SF covered, not conditioned). It has a fir post-and-beam frame, a standing-seam roof with 5-ft eaves and a charred-timber fascia to match the house, and a poured-rubber soft-fall surface. A 16-ft-wide, 12-ft-high bouldering wall faces south onto the sprint lane, with a crash pad and a 4-bike rack. It sits just west of the office and exercise room, so the gym, lane, wall and bikes form one active zone. The gym's west wall is now a full-height storage wall with a wall-mounted rig and rings."],M,M+10,W-2*M,100,bodys)
+para(["<b>What stayed the same.</b> The master suite, office / studio, exercise room and wellness wing (wet room, sauna, steam room, changing) keep their sizes. The master suite moved 5 ft south with the living pavilion, and the west wing moved 8 ft east to close up the courtyard. Kitchen (16 × 24) and the 16 × 12 conversation pit are unchanged. The galleries shortened with the courtyard; the west wing rooms lost 5 ft of length to match (tatami is now a true 12 × 12 eight-mat room). The south gallery became an open-air covered walkway under the wellness-wing eave."],M,M+20,W-2*M,H-2*M-90-th,bodys)
+page("Climbing Pavilion","05b · Revision 10.10.26  ·  full 12 ft wall, roof raised to 17 ft")
+img(S6+"desktop_climb.png",M,M+120,W-2*M,H-2*M-182)
+para(["<b>What changed.</b> The kids' climbing wall left the exercise room and now has its own open-air pavilion, 18 × 18 ft (324 SF covered, not conditioned). It has a fir post-and-beam frame, a standing-seam roof with 5-ft eaves and a charred-timber fascia to match the house, and a poured-rubber soft-fall surface. Decided 10.10.26: a full 16-ft-wide, 12-ft-high climbing wall from day one faces south onto the sprint lane, over soft-fall and thick crash pads, with a 4-bike rack. The roof was raised to 17 ft, so the beams clear the top of the wall by about 3 ft and the roof by about 4 ft. It sits just west of the office and exercise room, so the gym, lane, wall and bikes form one active zone. The gym's west wall is now a full-height storage wall with a wall-mounted rig and rings."],M,M+10,W-2*M,100,bodys)
 page("Mobile Viewport","06 · Live model on a 390 × 844 phone viewport")
 mw=(W-2*M-40)/3
 for i,(f,cap) in enumerate([("mobile_aerial","Aerial"),("mobile_kitchen_living","Kitchen + living"),("mobile_master_bath","Master bath")]):
@@ -166,6 +166,17 @@ while start<len(allrows):
     page("Finish Schedule" if fpg==1 else "Finish Schedule (Continued)","06b · Materials and fixtures, room by room")
     t=fstable([allrows[0]]+allrows[start:end]); _,th=t.wrapOn(c,fw,2000); t.drawOn(c,M,H-M-62-th)
     start=end; fpg+=1
+# Decisions log
+page("Decisions Log","06c · Settled by Max · 10.10.26")
+dl=[["#","Question","Decision","What changed in the design"],
+["1","Garage vs. carport","Keep the open carport","No change. Modern black steel two-car carport with a standing-seam roof and covered walkway to the front door."],
+["2","Music room acoustics","Fully isolated studio","Office / music loft (407) becomes a room-within-a-room: decoupled inner stud walls on resilient isolation mounts, a floated floor on isolation pads, an isolated ceiling on spring hangers, laminated double glazing with an air gap, and quiet decoupled HVAC with lined ducts and silencers, plus acoustic panels and ceiling clouds inside. Target STC 60+ (about 60-65 dB isolation), NC-20 inside. Room 405 becomes a sound lock with two solid-core sealed doors; the studio's outside door was removed. About 14 in of build-up per side: 528 SF gross, about 426 SF net (21 ft 8 in x 19 ft 8 in). Gross conditioned area is unchanged. Furniture moved in off the inner walls, so it still works as an office: sit-stand desk facing the garden, studio desk, piano, drums, guitar wall and sofa."],
+["3","Pool type","Small saltwater pool","Same 34 x 12 ft pool. A salt chlorine generator in the Pool Equipment room (211); replace the cell about every 3-5 years. Sealed flagstone deck (salt-resistant penetrating sealer, resealed every 2-3 years) and marine-grade 316 stainless fittings, ladders and drains."],
+["4","Climbing wall height","Full 12 ft wall from day one","The full 16 ft wide x 12 ft high wall is built from the start (no low wall, no future extension). Poured-rubber soft-fall plus thick crash pads, a second upper volume, and more holds. The pavilion roof went up from 13 ft to 17 ft so the beams clear the top of the wall by about 3 ft and the roof by about 4 ft."],
+["5","Utilities","New screened utility yard","36 x 30 ft yard beside the Pool Equipment room and wellness wing, behind a 7 ft charred-timber screen with a 12 ft service gate on a new gravel service lane from the drive. Inside: two rainwater tanks (about 5,000 gal each, fed from the roofs, with well or municipal backup), a water treatment lean-to (pressure pump, sediment + carbon filters, UV, softener), a buried septic tank + aerobic treatment unit, a generator + battery pad, and three HVAC condensers. Pool pump, filter and salt cell stay in room 211 next door. Drain field in the south meadow, more than 100 ft from the vegetable garden and the well; well up-slope to the north-east."]]
+dt=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(dl)],colWidths=[(W-2*M)*k for k in (0.04,0.16,0.18,0.62)])
+dt.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("TOPPADDING",(0,0),(-1,-1),4),("BOTTOMPADDING",(0,0),(-1,-1),4)]))
+_,dh=dt.wrapOn(c,W-2*M,800); dt.drawOn(c,M,H-M-62-dh)
 # 7 open questions
 page("Open Design Questions for Max","07 · Next steps")
 qs=["<b>Site and orientation.</b> Is there a real parcel? The plan assumes the mountain view is to the north and a gentle slope. A view to the west or south would mean rotating the courtyard. A steeper lot could become the gentle split (living pavilion 2 to 3 steps down).",
@@ -178,5 +189,6 @@ qs=["<b>Site and orientation.</b> Is there a real parcel? The plan assumes the m
 "<b>Climate and snow.</b> Deep, low eaves and a butterfly valley need snow-load engineering and heated valley gutters. Confirm the snow region, and whether you prefer a single low shed roof over the butterfly.",
 "<b>Climbing pavilion.</b> The wall is now outdoors in its own covered pavilion (as drawn). What ages are the kids? That sets the wall height (12 ft drawn) and the fall zone. Should one side get roll-down screens or a heater for winter use?",
 "<b>Budget and level of finish.</b> How far to push the details: hinoki, Calacatta, pocketing steel-framed glass, rammed earth? Each has a lower-cost stand-in."]
-para(qs[:5],M,M+30,cw,H-2*M-100,bodys); para(qs[5:],M+cw+30,M+30,cw,H-2*M-100,bodys)
+qs=[q for q in qs if not q.startswith(("<b>Garage","<b>Music","<b>Pool and","<b>Climbing"))]+["<b>Water and wastewater.</b> Is there municipal water at the road, or is the well the backup? A perc test will size the drain field and confirm whether a conventional septic tank or an aerobic treatment unit is needed."]
+h_=(len(qs)+1)//2; para(qs[:h_],M,M+30,cw,H-2*M-100,bodys); para(qs[h_:],M+cw+30,M+30,cw,H-2*M-100,bodys)
 c.save(); print(OUT)

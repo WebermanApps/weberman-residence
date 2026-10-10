@@ -5,7 +5,7 @@ An interactive, drawing-referenced 3D model of a single-level mountain courtyard
 **Live:** https://webermanapps.github.io/weberman-residence/
 
 ## The House
-- 5,272 SF conditioned (490 m²), all on one level (trimmed from 5,952 SF on 10.10.26). Footprint 94' × 83'. The courtyard is 36' × 28'.
+- 5,272 SF conditioned (490 m²; the isolated studio is 528 SF gross, about 426 SF net), all on one level (trimmed from 5,952 SF on 10.10.26). Footprint 94' × 83'. The courtyard is 36' × 28'.
 - Four low pavilions under deep 6 to 8 ft eaves wrap a central courtyard and are linked by a glazed engawa:
   - **Living Pavilion** (north, facing the mountains): kitchen with a marble island, walk-in pantry, dining, and living with a sunken conversation pit under a butterfly roof.
   - **Sleeping Wing** (east): the master suite with a hinoki soaking tub, two kids' rooms sharing a Jack-and-Jill bath (Kids' Room 2 doubles as the guest room), a guest / pool bath, and laundry.
