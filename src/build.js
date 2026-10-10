@@ -362,6 +362,27 @@ function buildSite(M, groups) {
     addCyl('site', M.plinth, fp.cx, fp.cy, 1.6, G, -0.2, 16);
     const fire = new THREE.MeshStandardMaterial({ color: 0xff8a3d, emissive: 0xff6a1a, emissiveIntensity: 1.5 }); fire.name = 'fire';
     const g2 = new THREE.ConeGeometry(0.9, 1.6, 8); g2.translate(fp.cx - CX, 0.6, -(fp.cy - CY)); B.add('site', fire, g2); }
+  // climbing pavilion (open-air, timber + standing seam, soft-fall)
+  { const cl = S.climb, o = cl.oh;
+    addBox('site', [M.plinth, M.plinth, M.stone, M.plinth, M.plinth, M.plinth], cl.x0 - 1, cl.y0 - 1, cl.x1 + 1, cl.y1 + 1, G, -1.0);
+    addBox('site', colorMat('#b5694a'), cl.x0, cl.y0, cl.x1, cl.y1, -1.0, -0.6); // poured rubber soft-fall
+    [[cl.x0, cl.y0], [cl.x1 - 0.7, cl.y0], [cl.x0, cl.y1 - 0.7], [cl.x1 - 0.7, cl.y1 - 0.7]].forEach(([x, y]) => addBox('site', M.c.fir, x, y, x + 0.7, y + 0.7, -0.6, cl.h - 1));
+    addBox('site', M.c.fir, cl.x0 - 0.5, cl.y0, cl.x1 + 0.5, cl.y0 + 0.7, cl.h - 2, cl.h - 1); addBox('site', M.c.fir, cl.x0 - 0.5, cl.y1 - 0.7, cl.x1 + 0.5, cl.y1, cl.h - 2, cl.h - 1);
+    for (let x = cl.x0 + 3; x < cl.x1 - 1; x += 3) addBox('site', M.c.fir, x, cl.y0 - o + 0.5, x + 0.35, cl.y1 + o - 0.5, cl.h - 1.0, cl.h - 0.6);
+    addBox('site', [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred], cl.x0 - o, cl.y0 - o, cl.x1 + o, cl.y1 + o, cl.h - 0.6, cl.h + 0.3);
+    // climbing wall on the north side, facing south, with holds and a volume
+    addBox('site', M.c.charred, cl.x0 + 1, cl.y1 - 1.6, cl.x1 - 1, cl.y1 - 0.9, -0.6, 11.4);
+    addBox('site', M.c.fir, cl.x0 + 1.2, cl.y1 - 2.0, cl.x1 - 1.2, cl.y1 - 1.6, -0.4, 11.2);
+    const holds = ['#e8c547', '#3f7fbf', '#d0573c', '#4e9a52', '#8e5cc2', '#f1eee7'];
+    for (let i = 0; i < 70; i++) { const x = cl.x0 + 1.6 + ((i * 37) % 100) / 100 * 14.6; const z = 0.6 + ((i * 53) % 100) / 100 * 10; addBox('site', colorMat(holds[i % 6]), x, cl.y1 - 2.3, x + 0.38, cl.y1 - 2.0, z, z + 0.3); }
+    addBox('site', colorMat('#d9cbb5'), cl.x0 + 9, cl.y1 - 3.4, cl.x0 + 12, cl.y1 - 2.0, 4, 6.5); // volume
+    addBox('site', colorMat('#55524c'), cl.x0 + 1.2, cl.y1 - 7, cl.x1 - 1.2, cl.y1 - 2.3, -0.6, 0.2); // crash pad
+    // second bike rack in the active zone
+    for (let i = 0; i < 4; i++) { const y = cl.y0 + 3 + i * 2.4; addBox('site', M.frame, cl.x1 - 2.2, y - 0.05, cl.x1 - 0.9, y + 0.05, -0.6, 1.8);
+      [0, 2.3].forEach(dx => { const g = new THREE.TorusGeometry(1.0, 0.11, 6, 18); g.translate(cl.x1 - 3.6 + dx - CX, 0.5, -(y - CY)); B.add('site', tire, g); });
+      addBox('site', colorMat(['#4e9a52', '#e8c547', '#3f7fbf', '#a3613d'][i]), cl.x1 - 3.6, y - 0.06, cl.x1 - 1.2, y + 0.06, 1.0, 1.15); }
+    addBox('site', M.stone, cl.x1 + 1, 2, 4, 6, G, -1.0); // path to gym/office
+  }
   // bath garden wall
   const bg = S.bathgarden; addBox('site', M.c.stucco, bg.x1 - 0.5, bg.y0, bg.x1, bg.y1, G, 7); addBox('site', M.c.stucco, bg.x0, bg.y1 - 0.5, bg.x1, bg.y1, G, 7);
   addBox('site', M.gravel, bg.x0, bg.y0, bg.x1 - 0.5, bg.y1 - 0.5, G, -1.1);
@@ -438,6 +459,7 @@ export const OUTDOOR = [
   { id: 'V', name: 'Vegetable Garden', wing: 'Outdoor', x0: -36, y0: 66, x1: -12, y1: 88, notes: 'Four 4 x 18 ft cedar raised beds inside a slatted deer fence, a few steps from the mudroom and pantry.', floor: 'Gravel' },
   { id: 'F', name: 'Sunken Fire Pit', wing: 'Outdoor', x0: 51, y0: 97, x1: 65, y1: 111, notes: '14-ft sunken stone circle facing the mountains, off the covered veranda.', floor: 'Stone' },
   { id: 'D', name: 'Pergola Dining', wing: 'Outdoor', x0: 8, y0: 86, x1: 26, y1: 100, notes: 'Outdoor table for ten under a charred-timber and fir pergola, next to the kitchen and the view.', floor: 'Stone' },
+  { id: 'W', name: 'Climbing Pavilion', wing: 'Outdoor', x0: -22, y0: 0, x1: -4, y1: 18, area: 0, cov: 324, notes: 'Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. A 16-ft-wide, 12-ft-high kids\' bouldering wall sits on the north side facing the sprint lane, over a poured-rubber soft-fall surface and crash pad. It sits in the active zone between the exercise room, the sprint lane and a second 4-bike rack. Covered outdoor area, not conditioned.', floor: 'Poured-rubber soft-fall', equip: ['Climbing wall 16\' × 12\'', 'Bouldering volume', 'Crash pad', '4-bike rack'] },
   { id: 'S', name: 'Outdoor Shower', wing: 'Outdoor', x0: 72.5, y0: 4, x1: 77.5, y1: 10, notes: 'Slat-screened stone shower by the pool, next to the changing room and the east engawa door.', floor: 'Stone' },
   { id: 'K', name: 'Bike Racks', wing: 'Outdoor', x0: -6, y0: 61, x1: -1.5, y1: 71, notes: 'Six-bike rack under the mudroom eave, with gear storage just inside.', floor: 'Stone' },
   { id: 'R', name: 'Carport', wing: 'Outdoor', x0: -44, y0: 30, x1: -20, y1: 54, notes: 'Open two-car carport with a standing-seam roof and a stone entry court. A garage is an open question.', floor: 'Gravel' },

@@ -41,7 +41,7 @@ ROOMS = [
  ("301","South Engawa Gallery","Wellness + Gym Wing",28,22,72,27,10,"oak",True,
   "Glazed engawa that closes the courtyard ring. Lets you reach the gym and wellness rooms in winter without going outside."),
  ("302","Exercise Room","Wellness + Gym Wing",28,0,50,22,12,"rubber",True,
-  "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors, kids' climbing wall on the west wall. Glass slides open to the turf sprint lane."),
+  "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors. The west wall is a full-height storage wall with a wall-mounted rig. Glass slides open to the turf sprint lane."),
  ("303","Wet Room","Wellness + Gym Wing",50,9,66,22,10,"stone",True,
   "Stone wet room: two rain showers, a sunken cold plunge (39-50 F), teak bench. Serves the sauna and hammam."),
  ("304","Sauna","Wellness + Gym Wing",50,0,58,9,8,"cedar",True,
@@ -218,8 +218,8 @@ FURN = [
  ("302","Balance boards",38,19.8,41,21.2,0.4,0,C['walnut'],"box"),
  ("302","Band anchor post",49,8,49.6,10,7,0,C['black'],"box"),
  ("302","Training mats",33,4,45,11,0.1,0,C['olive'],"box"),
- ("302","Kids' climbing wall",28.2,1,29.1,14.5,11,0,C['terra'],"wall"),
- ("302","Crash mat",29.1,1.5,32.5,14,0.9,0,C['slate'],"box"),
+ ("302","Storage wall (bands, mats, kettlebells)",28.3,1,30.3,9.5,8,0,C['oak'],"box"),
+ ("302","Wall-mount rig + rings",28.3,10.5,29.4,15.5,8.5,0,C['black'],"box"),
  # Wellness
  ("303","Cold plunge",60,17,65.4,21.4,0.4,0,C['water'],"box"),
  ("303","Rain showers",51,18.2,56,21.6,0.15,0,C['slate'],"box"),
@@ -283,7 +283,11 @@ SITE = dict(
  bathgarden=dict(x0=98,y0=74,x1=106,y1=88,label="Bath Garden"),
  meadow_label=(120,-40),
  drive=[(-90,10),(-60,18),(-44,30)],
+ climb=dict(x0=-22,y0=0,x1=-4,y1=18,oh=5,h=13,label="Climbing Pavilion"),
 )
+
+COVERED = [dict(id="C1",name="Climbing Pavilion",x0=-22,y0=0,x1=-4,y1=18,w=18,d=18,area=324,
+  notes="Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. 16-ft-wide, 12-ft-high kids' bouldering wall on the north side facing the sprint lane, over a 12-inch poured-rubber soft-fall surface. Sits in the active zone with the gym, sprint lane and a second bike rack.")]
 
 def total_conditioned():
     return sum(r['area'] for r in rooms if r['cond'])
@@ -294,6 +298,6 @@ if __name__=="__main__":
     for w in ["Living Pavilion","Sleeping Wing","Wellness + Gym Wing","Studio + Arrival"]:
         print(w, sum(r['area'] for r in rooms if r['wing']==w and r['cond']))
     data=dict(rooms=rooms,walls=WALLS,furn=furn,roofs=ROOFS,site=SITE,clad=CLAD,cladOvr=CLAD_OVR,
-              total=t,courtyard=COURTYARD)
+              total=t,courtyard=COURTYARD,covered=COVERED)
     json.dump(data,open("plan.json","w"),indent=1)
     print("walls",len(WALLS))

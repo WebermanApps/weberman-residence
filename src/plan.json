@@ -283,7 +283,7 @@
    "h": 12,
    "floor": "rubber",
    "cond": true,
-   "notes": "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors, kids' climbing wall on the west wall. Glass slides open to the turf sprint lane.",
+   "notes": "Athlete-style training room: Pilates Cadillac, pull-up rig, dumbbells, plyo boxes, balance boards, band anchors. The west wall is a full-height storage wall with a wall-mounted rig. Glass slides open to the turf sprint lane.",
    "w": 22,
    "d": 22,
    "area": 484
@@ -2708,26 +2708,26 @@
   },
   {
    "room": "302",
-   "label": "Kids' climbing wall",
-   "x0": 28.2,
+   "label": "Storage wall (bands, mats, kettlebells)",
+   "x0": 28.3,
    "y0": 1,
-   "x1": 29.1,
-   "y1": 14.5,
-   "h": 11,
+   "x1": 30.3,
+   "y1": 9.5,
+   "h": 8,
    "z0": 0,
-   "color": "#b0684a",
-   "shape": "wall"
+   "color": "#c39a6b",
+   "shape": "box"
   },
   {
    "room": "302",
-   "label": "Crash mat",
-   "x0": 29.1,
-   "y0": 1.5,
-   "x1": 32.5,
-   "y1": 14,
-   "h": 0.9,
+   "label": "Wall-mount rig + rings",
+   "x0": 28.3,
+   "y0": 10.5,
+   "x1": 29.4,
+   "y1": 15.5,
+   "h": 8.5,
    "z0": 0,
-   "color": "#55524c",
+   "color": "#2a2a2a",
    "shape": "box"
   },
   {
@@ -3285,7 +3285,16 @@
     -44,
     30
    ]
-  ]
+  ],
+  "climb": {
+   "x0": -22,
+   "y0": 0,
+   "x1": -4,
+   "y1": 18,
+   "oh": 5,
+   "h": 13,
+   "label": "Climbing Pavilion"
+  }
  },
  "clad": {
   "Living Pavilion": "stucco",
@@ -3307,5 +3316,19 @@
   "y0": 27,
   "x1": 72,
   "y1": 60
- }
+ },
+ "covered": [
+  {
+   "id": "C1",
+   "name": "Climbing Pavilion",
+   "x0": -22,
+   "y0": 0,
+   "x1": -4,
+   "y1": 18,
+   "w": 18,
+   "d": 18,
+   "area": 324,
+   "notes": "Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. 16-ft-wide, 12-ft-high kids' bouldering wall on the north side facing the sprint lane, over a 12-inch poured-rubber soft-fall surface. Sits in the active zone with the gym, sprint lane and a second bike rack."
+  }
+ ]
 }

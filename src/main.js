@@ -82,6 +82,7 @@ const VIEWS = {
   living: { name: 'Living', cam: [44, 22, 56], tgt: [56, 72, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
   office: { name: 'Office', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Office / music loft.', kicker: 'ROOM 407 · ROOF HIDDEN' },
   wellness: { name: 'Wellness', cam: [70, -44, 58], tgt: [52, 8, 0], roof: false, cut: 8, title: 'Wellness + gym wing.', kicker: 'ROOMS 301-306 · ON THE POOL · ROOF HIDDEN' },
+  climb: { name: 'Climbing', cam: [-4, -30, 8], tgt: [-13, 14, 6], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
   master: { name: 'Master', cam: [124, 38, 64], tgt: [86, 76, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
 };
 
@@ -92,8 +93,8 @@ const state = { mode: 'orbit', light: 'day', roof: true, cut: false, cutH: 4.5, 
 const labelObjs = [];
 const MINOR = new Set(['402', '405', '211', '206', '403', '306', '205', '203', '204', '301', '406', '104', '105', '210', '208']);
 const HIDE = new Set(['402', '405', '211']);
-const KEY = new Set(['101', '103', '201', '207', '209', '302', '303', '407', '404', '401', 'C', 'P', 'L']);
-const KEY2 = new Set(['103', '201', '209', '302', '407', 'P', 'L']);
+const KEY = new Set(['W', '101', '103', '201', '207', '209', '302', '303', '407', '404', '401', 'C', 'P', 'L']);
+const KEY2 = new Set(['W', '103', '201', '209', '302', '407', 'P', 'L']);
 function addLabel(item, outdoor) {
   if (HIDE.has(item.id)) return;
   const el = document.createElement('div'); el.className = 'rlabel' + (['204','301','406'].includes(item.id) ? ' gal' : '') + (outdoor ? ' out' : '') + (MINOR.has(item.id) || outdoor ? ' minor' : '') + (KEY.has(item.id) ? ' key' : '') + (KEY2.has(item.id) ? ' key2' : '');
@@ -124,7 +125,7 @@ function buildLists() {
     P.rooms.filter(r => r.wing === w && !HIDE.has(r.id)).forEach(r => { mk(r.id, r.id, r.name, list); if (!MINOR.has(r.id)) mk(r.id, r.id, r.name, chips, true); });
   }
   const g = document.createElement('div'); g.className = 'grp'; g.textContent = 'OUTDOORS'; list.appendChild(g);
-  OUTDOOR.forEach(o => { mk(o.id, '·', o.name, list); if (['C', 'P', 'L', 'V'].includes(o.id)) mk(o.id, '·', o.name, chips, true); });
+  OUTDOOR.forEach(o => { mk(o.id, '·', o.name, list); if (['C', 'W', 'P', 'L', 'V'].includes(o.id)) mk(o.id, '·', o.name, chips, true); });
   document.querySelectorAll('[data-id="all"]').forEach(b => b.classList.add('on'));
 }
 buildLists();
@@ -161,7 +162,7 @@ function select(id, fly) {
   document.querySelectorAll('.chips button.on, .room-list button.on').forEach(b => b.scrollIntoView?.({ block: 'nearest', inline: 'center', behavior: 'smooth' }));
   labelObjs.forEach(o => o.element.classList.toggle('on', o.userData.item.id === id));
   const w = it.x1 - it.x0, d = it.y1 - it.y0, cx = (it.x0 + it.x1) / 2, cy = (it.y0 + it.y1) / 2;
-  const outdoor = !it.area; const area = it.area ?? Math.round(w * d);
+  const outdoor = !it.area; const area = it.cov ?? it.area ?? Math.round(w * d);
   const h = outdoor ? 0.3 : roofUnder(cx, cy);
   hl.scale.set(w, 1, d); hl.position.copy(W(cx, cy, outdoor ? 0.2 : 0.08)); hl.visible = true;
   hlEdge.scale.set(w, Math.max(0.2, h), d); hlEdge.position.copy(W(cx, cy, Math.max(0.2, h) / 2)); hlEdge.visible = true;
@@ -170,10 +171,10 @@ function select(id, fly) {
   $('info-title').textContent = it.name;
   $('info-notes').textContent = it.notes;
   $('info-size').textContent = `${fmtFt(w)} × ${fmtFt(d)}  (${(w * FT2M).toFixed(1)} × ${(d * FT2M).toFixed(1)} m)`;
-  $('info-area').textContent = `${area.toLocaleString()} SF · ${(area * SF2M2).toFixed(1)} m²${!outdoor && !it.cond ? ' (unconditioned)' : ''}`;
+  $('info-area').textContent = `${area.toLocaleString()} SF · ${(area * SF2M2).toFixed(1)} m²${!outdoor && !it.cond ? ' (unconditioned)' : ''}${it.cov ? ' covered (not conditioned)' : ''}`;
   $('info-ceil').parentElement.hidden = outdoor; $('info-ceil').textContent = outdoor ? '' : `${fmtFt(it.h)} (roof deck ${fmtFt(Math.round(h * 2) / 2)})`;
   $('info-floor').textContent = outdoor ? it.floor : ({ oak: 'Wide-plank white oak', stone: 'Honed limestone', tatami: 'Tatami (8 mats)', rubber: 'Rubber training floor', cedar: 'Cedar duckboard', concrete: 'Sealed concrete' }[it.floor] || it.floor);
-  const eq = [...new Set(P.furn.filter(f => f.room === id && f.shape !== 'pit').map(f => f.label))];
+  const eq = it.equip || [...new Set(P.furn.filter(f => f.room === id && f.shape !== 'pit').map(f => f.label))];
   $('info-equip').innerHTML = eq.map(e => `<span>${e}</span>`).join('');
   $('info-walk').parentElement.hidden = outdoor && id !== 'C';
   setCaption(outdoor ? 'OUTDOORS' : `ROOM ${it.id} / SPATIAL STUDY`, it.name);
@@ -314,7 +315,7 @@ $('t-full').onclick = () => { const el = document.documentElement; if (!document
 // ---------- modals ----------
 function modal(title, html) { $('modal-title').textContent = title; $('modal-body').innerHTML = html; $('modal').hidden = false; }
 $('modal-close').onclick = () => $('modal').hidden = true; $('modal').onclick = (e) => { if (e.target.id === 'modal') $('modal').hidden = true; };
-const programTable = () => `<table>${WINGS.map(w => `<tr><td colspan="3"><b>${w}</b></td></tr>` + P.rooms.filter(r => r.wing === w).map(r => `<tr><td>${r.id}</td><td>${r.name}${r.cond ? '' : ' (unconditioned)'}</td><td style="text-align:right">${r.area} SF · ${(r.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')).join('')}<tr><td></td><td><b>Total Conditioned</b></td><td style="text-align:right"><b>${P.total.toLocaleString()} SF · ${Math.round(P.total * SF2M2)} m²</b></td></tr></table>`;
+const programTable = () => `<table>${WINGS.map(w => `<tr><td colspan="3"><b>${w}</b></td></tr>` + P.rooms.filter(r => r.wing === w).map(r => `<tr><td>${r.id}</td><td>${r.name}${r.cond ? '' : ' (unconditioned)'}</td><td style="text-align:right">${r.area} SF · ${(r.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')).join('')}<tr><td colspan="3"><b>Covered Outdoor (Not Conditioned)</b></td></tr>${(P.covered||[]).map(c => `<tr><td>${c.id}</td><td>${c.name}</td><td style="text-align:right">${c.area} SF · ${(c.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')}<tr><td></td><td><b>Total Conditioned</b></td><td style="text-align:right"><b>${P.total.toLocaleString()} SF · ${Math.round(P.total * SF2M2)} m²</b></td></tr></table>`;
 $('btn-drawings').onclick = () => { modal('Drawings', `<div class="tabs"><button class="on" data-img="Floor_Plan.png">Floor Plan</button><button data-img="Site_Plan.png">Site Plan</button><button data-img="prog">Room Program</button></div><div id="dw"><img src="./Floor_Plan.png" alt="Floor plan"></div>`);
   document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); $('dw').innerHTML = b.dataset.img === 'prog' ? programTable() : `<img src="./${b.dataset.img}" alt="${b.textContent}">`; }); };
 const ABOUT = `<h3>Concept</h3><p>A low, warm courtyard house for a mountain site, drawing on Bali, Japan and mid-century modernism rather than the cabin. Four single-storey pavilions wrap a 44 × 33 ft courtyard: <b>living</b> to the north facing the mountains, <b>sleeping</b> to the east, <b>wellness + gym</b> to the south on the pool, and <b>studio + arrival</b> to the west. A glazed engawa links them all, so every room looks into the garden. Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, standing seam metal, white stucco, shou sugi ban, rammed earth and natural stone.</p>

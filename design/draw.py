@@ -4,7 +4,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Arc, Circle, Polygon, FancyBboxPatch
 from matplotlib import font_manager as fm
-from design import rooms, WALLS, furn, ROOFS, SITE, COURTYARD, total_conditioned, FT2M, SF2M2
+from design import rooms, WALLS, furn, ROOFS, SITE, COURTYARD, COVERED, total_conditioned, FT2M, SF2M2
 
 G="/usr/share/fonts/truetype/sand-box/google/"
 import glob
@@ -150,6 +150,25 @@ def room_labels(ax, fs=6.2, small=4.6):
         ax.text(cx,cy-1.3,f"{ftin(r['w'])} × {ftin(r['d'])}",ha='center',va='center',fontsize=small,color=INK,zorder=9)
         ax.text(cx,cy-2.6,f"{r['area']} SF · {r['area']*SF2M2:.1f} m²",ha='center',va='center',fontsize=small-0.3,color=MUTED,zorder=9)
 
+def climb_art(ax,lw=1,labels=True):
+    c=SITE['climb']; o=c['oh']
+    ax.add_patch(Rectangle((c['x0'],c['y0']),c['x1']-c['x0'],c['y1']-c['y0'],fc="#c9a58c",ec="#7d5a44",lw=0.5*lw,zorder=0.6))
+    for i in range(1,18):
+        ax.plot([c['x0'],c['x1']],[c['y0']+i,c['y0']+i],color="#b8917a",lw=0.15*lw,zorder=0.65)
+    ax.add_patch(Rectangle((c['x0']-o,c['y0']-o),c['x1']-c['x0']+2*o,c['y1']-c['y0']+2*o,fc="none",ec="#5a5850",lw=0.6*lw,ls=(0,(5,2.5)),zorder=0.7))
+    ax.add_patch(Rectangle((c['x0']+1,c['y1']-1.2),16,1.0,fc="#a3613d",ec=INK,lw=0.5*lw,zorder=0.8))
+    for (px,py) in [(c['x0'],c['y0']),(c['x1']-0.7,c['y0']),(c['x0'],c['y1']-0.7),(c['x1']-0.7,c['y1']-0.7)]:
+        ax.add_patch(Rectangle((px,py),0.7,0.7,fc=INK,ec=INK,zorder=0.9))
+    ax.add_patch(Rectangle((c['x1']-2.4,c['y0']+2),1.8,10,fc="none",ec=INK,lw=0.5*lw,zorder=0.8))
+    if labels:
+        ax.text((c['x0']+c['x1'])/2,9.6,"C1",ha='center',fontsize=4.6,color=TERRA,zorder=9)
+        ax.text((c['x0']+c['x1'])/2,8.2,"CLIMBING PAVILION",ha='center',fontsize=5.4,color=INK,weight='bold',zorder=9)
+        ax.text((c['x0']+c['x1'])/2,6.8,"18' × 18' · 324 SF covered, open-air",ha='center',fontsize=4.2,color=INK,zorder=9)
+        ax.text((c['x0']+c['x1'])/2,5.6,"soft-fall rubber · not conditioned",ha='center',fontsize=4.0,color=MUTED,zorder=9)
+        ax.text((c['x0']+c['x1'])/2,c['y1']-2.2,"16' CLIMBING WALL, 12' H",ha='center',fontsize=3.8,color="#7a3b22",zorder=9)
+        ax.text(c['x1']-1.5,c['y0']+1.2,"BIKES",ha='center',fontsize=3.6,color=MUTED,zorder=9)
+        ax.text((c['x0']+c['x1'])/2,c['y0']-o-1.6,"ROOF + 5' EAVES (DASHED)",ha='center',fontsize=3.6,color=MUTED,zorder=9)
+
 def scalebar(ax,x,y,fs=6,step=5,mstep=1):
     k=step/5; hh=0.7*k
     for i in range(4):
@@ -167,7 +186,7 @@ def north(ax,x,y,s=3):
     ax.text(x,y+s+1.0,"N",ha='center',fontsize=8,weight='bold')
 
 def floor_plan(path, overlay=False):
-    X0,X1,Y0,Y1 = (-14,112,-24,100) if not overlay else (-10,110,-10,100)
+    X0,X1,Y0,Y1 = (-36,112,-24,100) if not overlay else (-30,110,-10,100)
     W=X1-X0; H=Y1-Y0
     if overlay:
         fig=plt.figure(figsize=(W/10,H/10),dpi=200)
@@ -175,6 +194,7 @@ def floor_plan(path, overlay=False):
         courtyard_art(ax,lw=1.4)
         for r in rooms:
             ax.add_patch(Rectangle((r['x0'],r['y0']),r['w'],r['d'],fc="#fbfaf6",ec="none",alpha=0.85,zorder=1))
+        climb_art(ax,lw=1.6,labels=False)
         draw_walls(ax,lw=1.6)
         fig.savefig(path,transparent=True); plt.close(fig)
         json.dump(dict(x0=X0,x1=X1,y0=Y0,y1=Y1),open(path.replace('.png','.json'),'w'))
@@ -194,6 +214,7 @@ def floor_plan(path, overlay=False):
     ax.add_patch(Rectangle((-14,-16),57,8,fc="#cfdcb4",ec="#8ea06a",lw=0.5,zorder=0.5)); ax.text(14,-12,"TURF SPRINT LANE (CONT.)",ha='center',va='center',fontsize=5,color="#4e5f2f")
     ax.add_patch(Rectangle((98,74),8,14,fc="#e3e8d6",ec="#a8b08f",lw=0.5,zorder=0.5)); ax.text(102,81,"BATH\nGARDEN",ha='center',va='center',fontsize=4.2,color=MUTED)
     ax.add_patch(Rectangle((-5,61),3.5,10,fc="none",ec=INK,lw=0.5,zorder=0.5)); ax.text(-3.3,73,"BIKES",ha='center',fontsize=4.2,color=MUTED)
+    climb_art(ax)
     ax.text(50,43.5,"COURTYARD",ha='center',fontsize=9,color=OLIVE,weight='bold',zorder=9,family=SERIF)
     ax.text(50,41.3,"44' × 33'  ·  1,452 SF open to sky",ha='center',fontsize=5.2,color=MUTED,zorder=9)
     ax.text(47,36,"ZEN GARDEN",ha='center',fontsize=4.6,color=MUTED,zorder=9)
@@ -208,8 +229,9 @@ def floor_plan(path, overlay=False):
     for a,b in [(4,28),(28,50),(50,72),(72,98)]: dim(ax,a,0,b,0,-18.5+4.5,None,5.5) if False else None
     dim(ax,0,88,98,88,8.5,None,7)
     for a,b in [(0,10),(10,26),(26,44),(44,72),(72,86),(86,98)]: dim(ax,a,88,b,88,4.5,f"{ftin(b-a)}",5.5)
-    dim(ax,-4,0,-4,88,-6,None,7,horiz=False)
-    for a,b in [(0,22),(22,60),(60,84)]: dim(ax,0,a,0,b,-8.5,f"{ftin(b-a)}",5.5,horiz=False)
+    dim(ax,-22,0,-22,88,-9.5,"88'  (26.82 m)",7,horiz=False)
+    for a,b in [(0,22),(22,60),(60,84)]: dim(ax,-22,a,-22,b,-6,f"{ftin(b-a)}",5.5,horiz=False)
+    dim(ax,-22,18,-4,18,2.2,"18'  (5.49 m)",5.2)
     dim(ax,98,14,98,64,9,None,6,horiz=False)
     scalebar(ax,80,-14.5); north(ax,106,-6)
     # side panel
@@ -226,6 +248,10 @@ def floor_plan(path, overlay=False):
             fig.text(sx,y,r['id'],fontsize=6.5,color=TERRA); fig.text(sx+0.022,y,r['name']+("" if r['cond'] else " (uncond.)"),fontsize=6.5,color=INK)
             fig.text(0.975,y,f"{r['area']} SF / {r['area']*SF2M2:.1f} m²",fontsize=6.5,ha='right',color=INK if r['cond'] else MUTED); y-=0.0135
         y-=0.008
+    fig.text(sx,y,"COVERED OUTDOOR (NOT CONDITIONED)",fontsize=7.5,weight='bold',color=OLIVE); fig.text(0.975,y,f"{sum(c['area'] for c in COVERED):,} SF",fontsize=7.5,weight='bold',color=OLIVE,ha='right'); y-=0.016
+    for cv in COVERED:
+        fig.text(sx,y,cv['id'],fontsize=6.5,color=TERRA); fig.text(sx+0.022,y,cv['name'],fontsize=6.5,color=INK); fig.text(0.975,y,f"{cv['area']} SF / {cv['area']*SF2M2:.1f} m²",fontsize=6.5,ha='right',color=MUTED); y-=0.0135
+    y-=0.008
     t=total_conditioned()
     fig.add_artist(Rectangle((sx-0.005,y-0.035),0.235,0.04,transform=fig.transFigure,fc="#e0e6d5",ec="none"))
     fig.text(sx,y-0.02,"TOTAL CONDITIONED",fontsize=8,weight='bold',color=OLIVE)
@@ -270,6 +296,8 @@ def site_plan(path):
     # drive + motor court
     ax.add_patch(Polygon([(-90,4),(-60,10),(-44,24),(-44,58),(-20,58),(-20,26),(10,26),(10,24),(-16,22),(-46,16),(-62,0),(-90,-6)],fc="#e3ddd0",ec="#b3ab98",lw=0.6,zorder=0.6))
     ax.text(-80,4,"GRAVEL DRIVE FROM ROAD",fontsize=8.0,color=MUTED,rotation=12,zorder=7)
+    climb_art(ax,labels=False)
+    ax.annotate("CLIMBING PAVILION\n18' × 18' covered, open-air",(-13,9),(-78,-22),fontsize=7.3,ha='center',arrowprops=dict(arrowstyle='-',lw=0.5),zorder=7)
     c=SITE['carport']; ax.add_patch(Rectangle((c['x0'],c['y0']),c['x1']-c['x0'],c['y1']-c['y0'],fc="#d6d0c3",ec=INK,lw=0.8,zorder=1))
     ax.text((c['x0']+c['x1'])/2,(c['y0']+c['y1'])/2,"CARPORT\n2 cars · 24' × 24'",ha='center',va='center',fontsize=8.0,zorder=7)
     ax.add_patch(Rectangle((-20,26),30,34,fc="#ddd5c6",ec="none",zorder=0.7)); ax.text(-5,40,"STONE\nENTRY\nCOURT",ha='center',va='center',fontsize=8.0,color=MUTED,zorder=7)
@@ -329,7 +357,7 @@ def site_plan(path):
            ("Courtyard","44' × 33' · 13.4 × 10.1 m"),("Pool","34' × 12' · 10.4 × 3.7 m, 4'-5' deep"),
            ("Turf sprint lane","75' × 8' · 22.9 × 2.4 m (20 yd + run-out)"),("Vegetable garden","24' × 22' · 4 raised beds"),
            ("Carport","24' × 24' · open, standing seam"),("Fire pit","14' dia. sunken, north terrace"),
-           ("Pergola dining","18' × 14' off the kitchen"),("Bike racks","6 bikes at mudroom door"),
+           ("Pergola dining","18' × 14' off the kitchen"),("Bike racks","6 at mudroom door + 4 at climbing pavilion"),("Climbing pavilion","18' × 18' covered, open-air · soft-fall · not conditioned"),
            ("Outdoor shower","By the pool, slat-screened"),]
     for k,v in items:
         fig.text(sx,y,k.upper(),fontsize=6.5,weight='bold',color=OLIVE); fig.text(sx,y-0.013,v,fontsize=7,color=INK); y-=0.034
