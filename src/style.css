@@ -169,3 +169,38 @@ svg{width:18px;height:18px;flex-shrink:0}
 }
 
 .info-row.fin{align-items:flex-start;gap:14px}.info-row.fin b{font-weight:500;text-align:right;line-height:1.35;font-size:12px;max-width:72%}
+/* ===== Light mode only (Max, Oct 10, 2026): UI stays light in every lighting mode ===== */
+:root{color-scheme:light}
+.seg button.on,.tabs button.on{background:var(--sel);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--olive)}
+.views button.on{background:var(--sel);color:var(--ink);border-color:var(--olive);box-shadow:inset 0 0 0 1px var(--olive)}
+.rlabel.out{background:#f7f5efe6;color:var(--olive);border-color:var(--olive)}
+.rlabel.on{background:#fff;color:var(--ink);border:2px solid var(--olive)}
+.rlabel.on .num{color:var(--olive)}
+.toast{background:var(--paper);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+.modal{background:#efede6d9;backdrop-filter:blur(3px)}
+.modal-card{border:1px solid var(--line);box-shadow:var(--shadow)}
+.loading{background:var(--bg);color:var(--ink)}
+/* evening scene is dark, so overlay text gets a light backing */
+.evening .caption,.evening .hint{background:#f7f5efeb;border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:var(--shadow)}
+.evening .hint{padding:4px 10px}
+/* Fit pass (Max, Oct 10, 2026): every tap target at least 44px */
+:root{--ch:44px}
+.hdr-btn{min-height:44px;min-width:44px;justify-content:center}
+.pill{min-width:44px;justify-content:center}
+.views{top:calc(var(--inset) + 66px)}
+.views button{height:44px;border-radius:22px;padding:0 14px}
+.caption{top:calc(var(--inset) + 122px)}
+.tools button{width:44px;height:44px}
+.room-list button{min-height:44px}
+.close{width:44px;height:44px;right:6px;top:4px}
+.link-btn{min-height:44px;display:inline-flex;align-items:center}
+.tabs button{min-height:44px;padding:0 14px;border-radius:22px}
+.tg{min-height:44px}
+@media (max-width:900px){:root{--ch:44px}.chips button{min-height:44px}}
+@media (max-width:640px){
+  .views{top:calc(var(--inset) + 124px)}
+  .caption{top:calc(var(--inset) + 178px)}
+  .tools button{width:44px;height:44px}
+  .info,.layers{bottom:68px}
+  .walk-pad{bottom:68px}
+}

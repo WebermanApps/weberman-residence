@@ -220,6 +220,7 @@ $('layers-close').onclick = () => { $('layers').hidden = true; };
 
 // ---------- lighting modes ----------
 function setLight(l) {
+  document.getElementById('app').classList.toggle('evening', l !== 'day');
   state.light = l; document.querySelectorAll('#light-seg button').forEach(b => b.classList.toggle('on', b.dataset.light === l));
   const day = l === 'day';
   skyU.top.value.set(day ? 0x86acd0 : 0x2b3550); skyU.mid.value.set(day ? 0xe3e8e6 : 0xd99a6c); skyU.bot.value.set(day ? 0xe9e4d6 : 0x6b5a50);
