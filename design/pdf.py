@@ -18,7 +18,7 @@ registerFontFamily("Sans",normal="Sans",bold="SansB",italic="Sans",boldItalic="S
 INK=HexColor("#34382d"); OLIVE=HexColor("#4d593e"); MUTED=HexColor("#7d8073"); PAPER=HexColor("#f7f5ef"); LINE=HexColor("#dddcd3"); TERRA=HexColor("#a3613d")
 W,H=landscape(letter); M=36
 OUT="/workspace/dreamhome/v2/Weberman_Residence_Plan.pdf"
-S="/workspace/dreamhome/v2/shots/"; S4=S+"v5/"; S6=S+"v6/"; D="/workspace/dreamhome/v2/out/"
+S="/workspace/dreamhome/v2/shots/"; S4=S+"v7/"; S6=S+"v6/"; D="/workspace/dreamhome/v2/out/"
 URL="https://webermanapps.github.io/weberman-residence/"; REPO="https://github.com/WebermanApps/weberman-residence"
 c=canvas.Canvas(OUT,pagesize=(W,H)); c.setTitle("Weberman Residence: Spatial Study"); c.setAuthor("Grok Bot for Max Weberman")
 body=ParagraphStyle("b",fontName="Sans",fontSize=10,leading=14.2,textColor=INK,spaceAfter=9)
@@ -68,11 +68,11 @@ page("Design Concept","01 · Concept")
 cw=(W-2*M-30)/2
 para([
 "<b>One low house around one garden.</b> Four single-storey pavilions wrap a 36 × 28 ft courtyard, the heart of the house. The <b>Living Pavilion</b> faces north to the mountains, the <b>Sleeping Wing</b> runs along the quiet east side, the <b>Wellness + Gym Wing</b> sits on the sunny south side next to the pool, and <b>Studio + Arrival</b> on the west holds the entry, tatami room and office / music loft. A glazed engawa ties them together, so every trip through the house runs along the garden.",
-"<b>Warm, low, open resort-modern.</b> Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, and low standing-seam roofs elsewhere. Outside it is a black timber house: shou sugi ban cladding under standing-seam metal roofs, with a rammed-earth wall at the entry, flagstone terraces and a gravel drive. Inside: lime plaster, honey oak and oak herringbone, black stone, marble, green zellige, cedar and aspen. The room-by-room swipe decks removed white render, glass at the entry, timber decks, slat enclosures, flat roofs, wood-burning stoves, white hammams, glass shower enclosures, brass taps in the bath, bunk beds and wood headboards. No gables, logs, stone fireplaces, clay tile, freestanding tubs or koi ponds.",
-"<b>Fine, not showy.</b> The craft is in the details: pocketing glass that disappears into the walls, slim black frames, a hinoki soaking tub under a skylight, cedar soffits, a 10-ft marble island against green zellige, and a sculpted wood ceiling over the music loft. There is one big mountain window rather than walls of glass everywhere.",
+"<b>Warm, low, open resort-modern.</b> Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, and low standing-seam roofs elsewhere. Outside, white lime-plaster panels with black timber trim (living and entry wings) meet charred-timber siding (sleeping and wellness wings) under standing-seam metal roofs, with bronze windows and front door, a koshi street lattice, a rammed-earth wall at the entry and a gravel drive. Inside: lime plaster, walnut floors, walnut and cherry joinery, limestone, a soapstone and marble island, green zellige, Japanese earth plaster, cedar and aspen. Round 2 brought back a timber engawa (with a stone step) and lattice screens. The swipe decks removed white render, glass at the entry, slat enclosures, flat roofs, wood-burning stoves, white hammams, glass shower enclosures, bunk beds and wood headboards. No gables, logs, stone fireplaces, clay tile, freestanding tubs or koi ponds.",
+"<b>Fine, not showy.</b> The craft is in the details: pocketing glass that disappears into the walls, slim bronze frames and one frameless glass corner, shoji and fusuma, kumiko lattice, a hinoki soaking tub under a skylight, unlacquered brass taps, cedar soffits, a 10-ft soapstone island with honed marble ends against green zellige, and a sculpted wood ceiling over the music loft. There is one big mountain window rather than walls of glass everywhere.",
 ],M,M+30,cw,H-2*M-100)
 rows=[["Loved in the swipe test","Where it lives in the plan"],
-["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa on the east and west, an open-air covered walkway on the south, and a flagstone terrace under the eaves"],
+["Central courtyard as the heart","Shade tree with a curved teak bench, Japanese maples, raked gravel, a planted water court, stone lanterns and a basin"],["Engawa walkway","Glazed engawa galleries plus a western red cedar engawa deck with a bluestone step around the courtyard; open-air walkway on the south"],
 ["Deep eaves","6' to 8' overhangs, cedar soffits"],["Disappearing glass walls","Pocketing sliders from the living, dining and galleries to the courtyard"],
 ["Big mountain-view window","20-ft fixed window in the living room; full-height glass in the master"],["Tatami room","8-mat room with a tokonoma, off the west engawa"],
 ["Japanese soaking tub","Hinoki tub at the master bath corner window"],["Loft-like office","24' × 22' isolated studio / office (room-within-a-room, STC 60+) with a 14' ceiling"],
@@ -84,7 +84,7 @@ t.setStyle(TableStyle([("FONT",(0,0),(-1,-1),"Sans",8.4),("FONT",(0,0),(-1,0),"S
   ("LINEBELOW",(0,0),(-1,-1),0.4,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("BOTTOMPADDING",(0,0),(-1,-1),4.5),("TOPPADDING",(0,0),(-1,-1),4.5),("LEFTPADDING",(0,0),(-1,-1),2)]))
 tw_,th_=t.wrapOn(c,cw,400); t.drawOn(c,M+cw+30,H-M-60-th_)
 # materials swatches
-sw=[("Lime plaster","#efe9de"),("Shou sugi ban","#2f2a26"),("Honey oak","#c88f4e"),("Black stone","#2b2c2c"),("Green zellige","#2f7a5c"),("Marble","#ece8e1"),("Flagstone","#a79d8c"),("Standing seam","#6a645c")]
+sw=[("Lime plaster","#efe9de"),("Shou sugi ban","#2f2a26"),("Walnut","#6e4a32"),("Cherry","#a8603e"),("Limestone","#e6dcc8"),("Soapstone","#6f7a75"),("Green zellige","#2f7a5c"),("Bronze","#4e3d2c")]
 y=M+40; x=M+cw+30
 c.setFont("SansB",7.5); c.setFillColor(OLIVE); c.drawString(x,y+44,"MATERIAL PALETTE")
 for i,(n,col) in enumerate(sw):
@@ -171,12 +171,35 @@ page("Decisions Log","06c · Settled by Max · 10.10.26")
 dl=[["#","Question","Decision","What changed in the design"],
 ["1","Garage vs. carport","Keep the open carport","No change. Modern black steel two-car carport with a standing-seam roof and covered walkway to the front door."],
 ["2","Music room acoustics","Fully isolated studio","Office / music loft (407) becomes a room-within-a-room: decoupled inner stud walls on resilient isolation mounts, a floated floor on isolation pads, an isolated ceiling on spring hangers, laminated double glazing with an air gap, and quiet decoupled HVAC with lined ducts and silencers, plus acoustic panels and ceiling clouds inside. Target STC 60+ (about 60-65 dB isolation), NC-20 inside. Room 405 becomes a sound lock with two solid-core sealed doors; the studio's outside door was removed. About 14 in of build-up per side: 528 SF gross, about 426 SF net (21 ft 8 in x 19 ft 8 in). Gross conditioned area is unchanged. Furniture moved in off the inner walls, so it still works as an office: sit-stand desk facing the garden, studio desk, piano, drums, guitar wall and sofa."],
-["3","Pool type","Small saltwater pool","Same 34 x 12 ft pool. A salt chlorine generator in the Pool Equipment room (211); replace the cell about every 3-5 years. Sealed flagstone deck (salt-resistant penetrating sealer, resealed every 2-3 years) and marine-grade 316 stainless fittings, ladders and drains."],
+["3","Pool type","Small saltwater pool","Same 34 x 12 ft pool. A salt chlorine generator in the Pool Equipment room (211); replace the cell about every 3-5 years. Sealed deck (now basalt with flamed-granite coping per Round 2; salt-resistant sealer, resealed every 2-3 years) and marine-grade 316 stainless fittings, ladders and drains."],
 ["4","Climbing wall height","Full 12 ft wall from day one","The full 16 ft wide x 12 ft high wall is built from the start (no low wall, no future extension). Poured-rubber soft-fall plus thick crash pads, a second upper volume, and more holds. The pavilion roof went up from 13 ft to 17 ft so the beams clear the top of the wall by about 3 ft and the roof by about 4 ft."],
 ["5","Utilities","New screened utility yard","36 x 30 ft yard beside the Pool Equipment room and wellness wing, behind a 7 ft charred-timber screen with a 12 ft service gate on a new gravel service lane from the drive. Inside: two rainwater tanks (about 5,000 gal each, fed from the roofs, with well or municipal backup), a water treatment lean-to (pressure pump, sediment + carbon filters, UV, softener), a buried septic tank + aerobic treatment unit, a generator + battery pad, and three HVAC condensers. Pool pump, filter and salt cell stay in room 211 next door. Drain field in the south meadow, more than 100 ft from the vegetable garden and the well; well up-slope to the north-east."]]
 dt=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(dl)],colWidths=[(W-2*M)*k for k in (0.04,0.16,0.18,0.62)])
 dt.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("TOPPADDING",(0,0),(-1,-1),4),("BOTTOMPADDING",(0,0),(-1,-1),4)]))
 _,dh=dt.wrapOn(c,W-2*M,800); dt.drawOn(c,M,H-M-62-dh)
+page("Decisions Log (Continued)","06d · This or That Round 2 · 11.10.26  ·  where Max picked Both, the split is noted")
+d2=[["#","Topic","Decision","How it is applied"],
+["6","Engawa","Timber engawa with stone step","Western red cedar deck along the north, east and west courtyard glass under the eaves, with a bluestone step, recessed step lights and string lights under the eave."],
+["7","Exterior walls","White plaster with black timber + charred siding (Both)","Split by zone: white lime-plaster panels with black timber trim on the Living Pavilion and Studio + Arrival wings (entry and view faces); charred-timber siding on the Sleeping and Wellness wings."],
+["8","Windows + front door","Bronze; frameless corner glass","Bronze frames throughout and a bronze front door (style and timber open). Frameless glass corner, no post, where the living room's courtyard glass meets the east engawa glass."],
+["9","Interior doors","Shoji; tatami: shoji + fusuma","Shoji leaves at the master suite, kids' rooms and entries. Tatami room: shoji to the engawa, fusuma closet doors. Exception: the isolated studio keeps solid-core sealed doors to hold STC 60+."],
+["10","Screens","Kumiko + koshi lattice (Both)","Kumiko lattice screen inside the genkan; koshi street lattice in cedar on the west entry face in front of the tatami window."],
+["11","Wood","Walnut floors; walnut + cherry joinery (Both); teak + cedar outdoors (Both)","Walnut floors replace all oak (herringbone too). Joinery: walnut in living, dining, kitchen, studio, genkan and tatami; cherry in bedrooms, closets, kids' rooms and baths. Outdoors: cedar for the engawa, lattice and pergola; teak for benches, loungers and tables."],
+["12","Stone","Limestone; soapstone island top + honed marble ends; slate + bluestone (Both); basalt + flamed granite (Both)","Honed limestone at the entry, baths, kitchen and wet room (steam room keeps black stone). Soapstone island top with honed marble waterfall ends. Courtyard: slate paving with bluestone step and path. Pool: basalt deck with flamed-granite coping."],
+["13","Plaster + tile","Earth plaster in the wet room; green zellige","Japanese earth-plaster walls in the wet room; green zellige kept in the kitchen and added as the master shower wall."],
+["14","Metal","Unlacquered brass faucets","Bath and kitchen taps, showers and the courtyard shower in unlacquered brass (mount still open)."],
+["15","Lighting","Paper lantern + woven; blown glass + paper; stone lanterns + mushroom lights","Living: paper lanterns over the pit, woven pendants by the north window. Island: alternating blown-glass and paper-lantern pendants. Paths: stone lanterns plus mushroom path lights in the planting."],
+["16","Furniture","Low linen sofa; Windsor + Shaker (Both); leather lounger; teak loungers","Low linen sofa in the pit; dining chairs split, Windsor (walnut) on the courtyard side and Shaker (cherry) on the north side; classic leather lounger; teak loungers on the east engawa and at the pool."],
+["17","Bath","Hinoki tub","Kept: hinoki soaking tub by the master bath window."]]
+d2t=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(d2)],colWidths=[(W-2*M)*k for k in (0.04,0.13,0.25,0.58)])
+d2t.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("VALIGN",(0,0),(-1,-1),"TOP"),("TOPPADDING",(0,0),(-1,-1),3),("BOTTOMPADDING",(0,0),(-1,-1),3)]))
+_,dh2=d2t.wrapOn(c,W-2*M,800); d2t.drawOn(c,M,H-M-62-dh2)
+from design import OPEN_ITEMS
+page("Open Items","06e · Neither or skipped in Round 2  ·  shown as placeholders until decided")
+oi=[["#","Item","Status in Round 2"]]+[[str(i+1),a,b_] for i,(a,b_) in enumerate(OPEN_ITEMS)]
+oit=Table([[Paragraph(str(v),cellh if i==0 else cell) for v in row] for i,row in enumerate(oi)],colWidths=[(W-2*M)*k for k in (0.05,0.3,0.65)])
+oit.setStyle(TableStyle([("LINEBELOW",(0,0),(-1,0),0.8,OLIVE),("LINEBELOW",(0,1),(-1,-1),0.25,LINE),("TOPPADDING",(0,0),(-1,-1),4),("BOTTOMPADDING",(0,0),(-1,-1),4)]))
+_,oh=oit.wrapOn(c,W-2*M,800); oit.drawOn(c,M,H-M-62-oh)
 # 7 open questions
 page("Open Design Questions for Max","07 · Next steps")
 qs=["<b>Site and orientation.</b> Is there a real parcel? The plan assumes the mountain view is to the north and a gentle slope. A view to the west or south would mean rotating the courtyard. A steeper lot could become the gentle split (living pavilion 2 to 3 steps down).",

@@ -227,7 +227,10 @@ def floor_plan(path, overlay=False):
     ax.text(45.5,30.9,"RAKED GRAVEL",ha='center',fontsize=4.4,color=MUTED,zorder=9)
     ax.text(60.5,39.5,"PLANTED\nWATER COURT",ha='center',va='center',fontsize=4.2,color="#2e6b80",zorder=9)
     ax.text(53,51.2,"SHADE TREE + TEAK BENCH",ha='center',fontsize=4.2,color="#4e5f2f",zorder=9)
-    ax.text(54,53.6,"FLAGSTONE TERRACE",ha='center',fontsize=4.2,color="#8f7650",zorder=9)
+    c_=COURTYARD
+    for (x0_,y0_,x1_,y1_) in [(c_['x0'],c_['y1']-4.5,c_['x1'],c_['y1']),(c_['x0'],c_['y0']+0.2,c_['x0']+4.5,c_['y1']-4.5),(c_['x1']-4.5,c_['y0']+5,c_['x1'],c_['y1']-4.5)]:
+        ax.add_patch(Rectangle((x0_,y0_),x1_-x0_,y1_-y0_,fc="#d9b48c",ec="#a5825c",lw=0.3,alpha=0.55,zorder=1.9))
+    ax.text(54,53.0,"CEDAR ENGAWA + BLUESTONE STEP",ha='center',fontsize=4.2,color="#7a5a3a",zorder=9)
     ax.text(69,26.3,"CRT. SHOWER",ha='center',fontsize=3.4,color=MUTED,zorder=9)
     draw_walls(ax)
     room_labels(ax)

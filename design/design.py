@@ -18,7 +18,7 @@ ROOMS = [
   "Side entry from the bike racks and kitchen garden. Cubbies, boot bench, ski and helmet wall, dog wash."),
  ("201","Master Bedroom","Sleeping Wing",72,59,86,83,11,"honey",True,
   "Floor-to-ceiling glass to the mountains with sheer linen curtains, cove lighting, and a big fan under a wood ceiling. Low linen-wrapped bed against a lime-plaster headwall ledge (no wood platform or headboard), and a pair of lounge chairs at the view window."),
- ("202","Master Bath","Sleeping Wing",86,69,98,83,10,"blackstone",True,
+ ("202","Master Bath","Sleeping Wing",86,69,98,83,10,"stone",True,
   "Deep Japanese hinoki soaking tub at the corner window under a skylight. Open walk-in rain shower behind a black-stone wall (no glass enclosure), one long floating oak vanity with integrated stone basins and matte black taps, and a WC room. Opens to a walled bath garden."),
  ("203","Master Closet","Sleeping Wing",86,59,98,69,10,"honey",True,
   "Walk-in closet with honey-oak millwork and a center island."),
@@ -46,7 +46,7 @@ ROOMS = [
   "Open-air covered walkway (not conditioned) under the wellness-wing eave, closing the courtyard ring. Flagstone floor, open to the courtyard, with glass doors into the east and west galleries."),
  ("302","Exercise Room","Wellness + Gym Wing",28,0,50,22,12,"honey",True,
   "Calm studio look: honey-oak floor with a rubber lifting area, a high wood ceiling, and a mirror wall. Free-standing rig with wood rings and a climbing rope, Pilates Cadillac and reformer, wood water rower, treadmill, kettlebell and dumbbell rack, and a bars-and-bands wall. Glass slides open to the sprint lane and an outdoor pull-up station."),
- ("303","Wet Room","Wellness + Gym Wing",50,9,66,22,10,"blackstone",True,
+ ("303","Wet Room","Wellness + Gym Wing",50,9,66,22,10,"stone",True,
   "Black-stone wet room: two rain showers, a built-in cold plunge lined in green zellige (39-50 F), teak bench. Serves the sauna and steam room."),
  ("304","Sauna","Wellness + Gym Wing",50,0,58,9,8,"aspen",True,
   "Warm cedar walls with tiered pale-aspen benches, backlit underneath, and an electric rock heater (no wood stove). Low window toward the pool and meadow."),
@@ -68,40 +68,40 @@ ROOMS = [
  ("407","Isolated Studio / Office","Studio + Arrival",4,0,28,22,14,"honey",True,
   "Fully isolated room-within-a-room studio that is still a great work office: sit-stand desk facing the garden, studio desk with mixer and MPC, digital piano, e-drums, guitar wall and sofa. Decoupled inner stud walls on resilient isolation mounts (about 14 in total wall build-up per side), a floated floor on isolation pads, an isolated ceiling on spring hangers, laminated double glazing with an air gap, and quiet decoupled HVAC with lined ducts and silencers. Target STC 60+ (about 60-65 dB isolation) and NC-20 inside. 528 SF gross, about 426 SF net inside the inner shell (21 ft 8 in x 19 ft 8 in)."),
 ]
-FLOORS = {"flagstone":"Flagstone (open-air)","honey":"Wide-plank honey oak","herring":"Oak herringbone","stonetile":"Large-format limestone tiles","stone":"Honed limestone","blackstone":"Honed black stone",
+FLOORS = {"flagstone":"Flagstone (open-air)","honey":"Wide-plank walnut","herring":"Walnut herringbone","stonetile":"Large-format honed limestone","stone":"Honed limestone","blackstone":"Honed black stone",
           "tatami":"Tatami (8 mats)","aspen":"Aspen duckboard","concrete":"Sealed concrete"}
 FIN = {
- "101":"Large stone tiles; lime plaster; white handleless cabinets; black stone counters; green zellige backsplash; marble island; honey-oak open shelves; stainless range; glass chimney hood; white apron sink; brass faucet",
- "102":"Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; honey-oak table for eight; paper lantern",
- "103":"Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; linen pit upholstery; cognac leather; paper lanterns; shoji screens; art wall",
- "104":"Large stone tiles; lime plaster; honey-oak open shelving",
- "105":"Large stone tiles; lime plaster; honey-oak cubbies; stone dog wash",
- "201":"Honey-oak floor; lime plaster; wood ceiling with cove lighting; sheer linen curtains; big ceiling fan; linen bed",
- "202":"Black stone floor and shower wall; lime plaster; hinoki soaking tub; floating oak vanity, integrated basins; matte black taps; skylight",
- "203":"Honey-oak floor and millwork; lime plaster",
- "204":"Honey-oak floor; lime plaster; black steel sliding glass",
+ "101":"Large-format honed limestone; lime plaster; white handleless cabinets; black stone perimeter counters; green zellige backsplash; soapstone island top with honed marble waterfall ends; walnut open shelves; stainless range; glass chimney hood; white apron sink; unlacquered brass faucet; blown-glass + paper-lantern pendants over the island",
+ "102":"Walnut herringbone; lime plaster; exposed fir beams; cedar ceiling; dining table (open item); mixed chairs: Windsor (walnut) on the courtyard side, Shaker (cherry) on the north side; paper lantern",
+ "103":"Walnut herringbone; lime plaster; exposed fir beams; cedar ceiling; low linen sofa in the pit; classic leather lounger; paper lanterns over the pit + woven pendants by the north window; shoji screens; frameless corner glass at the courtyard corner; bronze frames elsewhere; art wall",
+ "104":"Large-format honed limestone; lime plaster; walnut open shelving",
+ "105":"Large-format honed limestone; lime plaster; walnut cubbies; stone dog wash",
+ "201":"Walnut floor; lime plaster; cherry joinery; shoji doors; wood ceiling with cove lighting; sheer linen curtains; big ceiling fan; linen bed; bronze window frames",
+ "202":"Honed limestone floor and walls; green zellige shower wall; hinoki soaking tub; floating cherry vanity, integrated basins; unlacquered brass taps (mount: open item); skylight",
+ "203":"Walnut floor; cherry millwork; lime plaster; shoji door",
+ "204":"Walnut floor; lime plaster; bronze sliding glass",
  "205":"Honed limestone; lime plaster; white cabinets",
  "206":"Sealed concrete; painted plaster",
- "207":"Honey-oak floor; calm white lime plaster; oak window seat with linen cushion; oak wardrobe; cube bins; bouldering panel",
- "212":"Honey-oak floor; lime plaster; oak wardrobe",
- "213":"Honey-oak floor; lime plaster",
- "208":"Honed limestone; white tile tub-shower; oak vanities",
- "209":"Honey-oak floor; calm white lime plaster; oak window seat; cube bins; climbing panel",
- "210":"Honed limestone; tiled walk-in shower; oak vanity",
+ "207":"Walnut floor; calm white lime plaster; shoji door; cherry window seat with linen cushion; cherry desk and cube shelves; white wardrobe; bouldering panel",
+ "212":"Walnut floor; lime plaster; shoji door; white wardrobe",
+ "213":"Walnut floor; lime plaster; shoji door",
+ "208":"Honed limestone; white tile tub-shower; cherry vanities; unlacquered brass taps",
+ "209":"Walnut floor; calm white lime plaster; shoji door; cherry window seat, desk and cube shelves; climbing panel",
+ "210":"Honed limestone; tiled walk-in shower (floor: open item); cherry vanity; unlacquered brass taps",
  "211":"Sealed concrete",
  "301":"Flagstone floor; open-air, covered by the wellness-wing roof; cedar soffit",
- "302":"Honey-oak floor; rubber lifting tiles; lime plaster; high wood ceiling; mirror wall; black steel rig; wood rings",
- "303":"Black stone floor and walls; green zellige plunge; teak bench",
+ "302":"Walnut floor; rubber lifting tiles; lime plaster; high wood ceiling; mirror wall; black steel rig; wood rings",
+ "303":"Honed limestone floor; Japanese earth-plaster walls (tadelakt-style sealed); green zellige plunge; teak bench; unlacquered brass rain showers",
  "304":"Cedar walls and ceiling; pale aspen tiered benches, backlit; aspen duckboard floor; electric rock heater",
- "305":"Honed black stone floor, walls and heated bench",
- "306":"Honed limestone; lime plaster; honey-oak lockers",
- "401":"Large stone tiles; rammed-earth feature wall; lime plaster; charred-oak pivot door",
- "402":"Honey-oak floor; oak millwork",
- "403":"Honed limestone; lime plaster; integrated stone basin",
- "404":"Tatami; lime plaster; shoji; walnut tokonoma",
- "405":"Honey-oak floor; painted plaster; two solid-core doors with perimeter + drop seals",
- "406":"Honey-oak floor; lime plaster; black steel sliding glass",
- "407":"Floated honey-oak floor on isolation pads; decoupled inner walls on resilient mounts; isolated ceiling; laminated double glazing; solid-core doors with seals; lined ducts; lime plaster; fabric acoustic panels; acoustic ceiling clouds; sculpted wood ceiling; skylight; layered pendants",
+ "305":"Honed black stone floor, walls and heated bench (kept: steam needs an impervious stone)",
+ "306":"Honed limestone; lime plaster; cherry lockers",
+ "401":"Large-format honed limestone; rammed-earth feature wall; lime plaster; kumiko lattice screen; bronze front door (style + timber: open item)",
+ "402":"Walnut floor; walnut millwork",
+ "403":"Honed limestone; lime plaster; integrated stone basin; unlacquered brass tap",
+ "404":"Tatami; lime plaster; shoji to the engawa; fusuma closet doors; walnut tokonoma",
+ "405":"Walnut floor; painted plaster; two solid-core doors with perimeter + drop seals",
+ "406":"Walnut floor; lime plaster; bronze sliding glass",
+ "407":"Floated walnut floor on isolation pads; decoupled inner walls on resilient mounts; isolated ceiling; laminated double glazing in bronze frames; solid-core doors with seals (not shoji, to keep STC 60+); lined ducts; lime plaster; walnut desks; fabric acoustic panels; acoustic ceiling clouds; sculpted wood ceiling; skylight; layered pendants",
 }
 rooms = [dict(id=r[0],name=r[1],wing=r[2],x0=r[3],y0=r[4],x1=r[5],y1=r[6],h=r[7],floor=r[8],cond=r[9],notes=r[10],fin=FIN[r[0]],floorName=FLOORS[r[8]]) for r in ROOMS]
 for r in rooms:
@@ -115,7 +115,7 @@ F = [
  # Living pavilion
  ('v',36,55,79,'open'),('v',50,55,79,'open'),
  ('h',55,30,36,'open'),
- ('h',55,36.5,49.5,'glass'),('h',55,50.5,71.5,'glass'),
+ ('h',55,36.5,49.5,'glass'),('h',55,50.5,72,'fixed'),
  ('h',79,28,35,'window',(4.5,8)),('h',79,37,49,'glass'),('h',79,51,71,'fixed'),
  ('v',20,71,74,'door'),('v',20,59,62,'door'),
  ('v',10,59,62,'exdoor'),('v',10,71,77,'window',(3,7)),('h',55,11,17,'window',(3,7)),
@@ -124,7 +124,7 @@ F = [
  ('h',59,73,77,'slide'),('h',83,73,85,'fixed'),('v',86,61,64,'door'),('v',86,71,74.5,'slide'),
  ('h',83,88,97,'window',(2,8)),('v',98,71,82,'window',(2,8)),('v',98,62,67,'window',(6,8)),
  # East gallery + bedrooms
- ('v',72,27.5,54.5,'glass'),('v',72,22.5,26.5,'glass'),('v',72,16,19,'door'),('h',14,73,77,'exdoor'),
+ ('v',72,27.5,55,'fixed'),('v',72,22.5,26.5,'glass'),('v',72,16,19,'door'),('h',14,73,77,'exdoor'),
  ('v',78,18,21,'door'),('v',78,24.5,27.5,'door'),('v',78,45.75,48.75,'door'),('v',78,52,55,'door'),
  ('v',85,24.5,27.5,'door'),('v',85,31.5,34.5,'door'),('v',85,41,44,'door'),('v',85,45.75,48.75,'door'),
  ('v',88,52,55,'door'),('v',98,50,53,'exdoor'),
@@ -182,7 +182,7 @@ def segments():
 WALLS = segments()
 
 # Exterior material per room (cladding)
-CLAD = {"Living Pavilion":"charred","Sleeping Wing":"charred","Wellness + Gym Wing":"charred","Studio + Arrival":"charred"}
+CLAD = {"Living Pavilion":"whiteplaster","Sleeping Wing":"charred","Wellness + Gym Wing":"charred","Studio + Arrival":"whiteplaster"}
 CLAD_OVR = {"401":"rammed"}
 
 # Furniture & equipment: (room, label, x0,y0,x1,y1, h, z0, color, shape)
@@ -203,7 +203,7 @@ FURN = [
  ('101', 'Open wood shelves', 20.25, 74.6, 21.1, 78.6, 3.2, 4.4, 'mat:honey', 'shelves'),
  ('101', 'Open wood shelves', 20.25, 55.6, 21.1, 58.6, 3.2, 4.4, 'mat:honey', 'shelves'),
  ('101', 'Integrated fridge + ovens (handleless)', 20.4, 63.5, 22.6, 70, 8.5, 0, 'mat:lacq', 'box'),
- ('101', 'Pendants', 24, 65.6, 32, 66.9, 0.7, 7.4, '#efe6d3', 'pendants'),
+ ('101', 'Blown-glass + paper-lantern pendants', 24, 65.6, 32, 66.9, 0.7, 7.4, '#efe6d3', 'pendants'),
  # Dining
  # Living
  # Pantry/mud
@@ -220,18 +220,18 @@ FURN = [
  ('201', 'Cove lighting', 72.3, 59.3, 85.7, 82.7, 0.12, 10.2, '#ffd9a0', 'cove'),
  ('201', 'Rug', 75, 67.2, 84, 78, 0.05, 0, '#cdbfa6', 'box'),
  ('202', 'Deep hinoki soaking tub by the window', 93, 78, 97.4, 82.4, 2.3, 0, '#e2c894', 'tub'),
- ('202', 'Walk-in rain shower', 86.6, 75.4, 92, 82.4, 0.12, 0, 'mat:blackstone', 'box'),
- ('202', 'Black stone shower wall', 86.6, 74.9, 91.2, 75.4, 7.5, 0, 'mat:blackstone', 'box'),
- ('202', 'Floating oak vanity, integrated basins', 95.4, 69.6, 97.4, 76.5, 1.5, 1.4, 'mat:honey', 'vanity'),
+ ('202', 'Walk-in rain shower (floor: open item, limestone shown)', 86.6, 75.4, 92, 82.4, 0.12, 0, 'mat:stone', 'box'),
+ ('202', 'Green zellige shower wall + unlacquered brass rain head', 86.6, 74.9, 91.2, 75.4, 7.5, 0, 'mat:zellige', 'box'),
+ ('202', 'Floating cherry vanity, integrated basins', 95.4, 69.6, 97.4, 76.5, 1.5, 1.4, 'mat:cherry', 'vanity'),
  ('202', 'WC', 87, 69.6, 89, 72, 1.4, 0, '#f3f1ec', 'box'),
- ('203', 'Closet millwork', 86.4, 59.4, 88.4, 68.6, 7.5, 0, 'mat:honey', 'box'),
- ('203', 'Closet millwork', 95.6, 59.4, 97.6, 68.6, 7.5, 0, 'mat:honey', 'box'),
- ('203', 'Island', 90.5, 62, 93.5, 66, 3, 0, 'mat:honey', 'box'),
+ ('203', 'Closet millwork', 86.4, 59.4, 88.4, 68.6, 7.5, 0, 'mat:cherry', 'box'),
+ ('203', 'Closet millwork', 95.6, 59.4, 97.6, 68.6, 7.5, 0, 'mat:cherry', 'box'),
+ ('203', 'Island', 90.5, 62, 93.5, 66, 3, 0, 'mat:cherry', 'box'),
  # East gallery
  # Kids 1
  # Kids 2
  ("210","Walk-in shower",83,14.4,87.6,18.4,0.12,0,"mat:stone","box"),
- ("210","Vanity",78.4,14.6,80,19,2.8,0,"mat:honey","box"),
+ ("210","Vanity",78.4,14.6,80,19,2.8,0,"mat:cherry","box"),
  ("210","WC",84,21.5,86,23.6,1.4,0,"#f3f1ec","box"),
  ("211","Pump + filter",90,15,96,18,3,0,"mat:steel","box"),
  ("211","Salt chlorine generator cell + controller",92,21,96.5,23.4,4.5,0,"#9aa0a3","box"),
@@ -256,7 +256,7 @@ FURN = [
  ("304","Tiered aspen benches, backlit",50.4,4.4,57.6,8.6,3,0,"mat:aspen","benches"),
  ("304","Electric rock heater",56.2,0.6,57.6,2.4,2.6,0,"#2f2c29","heater"),
  ("305","Heated black-stone bench",58.4,5.8,65.6,8.6,1.6,0,"mat:blackstone","box"),
- ("306","Lockers + towels",70.6,1,71.6,12,7,0,"mat:honey","box"),
+ ("306","Lockers + towels",70.6,1,71.6,12,7,0,"mat:cherry","box"),
  # Studio
  ('405', 'Gear racks', 18.4, 22.4, 29.6, 24, 7, 0, 'mat:steel', 'box'),
  # Office / music
@@ -281,8 +281,8 @@ FURN = [
  ("407","Rug",8,6,17,13,0.05,0,"#cdbfa6","box"),
  # Dining (14 x 24)
  ("102","Honey-oak dining table (8)",39,64,47,68,2.5,0,"mat:honey","table"),
- ("102","Chairs",39.5,62.4,46.5,63.6,1.5,0,"#d9cbb5","chairs"),
- ("102","Chairs",39.5,68.4,46.5,69.6,1.5,0,"#d9cbb5","chairs"),
+ ("102","Windsor chairs (walnut)",39.5,62.4,46.5,63.6,1.5,0,"mat:honey","chairs"),
+ ("102","Shaker chairs (cherry)",39.5,68.4,46.5,69.6,1.5,0,"mat:cherry","chairs"),
  ("102","Paper lantern",41,64.5,45,67.5,2.4,6.6,"#f4ecdc","lantern"),
  ("102","Shoji screens",49.7,72.5,50.0,78.8,8,0,"#f4ecdc","shoji"),
  # Living (22 x 24) - pit kept at 16 x 12
@@ -292,6 +292,8 @@ FURN = [
  ("103","Low modular sofa (pit)",51.8,63.6,54.1,70.4,1.0,-1.5,"mat:linen","sofa"),
  ("103","Coffee table",57,65.2,63,68.8,0.8,-1.5,"#6b4a33","box"),
  ("103","Paper lanterns",55.5,64,63.5,70,2.0,7.0,"#f4ecdc","lanterns"),
+ ("103","Woven pendant",52.3,75.2,54.3,77.2,1.6,6.6,"#b48a56","woven"),
+ ("103","Woven pendant",58,75.2,60,77.2,1.6,6.6,"#b48a56","woven"),
  ("103","Linear gas fire in plaster plinth",69.4,61,71.4,73,1.6,0,"mat:plaster","fire"),
  ("103","Leather lounge chair",52,74.6,55.2,78,2.6,0,"#8a5a34","lounge"),
  ("103","Wall-mounted art",71.4,64,71.6,71,4.2,3.8,"#c9b48e","art"),
@@ -303,23 +305,23 @@ FURN = [
  ("206","Air handler + ERV",94,55,97.6,58.6,6,0,"mat:steel","box"),
  ("206","Linen shelves",88.4,49.4,92,51,7,0,"mat:honey","box"),
  # Kids' Room 1 (13 x 12.5)
- ("207","Window-seat reading nook",96.2,39,97.8,45,1.6,0,"mat:honey","seat"),
+ ("207","Window-seat reading nook",96.2,39,97.8,45,1.6,0,"mat:cherry","seat"),
  ("207","Twin bed",89.5,42,93.1,48.6,1.4,0,"mat:linen","bed"),
- ("207","Desk by the window",94,36.9,97.8,38.5,2.5,0,"mat:honey","table"),
+ ("207","Desk by the window",94,36.9,97.8,38.5,2.5,0,"mat:cherry","table"),
  ("207","Wardrobe",85.3,36.9,87.3,39.6,7,0,"mat:lacq","box"),
- ("207","Low cube shelves + bins",87.6,36.9,91.6,38.2,2.4,0,"mat:honey","cubes"),
+ ("207","Low cube shelves + bins",87.6,36.9,91.6,38.2,2.4,0,"mat:cherry","cubes"),
  ("207","Beanbag",90,39,92.5,41.5,1.3,0,"#c98f6a","beanbags"),
  ("207","Small bouldering wall + mat",93.5,48.65,97.8,48.95,8,0,"mat:honey","kidwall"),
  # Jack-and-Jill (7 x 15.5)
  ("208","Tub-shower",78.4,30.4,84.6,33,1.8,0,"#f3f1ec","box"),
- ("208","Vanity 1",78.4,35,79.7,39.5,2.8,0,"mat:honey","box"),
- ("208","Vanity 2",83.3,36,84.6,40,2.8,0,"mat:honey","box"),
+ ("208","Vanity 1",78.4,35,79.7,39.5,2.8,0,"mat:cherry","box"),
+ ("208","Vanity 2",83.3,36,84.6,40,2.8,0,"mat:cherry","box"),
  ("208","WC",78.4,41.5,80.4,43.5,1.4,0,"#f3f1ec","box"),
  # Kids' Room 2 / Guest (13 x 12.5)
- ("209","Window-seat reading nook",96.2,28,97.8,34,1.6,0,"mat:honey","seat"),
+ ("209","Window-seat reading nook",96.2,28,97.8,34,1.6,0,"mat:cherry","seat"),
  ("209","Queen bed (guest)",88.5,29.6,93.7,36.3,1.6,0,"mat:linen","bed"),
- ("209","Desk by the window",94,24.4,97.8,26,2.5,0,"mat:honey","table"),
- ("209","Low cube shelves + bins",94.4,35.1,97.8,36.3,2.4,0,"mat:honey","cubes"),
+ ("209","Desk by the window",94,24.4,97.8,26,2.5,0,"mat:cherry","table"),
+ ("209","Low cube shelves + bins",94.4,35.1,97.8,36.3,2.4,0,"mat:cherry","cubes"),
  ("209","Small climbing wall + mat",86,24.25,93.5,24.6,8,0,"mat:honey","kidwall"),
  ("212","Wardrobe",79,27.8,84.6,29.8,7,0,"mat:lacq","box"),
  # Genkan, closets, powder, tatami (west wing moved 8 ft east)
@@ -329,6 +331,8 @@ FURN = [
  ("402","Coats",18.4,40.4,19.6,45.6,7,0,"mat:honey","box"),
  ("403","Integrated stone vanity",25.5,40.3,28.5,41.3,2.8,0,"mat:stone","box"),
  ("403","WC",24.4,43.6,26.4,45.6,1.4,0,"#f3f1ec","box"),
+ ("404","Fusuma closet doors",18.6,28.15,29.4,28.45,7,0,"#e9dfc9","fusuma"),
+ ("401","Kumiko lattice screen",27.2,47.6,27.45,52.4,7,0,"mat:honey","kumiko"),
  ("404","Tokonoma",18.4,32,20,37,1.0,0,"#6b4a33","box"),
  ("404","Low table + zabuton",22.5,32,26.5,36,1.2,0,"#6b4a33","lowtable"),
  ("404","Paper andon lantern",27.5,37.6,28.5,38.6,2.2,0,"#f4ecdc","andon"),
@@ -392,14 +396,28 @@ COVERED = [dict(id="C1",name="Climbing Pavilion",x0=-22,y0=0,x1=-4,y1=18,w=18,d=
   notes="Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. 16-ft-wide, 12-ft-high kids' bouldering wall on the north side facing the sprint lane, over a 12-inch poured-rubber soft-fall surface. Sits in the active zone with the gym, sprint lane and a second bike rack.")]
 
 OUTDOOR_FIN = [
- ("Exterior","Flagstone terraces","Black charred-timber (shou sugi ban) cladding; standing-seam metal roofs, low mono-pitch and butterfly; rammed-earth entry wall; solid charred-oak pivot door"),
- ("Courtyard","Flagstone, lawn, raked gravel","Big shade tree; Japanese maples; planted water court; stone lanterns; stone water basin; curved teak bench; lit path lights; courtyard shower"),
- ("Saltwater pool + bale","Sealed flagstone deck (salt-resistant penetrating sealer)","Saltwater pool with salt chlorine generator (cell replaced about every 3-5 years); marine-grade 316 stainless fittings, ladders and drains; green stone pool tile; teak and linen loungers; bale pavilion with honey-oak platform and standing-seam roof"),
- ("Landscape","Meadow, gravel","Wildflower meadow; vegetable garden in cedar beds; fruit trees; round stone fire pit; front garden beds"),
- ("Arrival","Gravel drive, flagstone","Modern black steel carport; covered walkway to the front door"),
+ ("Exterior","Flagstone terraces","Split by zone: white lime-plaster panels with black timber trim on the Living Pavilion and Studio + Arrival wings (entry and view faces); charred-timber (shou sugi ban) siding on the Sleeping and Wellness wings; bronze window and door frames; bronze front door (style + timber: open item); koshi street lattice on the entry face; standing-seam metal roofs; rammed-earth entry wall; exterior wall light: open item"),
+ ("Engawa + courtyard","Western red cedar engawa deck with a bluestone step; slate paving with bluestone paths; lawn; raked gravel","Timber engawa on the north, east and west edges under the eaves; recessed step lights in the bluestone step + string lights under the eave; two teak loungers on the east engawa; big shade tree; Japanese maples; planted water court; stone lanterns + mushroom path lights in the planting; stone water basin; curved teak bench; courtyard table: open item; courtyard shower"),
+ ("Saltwater pool + bale","Basalt deck with flamed-granite coping (both sealed, salt-resistant)","Saltwater pool with salt chlorine generator (cell replaced about every 3-5 years); marine-grade 316 stainless fittings, ladders and drains; green stone pool tile; teak loungers with linen; bale pavilion with walnut platform and standing-seam roof"),
+ ("Landscape","Meadow, gravel","Wildflower meadow; vegetable garden in western red cedar beds; fruit trees; round stone fire pit; front garden beds; cedar pergola with teak table"),
+ ("Arrival","Gravel drive, flagstone","Modern black steel carport (decided); covered walkway to the front door"),
  ("Climbing Pavilion","Poured-rubber soft-fall + crash pads","Fir frame; standing-seam roof raised to 17 ft (about 4 ft clear over the wall); full 16 ft wide x 12 ft high climbing wall"),
- ("Utility Yard","Compacted gravel + concrete equipment pads","7 ft charred-timber screen with service gate; 2 rainwater tanks; water treatment lean-to; septic/ATU lids; generator + battery pad; HVAC condensers"),
+ ("Utility Yard","Floor: open item (gravel + concrete pads shown)","7 ft charred-timber screen with service gate; 2 rainwater tanks; water treatment lean-to; septic/ATU lids; generator + battery pad; HVAC condensers"),
  ("Active zone","Turf","Sprint lane; outdoor pull-up station in black steel"),
+]
+OPEN_ITEMS = [
+ ("Front door style + timber","Bronze chosen; panel style and timber species still open"),
+ ("Bath faucet mount","Neither deck- nor wall-mount chosen"),
+ ("Light switches","Neither option chosen"),
+ ("Door hardware","Skipped"),
+ ("Cabinet pulls","Skipped (kitchen stays handleless for now)"),
+ ("Exterior wall light","Neither option chosen"),
+ ("Bath accent stone","Neither option chosen (green zellige used as the accent for now)"),
+ ("Terracotta","Skipped (none used)"),
+ ("Shower floor","Skipped (honed limestone shown)"),
+ ("Utility yard floor","Skipped (gravel + concrete pads shown)"),
+ ("Dining table","Skipped (placeholder table shown)"),
+ ("Courtyard table","Neither option chosen (none shown)"),
 ]
 
 def total_conditioned():
@@ -410,7 +428,7 @@ if __name__=="__main__":
     print("Conditioned SF:",t, "m2:",round(t*SF2M2,1))
     for w in ["Living Pavilion","Sleeping Wing","Wellness + Gym Wing","Studio + Arrival"]:
         print(w, sum(r['area'] for r in rooms if r['wing']==w and r['cond']))
-    data=dict(rooms=rooms,walls=WALLS,furn=furn,roofs=ROOFS,site=SITE,clad=CLAD,cladOvr=CLAD_OVR,
+    data=dict(openItems=OPEN_ITEMS,frameless=[["h",55,50.5,72],["v",72,27.5,55]],rooms=rooms,walls=WALLS,furn=furn,roofs=ROOFS,site=SITE,clad=CLAD,cladOvr=CLAD_OVR,
               total=t,courtyard=COURTYARD,covered=COVERED)
     json.dump(data,open("plan.json","w"),indent=1)
     print("walls",len(WALLS))

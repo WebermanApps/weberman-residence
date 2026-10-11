@@ -17,13 +17,22 @@ export function makeMaterials() {
   M.plaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.96 }); // lime plaster
   M.charred = std({ map: T.charred, normalMap: T.charredN, roughness: 0.82 });
   M.rammed = std({ map: T.rammed, normalMap: T.rammedN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.95 });
-  M.stone = std({ map: T.stone, roughness: 0.8 });
+  M.stone = std({ map: T.stone, roughness: 0.8, color: 0xf8f0e0 }); // honed limestone
   M.flag = std({ map: T.flag, normalMap: T.flagN, roughness: 0.88 });
   M.plinth = std({ map: T.plinth, roughness: 0.9 });
   M.oak = std({ map: T.oak, roughness: 0.6 });
-  M.honey = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.48 });
-  M.herring = std({ map: T.herring, normalMap: T.herringN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.5 });
-  M.stonetile = std({ map: T.stonetile, normalMap: T.stonetileN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.62 });
+  M.honey = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.48, color: 0x8a5d40 }); // walnut (Round 2: walnut replaces oak)
+  M.cherry = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.45, color: 0xd08a62 });
+  M.herring = std({ map: T.herring, normalMap: T.herringN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.5, color: 0x8f6244 });
+  M.stonetile = std({ map: T.stonetile, normalMap: T.stonetileN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.62, color: 0xf6eedd }); // limestone
+  M.bluestone = std({ map: T.stonetile, normalMap: T.stonetileN, roughness: 0.75, color: 0x8d99a3 });
+  M.basalt = std({ map: T.stonetile, normalMap: T.stonetileN, roughness: 0.8, color: 0x5a5d60 });
+  M.granite = std({ map: T.stone, roughness: 0.92, color: 0xc4c0b8 });
+  M.slate = std({ map: T.flag, normalMap: T.flagN, roughness: 0.85, color: 0x77818a });
+  M.soapstone = std({ map: T.marble, roughness: 0.6, color: 0x7f8a85 });
+  M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xd2ad84 });
+  M.whiteplaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.94, color: 0xffffff });
+  M.bronze = std({ color: 0x4e3d2c, roughness: 0.4, metalness: 0.65 });
   M.blackstone = std({ map: T.blackstone, normalMap: T.blackstoneN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.42 });
   M.marble = std({ map: T.marble, roughness: 0.18 });
   M.zellige = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.12, metalness: 0.05 });
@@ -49,7 +58,7 @@ export function makeMaterials() {
   M.lamp = std({ color: 0xfff1d6, emissive: 0xffc77a, emissiveIntensity: 0.6 }); M.lamp.name = 'lamp';
   M.rgb = std({ color: 0xb04de0, emissive: 0x9b3bff, emissiveIntensity: 1.2 });
   M.mirror = std({ color: 0xc9d3d6, roughness: 0.04, metalness: 0.9 });
-  M.brass = std({ color: 0xc9a14a, roughness: 0.3, metalness: 0.9 });
+  M.brass = std({ color: 0xb48f4c, roughness: 0.48, metalness: 0.85 }); // unlacquered brass
   M.leather = std({ color: 0x8a5a34, roughness: 0.55 });
   M.water = std({ color: 0x4d9fb3, roughness: 0.08, metalness: 0.1, transparent: true, opacity: 0.88 });
   M.poolwater = std({ color: 0x3f9a92, roughness: 0.05, metalness: 0.1, transparent: true, opacity: 0.8 });
@@ -60,7 +69,7 @@ export function makeMaterials() {
   M.highlight = new THREE.MeshBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.28, depthWrite: false });
   // clipped twins for everything inside the building (section cuts)
   M.c = {};
-  for (const k of ['stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
+  for (const k of ['cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
     const m = M[k].clone(); m.name = M[k].name; m.clippingPlanes = clip; m.clipShadows = true; M.c[k] = m;
   }
   M.T = T;
@@ -218,13 +227,13 @@ function wallSolid(M, s, a, b, zb, zt) {
   if (s.ext) { if (Math.abs(a - s.a) < 1e-6) aa -= t / 2; if (Math.abs(b - s.b) < 1e-6) bb += t / 2; }
   if (s.ext) {
     const inside = s.pos || s.neg; const outSign = s.pos ? -1 : 1;
-    const clad = M.c[cladFor(inside)]; const inner = inside === '304' ? M.c.cedar : (inside === '305' || inside === '303') ? M.c.blackstone : M.c.plaster;
+    const clad = M.c[cladFor(inside)]; const inner = inside === '304' ? M.c.cedar : inside === '305' ? M.c.blackstone : inside === '303' ? M.c.earth : M.c.plaster;
     const outRange = outSign > 0 ? [0, t / 2] : [-t / 2, 0]; const inRange = outSign > 0 ? [-t / 2, 0] : [0, t / 2];
     extrudeOnWall('walls', clad, s, aa, bb, zb, zt, outRange[0], outRange[1]);
     extrudeOnWall('walls', inner, s, aa, bb, zb, zt, inRange[0], inRange[1]);
   } else {
     const has = (id) => s.pos === id || s.neg === id;
-    extrudeOnWall('walls', has('304') ? M.c.cedar : (has('305') || has('303')) ? M.c.blackstone : M.c.plaster, s, a - t / 2 + 0.001, b + t / 2 - 0.001, zb, zt, -t / 2, t / 2);
+    extrudeOnWall('walls', has('304') ? M.c.cedar : has('305') ? M.c.blackstone : has('303') ? M.c.earth : M.c.plaster, s, a - t / 2 + 0.001, b + t / 2 - 0.001, zb, zt, -t / 2, t / 2);
   }
 }
 function glassPanel(M, s, a, b, zb, zt, slider) {
@@ -233,10 +242,12 @@ function glassPanel(M, s, a, b, zb, zt, slider) {
     if (s.o === 'h') addBox(layer, mat, A, s.c + o1, Bv, s.c + o2, za, zz); else addBox(layer, mat, s.c + o1, A, s.c + o2, Bv, za, zz);
   };
   box(a, b, zb, zt, -t / 2, t / 2, M.c.glass, 'glass');
-  box(a, b, zb, zb + 0.25, -0.18, 0.18, M.c.frame, 'walls');
-  box(a, b, zt - 0.3, zt, -0.18, 0.18, M.c.frame, 'walls');
+  box(a, b, zb, zb + 0.25, -0.18, 0.18, M.c.bronze, 'walls');
+  box(a, b, zt - 0.3, zt, -0.18, 0.18, M.c.bronze, 'walls');
+  const fl = (P.frameless || []).some(([o, c, fa, fb]) => o === s.o && Math.abs(c - s.c) < 0.01 && a < fb && b > fa);
+  if (fl) return void blocking.push({ s, a, b }); // frameless corner glass: no mullions, no corner post
   const n = Math.max(1, Math.round((b - a) / (slider ? 5.5 : 8)));
-  for (let i = 0; i <= n; i++) { const p = a + (b - a) * i / n; box(p - 0.09, p + 0.09, zb, zt, -0.15, 0.15, M.c.frame, 'walls'); }
+  for (let i = 0; i <= n; i++) { const p = a + (b - a) * i / n; box(p - 0.09, p + 0.09, zb, zt, -0.15, 0.15, M.c.bronze, 'walls'); }
   blocking.push({ s, a, b });
 }
 function buildWalls(M) {
@@ -250,7 +261,16 @@ function buildWalls(M) {
         if (top > dh + 0.05) wallSolid(M, s, p.a, p.b, dh, null);
         if (p.k === 'front') { // charred-oak pivot door, slightly open
           const L = p.b - p.a; const g = boxGeo(L * 0.62, dh - 0.05, 0.22); g.translate(L * 0.31, dh / 2, 0);
-          g.rotateY(-0.55); const [hx, hy] = pt(s, p.a + L * 0.19); g.translate(hx - CX, 0, -(hy - CY)); B.add('walls', M.c.fir, g);
+          g.rotateY(-0.55); const [hx, hy] = pt(s, p.a + L * 0.19); g.translate(hx - CX, 0, -(hy - CY)); B.add('walls', M.c.bronze, g);
+        }
+        const SHOJI = ['201', '203', '207', '209', '212', '213', '404'];
+        if ((p.k === 'door' || p.k === 'slide') && (SHOJI.includes(s.pos) || SHOJI.includes(s.neg)) && !['405', '407'].includes(s.pos) && !['405', '407'].includes(s.neg)) {
+          const L = p.b - p.a, pw = Math.max(1.6, L * 0.5), off = 0.24; // one leaf slid half open
+          const bx = (A, Bv, za, zz, o1, o2, m) => { if (s.o === 'h') addBox('furn', m, A, s.c + o1, Bv, s.c + o2, za, zz); else addBox('furn', m, s.c + o1, A, s.c + o2, Bv, za, zz); };
+          const a0 = p.a, a1 = p.a + pw; bx(a0, a1, 0.05, dh - 0.1, off - 0.02, off + 0.02, M.c.paper);
+          bx(a0, a1, 0, 0.15, off - 0.06, off + 0.06, M.c.cherry); bx(a0, a1, dh - 0.2, dh - 0.05, off - 0.06, off + 0.06, M.c.cherry);
+          for (const q of [a0, a0 + pw / 2 - 0.04, a1 - 0.08]) bx(q, q + 0.08, 0, dh - 0.05, off - 0.06, off + 0.06, M.c.cherry);
+          for (let k = 1; k < 5; k++) { const z = (dh - 0.1) * k / 5; bx(a0, a1, z - 0.03, z + 0.03, off - 0.05, off + 0.05, M.c.cherry); }
         }
       } else if (p.k === 'window') {
         const [sill, head] = p.x; wallSolid(M, s, p.a, p.b, 0, sill); glassPanel(M, s, p.a, p.b, sill, Math.min(head, top), false);
@@ -318,14 +338,17 @@ function buildFurniture(M) {
     const mat = matFor(f.color);
     const z0 = f.z0, z1 = f.z0 + Math.max(f.h, 0.04), cx = (f.x0 + f.x1) / 2, cy = (f.y0 + f.y1) / 2, w = f.x1 - f.x0, d = f.y1 - f.y0, alongX = w >= d;
     switch (f.shape) {
-      case 'island': addBox(F_, M.c.lacq, f.x0 + 0.4, f.y0 + 1.2, f.x1 - 0.4, f.y1 - 0.1, 0, 2.85); addBox(F_, mat, f.x0, f.y0, f.x1, f.y1, 2.85, 3.0); addBox(F_, mat, f.x0, f.y0 + 0.2, f.x0 + 0.15, f.y1, 0, 2.85); addBox(F_, mat, f.x1 - 0.15, f.y0 + 0.2, f.x1, f.y1, 0, 2.85); break;
+      case 'island': addBox(F_, M.c.lacq, f.x0 + 0.4, f.y0 + 1.2, f.x1 - 0.4, f.y1 - 0.1, 0, 2.85); addBox(F_, M.c.soapstone, f.x0 + 0.15, f.y0, f.x1 - 0.15, f.y1, 2.85, 3.0); addBox(F_, mat, f.x0, f.y0, f.x0 + 0.15, f.y1, 0, 3.0); addBox(F_, mat, f.x0, f.y0 + 0.2, f.x0 + 0.15, f.y1, 0, 2.85); addBox(F_, mat, f.x1 - 0.15, f.y0, f.x1, f.y1, 0, 3.0); break;
       case 'stools': { const n = Math.round(w / 1.7); for (let i = 0; i < n; i++) { const x = f.x0 + w * (i + 0.5) / n; addCyl(F_, mat, x, cy, 0.62, z1 - 0.12, z1, 16); addCyl(F_, M.c.frame, x, cy, 0.07, 0, z1 - 0.12, 6); const ring = new THREE.TorusGeometry(0.4, 0.035, 4, 16); ring.rotateX(Math.PI / 2); addGeo(F_, M.c.brass, ring, x, cy, 0.85); addCyl(F_, M.c.frame, x, cy, 0.5, 0, 0.05, 14); } break; }
       case 'range': addBox(F_, mat, f.x0, f.y0, f.x1, f.y1, 0, z1 - 0.05); addBox(F_, M.c.dark, f.x0 + 0.1, f.y0 + 0.1, f.x1 - 0.1, f.y1 - 0.2, z1 - 0.05, z1 + 0.05); addBox(F_, M.c.dark, f.x0 + 0.3, f.y0 - 0.02, f.x1 - 0.3, f.y0 + 0.02, 0.6, 2.2); for (let i = 0; i < 5; i++) addCyl(D_, M.c.frame, f.x0 + 0.4 + i * 0.55, f.y0 - 0.05, 0.08, 2.6, 2.75, 8); break;
       case 'hood': addBox(F_, M.c.glass, f.x0, f.y0, f.x1, f.y1, z0, z1); addBox(F_, M.c.steel, f.x0 + 0.1, f.y0 + 0.1, f.x1 - 0.1, f.y1 - 0.1, z0 - 0.06, z0); addBox(F_, M.c.steel, cx - 0.5, f.y1 - 1.1, cx + 0.5, f.y1 - 0.05, z1, 12); break;
       case 'sink': addBox(F_, mat, f.x0, f.y0, f.x1, f.y0 + 0.12, z0, z0 + 0.95); addBox(F_, mat, f.x0, f.y0, f.x1, f.y1 - 0.2, z0, z0 + 0.12); addBox(F_, M.c.dark, f.x0 + 0.15, f.y0 + 0.15, f.x1 - 0.15, f.y1 - 0.3, z0 + 0.12, z0 + 0.13);
         addCyl(F_, M.c.brass, cx, f.y1 - 0.15, 0.06, 3.0, 4.2, 8); addBox(F_, M.c.brass, cx - 0.05, f.y1 - 0.95, cx + 0.05, f.y1 - 0.15, 4.1, 4.2); addCyl(F_, M.c.brass, cx, f.y1 - 0.95, 0.05, 3.85, 4.15, 8); break;
       case 'shelves': for (let k = 0; k < 3; k++) { const z = z0 + k * 1.3; addBox(F_, mat, f.x0, f.y0, f.x1, f.y1, z, z + 0.13); for (let q = 0; q < 5; q++) { const yy = f.y0 + 0.4 + q * (d - 0.8) / 4; if ((q + k) % 3) addCyl(D_, M.c.white, cx, yy, 0.28, z + 0.13, z + 0.55 + (q % 2) * 0.25, 10); else addBox(D_, colorMat('#c4b49a'), cx - 0.2, yy - 0.3, cx + 0.2, yy + 0.3, z + 0.13, z + 0.9); } } break;
-      case 'pendants': { for (let i = 0; i < 3; i++) { const x = f.x0 + w * (i + 0.5) / 3; const g = new THREE.SphereGeometry(0.55, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2); addGeo(F_, M.c.lacq, g, x, cy, z0 + 0.15); addCyl(F_, M.c.lamp, x, cy, 0.3, z0, z0 + 0.15, 12); addCyl(F_, M.c.frame, x, cy, 0.02, z0 + 0.7, 11.8, 4); } break; }
+      case 'pendants': { for (let i = 0; i < 3; i++) { const x = f.x0 + w * (i + 0.5) / 3; if (i % 2 === 0) { sphere(F_, M.c.glass, x, cy, z0 + 0.5, 0.62, 1.1); sphere(F_, M.c.lamp, x, cy, z0 + 0.45, 0.18, 1); } else sphere(F_, M.c.paper, x, cy, z0 + 0.5, 0.8, 1.15); addCyl(F_, M.c.brass, x, cy, 0.02, z0 + 1.1, 11.8, 4); } break; }
+      case 'woven': { const g = new THREE.SphereGeometry(Math.min(w, d) / 2, 18, 10, 0, Math.PI * 2, 0, Math.PI * 0.62); addGeo(F_, mat, g, cx, cy, z0); for (let k = 0; k < 4; k++) { const r = Math.min(w, d) / 2 * (0.95 - k * 0.15); addCyl(F_, colorMat('#8a6438'), cx, cy, r, z0 + 0.15 + k * 0.28, z0 + 0.2 + k * 0.28, 18); } addCyl(F_, M.c.lamp, cx, cy, 0.25, z0 - 0.3, z0 - 0.1, 10); addCyl(F_, M.c.frame, cx, cy, 0.02, z0 + f.h * 0.6, 11.8, 4); break; }
+      case 'fusuma': { const n = 4, pw = w / n; for (let k = 0; k < n; k++) { const xa = f.x0 + k * pw; addBox(F_, mat, xa + 0.04, f.y0, xa + pw - 0.04, f.y1, 0.1, z1 - 0.1); addBox(F_, M.c.cherry, xa, f.y0 - 0.02, xa + 0.06, f.y1 + 0.02, 0, z1); addCyl(F_, M.c.dark, xa + pw - 0.5, f.y0 - 0.03, 0.12, 3.2, 3.5, 10); } addBox(F_, M.c.cherry, f.x0, f.y0 - 0.02, f.x1, f.y1 + 0.02, z1 - 0.12, z1); break; }
+      case 'kumiko': { addBox(F_, M.c.paper, f.x0 + 0.08, f.y0, f.x1 - 0.08, f.y1, 0.4, z1 - 0.1); const along = d > w; const L = along ? d : w; for (let k = 0; k <= Math.round(L / 0.5); k++) { const q = (along ? f.y0 : f.x0) + k * L / Math.round(L / 0.5); if (along) addBox(F_, mat, f.x0 - 0.02, q - 0.03, f.x1 + 0.02, q + 0.03, 0.4, z1); else addBox(F_, mat, q - 0.03, f.y0 - 0.02, q + 0.03, f.y1 + 0.02, 0.4, z1); } for (let z = 0.4; z <= z1; z += 0.5) addBox(F_, mat, f.x0 - 0.02, f.y0 - 0.02, f.x1 + 0.02, f.y1 + 0.02, z, z + 0.05); addBox(F_, mat, f.x0 - 0.05, f.y0, f.x1 + 0.05, f.y1, 0, 0.4); break; }
       case 'table': addBox(F_, mat, f.x0, f.y0, f.x1, f.y1, z1 - 0.15, z1); [[f.x0 + 0.4, f.y0 + 0.4], [f.x1 - 0.6, f.y0 + 0.4], [f.x0 + 0.4, f.y1 - 0.6], [f.x1 - 0.6, f.y1 - 0.6]].forEach(([x, y]) => addBox(F_, mat, x, y, x + 0.2, y + 0.2, 0, z1 - 0.15)); break;
       case 'chairs': chairsRow(f, mat, f.y0 > 70); break;
       case 'lantern': sphere(F_, M.c.paper, cx, cy, z0 + f.h / 2, Math.min(w, d) / 2, f.h / Math.min(w, d)); addCyl(F_, M.c.frame, cx, cy, 0.02, z0 + f.h, 11.8, 4); break;
@@ -434,7 +457,18 @@ function buildSite(M, groups) {
   const ground = new THREE.Mesh(gg, M.meadow); ground.position.y = G; ground.receiveShadow = true; groups.ground.add(ground);
   // courtyard: flagstone terrace ring (no timber engawa deck), raked gravel, planted water court, lawn, shade tree, maples
   const c = P.courtyard; const FL = [M.plinth, M.plinth, M.flag, M.plinth, M.plinth, M.plinth];
-  addBox('site', FL, c.x0, c.y0, c.x1, c.y1, G, -0.3);
+  addBox('site', [M.plinth, M.plinth, M.slate, M.plinth, M.plinth, M.plinth], c.x0, c.y0, c.x1, c.y1, G, -0.3); // slate paving
+  { // timber engawa (western red cedar) with a bluestone step, on the north, west and east edges under the eaves
+    const DK = [M.cedar, M.cedar, M.cedar, M.cedar, M.cedar, M.cedar], BS = [M.bluestone, M.bluestone, M.bluestone, M.bluestone, M.bluestone, M.bluestone];
+    addBox('site', DK, c.x0, c.y1 - 4.5, c.x1, c.y1, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y1 - 5.8, c.x1 - 4.5, c.y1 - 4.5, -0.3, -0.18);
+    addBox('site', DK, c.x0, c.y0 + 0.2, c.x0 + 4.5, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y0 + 5.5, c.x0 + 5.8, c.y1 - 5.8, -0.3, -0.18);
+    addBox('site', DK, c.x1 - 4.5, c.y0 + 5, c.x1, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x1 - 5.8, c.y0 + 5.5, c.x1 - 4.5, c.y1 - 5.8, -0.3, -0.18);
+    for (let x = c.x0 + 6; x < c.x1 - 5; x += 3) addBox('detail', M.lamp, x, c.y1 - 5.82, x + 0.5, c.y1 - 5.78, -0.26, -0.22); // recessed step lights
+    for (let y = c.y0 + 7; y < c.y1 - 6; y += 3) { addBox('detail', M.lamp, c.x0 + 5.78, y, c.x0 + 5.82, y + 0.5, -0.26, -0.22); addBox('detail', M.lamp, c.x1 - 5.82, y, c.x1 - 5.78, y + 0.5, -0.26, -0.22); }
+    for (let x = c.x0 + 1; x <= c.x1 - 1; x += 1.6) { const sag = Math.sin(((x - c.x0) / 8) * Math.PI) * 0.5; addCyl('detail', M.lamp, x, c.y1 - 6.2, 0.09, 8.6 - Math.abs(sag), 8.78 - Math.abs(sag), 6); } // string lights under the eave
+    addBox('site', BS, c.x0 + 5.8, 40.3, c.x1 - 5.8, 41.7, -0.3, -0.2); // bluestone path
+    [[c.x1 - 4, 34], [c.x1 - 4, 41.5]].forEach(([x, y]) => { addBox('site', M.c.teak, x - 1.1, y, x + 1.1, y + 6, -0.05, 0.9); addBox('site', M.c.linen, x - 1.0, y + 0.2, x + 1.0, y + 4.4, 0.9, 1.25); const g = boxGeo(2.0, 0.3, 1.8); g.rotateX(-0.9); g.translate(x - CX, 1.6, -(y + 5.2 - CY)); B.add('site', M.c.teak, g); }); // teak loungers on the east engawa
+  }
   const lw = S.lawn; addBox('site', [M.plinth, M.plinth, M.turf, M.plinth, M.plinth, M.plinth], lw.x0, lw.y0, lw.x1, lw.y1, -0.5, -0.28);
   const z = S.zen; addBox('site', M.plinth, z.x0 - 0.3, z.y0 - 0.3, z.x1 + 0.3, z.y1 + 0.3, -0.5, -0.26); addBox('site', M.gravel, z.x0, z.y0, z.x1, z.y1, -0.5, -0.27);
   [[42, 33, 1.6, 1.4], [48.5, 36.5, 1.2, 1.0], [50, 32, 0.9, 0.8]].forEach(([x, y, r, h]) => { const g = new THREE.DodecahedronGeometry(r, 0); g.scale(1, h / r * 0.7, 1); g.translate(x - CX, -0.3 + h * 0.3, -(y - CY)); B.add('site', M.plinth, g); });
@@ -458,18 +492,18 @@ function buildSite(M, groups) {
   { const trop = new THREE.MeshStandardMaterial({ color: 0x3f6b35, roughness: 0.8 }); [[38.5, 29.5], [56, 41.2], [42.5, 52.5], [69.5, 51.5], [54, 29], [70, 36.5]].forEach(([x, y], i) => { for (let k = 0; k < 5; k++) { const g = new THREE.ConeGeometry(0.5, 3 + (k % 3), 4); g.rotateZ((k - 2) * 0.35); g.rotateY(k * 1.3); addGeo('site', trop, g, x + (k - 2) * 0.3, y + ((k * 7) % 3 - 1) * 0.3, 1.0); } }); }
   // lit garden path lights (instanced)
   { const pts = []; for (let x = 39; x <= 69; x += 6) { pts.push([x, 28.4], [x, 53.8]); } for (let y = 34; y <= 50; y += 5.3) { pts.push([37.2, y], [70.8, y]); }
-    const g = new THREE.CylinderGeometry(0.12, 0.14, 1.6, 6); g.translate(0, 0.8, 0); const im = new THREE.InstancedMesh(g, M.frame, pts.length); const g2 = new THREE.CylinderGeometry(0.16, 0.16, 0.3, 8); const im2 = new THREE.InstancedMesh(g2, M.lamp, pts.length);
+    const g = new THREE.CylinderGeometry(0.07, 0.09, 1.3, 6); g.translate(0, 0.65, 0); const im = new THREE.InstancedMesh(g, M.bronze, pts.length); const g2 = new THREE.SphereGeometry(0.42, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2); g2.scale(1, 0.55, 1); const im2 = new THREE.InstancedMesh(g2, M.lamp, pts.length); // mushroom path lights in the planting
     const mm = new THREE.Matrix4(); pts.forEach(([x, y], i) => { mm.makeTranslation(x - CX, -0.3, -(y - CY)); im.setMatrixAt(i, mm); mm.makeTranslation(x - CX, 1.35, -(y - CY)); im2.setMatrixAt(i, mm); }); groups.detail.add(im); groups.detail.add(im2); }
   // courtyard shower (charred board wall, stone floor)
   { const cs = S.cshower; addBox('site', M.c.blackstone, cs.x0, cs.y0, cs.x1, cs.y1, -0.3, -0.18); addBox('site', M.c.charred, cs.x0, cs.y1 - 0.3, cs.x1, cs.y1, -0.3, 7); addBox('site', M.c.charred, cs.x0, cs.y0, cs.x0 + 0.3, cs.y1, -0.3, 7);
     addBox('site', M.c.brass, cs.x0 + 2.4, cs.y1 - 0.5, cs.x0 + 2.55, cs.y1 - 0.3, -0.2, 7.2); addBox('site', M.c.brass, cs.x0 + 2.3, cs.y1 - 1.6, cs.x0 + 2.65, cs.y1 - 0.4, 7.0, 7.15); addCyl('site', M.c.brass, cs.x0 + 2.47, cs.y1 - 1.5, 0.45, 6.85, 7.0, 14); }
   // plinth band around the house footprint under exterior walls handled by floors
   // pool + deck
-  const pd = S.pooldeck, p = S.pool;
+  const pd = S.pooldeck, p = S.pool; { const FL = [M.plinth, M.plinth, M.basalt, M.plinth, M.plinth, M.plinth]; addBox('site', M.granite, p.x0 - 1.5, p.y0 - 1.5, p.x1 + 1.5, p.y1 + 1.5, G, -0.95);
   addBox('site', FL, pd.x0, pd.y0, pd.x1, p.y0, G, -1.0);
   addBox('site', FL, pd.x0, p.y1, pd.x1, pd.y1, G, -1.0);
   addBox('site', FL, pd.x0, p.y0, p.x0, p.y1, G, -1.0);
-  addBox('site', FL, p.x1, p.y0, pd.x1, p.y1, G, -1.0);
+  addBox('site', FL, p.x1, p.y0, pd.x1, p.y1, G, -1.0); }
   addBox('site', M.pooltile, p.x0, p.y0, p.x1, p.y1, -5.6, -5.4);
   addBox('site', M.pooltile, p.x0, p.y0 - 0.02, p.x1, p.y0 + 0.02, -5.4, -1.0); addBox('site', M.pooltile, p.x0, p.y1 - 0.02, p.x1, p.y1 + 0.02, -5.4, -1.0);
   addBox('site', M.pooltile, p.x0 - 0.02, p.y0, p.x0 + 0.02, p.y1, -5.4, -1.0); addBox('site', M.pooltile, p.x1 - 0.02, p.y0, p.x1 + 0.02, p.y1, -5.4, -1.0);
@@ -590,6 +624,8 @@ function buildSite(M, groups) {
     const df = S.drainfield; addBox('site', colorMat('#9fb07a'), df.x0, df.y0, df.x1, df.y1, G, -1.25); for (let y = df.y0 + 3; y < df.y1; y += 5) addBox('site', colorMat('#8a9c66'), df.x0 + 2, y, df.x1 - 2, y + 0.6, G, -1.2);
     const wl = S.well; addCyl('site', colorMat('#7d7a70'), wl.cx, wl.cy, 1.6, G, 1.2, 16); addCyl('site', M.c.charred, wl.cx, wl.cy, 0.5, 1.2, 3.2, 10);
   }
+  // koshi street lattice on the west (entry/street) face, in front of the tatami window
+  { for (let y = 28.6; y <= 45.4; y += 0.42) addBox('site', M.c.cedar, 17.1, y, 17.35, y + 0.16, -0.2, 8.2); addBox('site', M.c.cedar, 17.0, 28.4, 17.45, 45.6, 8.2, 8.5); addBox('site', M.c.cedar, 17.0, 28.4, 17.45, 45.6, -0.3, 0.0); }
   // bath garden wall
   const bg = S.bathgarden; addBox('site', M.c.charred, bg.x1 - 0.5, bg.y0, bg.x1, bg.y1, G, 7); addBox('site', M.c.charred, bg.x0, bg.y1 - 0.5, bg.x1, bg.y1, G, 7);
   addBox('site', M.gravel, bg.x0, bg.y0, bg.x1 - 0.5, bg.y1 - 0.5, G, -1.1);
@@ -668,8 +704,8 @@ export const OUTDOOR = [
   { id: 'U', name: 'Utility Yard', wing: 'Outdoor', x0: 100, y0: -6, x1: 136, y1: 24, area: 0, notes: '36 x 30 ft screened service yard beside the Pool Equipment room (211, which keeps the pool pump, filter and salt cell) and the wellness wing. 7-ft charred-timber screen matching the house, with a 12-ft service gate on the gravel service lane from the drive for pump trucks and deliveries.', floor: 'Compacted gravel + concrete pads', fin: 'Charred-timber screen; gravel; concrete pads' },
   { id: 'U6', name: 'Drain Field', wing: 'Outdoor', x0: 30, y0: -74, x1: 90, y1: -52, notes: 'On-site wastewater drain field in the south meadow below the service lane, more than 100 ft from the vegetable garden and the well, kept clear of the service lane. Size to the perc test.', floor: 'Meadow grass', fin: 'Meadow over trenches' },
   { id: 'U7', name: 'Well', wing: 'Outdoor', x0: 137, y0: 92, x1: 143, y1: 98, notes: 'Well head up-slope in the north-east, far from the drain field. Backup supply to the rainwater tanks.', floor: 'Gravel', fin: 'Stone pad; charred timber cover' },
-  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 36, y0: 27, x1: 72, y1: 55, notes: 'The heart of the house, now 36 x 28 ft. A katsura shade tree with a curved teak bench, Japanese maples, a lawn, a raked-gravel garden with three stones, a planted water court with a stone water basin, stone lanterns and lit paths, all on a flagstone terrace under 6-ft eaves. Every main room opens onto it.', h: null, floor: 'Flagstone, lawn, raked gravel', fin: 'Flagstone terrace; raked gravel; lawn; black-stone water court edge; stone lanterns and basin; teak bench; path lights' },
-  { id: 'P', name: 'Saltwater Pool', wing: 'Outdoor', x0: 54, y0: -22, x1: 88, y1: -10, notes: 'Small 34 x 12 ft saltwater pool lined in green stone tile, on the sunny south side outside the wellness wing. A salt chlorine generator in the Pool Equipment room (cell replaced about every 3-5 years), marine-grade 316 stainless fittings, a sealed flagstone deck, teak loungers, and a bale pavilion at the east end.', floor: 'Sealed flagstone deck', fin: 'Green stone pool tile; sealed flagstone deck; 316 stainless fittings; teak and linen loungers' },
+  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 36, y0: 27, x1: 72, y1: 55, notes: 'The heart of the house, 36 x 28 ft. A western red cedar engawa runs along the north, east and west glass under the eaves, with a bluestone step lit by recessed step lights and string lights under the eave. Slate paving with a bluestone path, a katsura shade tree with a curved teak bench, Japanese maples, a lawn, raked gravel, a planted water court with a stone basin, stone lanterns and mushroom path lights in the planting, and two teak loungers on the east engawa. Courtyard table: open item.', floor: 'Cedar engawa; slate + bluestone paving', fin: 'Western red cedar engawa; bluestone step; slate paving; bluestone path; teak bench and loungers; stone lanterns; mushroom path lights; string lights' },
+  { id: 'P', name: 'Saltwater Pool', wing: 'Outdoor', x0: 54, y0: -22, x1: 88, y1: -10, notes: 'Small 34 x 12 ft saltwater pool lined in green stone tile, on the sunny south side outside the wellness wing. A salt chlorine generator in the Pool Equipment room (cell replaced about every 3-5 years), marine-grade 316 stainless fittings, a sealed basalt deck with flamed-granite coping, teak loungers, and a bale pavilion at the east end.', floor: 'Basalt deck, flamed-granite coping', fin: 'Green stone pool tile; basalt deck; flamed-granite coping; 316 stainless fittings; teak and linen loungers' },
   { id: 'B', name: 'Bale Pavilion', wing: 'Outdoor', x0: 90, y0: -27, x1: 97, y1: -19, notes: 'Balinese-style bale by the pool: a raised honey-oak platform with linen cushions under a low standing-seam roof on fir posts.', floor: 'Honey-oak platform', fin: 'Honey oak; fir posts; standing-seam roof; linen cushions' },
   { id: 'L', name: 'Turf Sprint Lane', wing: 'Outdoor', x0: -32, y0: -16, x1: 43, y1: -8, notes: '20 yards (60 ft) of turf marked every 5 yards, plus a 15-ft run-out to a charred-timber end wall. An outdoor pull-up station stands at the gym end.', floor: 'Synthetic turf', fin: 'Turf; charred-timber end wall; black steel pull-up station' },
   { id: 'V', name: 'Vegetable Garden', wing: 'Outdoor', x0: -30, y0: 64, x1: -6, y1: 86, notes: 'Loved: four 4 x 18 ft cedar raised beds inside a slatted deer fence, a few steps from the mudroom and pantry, with a small orchard of fruit trees beside it.', floor: 'Gravel', fin: 'Cedar beds; gravel paths; fruit trees' },

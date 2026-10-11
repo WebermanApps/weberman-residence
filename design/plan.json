@@ -1,4 +1,68 @@
 {
+ "openItems": [
+  [
+   "Front door style + timber",
+   "Bronze chosen; panel style and timber species still open"
+  ],
+  [
+   "Bath faucet mount",
+   "Neither deck- nor wall-mount chosen"
+  ],
+  [
+   "Light switches",
+   "Neither option chosen"
+  ],
+  [
+   "Door hardware",
+   "Skipped"
+  ],
+  [
+   "Cabinet pulls",
+   "Skipped (kitchen stays handleless for now)"
+  ],
+  [
+   "Exterior wall light",
+   "Neither option chosen"
+  ],
+  [
+   "Bath accent stone",
+   "Neither option chosen (green zellige used as the accent for now)"
+  ],
+  [
+   "Terracotta",
+   "Skipped (none used)"
+  ],
+  [
+   "Shower floor",
+   "Skipped (honed limestone shown)"
+  ],
+  [
+   "Utility yard floor",
+   "Skipped (gravel + concrete pads shown)"
+  ],
+  [
+   "Dining table",
+   "Skipped (placeholder table shown)"
+  ],
+  [
+   "Courtyard table",
+   "Neither option chosen (none shown)"
+  ]
+ ],
+ "frameless": [
+  [
+   "h",
+   55,
+   50.5,
+   72
+  ],
+  [
+   "v",
+   72,
+   27.5,
+   55
+  ]
+ ],
  "rooms": [
   {
    "id": "101",
@@ -12,8 +76,8 @@
    "floor": "stonetile",
    "cond": true,
    "notes": "Bright, sleek kitchen: white handleless cabinets, black stone counters and a green zellige backsplash. A 10-ft marble island seats five on stools. Stainless range under a glass chimney hood, white apron sink with a brass faucet, open honey-oak shelves.",
-   "fin": "Large stone tiles; lime plaster; white handleless cabinets; black stone counters; green zellige backsplash; marble island; honey-oak open shelves; stainless range; glass chimney hood; white apron sink; brass faucet",
-   "floorName": "Large-format limestone tiles",
+   "fin": "Large-format honed limestone; lime plaster; white handleless cabinets; black stone perimeter counters; green zellige backsplash; soapstone island top with honed marble waterfall ends; walnut open shelves; stainless range; glass chimney hood; white apron sink; unlacquered brass faucet; blown-glass + paper-lantern pendants over the island",
+   "floorName": "Large-format honed limestone",
    "w": 16,
    "d": 24,
    "area": 384
@@ -30,8 +94,8 @@
    "floor": "herring",
    "cond": true,
    "notes": "Seats eight under exposed fir beams and a big paper lantern. Disappearing glass to the courtyard on the south and to the pergola dining terrace on the north.",
-   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; honey-oak table for eight; paper lantern",
-   "floorName": "Oak herringbone",
+   "fin": "Walnut herringbone; lime plaster; exposed fir beams; cedar ceiling; dining table (open item); mixed chairs: Windsor (walnut) on the courtyard side, Shaker (cherry) on the north side; paper lantern",
+   "floorName": "Walnut herringbone",
    "w": 14,
    "d": 24,
    "area": 336
@@ -48,8 +112,8 @@
    "floor": "herring",
    "cond": true,
    "notes": "The heart of the house, fully open to the garden: 21 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. 16-ft sunken conversation pit with a low modular sofa, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
-   "fin": "Oak herringbone; lime plaster; exposed fir beams; cedar ceiling; linen pit upholstery; cognac leather; paper lanterns; shoji screens; art wall",
-   "floorName": "Oak herringbone",
+   "fin": "Walnut herringbone; lime plaster; exposed fir beams; cedar ceiling; low linen sofa in the pit; classic leather lounger; paper lanterns over the pit + woven pendants by the north window; shoji screens; frameless corner glass at the courtyard corner; bronze frames elsewhere; art wall",
+   "floorName": "Walnut herringbone",
    "w": 22,
    "d": 24,
    "area": 528
@@ -66,8 +130,8 @@
    "floor": "stonetile",
    "cond": true,
    "notes": "Floor-to-ceiling open honey-oak shelving, second fridge, appliance counter.",
-   "fin": "Large stone tiles; lime plaster; honey-oak open shelving",
-   "floorName": "Large-format limestone tiles",
+   "fin": "Large-format honed limestone; lime plaster; walnut open shelving",
+   "floorName": "Large-format honed limestone",
    "w": 10,
    "d": 12,
    "area": 120
@@ -84,8 +148,8 @@
    "floor": "stonetile",
    "cond": true,
    "notes": "Side entry from the bike racks and kitchen garden. Cubbies, boot bench, ski and helmet wall, dog wash.",
-   "fin": "Large stone tiles; lime plaster; honey-oak cubbies; stone dog wash",
-   "floorName": "Large-format limestone tiles",
+   "fin": "Large-format honed limestone; lime plaster; walnut cubbies; stone dog wash",
+   "floorName": "Large-format honed limestone",
    "w": 10,
    "d": 12,
    "area": 120
@@ -102,8 +166,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Floor-to-ceiling glass to the mountains with sheer linen curtains, cove lighting, and a big fan under a wood ceiling. Low linen-wrapped bed against a lime-plaster headwall ledge (no wood platform or headboard), and a pair of lounge chairs at the view window.",
-   "fin": "Honey-oak floor; lime plaster; wood ceiling with cove lighting; sheer linen curtains; big ceiling fan; linen bed",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; lime plaster; cherry joinery; shoji doors; wood ceiling with cove lighting; sheer linen curtains; big ceiling fan; linen bed; bronze window frames",
+   "floorName": "Wide-plank walnut",
    "w": 14,
    "d": 24,
    "area": 336
@@ -117,11 +181,11 @@
    "x1": 98,
    "y1": 83,
    "h": 10,
-   "floor": "blackstone",
+   "floor": "stone",
    "cond": true,
    "notes": "Deep Japanese hinoki soaking tub at the corner window under a skylight. Open walk-in rain shower behind a black-stone wall (no glass enclosure), one long floating oak vanity with integrated stone basins and matte black taps, and a WC room. Opens to a walled bath garden.",
-   "fin": "Black stone floor and shower wall; lime plaster; hinoki soaking tub; floating oak vanity, integrated basins; matte black taps; skylight",
-   "floorName": "Honed black stone",
+   "fin": "Honed limestone floor and walls; green zellige shower wall; hinoki soaking tub; floating cherry vanity, integrated basins; unlacquered brass taps (mount: open item); skylight",
+   "floorName": "Honed limestone",
    "w": 12,
    "d": 14,
    "area": 168
@@ -138,8 +202,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Walk-in closet with honey-oak millwork and a center island.",
-   "fin": "Honey-oak floor and millwork; lime plaster",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; cherry millwork; lime plaster; shoji door",
+   "floorName": "Wide-plank walnut",
    "w": 12,
    "d": 10,
    "area": 120
@@ -156,8 +220,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Glazed engawa along the courtyard: honey-oak floor, sliding glass, a long low bench and wall-mounted art. Links living, bedrooms and the wellness wing.",
-   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; lime plaster; bronze sliding glass",
+   "floorName": "Wide-plank walnut",
    "w": 6,
    "d": 45,
    "area": 270
@@ -210,8 +274,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Compact 13 x 12.5 ft calm white room: window-seat reading nook on the east window, desk by the window, wardrobe, low cube shelves with bins, a beanbag, and a small bouldering wall with a crash mat.",
-   "fin": "Honey-oak floor; calm white lime plaster; oak window seat with linen cushion; oak wardrobe; cube bins; bouldering panel",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; calm white lime plaster; shoji door; cherry window seat with linen cushion; cherry desk and cube shelves; white wardrobe; bouldering panel",
+   "floorName": "Wide-plank walnut",
    "w": 13,
    "d": 12.5,
    "area": 162.5
@@ -228,7 +292,7 @@
    "floor": "stone",
    "cond": true,
    "notes": "Tighter 7 x 15.5 ft bath (about 109 SF) between the kids' rooms: two vanities, WC and a tiled tub-shower, lockable from each side.",
-   "fin": "Honed limestone; white tile tub-shower; oak vanities",
+   "fin": "Honed limestone; white tile tub-shower; cherry vanities; unlacquered brass taps",
    "floorName": "Honed limestone",
    "w": 7,
    "d": 15.5,
@@ -246,8 +310,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Compact 13 x 12.5 ft room that still fits a queen bed, so it doubles as the guest room. Window-seat nook, desk by the window, cube shelves, and a small climbing wall feature. The Guest / Pool Bath is just down the engawa.",
-   "fin": "Honey-oak floor; calm white lime plaster; oak window seat; cube bins; climbing panel",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; calm white lime plaster; shoji door; cherry window seat, desk and cube shelves; climbing panel",
+   "floorName": "Wide-plank walnut",
    "w": 13,
    "d": 12.5,
    "area": 162.5
@@ -264,7 +328,7 @@
    "floor": "stone",
    "cond": true,
    "notes": "Guest-capable full bath (walk-in shower, vanity, WC) reached from the engawa, also serving the pool and Kids' Room 2 when it hosts guests.",
-   "fin": "Honed limestone; tiled walk-in shower; oak vanity",
+   "fin": "Honed limestone; tiled walk-in shower (floor: open item); cherry vanity; unlacquered brass taps",
    "floorName": "Honed limestone",
    "w": 10,
    "d": 10,
@@ -300,8 +364,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Entry vestibule from the east engawa to Kids' Room 2, with a wardrobe.",
-   "fin": "Honey-oak floor; lime plaster; oak wardrobe",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; lime plaster; shoji door; white wardrobe",
+   "floorName": "Wide-plank walnut",
    "w": 7,
    "d": 6,
    "area": 42
@@ -318,8 +382,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Short entry vestibule from the east engawa to Kids' Room 1.",
-   "fin": "Honey-oak floor; lime plaster",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; lime plaster; shoji door",
+   "floorName": "Wide-plank walnut",
    "w": 7,
    "d": 3.5,
    "area": 24.5
@@ -354,8 +418,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Calm studio look: honey-oak floor with a rubber lifting area, a high wood ceiling, and a mirror wall. Free-standing rig with wood rings and a climbing rope, Pilates Cadillac and reformer, wood water rower, treadmill, kettlebell and dumbbell rack, and a bars-and-bands wall. Glass slides open to the sprint lane and an outdoor pull-up station.",
-   "fin": "Honey-oak floor; rubber lifting tiles; lime plaster; high wood ceiling; mirror wall; black steel rig; wood rings",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; rubber lifting tiles; lime plaster; high wood ceiling; mirror wall; black steel rig; wood rings",
+   "floorName": "Wide-plank walnut",
    "w": 22,
    "d": 22,
    "area": 484
@@ -369,11 +433,11 @@
    "x1": 66,
    "y1": 22,
    "h": 10,
-   "floor": "blackstone",
+   "floor": "stone",
    "cond": true,
    "notes": "Black-stone wet room: two rain showers, a built-in cold plunge lined in green zellige (39-50 F), teak bench. Serves the sauna and steam room.",
-   "fin": "Black stone floor and walls; green zellige plunge; teak bench",
-   "floorName": "Honed black stone",
+   "fin": "Honed limestone floor; Japanese earth-plaster walls (tadelakt-style sealed); green zellige plunge; teak bench; unlacquered brass rain showers",
+   "floorName": "Honed limestone",
    "w": 16,
    "d": 13,
    "area": 208
@@ -408,7 +472,7 @@
    "floor": "blackstone",
    "cond": true,
    "notes": "Stone steam room (not a white hammam): honed black stone on the walls, floor and heated bench.",
-   "fin": "Honed black stone floor, walls and heated bench",
+   "fin": "Honed black stone floor, walls and heated bench (kept: steam needs an impervious stone)",
    "floorName": "Honed black stone",
    "w": 8,
    "d": 9,
@@ -426,7 +490,7 @@
    "floor": "stone",
    "cond": true,
    "notes": "Towels, robes, honey-oak lockers. Door to the pool deck and outdoor shower.",
-   "fin": "Honed limestone; lime plaster; honey-oak lockers",
+   "fin": "Honed limestone; lime plaster; cherry lockers",
    "floorName": "Honed limestone",
    "w": 6,
    "d": 22,
@@ -444,8 +508,8 @@
    "floor": "stonetile",
    "cond": true,
    "notes": "Stone genkan with a step-up to the oak floor, a rammed-earth feature wall and one large artwork. Solid charred-oak pivot door (no glass entry). The first view lines up across the engawa into the courtyard.",
-   "fin": "Large stone tiles; rammed-earth feature wall; lime plaster; charred-oak pivot door",
-   "floorName": "Large-format limestone tiles",
+   "fin": "Large-format honed limestone; rammed-earth feature wall; lime plaster; kumiko lattice screen; bronze front door (style + timber: open item)",
+   "floorName": "Large-format honed limestone",
    "w": 12,
    "d": 9,
    "area": 108
@@ -462,8 +526,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Coat and shoe storage.",
-   "fin": "Honey-oak floor; oak millwork",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; walnut millwork",
+   "floorName": "Wide-plank walnut",
    "w": 6,
    "d": 6,
    "area": 36
@@ -480,7 +544,7 @@
    "floor": "stone",
    "cond": true,
    "notes": "Powder room by the entry: integrated stone basin, lime-plaster walls.",
-   "fin": "Honed limestone; lime plaster; integrated stone basin",
+   "fin": "Honed limestone; lime plaster; integrated stone basin; unlacquered brass tap",
    "floorName": "Honed limestone",
    "w": 6,
    "d": 6,
@@ -498,7 +562,7 @@
    "floor": "tatami",
    "cond": true,
    "notes": "8-mat (12 x 12 ft) tatami room (loved) with a tokonoma alcove, low table, zabuton and a paper andon lantern. Shoji slide open to the engawa and courtyard; low garden window. Used for tea, meditation, or as an overflow guest room.",
-   "fin": "Tatami; lime plaster; shoji; walnut tokonoma",
+   "fin": "Tatami; lime plaster; shoji to the engawa; fusuma closet doors; walnut tokonoma",
    "floorName": "Tatami (8 mats)",
    "w": 12,
    "d": 12,
@@ -516,8 +580,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Sound lock vestibule between the west engawa and the studio: two solid-core doors with full perimeter seals and automatic drop seals, so one is always closed. Also holds the AV rack and instrument storage.",
-   "fin": "Honey-oak floor; painted plaster; two solid-core doors with perimeter + drop seals",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; painted plaster; two solid-core doors with perimeter + drop seals",
+   "floorName": "Wide-plank walnut",
    "w": 12,
    "d": 6,
    "area": 72
@@ -534,8 +598,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Glazed engawa from the entry to the office and great room.",
-   "fin": "Honey-oak floor; lime plaster; black steel sliding glass",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Walnut floor; lime plaster; bronze sliding glass",
+   "floorName": "Wide-plank walnut",
    "w": 6,
    "d": 33,
    "area": 198
@@ -552,8 +616,8 @@
    "floor": "honey",
    "cond": true,
    "notes": "Fully isolated room-within-a-room studio that is still a great work office: sit-stand desk facing the garden, studio desk with mixer and MPC, digital piano, e-drums, guitar wall and sofa. Decoupled inner stud walls on resilient isolation mounts (about 14 in total wall build-up per side), a floated floor on isolation pads, an isolated ceiling on spring hangers, laminated double glazing with an air gap, and quiet decoupled HVAC with lined ducts and silencers. Target STC 60+ (about 60-65 dB isolation) and NC-20 inside. 528 SF gross, about 426 SF net inside the inner shell (21 ft 8 in x 19 ft 8 in).",
-   "fin": "Floated honey-oak floor on isolation pads; decoupled inner walls on resilient mounts; isolated ceiling; laminated double glazing; solid-core doors with seals; lined ducts; lime plaster; fabric acoustic panels; acoustic ceiling clouds; sculpted wood ceiling; skylight; layered pendants",
-   "floorName": "Wide-plank honey oak",
+   "fin": "Floated walnut floor on isolation pads; decoupled inner walls on resilient mounts; isolated ceiling; laminated double glazing in bronze frames; solid-core doors with seals (not shoji, to keep STC 60+); lined ducts; lime plaster; walnut desks; fabric acoustic panels; acoustic ceiling clouds; sculpted wood ceiling; skylight; layered pendants",
+   "floorName": "Wide-plank walnut",
    "w": 24,
    "d": 22,
    "area": 528
@@ -651,8 +715,8 @@
    "feats": [
     {
      "a": 50.5,
-     "b": 71.5,
-     "k": "glass",
+     "b": 72,
+     "k": "fixed",
      "x": null
     }
    ]
@@ -921,8 +985,8 @@
    "feats": [
     {
      "a": 27.5,
-     "b": 54.5,
-     "k": "glass",
+     "b": 55,
+     "k": "fixed",
      "x": null
     }
    ]
@@ -2281,7 +2345,7 @@
   },
   {
    "room": "101",
-   "label": "Pendants",
+   "label": "Blown-glass + paper-lantern pendants",
    "x0": 24,
    "y0": 65.6,
    "x1": 32,
@@ -2437,38 +2501,38 @@
   },
   {
    "room": "202",
-   "label": "Walk-in rain shower",
+   "label": "Walk-in rain shower (floor: open item, limestone shown)",
    "x0": 86.6,
    "y0": 75.4,
    "x1": 92,
    "y1": 82.4,
    "h": 0.12,
    "z0": 0,
-   "color": "mat:blackstone",
+   "color": "mat:stone",
    "shape": "box"
   },
   {
    "room": "202",
-   "label": "Black stone shower wall",
+   "label": "Green zellige shower wall + unlacquered brass rain head",
    "x0": 86.6,
    "y0": 74.9,
    "x1": 91.2,
    "y1": 75.4,
    "h": 7.5,
    "z0": 0,
-   "color": "mat:blackstone",
+   "color": "mat:zellige",
    "shape": "box"
   },
   {
    "room": "202",
-   "label": "Floating oak vanity, integrated basins",
+   "label": "Floating cherry vanity, integrated basins",
    "x0": 95.4,
    "y0": 69.6,
    "x1": 97.4,
    "y1": 76.5,
    "h": 1.5,
    "z0": 1.4,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "vanity"
   },
   {
@@ -2492,7 +2556,7 @@
    "y1": 68.6,
    "h": 7.5,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -2504,7 +2568,7 @@
    "y1": 68.6,
    "h": 7.5,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -2516,7 +2580,7 @@
    "y1": 66,
    "h": 3,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -2540,7 +2604,7 @@
    "y1": 19,
    "h": 2.8,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -2816,7 +2880,7 @@
    "y1": 12,
    "h": 7,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -3073,26 +3137,26 @@
   },
   {
    "room": "102",
-   "label": "Chairs",
+   "label": "Windsor chairs (walnut)",
    "x0": 39.5,
    "y0": 62.4,
    "x1": 46.5,
    "y1": 63.6,
    "h": 1.5,
    "z0": 0,
-   "color": "#d9cbb5",
+   "color": "mat:honey",
    "shape": "chairs"
   },
   {
    "room": "102",
-   "label": "Chairs",
+   "label": "Shaker chairs (cherry)",
    "x0": 39.5,
    "y0": 68.4,
    "x1": 46.5,
    "y1": 69.6,
    "h": 1.5,
    "z0": 0,
-   "color": "#d9cbb5",
+   "color": "mat:cherry",
    "shape": "chairs"
   },
   {
@@ -3190,6 +3254,30 @@
    "z0": 7.0,
    "color": "#f4ecdc",
    "shape": "lanterns"
+  },
+  {
+   "room": "103",
+   "label": "Woven pendant",
+   "x0": 52.3,
+   "y0": 75.2,
+   "x1": 54.3,
+   "y1": 77.2,
+   "h": 1.6,
+   "z0": 6.6,
+   "color": "#b48a56",
+   "shape": "woven"
+  },
+  {
+   "room": "103",
+   "label": "Woven pendant",
+   "x0": 58,
+   "y0": 75.2,
+   "x1": 60,
+   "y1": 77.2,
+   "h": 1.6,
+   "z0": 6.6,
+   "color": "#b48a56",
+   "shape": "woven"
   },
   {
    "room": "103",
@@ -3308,7 +3396,7 @@
    "y1": 45,
    "h": 1.6,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "seat"
   },
   {
@@ -3332,7 +3420,7 @@
    "y1": 38.5,
    "h": 2.5,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "table"
   },
   {
@@ -3356,7 +3444,7 @@
    "y1": 38.2,
    "h": 2.4,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "cubes"
   },
   {
@@ -3404,7 +3492,7 @@
    "y1": 39.5,
    "h": 2.8,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -3416,7 +3504,7 @@
    "y1": 40,
    "h": 2.8,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "box"
   },
   {
@@ -3440,7 +3528,7 @@
    "y1": 34,
    "h": 1.6,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "seat"
   },
   {
@@ -3464,7 +3552,7 @@
    "y1": 26,
    "h": 2.5,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "table"
   },
   {
@@ -3476,7 +3564,7 @@
    "y1": 36.3,
    "h": 2.4,
    "z0": 0,
-   "color": "mat:honey",
+   "color": "mat:cherry",
    "shape": "cubes"
   },
   {
@@ -3574,6 +3662,30 @@
    "z0": 0,
    "color": "#f3f1ec",
    "shape": "box"
+  },
+  {
+   "room": "404",
+   "label": "Fusuma closet doors",
+   "x0": 18.6,
+   "y0": 28.15,
+   "x1": 29.4,
+   "y1": 28.45,
+   "h": 7,
+   "z0": 0,
+   "color": "#e9dfc9",
+   "shape": "fusuma"
+  },
+  {
+   "room": "401",
+   "label": "Kumiko lattice screen",
+   "x0": 27.2,
+   "y0": 47.6,
+   "x1": 27.45,
+   "y1": 52.4,
+   "h": 7,
+   "z0": 0,
+   "color": "mat:honey",
+   "shape": "kumiko"
   },
   {
    "room": "404",
@@ -4088,10 +4200,10 @@
   ]
  },
  "clad": {
-  "Living Pavilion": "charred",
+  "Living Pavilion": "whiteplaster",
   "Sleeping Wing": "charred",
   "Wellness + Gym Wing": "charred",
-  "Studio + Arrival": "charred"
+  "Studio + Arrival": "whiteplaster"
  },
  "cladOvr": {
   "401": "rammed"
