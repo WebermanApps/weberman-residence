@@ -41,8 +41,8 @@ b.addEventListener('click',async function(){var url=location.origin+location.pat
  try{await navigator.clipboard.writeText(url);b.textContent='Link Copied';setTimeout(function(){b.textContent='⇪ Share'},1800)}catch(e){prompt('Copy this link:',url)}});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();})();
 </script><!--/mw-polish-->
-  <script type="module" crossorigin src="./assets/index-YXHAtcSD.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-gPLxhX8S.css">
+  <script type="module" crossorigin src="./assets/index-CdJjpypR.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DXptRF_C.css">
 </head>
 <body>
 <div id="app">
@@ -94,6 +94,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         <div class="cap-kicker" id="cap-kicker">A DRAWING-BASED SPATIAL STUDY</div>
         <div class="cap-title" id="cap-title">The whole house.</div>
       </div>
+      <button class="pill back mw-hover" id="btn-back" hidden aria-label="Back to whole house"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 6l-6 6 6 6"/></svg><span>Back to Whole House</span></button>
       <div class="info" id="info" hidden>
         <button class="close" id="info-close" aria-label="Hide room details">×</button>
         <div class="info-kicker" id="info-kicker"></div>
@@ -115,7 +116,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         <input type="range" id="cut-h" min="2" max="15" step="0.5" value="4.5">
         <div class="sep"></div>
         <label class="tg"><span>Furniture + equipment</span><input type="checkbox" id="ly-furn" checked><i></i></label>
-        <label class="tg"><span>Room labels</span><input type="checkbox" id="ly-labels" checked><i></i></label>
+        <label class="tg"><span>Show labels</span><input type="checkbox" id="ly-labels"><i></i></label>
         <label class="tg"><span>Plan drawing overlay</span><input type="checkbox" id="ly-overlay"><i></i></label>
         <div class="slider-row"><span>Overlay opacity</span><b id="ov-val">85%</b></div>
         <input type="range" id="ov-op" min="0.1" max="1" step="0.05" value="0.85">

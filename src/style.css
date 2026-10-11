@@ -109,7 +109,7 @@ svg{width:18px;height:18px;flex-shrink:0}
 .rlabel.out .num{display:none}
 .rlabel.on{background:var(--olive);color:#fff;border-color:var(--olive)}
 .rlabel.on .num{color:#dfe6d2}
-.labels-off .rlabel{display:none}
+.labels-off:not(.plan-mode) .rlabel{display:none}
 .roof-on .rlabel.minor:not(.on){display:none}
 .plan-mode .rlabel.gal:not(.on){display:none}
 .modal{position:fixed;inset:0;background:#2a2d2499;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -204,3 +204,13 @@ svg{width:18px;height:18px;flex-shrink:0}
   .info,.layers{bottom:68px}
   .walk-pad{bottom:68px}
 }
+
+/* hover highlight name tag + back button (brand: light mode, olive accents) */
+.mw-hover{transition:background-color .15s ease,border-color .15s ease,box-shadow .15s ease}
+.mw-hover:hover{background-color:#eef0e6;border-color:var(--olive2)}
+.hovertag{position:absolute;z-index:6;pointer-events:none;display:flex;flex-direction:column;gap:1px;background:var(--paper);border:1px solid var(--olive2);border-radius:8px;padding:6px 10px;box-shadow:0 4px 14px #34382d1f;transform:translate(14px,calc(-100% - 10px));white-space:nowrap}
+.hovertag.center{transform:translate(-50%,-50%)}
+.hovertag b{font-size:12.5px;font-weight:600;color:var(--ink)}
+.hovertag span{font-size:11px;color:var(--muted)}
+.back{position:absolute;left:50%;transform:translateX(-50%);bottom:84px;z-index:7;min-height:44px;padding:0 16px;display:flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;color:var(--ink);box-shadow:0 4px 14px #34382d1f;cursor:pointer}
+.back svg{width:18px;height:18px}

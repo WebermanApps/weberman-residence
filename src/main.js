@@ -95,7 +95,7 @@ const VIEWS = {
 };
 
 // ---------- state ----------
-const state = { mode: 'orbit', light: 'day', roof: true, cut: false, cutH: 4.5, furn: true, labels: true, overlay: false, ovOp: 0.85, site: true, mtn: true, shadows: true, sel: null, view: 'aerial' };
+const state = { mode: 'orbit', light: 'day', roof: true, cut: false, cutH: 4.5, furn: true, labels: false, overlay: false, ovOp: 0.85, site: true, mtn: true, shadows: true, sel: null, view: 'aerial' };
 
 // ---------- labels ----------
 const labelObjs = [];
@@ -143,13 +143,13 @@ $('hdr-total').textContent = `${P.total.toLocaleString()} SF conditioned (${Math
 const viewsEl = $('views');
 Object.entries(VIEWS).forEach(([k, v]) => { const b = document.createElement('button'); b.textContent = v.name; b.dataset.view = k; b.onclick = () => goView(k); viewsEl.appendChild(b); });
 let tween = null;
-function flyTo(camP, tgtP, fov, dur = 1100) {
+function flyTo(camP, tgtP, fov, dur = 1100, ease = 'inout') {
   const p0 = persp.position.clone(), t0 = controls.target.clone(), f0 = persp.fov; const t1 = performance.now();
-  tween = { p0, t0, f0, p1: camP, t1v: tgtP, f1: fov ?? 42, start: t1, dur };
+  tween = { p0, t0, f0, p1: camP, t1v: tgtP, f1: fov ?? 42, start: t1, dur, ease };
 }
 function setCaption(k, t) { $('cap-kicker').textContent = k; $('cap-title').textContent = t; }
 function goView(k, instant) {
-  const v = VIEWS[k]; state.view = k;
+  const v = VIEWS[k]; state.view = k; if (typeof prevView !== 'undefined') { prevView = null; $('btn-back').hidden = true; }
   if (state.mode !== 'orbit') setMode('orbit');
   setRoof(v.roof); setCut(!!v.cut, v.cut || 4.5);
   viewsEl.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.view === k));
@@ -188,14 +188,26 @@ function select(id, fly) {
   $('info-walk').parentElement.hidden = outdoor && id !== 'C';
   setCaption(outdoor ? 'OUTDOORS' : `ROOM ${it.id} / SPATIAL STUDY`, it.name);
   if (fly && state.mode === 'orbit') {
-    if (!outdoor) { setRoof(false); setCut(true, 8); }
-    const span = Math.max(w, d, 14); const dist = span * (isMobile() ? 2.6 : 1.9) + 16;
-    const tp = W(cx, cy, 1); const dir = new THREE.Vector3(0.35, 0.95, 0.75).normalize();
-    flyTo(tp.clone().add(dir.multiplyScalar(dist)), tp);
+    if (!prevView) prevView = { p: persp.position.clone(), t: controls.target.clone(), fov: persp.fov, roof: state.roof, cut: state.cut, cutH: state.cutH, view: state.view };
+    if (!outdoor) { setRoof(false); setCut(true, Math.min(8, Math.max(6, (it.h || 10) - 2))); } // temporary roof cutaway over the room
+    const rh = outdoor ? 4 : Math.min(h, 10); const rad = Math.max(11, 0.5 * Math.hypot(w, d, rh) + 3);
+    const fov = 42, vf = THREE.MathUtils.degToRad(fov) / 2, hf = Math.atan(Math.tan(vf) * persp.aspect);
+    const dist = rad / Math.sin(Math.min(vf, hf)) * (isMobile() ? 1.5 : 1.3);
+    const tp = W(cx, cy, rh * 0.25); const dir = new THREE.Vector3(0.55, 1.05, 0.8).normalize(); // pleasant 3/4 view from the south-east, above
+    flyTo(tp.clone().add(dir.multiplyScalar(dist)), tp, fov, 600, 'out');
     viewsEl.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    $('btn-back').hidden = false;
   }
   if (fly && state.mode === 'plan') { pcontrols.target.copy(W(cx, cy, 0)); ortho.position.set(pcontrols.target.x, 400, pcontrols.target.z + 0.01); ortho.zoom = Math.min(4, 70 / Math.max(w, d, 14)); ortho.updateProjectionMatrix(); }
   if (fly && state.mode === 'walk') enterWalkAt(cx, cy);
+}
+let prevView = null;
+function backToHouse() {
+  clearHover(); deselect(); $('btn-back').hidden = true;
+  const pv = prevView; prevView = null;
+  if (!pv) { goView('aerial'); return; }
+  setRoof(pv.roof); setCut(pv.cut, pv.cutH); flyTo(pv.p, pv.t, pv.fov, 600, 'out');
+  if (pv.view && VIEWS[pv.view]) { viewsEl.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.view === pv.view)); setCaption(VIEWS[pv.view].kicker, VIEWS[pv.view].title); }
 }
 function deselect() { state.sel = null; $('info').hidden = true; hl.visible = false; hlEdge.visible = false; labelObjs.forEach(o => o.element.classList.remove('on')); }
 $('info-close').onclick = deselect;
@@ -210,6 +222,7 @@ $('ly-roof').onchange = (e) => setRoof(e.target.checked);
 $('ly-cut').onchange = (e) => setCut(e.target.checked);
 $('cut-h').oninput = (e) => setCut(true, parseFloat(e.target.value));
 $('ly-furn').onchange = (e) => { state.furn = e.target.checked; groups.furn.visible = state.furn; groups.detail.visible = state.furn; };
+host.classList.add('labels-off');
 $('ly-labels').onchange = (e) => { state.labels = e.target.checked; host.classList.toggle('labels-off', !state.labels); };
 $('ly-overlay').onchange = (e) => setOverlay(e.target.checked);
 $('ov-op').oninput = (e) => { ovMat.opacity = parseFloat(e.target.value); $('ov-val').textContent = Math.round(ovMat.opacity * 100) + '%'; };
@@ -309,13 +322,62 @@ renderer.domElement.addEventListener('pointerup', (e) => {
   if (moved > 6 || dt > 600 || state.mode === 'walk') return;
   const rect = renderer.domElement.getBoundingClientRect();
   const v = new THREE.Vector2(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
+  const id = pickAt(e.clientX, e.clientY);
+  if (e.pointerType === 'touch' || e.pointerType === 'pen') { // touch: first tap highlights + names, second tap on the same room zooms
+    if (!id) { clearHover(); deselect(); return; }
+    if (hoverId === id) { select(id, true); return; }
+    setHover(id, null); return;
+  }
+  if (id) { select(id, true); return; }
+  clearHover(); deselect();
+});
+// ---------- hover highlight + name tag ----------
+function pickAt(x, y) {
+  const rect = renderer.domElement.getBoundingClientRect();
+  const v = new THREE.Vector2(((x - rect.left) / rect.width) * 2 - 1, -((y - rect.top) / rect.height) * 2 + 1);
   ray.setFromCamera(v, camera);
   const hit = ray.intersectObjects(pickMeshes, false)[0];
-  if (hit) { select(hit.object.userData.room, false); return; }
+  if (hit) return hit.object.userData.room;
   const g = ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0, 1, 0), 1.0), new THREE.Vector3());
-  if (g) { const px = g.x + CX, py = -g.z + CY; const o = OUTDOOR.find(q => px >= q.x0 && px <= q.x1 && py >= q.y0 && py <= q.y1); if (o) { select(o.id, false); return; } }
-  deselect();
+  if (g) { const px = g.x + CX, py = -g.z + CY; const o = OUTDOOR.find(q => px >= q.x0 && px <= q.x1 && py >= q.y0 && py <= q.y1); if (o) return o.id; }
+  return null;
+}
+const hvMat = new THREE.MeshBasicMaterial({ color: 0xa9b38f, transparent: true, opacity: 0.22, depthWrite: false, side: THREE.DoubleSide });
+const hvFloor = new THREE.Mesh(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2), hvMat); hvFloor.visible = false; hvFloor.renderOrder = 5; scene.add(hvFloor);
+const hvBox = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 0xc9d0b6, transparent: true, opacity: 0.1, depthWrite: false })); hvBox.visible = false; hvBox.renderOrder = 5; scene.add(hvBox);
+const hvEdge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)), new THREE.LineBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.9 })); hvEdge.visible = false; hvEdge.renderOrder = 6; scene.add(hvEdge);
+const tag = document.createElement('div'); tag.className = 'hovertag mw-hover'; tag.hidden = true; tag.setAttribute('role', 'status'); host.appendChild(tag);
+let hoverId = null, hvPend = null, hvLast = 0, hvRaf = 0;
+function setHover(id, at) {
+  const it = findItem(id); if (!it) return clearHover();
+  const w = it.x1 - it.x0, d = it.y1 - it.y0, cx = (it.x0 + it.x1) / 2, cy = (it.y0 + it.y1) / 2, outdoor = !it.area;
+  if (hoverId !== id) {
+    hoverId = id; const h = outdoor ? 0.4 : Math.min(roofUnder(cx, cy), state.roof ? 99 : 30);
+    hvFloor.scale.set(w, 1, d); hvFloor.position.copy(W(cx, cy, outdoor ? 0.25 : 0.12));
+    hvBox.scale.set(w - 0.1, Math.max(0.3, h), d - 0.1); hvBox.position.copy(W(cx, cy, Math.max(0.3, h) / 2));
+    hvEdge.scale.copy(hvBox.scale); hvEdge.position.copy(hvBox.position);
+    hvFloor.visible = hvEdge.visible = true; hvBox.visible = !outdoor;
+    const area = it.cov ?? it.area ?? Math.round(w * d);
+    tag.innerHTML = `<b>${it.name}</b><span>${fmtFt(w)} × ${fmtFt(d)} · ${area.toLocaleString()} SF</span>`; tag.hidden = false;
+    renderer.domElement.style.cursor = 'pointer';
+  }
+  if (at) { tag.style.left = at[0] + 'px'; tag.style.top = at[1] + 'px'; tag.classList.remove('center'); }
+  else { const p = W(cx, cy, outdoor ? 1 : 2).project(camera); const r = renderer.domElement.getBoundingClientRect(); tag.style.left = ((p.x + 1) / 2 * r.width) + 'px'; tag.style.top = ((1 - p.y) / 2 * r.height) + 'px'; tag.classList.add('center'); }
+}
+function clearHover() { hoverId = null; hvFloor.visible = hvBox.visible = hvEdge.visible = false; tag.hidden = true; renderer.domElement.style.cursor = ''; }
+renderer.domElement.addEventListener('pointermove', (e) => {
+  if (e.pointerType !== 'mouse' || state.mode === 'walk' || (down && e.buttons)) return;
+  const r = renderer.domElement.getBoundingClientRect(); hvPend = [e.clientX, e.clientY, e.clientX - r.left, e.clientY - r.top];
+  if (hvRaf) return;
+  hvRaf = requestAnimationFrame(function step(now) { // throttle: at most one raycast per ~40 ms, on animation frames
+    if (now - hvLast < 40) { hvRaf = requestAnimationFrame(step); return; }
+    hvRaf = 0; hvLast = now; const [x, y, lx, ly] = hvPend; const id = pickAt(x, y);
+    if (id) setHover(id, [lx, ly]); else if (hoverId) clearHover();
+  });
 });
+renderer.domElement.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') clearHover(); });
+window.addEventListener('keydown', (e) => { if (e.code === 'Escape' && state.mode !== 'walk' && (prevView || state.sel)) backToHouse(); });
+$('btn-back').onclick = backToHouse;
 
 // ---------- tools ----------
 function toast(msg) { const t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => t.hidden = true, 2200); }
@@ -344,7 +406,7 @@ let last = performance.now(), frames = 0;
 function loop(now) {
   const dt = Math.min(0.05, (now - last) / 1000); last = now;
   if (tween && state.mode === 'orbit') {
-    let t = Math.min(1, (now - tween.start) / tween.dur); const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    let t = Math.min(1, (now - tween.start) / tween.dur); const e = tween.ease === 'out' ? 1 - Math.pow(1 - t, 3) : t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     persp.position.lerpVectors(tween.p0, tween.p1, e); controls.target.lerpVectors(tween.t0, tween.t1v, e); persp.fov = tween.f0 + (tween.f1 - tween.f0) * e; persp.updateProjectionMatrix();
     if (t >= 1) tween = null;
   }
