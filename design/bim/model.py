@@ -116,12 +116,13 @@ add('struct', 'pool', 'RC Pool Shell (Waterproof Concrete)', "34' x 12', 1.2-1.6
 
 # ================= WALLS + FRAMING; DOORS + WINDOWS =================
 STUD_W, STUD_T = 92/304.8, 0.14
+ACOUSTIC = {'407', '405', '201', '207', '209'}
 def wtype(w):
     rs = wall_rooms(w)
-    if '407' in rs: return 'W4', 'Double-Stud Isolation Wall (STC 60+)', '2 x 92 mm LGS on separate tracks, 25 mm gap, 2 x 16 mm gypsum + mineral wool each side'
-    if w['ext']: return 'W1', 'AAC Block Exterior Wall', '200 mm AAC block, RC lintels + stiffeners, render + lime plaster or charred-timber rainscreen'
-    if set(rs) & WET: return 'W2', 'AAC Block Wet Wall', '100 mm AAC block, cement render, waterproof membrane in wet zones'
-    return 'W3', 'Light-Gauge Steel Stud Partition', '92 mm LGS studs @ 400 mm o.c., 12 mm gypsum each side, acoustic insulation'
+    if w['ext']: return 'W1', 'AAC Block Exterior Wall', '200 mm AAC block in RC frame (RC lintels + stiffeners), 50 mm mineral-wool exterior insulation OR ventilated charred-timber cladding on aluminium battens, lime plaster both faces'
+    if set(rs) & ACOUSTIC: return 'W3', 'Acoustic Steel Stud Partition', '92 mm LGS @ 400 mm (double stud on isolated tracks at studio 407), 75 mm acoustic mineral wool, 2 x 13 mm sound-rated board each side, resilient channel (STC 55+, 60+ at studio)'
+    if set(rs) & WET: return 'W2', 'Steel Stud Partition (Wet Face)', '92 mm LGS @ 400 mm, cement board on wet face + liquid/sheet waterproofing membrane (min 1.8 m in showers, full height in steam), gypsum on dry face'
+    return 'W2', 'Light-Gauge Steel Stud Partition', '92 mm LGS studs @ 400 mm o.c., 12.5 mm board each side, mineral wool infill'
 OPEN = {'door': ('Shoji Sliding Door' , 'Interior'), 'exdoor': ('Bronze-Framed Glazed Door', 'Exterior'), 'front': ('Bronze Pivot Front Door', 'Exterior'),
         'window': ('Bronze-Framed Casement Window', 'Exterior'), 'glass': ('Bronze-Framed Pocketing Glass Wall', 'Exterior'), 'slide': ('Bronze Sliding Glass Door', 'Exterior'),
         'fixed': ('Frameless Fixed Glass', 'Exterior'), 'open': ('Cased Opening', 'Interior')}
@@ -215,7 +216,7 @@ for r in P['roofs']:
     for hx0, hy0, hx1, hy1 in r.get('holes', []):
         z = roofUnderside(r, (hx0+hx1)/2, (hy0+hy1)/2)
         add('roof', 'trimmer', 'Skylight Trimmer Frame', f"{fi(hx1-hx0)} x {fi(hy1-hy0)}, RHS 100 x 50 mm", 'Roof Framing', [B(hx0-.2, hy0-.2, z-.4, hx1+.2, hy1+.2, z)], roof=r['id'], tag='SK')
-    add('roof', 'deck', 'Standing-Seam Roof Assembly', 'Standing seam 0.5 mm AZ150, 75 mm PIR insulation, vapor-open underlay', 'Roof', [], roof=r['id'],
+    add('roof', 'deck', 'Standing-Seam Roof Assembly', 'Standing seam 0.5 mm AZ150 on steel purlins, 40 mm ventilated cavity (eave-to-ridge), reflective radiant barrier, 75 mm PIR insulation, vapor-open underlay; no timber', 'Roof', [], roof=r['id'],
         plan=[x0, y0, x1, y1], slope=r['type'])
 
 # ================= ELECTRICAL =================
@@ -517,6 +518,7 @@ add('site', 'pipe', 'Earthing: Ground Rods + Ring', '2 x 16 mm x 2.4 m copper-bo
 exec(open(os.path.join(HERE, 'extras.py')).read())
 exec(open(os.path.join(HERE, 'farm.py')).read())
 exec(open(os.path.join(HERE, 'kitchen.py')).read())
+exec(open(os.path.join(HERE, 'standards.py')).read())
 LAYERS = [
     dict(id='arch', name='Architecture', sheet='A-101', desc='Walls, rooms, doors and windows'),
     dict(id='struct', name='Structure', sheet='S-101', desc='RC footings, columns, ground + roof beams, slabs, pool shell'),
@@ -531,7 +533,7 @@ LAYERS = [
     dict(id='ctrl', name='Controls', sheet='E-103', desc='Home controller, sensors, valves, monitoring'),
     dict(id='farm', name='Landscape + Farm', sheet='P-102', desc='Coop + run, raised beds, compost, greywater, herb nook'),
 ]
-out = dict(kitchen=KITCHEN, rooms={r['id']: r['name'] for r in P['rooms']}, project='Weberman Residence', units='ft', origin='plan.json (x east, y north, z up from FFL)', generated='2026-10-11', layers=LAYERS,
+out = dict(standards=STANDARDS, kitchen=KITCHEN, rooms={r['id']: r['name'] for r in P['rooms']}, project='Weberman Residence', units='ft', origin='plan.json (x east, y north, z up from FFL)', generated='2026-10-11', layers=LAYERS,
            grid=GRID, solar=SOLAR, rain=RAIN, well=WELL, controls=CTRL_SUM, farm=FARM, sustain=SUST, panels=PANELS, circuits=CIRC, cuLoad=CUload, elements=EL)
 if __name__ == '__main__':
     dst = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, 'bim.json')

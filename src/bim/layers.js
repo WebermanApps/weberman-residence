@@ -133,7 +133,7 @@ function init(app, M) {
     clearSel(); sel = mesh; const e = mesh.userData.bim;
     selBox = new THREE.BoxHelper(mesh, 0x0a0a0a); selBox.material = selMat; selBox.renderOrder = 20; scene.add(selBox);
     const room = e.room ? (roomName[e.room] ? `${roomName[e.room]} (${e.room})` : e.room) : (e.rooms ? e.rooms.map(r => roomName[r] || r).join(' / ') : '');
-    const rows = [['Type', e.type], ['Size', e.size], ['System', e.system], e.tag && ['Mark', e.tag], e.circuit && ['Circuit', e.circuit], room && ['Location', room], e.grid && ['Grid', e.grid], e.spec && ['Build-Up', e.spec]].filter(Boolean);
+    const rows = [['Type', e.type], ['Size', e.size], ['System', e.system], e.tag && ['Mark', e.tag], e.circuit && ['Circuit', e.circuit], room && ['Location', room], e.grid && ['Grid', e.grid], e.spec && ['Build-Up', e.spec], e.standard && ['Standard', e.standard], e.wall_type && ['Wall Type', e.wall_type]].filter(Boolean);
     const sheet = sheetOf[e.layer];
     props.innerHTML = `<button class="bim-x mw-hover" type="button" aria-label="Close properties">×</button><div class="bim-k">${LABEL[e.layer]} · ${e.id}</div><h3>${esc(e.type)}</h3><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(String(v))}</dd>`).join('')}</dl><a class="bim-link mw-hover" href="./sheets/${sheet}.svg" target="_blank" rel="noopener">View Sheet ${sheet}</a>`;
     props.querySelector('.bim-x').addEventListener('click', clearSel); props.hidden = false;

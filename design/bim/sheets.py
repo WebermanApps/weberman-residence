@@ -10,6 +10,7 @@ esc = html.escape
 SHEETS = [
     ('G-001', 'Cover Sheet + Sheet Index', 'As Noted'),
     ('G-002', 'Sustainability Summary', 'NTS'),
+    ('G-003', 'Construction Standards (Thai vs Western)', 'NTS'),
     ('A-101', 'Floor Plan (Dimensioned)', '1/8" = 1\'-0"'),
     ('A-102', 'Roof Plan', '1/8" = 1\'-0"'),
     ('A-201', 'Exterior Elevations', '1/8" = 1\'-0"'),
@@ -529,7 +530,7 @@ for e in layer('framing'):
     if e['cat'] == 'wall': wt.setdefault(e['tag'], [e['type'], e['spec'], 0]); wt[e['tag']][2] += math.hypot(e['plan'][2] - e['plan'][0], e['plan'][3] - e['plan'][1])
 sh.text(50, 335, 'WALL TYPES', 3, weight=600, font='Khand')
 yy = table(sh, 50, 338, ['Type', 'Description', 'Build-Up', 'Length'], [[k_, a, b, f"{round(c)} ft"] for k_, (a, b, c) in sorted(wt.items())], [12, 58, 230, 18], 1.9)
-y2 = legend(sh, 50, yy + 10, [('line', {'w': 1.0}, 'W1 AAC exterior wall 200 mm'), ('line', {'w': .6, 'c': '#525252'}, 'W2 AAC wet-room wall 100 mm'), ('line', {'w': .6, 'dash': '0.6,0.4'}, 'W3 LGS stud partition'), ('line', {'w': 1.0, 'dash': '2,.5'}, 'W4 Double-stud isolation (Studio)'), ('rect', {}, 'L1 RC lintel over opening')], 'Wall Legend')
+y2 = legend(sh, 50, yy + 10, [('line', {'w': 1.0}, 'W1 AAC exterior wall 200 mm'), ('line', {'w': .6, 'c': '#525252'}, 'W2 LGS steel stud partition'), ('line', {'w': .6, 'dash': '0.6,0.4'}, 'W3 Acoustic steel stud (studio + bedrooms)'), ('line', {'w': 1.0, 'dash': '2,.5'}, 'W4 RC wall (pool, retaining, cistern, shear)'), ('rect', {}, 'L1 RC lintel over opening')], 'Wall Legend')
 sh.text(400, 440, 'ROOF FRAMING SCHEDULE', 3, weight=600, font='Khand')
 rr = [['R1', 'Steel rafter', 'H-150 x 75 x 5 x 7, SS400, @ 1.2 m, cantilevers to eaves', sum(1 for e in EL if e.get('tag') == 'R1')],
       ['P1', 'C-purlin', 'C-100 x 50 x 20 x 2.3, @ 1.1 m max', sum(1 for e in EL if e.get('tag') == 'P1')],
@@ -700,6 +701,7 @@ sh.tbnotes('General Notes', ['Concept design development set for coordination an
 
 exec(open(os.path.join(HERE, 'sheets_extra.py')).read())
 exec(open(os.path.join(HERE, 'sheets_kitchen.py')).read())
+exec(open(os.path.join(HERE, 'sheets_std.py')).read())
 # ---------- write ----------
 pdfs = []
 for no, _, _ in SHEETS:
