@@ -1,3 +1,4 @@
+import './brand-tokens.css';
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -342,11 +343,11 @@ function pickAt(x, y) {
   if (g) { const px = g.x + CX, py = -g.z + CY; const o = OUTDOOR.find(q => px >= q.x0 && px <= q.x1 && py >= q.y0 && py <= q.y1); if (o) return o.id; }
   return null;
 }
-const hvMat = new THREE.MeshBasicMaterial({ color: 0xa9b38f, transparent: true, opacity: 0.22, depthWrite: false, side: THREE.DoubleSide });
+const hvMat = new THREE.MeshBasicMaterial({ color: 0x737373, transparent: true, opacity: 0.18, depthWrite: false, side: THREE.DoubleSide });
 const hvFloor = new THREE.Mesh(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2), hvMat); hvFloor.visible = false; hvFloor.renderOrder = 5; scene.add(hvFloor);
-const hvBox = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 0xc9d0b6, transparent: true, opacity: 0.1, depthWrite: false })); hvBox.visible = false; hvBox.renderOrder = 5; scene.add(hvBox);
-const hvEdge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)), new THREE.LineBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.9 })); hvEdge.visible = false; hvEdge.renderOrder = 6; scene.add(hvEdge);
-const tag = document.createElement('div'); tag.className = 'hovertag mw-hover'; tag.hidden = true; tag.setAttribute('role', 'status'); host.appendChild(tag);
+const hvBox = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 0xd4d4d4, transparent: true, opacity: 0.12, depthWrite: false })); hvBox.visible = false; hvBox.renderOrder = 5; scene.add(hvBox);
+const hvEdge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)), new THREE.LineBasicMaterial({ color: 0x171717, transparent: true, opacity: 0.85 })); hvEdge.visible = false; hvEdge.renderOrder = 6; scene.add(hvEdge);
+const tag = document.createElement('div'); tag.className = 'hovertag'; tag.hidden = true; tag.setAttribute('role', 'status'); host.appendChild(tag);
 let hoverId = null, hvPend = null, hvLast = 0, hvRaf = 0;
 function setHover(id, at) {
   const it = findItem(id); if (!it) return clearHover();
