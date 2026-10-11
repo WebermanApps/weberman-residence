@@ -1,0 +1,39 @@
+/* BIM Layers panel (separate module; does not modify the viewer's own styles) */
+.bim-btn{display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 14px;background:var(--mw-background);color:var(--mw-foreground);border:1px solid var(--mw-border);border-radius:var(--mw-radius);font-family:var(--mw-font-body);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.bim-btn[aria-expanded="true"]{background:var(--mw-secondary);border-color:var(--mw-primary)}
+.bim-panel{position:absolute;top:72px;right:16px;z-index:30;width:410px;max-width:calc(100% - 32px);max-height:calc(100% - 150px);overflow:auto;background:var(--mw-background);color:var(--mw-foreground);border:1px solid var(--mw-border);border-radius:0.75rem;box-shadow:0 8px 28px rgba(10,10,10,.12);font-family:var(--mw-font-body);padding:14px 14px 10px}
+.bim-panel h2{font-family:var(--mw-font-heading);font-weight:700;font-size:20px;margin:0;line-height:1.1}
+.bim-panel .bim-sub{font-size:12px;color:var(--mw-muted-text);margin:4px 0 10px;line-height:1.4}
+.bim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.bim-x{min-width:44px;min-height:44px;border:0;background:transparent;font-size:22px;cursor:pointer;color:var(--mw-foreground);border-radius:var(--mw-radius)}
+.bim-row{display:flex;align-items:center;gap:8px;min-height:48px;border-top:1px solid var(--mw-border)}
+.bim-tg{flex:1;display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:14px;font-weight:600;padding:0 4px;border-radius:var(--mw-radius);min-width:0}
+.bim-tg input{position:absolute;opacity:0;width:1px;height:1px}
+.bim-sw{flex:none;width:12px;height:12px;border-radius:3px;border:1px solid rgba(10,10,10,.25)}
+.bim-tg .bim-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bim-tg .bim-n{font-size:11px;color:var(--mw-muted-text);font-weight:400}
+.bim-tg i{flex:none;position:relative;width:38px;height:22px;border-radius:11px;background:var(--mw-border);transition:background-color var(--mw-dur) var(--mw-ease)}
+.bim-tg i::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform var(--mw-dur) var(--mw-ease)}
+.bim-tg input:checked + i{background:var(--mw-primary)}
+.bim-tg input:checked + i::after{transform:translateX(16px)}
+.bim-tg input:focus-visible + i{outline:2px solid var(--mw-primary);outline-offset:2px}
+.bim-link{flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 10px;font-size:11px;font-weight:600;letter-spacing:var(--mw-tracking-label);text-transform:uppercase;color:var(--mw-foreground);text-decoration:none;border:1px solid var(--mw-border);border-radius:0;background:var(--mw-background);white-space:nowrap}
+.bim-link.pdf{min-width:44px;padding:0 8px;color:var(--mw-muted-text)}
+.bim-foot{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--mw-border);padding-top:10px;margin-top:2px}
+.bim-foot .bim-link{flex:1}
+.bim-foot .bim-link.primary{background:var(--mw-primary);color:var(--mw-primary-foreground);border-color:var(--mw-primary)}
+.bim-note{font-size:11px;color:var(--mw-muted-text);margin:8px 2px 2px;line-height:1.4}
+.bim-props{position:absolute;left:16px;bottom:16px;z-index:31;width:320px;max-width:calc(100% - 32px);background:var(--mw-background);color:var(--mw-foreground);border:1px solid var(--mw-border);border-radius:0.75rem;box-shadow:0 8px 28px rgba(10,10,10,.14);font-family:var(--mw-font-body);padding:12px 14px}
+.bim-props h3{font-family:var(--mw-font-heading);font-weight:700;font-size:18px;margin:0 0 2px;line-height:1.15;padding-right:40px}
+.bim-props .bim-k{font-size:11px;letter-spacing:var(--mw-tracking-label);text-transform:uppercase;color:var(--mw-muted-text);font-weight:600}
+.bim-props dl{display:grid;grid-template-columns:72px 1fr;gap:4px 10px;margin:8px 0;font-size:13px}
+.bim-props dt{color:var(--mw-muted-text)}
+.bim-props dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.bim-props .bim-x{position:absolute;top:4px;right:4px}
+@media (max-width:700px){
+  .bim-tg .bim-n{display:none}
+  .bim-link{padding:0 8px}
+  .bim-btn span{display:none}
+  .bim-panel{top:auto;bottom:0;left:0;right:0;width:auto;max-height:62%;border-radius:0.75rem 0.75rem 0 0;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+  .bim-props{left:8px;right:8px;bottom:8px;width:auto}
+}
