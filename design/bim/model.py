@@ -119,10 +119,10 @@ STUD_W, STUD_T = 92/304.8, 0.14
 ACOUSTIC = {'407', '405', '201', '207', '209'}
 def wtype(w):
     rs = wall_rooms(w)
-    if w['ext']: return 'W1', 'AAC Block Exterior Wall', '200 mm AAC block in RC frame (RC lintels + stiffeners), 50 mm mineral-wool exterior insulation OR ventilated charred-timber cladding on aluminium battens, lime plaster both faces'
-    if set(rs) & ACOUSTIC: return 'W3', 'Acoustic Steel Stud Partition', '92 mm LGS @ 400 mm (double stud on isolated tracks at studio 407), 75 mm acoustic mineral wool, 2 x 13 mm sound-rated board each side, resilient channel (STC 55+, 60+ at studio)'
-    if set(rs) & WET: return 'W2', 'Steel Stud Partition (Wet Face)', '92 mm LGS @ 400 mm, cement board on wet face + liquid/sheet waterproofing membrane (min 1.8 m in showers, full height in steam), gypsum on dry face'
-    return 'W2', 'Light-Gauge Steel Stud Partition', '92 mm LGS studs @ 400 mm o.c., 12.5 mm board each side, mineral wool infill'
+    if w['ext']: return 'W1', 'Steel Stud Exterior Wall (Rainscreen)', '150 mm galvanized LGS studs (1.15 mm BMT) @ 400 mm as infill within the RC frame (slip head track at beams), 150 mm mineral-wool cavity insulation, 12 mm fiber-cement sheathing (SCG Smartboard / Shera) + breather membrane, 25 mm ventilated rainscreen cavity on aluminium battens + insect mesh, outer skin white lime render on fiber-cement panel or charred-timber cladding; interior 12 mm moisture-resistant fiber-cement board, alkali-resistant mesh tape at joints, lime plaster skim, subtle textured plaster finish (texture TBD, selection round pending), painted with breathable mineral/lime-compatible paint, warm white'
+    if set(rs) & ACOUSTIC: return 'W3', 'Acoustic Steel Stud Partition', 'Double 92 mm LGS on isolated tracks (studio 407) / 92 mm LGS + resilient channel (bedrooms), 75 mm acoustic mineral wool, 2 layers 12 mm fiber-cement board each side, AR mesh tape + lime plaster, subtle textured plaster finish (texture TBD, selection round pending), painted with breathable mineral/lime-compatible paint, warm white (STC 55+, 60+ at studio)'
+    if set(rs) & WET: return 'W2', 'Steel Stud Partition (Wet Face)', '92 mm LGS @ 400 mm, 12 mm cement board + liquid/sheet waterproofing membrane on wet face (min 1.8 m in showers, full height in steam; finishes unchanged, Japanese earth plaster in wellness wet room), fiber-cement board + lime plaster on dry face'
+    return 'W2', 'Light-Gauge Steel Stud Partition', '92 mm LGS studs @ 400 mm o.c., 12 mm moisture-resistant fiber-cement board each side (SCG Smartboard / Shera), mineral wool infill, AR mesh tape at joints, lime plaster skim, subtle textured plaster finish (texture TBD, selection round pending), painted with breathable mineral/lime-compatible paint, warm white'
 OPEN = {'door': ('Shoji Sliding Door' , 'Interior'), 'exdoor': ('Bronze-Framed Glazed Door', 'Exterior'), 'front': ('Bronze Pivot Front Door', 'Exterior'),
         'window': ('Bronze-Framed Casement Window', 'Exterior'), 'glass': ('Bronze-Framed Pocketing Glass Wall', 'Exterior'), 'slide': ('Bronze Sliding Glass Door', 'Exterior'),
         'fixed': ('Frameless Fixed Glass', 'Exterior'), 'open': ('Cased Opening', 'Interior')}
@@ -176,9 +176,9 @@ for w in WALLS:
         e = add('arch', cat, nm, f"{fi(b-a)} W x {fi(s1-s0)} H" + (f", sill {fi(s0)}" if s0 else ''), f"Doors + Windows ({sysn})", [gg], tag=mark,
                 rooms=wall_rooms(w), o=w['o'], c=w['c'], a=a, b=b, k=f['k'], z=[s0, s1])
         DOORS.append(e)
-        # RC lintel over openings in masonry walls
+        # LGS box header over openings in stud walls
         if tagt in ('W1', 'W2') and s1 < w['h'] - TOP_BEAM_D - 0.2:
-            add('framing', 'lintel', 'RC Lintel L1', f"{fi(b-a+1)} x 150 mm deep", 'Walls + Framing', [seg(a - .5, b + .5, s1, s1 + 0.5)], tag='L1')
+            add('framing', 'lintel', 'LGS Box Header L1', f"{fi(b-a+1)}, double C-section box header + king/jack studs", 'Walls + Framing', [seg(a - .5, b + .5, s1, s1 + 0.5)], tag='L1')
         elif s1 >= w['h'] - TOP_BEAM_D - 0.2 and (b - a) > 12:
             add('struct', 'beam', 'Steel Transfer Beam TB1 (Engineer to Size)', f"Span {fi(b-a)}; assume W250 x 25 kg/m", 'RC Frame + Steel', [seg(a, b, w['h'] - TOP_BEAM_D - 0.8, w['h'] - TOP_BEAM_D)], tag='TB1')
 
@@ -522,7 +522,7 @@ exec(open(os.path.join(HERE, 'standards.py')).read())
 LAYERS = [
     dict(id='arch', name='Architecture', sheet='A-101', desc='Walls, rooms, doors and windows'),
     dict(id='struct', name='Structure', sheet='S-101', desc='RC footings, columns, ground + roof beams, slabs, pool shell'),
-    dict(id='framing', name='Framing', sheet='S-102', desc='AAC walls, LGS stud partitions, lintels'),
+    dict(id='framing', name='Framing', sheet='S-102', desc='LGS stud exterior + interior walls, headers'),
     dict(id='roof', name='Roof', sheet='A-102', desc='Steel rafters, C-purlins, skylight trimmers', sheet2='S-102'),
     dict(id='elec', name='Electrical', sheet='E-101', desc='Panels, circuits, outlets, lighting, data'),
     dict(id='plumb', name='Plumbing', sheet='P-101', desc='Supply, hot water, drainage, vents, rainwater, pool'),

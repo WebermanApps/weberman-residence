@@ -14,7 +14,7 @@ legend(sh, 560, 470, WT_LEG, 'Wall Types')
 # S-102
 sh = sheets['S-102']; v = View(sh, 25.4 * 3 / 32, 0, 0)
 legend(sh, 560, 470, WT_LEG, 'Wall Types (Approved Standard)')
-sh.tbnotes('Standard', ['No timber framing (termites): RC frame, AAC, LGS studs, steel roof.', 'Poured concrete only at pool, retaining walls, cistern and engineer-required shear walls (W4).'])
+sh.tbnotes('Standard', ['No timber framing (termites): RC frame, LGS stud walls, steel roof.', 'Poured concrete only at pool, retaining walls, cistern and engineer-required shear walls (W4).'])
 # A-301 typical details
 sh = sheets['A-301']
 def layers_detail(x, y, title, n, rows, horiz=True):
@@ -25,14 +25,14 @@ def layers_detail(x, y, title, n, rows, horiz=True):
     title_mark(sh, x, yy + 8, n, title, '1:10 (NTS)')
     return yy + 18
 yb = layers_detail(585, 120, 'Typical Exterior Wall W1 (Plan Cut, Out to In)', '4', [
-    ('Charred-timber cladding on aluminium battens (or lime render)', 4, '#3d3d3d', None), ('25 mm ventilated cavity, insect mesh top + bottom', 5, '#ffffff', '1,.6'),
-    ('Breather membrane', 1.2, '#d4d4d4', None), ('50 mm mineral-wool exterior insulation', 10, '#f5f0d8', None), ('200 mm AAC block, thin-bed mortar', 40, '#e5e5e5', None), ('Lime plaster 15 mm', 3, '#fafafa', None)])
+    ('Charred-timber cladding or white lime render on fiber-cement panel, on aluminium battens', 4, '#3d3d3d', None), ('25 mm ventilated rainscreen cavity, insect mesh top + bottom', 5, '#ffffff', '1,.6'),
+    ('Breather membrane', 1.2, '#d4d4d4', None), ('12 mm fiber-cement sheathing (SCG Smartboard / Shera)', 2.5, '#e5e5e5', None), ('150 mm LGS studs @ 400 mm infill in RC frame + mineral-wool cavity insulation', 30, '#f5f0d8', None), ('12 mm moisture-resistant fiber-cement board, AR mesh tape at joints', 2.5, '#e5e5e5', None), ('Lime plaster skim, textured finish (TBD), mineral paint warm white', 2, '#fafafa', None)])
 yb = layers_detail(585, yb, 'Typical Roof (Top Down)', '5', [
     ('Standing-seam metal 0.5 mm AZ150', 2, '#3d3d3d', None), ('Vapor-open underlay', 1.2, '#d4d4d4', None), ('40 mm ventilated cavity, eave intake to ridge vent', 8, '#ffffff', '1,.6'),
     ('Reflective radiant barrier', 1.2, '#cfd8dc', None), ('75 mm PIR insulation', 15, '#f5f0d8', None), ('C-purlins on steel H-rafters (no timber)', 12, '#ffffff', '2,1'), ('Ceiling: board on steel furring', 3, '#fafafa', None)])
 yb = layers_detail(585, yb, 'Typical Partition W2 / W3', '6', [
-    ('Board (cement board + membrane on wet faces)', 3, '#fafafa', None), ('92 mm LGS stud @ 400 mm + mineral wool (W3: 75 mm acoustic wool, resilient channel, 2 x sound board)', 18, '#f5f0d8', None), ('Board', 3, '#fafafa', None)])
-sh.tbnotes('Standard', ['RC frame + AAC + LGS + steel roof; no timber framing.', 'Wet areas: membrane, flood test 24 h.'])
+    ('Lime plaster + mineral paint (wet face: cement board + membrane, finish unchanged)', 2, '#fafafa', None), ('12 mm fiber-cement board (W3: 2 layers)', 3, '#e5e5e5', None), ('92 mm LGS @ 400 mm + mineral wool (W3: double stud or resilient channel, 75 mm wool)', 18, '#f5f0d8', None), ('12 mm fiber-cement board (W3: 2 layers)', 3, '#e5e5e5', None), ('Lime plaster + mineral paint', 2, '#fafafa', None)])
+sh.tbnotes('Standard', ['RC frame + LGS stud walls (fiber-cement, lime plaster) + steel roof.', 'Wet areas: membrane, flood test 24 h.'])
 # P-101 traps, vents, floor drains, grease trap
 sh = sheets['P-101']; v = View(sh, 25.4 * 3 / 32, 70, 330)
 def fd(x, y): sh.rect(x - .9, y - .9, 1.8, 1.8, '#ffffff', sw=.25); sh.line(x - .9, y - .9, x + .9, y + .9, .15); sh.line(x - .9, y + .9, x + .9, y - .9, .15)
@@ -48,7 +48,7 @@ sh.tbnotes('Standard', ['PPR fusion-welded supply, pressure test 1.5 x WP (min 1
 # ======================= G-003 CONSTRUCTION STANDARDS =======================
 sh = new('G-003')
 sh.text(40, 50, 'CONSTRUCTION STANDARDS: THAI VS WESTERN', 16, weight=600, font='Khand', extra=' letter-spacing="0.6"')
-sh.text(40, 61, 'Approved project standard (Oct 11 2026). Applies to every sheet and to the element properties in the 3D model.', 3.6, fill='#404040')
+sh.text(40, 61, 'Approved project standard (Oct 11 2026; walls revised Oct 12 2026). Applies to every sheet and to the element properties in the 3D model.', 3.6, fill='#404040')
 rows = []
 for t, th, ours, why in STANDARDS: rows.append([t, th, ours, why])
 yy = table(sh, 40, 72, ['Topic', 'Common Thai Practice', 'Our Standard', 'Why'], rows, [80, 220, 220, 180], 2.6)

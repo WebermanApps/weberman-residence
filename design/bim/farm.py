@@ -48,7 +48,7 @@ SUST = [  # move, status, rough THB, impact
     ('Kitchen garden, raised beds, compost + 4-6 hens', 'Included', 160000, 'Food + closes the waste loop'),
     ('Indoor hydroponic herb nook (solar-powered LEDs)', 'Included', 589000, 'Year-round herbs, zero food miles'),
     ('EV-ready: 7.4 kW charger + spare conduit to carport', 'Included', 45000, 'Solar-charged driving'),
-    ('Low-carbon materials: AAC block, slag/fly-ash cement blend, plantation teak, charred timber (no paint), lime plaster', 'Included', 0, '~15-25% less embodied carbon (cost-neutral)'),
+    ('Low-carbon materials: light-gauge steel stud walls with fiber-cement board, slag/fly-ash cement blend, plantation teak, charred timber (no paint), lime plaster', 'Included', 0, '~15-25% less embodied carbon (cost-neutral)'),
     ('Bidirectional EV charger (V2H backup)', 'Optional', 350000, 'Car becomes a 60 kWh home battery'),
     ('Solar-thermal / heat-pump pool heating on surplus', 'Optional', 120000, 'Warm pool without grid power'),
     ('Green (sedum) roof on studio, + acoustic + cooling', 'Optional', 250000, 'Cooler studio, habitat'),

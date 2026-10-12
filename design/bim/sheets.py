@@ -265,7 +265,7 @@ title_mark(sh, 115, 560, '1', 'Floor Plan', '1/8" = 1\'-0"'); north(sh, 560, 60)
 # door + window schedule
 yy = table(sh, 592, 40, ['Mark', 'Type', 'Size', 'Rooms'], [[e['tag'], e['type'], e['size'], ', '.join(e['rooms'])] for e in layer('arch')], [10, 58, 60, 40], 1.75)
 sh.text(592, 36, 'DOOR + WINDOW SCHEDULE', 3, weight=600, font='Khand')
-sh.tbnotes('Plan Notes', ['Dimensions to wall centerlines unless noted; exterior AAC walls 200 mm, partitions 100-150 mm.', f'Conditioned area {P["total"]:,} SF ({round(P["total"]*0.0929)} m²).', 'All glazing bronze-framed, low-E, laminated where below 900 mm; frameless corner at Living.', 'Wet rooms: 50 mm slab drop + waterproof membrane, 150 mm upturn.'])
+sh.tbnotes('Plan Notes', ['Dimensions to wall centerlines unless noted; exterior LGS rainscreen walls 200 mm nominal, partitions 100-150 mm.', f'Conditioned area {P["total"]:,} SF ({round(P["total"]*0.0929)} m²).', 'All glazing bronze-framed, low-E, laminated where below 900 mm; frameless corner at Living.', 'Wet rooms: 50 mm slab drop + waterproof membrane, 150 mm upturn.'])
 
 # ======================= A-102 ROOF PLAN =======================
 sh = new('A-102'); v = View(sh, K8, 110, 360)
@@ -530,7 +530,7 @@ for e in layer('framing'):
     if e['cat'] == 'wall': wt.setdefault(e['tag'], [e['type'], e['spec'], 0]); wt[e['tag']][2] += math.hypot(e['plan'][2] - e['plan'][0], e['plan'][3] - e['plan'][1])
 sh.text(50, 335, 'WALL TYPES', 3, weight=600, font='Khand')
 yy = table(sh, 50, 338, ['Type', 'Description', 'Build-Up', 'Length'], [[k_, a, b, f"{round(c)} ft"] for k_, (a, b, c) in sorted(wt.items())], [12, 58, 230, 18], 1.9)
-y2 = legend(sh, 50, yy + 10, [('line', {'w': 1.0}, 'W1 AAC exterior wall 200 mm'), ('line', {'w': .6, 'c': '#525252'}, 'W2 LGS steel stud partition'), ('line', {'w': .6, 'dash': '0.6,0.4'}, 'W3 Acoustic steel stud (studio + bedrooms)'), ('line', {'w': 1.0, 'dash': '2,.5'}, 'W4 RC wall (pool, retaining, cistern, shear)'), ('rect', {}, 'L1 RC lintel over opening')], 'Wall Legend')
+y2 = legend(sh, 50, yy + 10, [('line', {'w': 1.0}, 'W1 LGS steel stud exterior wall (rainscreen)'), ('line', {'w': .6, 'c': '#525252'}, 'W2 LGS steel stud partition'), ('line', {'w': .6, 'dash': '0.6,0.4'}, 'W3 Acoustic steel stud (studio + bedrooms)'), ('line', {'w': 1.0, 'dash': '2,.5'}, 'W4 RC wall (pool, retaining, cistern, shear)'), ('rect', {}, 'L1 LGS box header over opening')], 'Wall Legend')
 sh.text(400, 440, 'ROOF FRAMING SCHEDULE', 3, weight=600, font='Khand')
 rr = [['R1', 'Steel rafter', 'H-150 x 75 x 5 x 7, SS400, @ 1.2 m, cantilevers to eaves', sum(1 for e in EL if e.get('tag') == 'R1')],
       ['P1', 'C-purlin', 'C-100 x 50 x 20 x 2.3, @ 1.1 m max', sum(1 for e in EL if e.get('tag') == 'P1')],
@@ -540,7 +540,7 @@ rr = [['R1', 'Steel rafter', 'H-150 x 75 x 5 x 7, SS400, @ 1.2 m, cantilevers to
       ['--', 'Corrosion', 'Hot-dip galvanized or 2-coat epoxy (humid mountain climate)', '-']]
 yy = table(sh, 400, 443, ['Mark', 'Member', 'Section / Spec', 'Qty'], rr, [12, 34, 100, 12], 1.9)
 legend(sh, 400, yy + 10, [('line', {'w': .3}, 'Steel rafter R1'), ('line', {'w': .1, 'c': '#737373', 'dash': '1,.5'}, 'C-purlin P1'), ('rect', {'fill': '#0a0a0a'}, 'Column below (bearing)')], 'Roof Framing Legend')
-sh.tbnotes('Framing Notes', ['Interior LGS: 0.75 mm BMT studs, deflection head track at slab/beam.', 'AAC: thin-bed mortar; RC stiffener columns 100 x wall width at max 3 m and at openings > 2 m.', 'Studio double-stud walls on separate tracks + resilient ceiling (STC 60+).'])
+sh.tbnotes('Framing Notes', ['Interior LGS: 0.75 mm BMT studs, deflection head track at slab/beam.', 'Exterior LGS 150 mm infill: slip head track at RC beams, anchored to slab + columns; fiber-cement sheathing.', 'Studio double-stud walls on separate tracks + resilient ceiling (STC 60+).'])
 
 # ======================= E-101 POWER + LIGHTING =======================
 sh = new('E-101'); v = View(sh, K8, 90, 345)
@@ -673,7 +673,7 @@ lc = _C(e['layer'] for e in EL)
 for l in wrap(f"Every sheet in this set and the interactive 3D model are generated from one data model: plan.json (rooms, walls, openings, roofs, site) extended into bim.json with {len(EL):,} elements in twelve layers ({", ".join(f"{l['name']} {lc[l['id']]}" for l in LAYERS)}). Change the model and both regenerate, so drawings and 3D always match.", 95):
     sh.text(40, yy2, l, 3); yy2 += 4.6
 sh.text(40, yy2 + 8, 'PROJECT DATA', 4.5, weight=600, font='Khand')
-pd = [['Conditioned area', f"{P['total']:,} SF ({round(P['total']*0.0929)} m²), single level"], ['Footprint', "94' x 83' around a 36' x 28' courtyard"], ['Structure', 'RC frame on spread footings, AAC + LGS walls, steel roof framing'],
+pd = [['Conditioned area', f"{P['total']:,} SF ({round(P['total']*0.0929)} m²), single level"], ['Footprint', "94' x 83' around a 36' x 28' courtyard"], ['Structure', 'RC frame on spread footings, LGS stud walls (fiber-cement + lime plaster), steel roof framing'],
       ['Roofs', 'Standing seam: butterfly (Living) + 5 shed roofs, 4-8 ft eaves'], ['Services', 'PEA 3-phase + solar/battery/generator; well + rainwater; septic + ATU; saltwater pool'], ['Codes (to confirm)', 'Building Control Act B.E. 2522, Ministerial Regs, EIT electrical standard, DPT 1301/1302/1311']]
 table(sh, 40, yy2 + 12, ['Item', 'Value'], pd, [40, 150], 2.6, head=False)
 # key plan
