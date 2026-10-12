@@ -55,7 +55,7 @@ def elev(ox, oy, title, n, span, items, flip=False, wallh=12):
     title_mark(sh, ox, oy + 12, n, title, '1/4" = 1\'-0"')
 OAK, Q, ST, GL = '#e9dcc4', '#f3f1ec', '#c9cdd0', '#e6eef0'
 elev(300, 150, 'North Elevation: Sink + Slide Wall', '2', (20, 36), [
-    ('Oak base, handleless', 20.6, 30.3, 0, 2.85, OAK, None), ('Quartzite counter + sink', 20.5, 30.4, 2.85, 3.0, Q, None),
+    ('Oak base, flush inset, handleless', 20.6, 30.3, 0, 2.85, OAK, None), ('Quartzite counter + sink', 20.5, 30.4, 2.85, 3.0, Q, None),
     ('Herb wall behind glass', 20.8, 25.8, 3.0, 7.5, GL, None), ('Garden window', 26.2, 30, 3.6, 7.5, GL, None),
     ('Lift-and-slide pocket wall (opens fully)', 30.5, 35.6, 0, 8, GL, '2,1')])
 elev(440, 150, 'South Elevation: Range Wall', '3', (20, 36), [
@@ -66,11 +66,11 @@ elev(300, 290, 'West Elevation: Tall Wall + Pantry', '4', (55, 79), [
     ('Built-in stainless fridge', 64.5, 67.5, 0, 7.2, ST, None), ('Steam + wall oven column', 67.6, 70.6, 0, 8.5, OAK, None), ('Pantry door', 71, 74, 0, 7.5, 'none', '2,1'),
     ('Oak base', 76.4, 78.6, 0, 2.85, OAK, None)], flip=True)
 elev(480, 290, 'Island Elevation: Quartzite Waterfall', '5', (22, 34), [
-    ('Waterfall end', 22.9, 23.15, 0, 3.03, Q, None), ('Rift oak base, flat slab', 23.15, 32.85, 0.15, 2.85, OAK, None), ('Waterfall end', 32.85, 33.1, 0, 3.03, Q, None),
+    ('Waterfall end', 22.9, 23.15, 0, 3.03, Q, None), ('Rift oak base, flush inset slab', 23.15, 32.85, 0.15, 2.85, OAK, None), ('Waterfall end', 32.85, 33.1, 0, 3.03, Q, None),
     ('Quartzite top', 22.9, 33.1, 2.85, 3.03, Q, None), ('Linear suspended LED', 24, 32, 8.6, 8.75, '#fff3c4', None), ('Skylight SK-1 above', 24, 32, 11.4, 11.9, GL, '2,1')], wallh=12)
 # schedules
 sh.text(300, 350, 'MATERIAL + APPLIANCE SCHEDULE', 3, weight=600, font='Khand')
-yy = table(sh, 300, 353, ['Item', 'Selection'], [['Cabinets', 'Rift white oak, flat slab, handleless (finger-pull reveal)'], ['Counters', 'Honed quartzite, 30 mm, mitred 60 mm edge'], ['Island', '10\' quartzite waterfall, stools on one side'], ['Sink', 'Integrated quartzite, carved from the counter'], ['Faucet', 'Brushed stainless (not brass, kitchen only)'], ['Backsplash', 'Honed marble slab (zellige or plaster alternate)'], ['Range', '48" pro gas with high-heat wok burner'], ['Hood', 'Insert hidden in oak cabinetry, 1,500 m3/h + MUA'], ['Fridge', '36" built-in stainless'], ['Ovens', 'Steam oven + wall oven column'], ['Cooktop 2', 'Flush 2-zone induction in work island'], ['Lighting', 'Skylight + linear suspended LED; shelf strips'], ['Opening', 'Lift-and-slide pocket wall to pergola']], [40, 95], 2.0)
+yy = table(sh, 300, 353, ['Item', 'Selection'], [['Cabinets', 'Rift white oak, flat slab, handleless, flush inset in face frames (finger-pull reveal)'], ['Counters', 'Honed quartzite, 30 mm, mitred 60 mm edge'], ['Island', '10\' quartzite waterfall, stools on one side'], ['Sink', 'Integrated quartzite, carved from the counter'], ['Faucet', 'Brushed stainless (not brass, kitchen only)'], ['Backsplash', 'Honed marble slab (zellige or plaster alternate)'], ['Range', '48" pro gas with high-heat wok burner'], ['Hood', 'Insert hidden in oak cabinetry, 1,500 m3/h + MUA'], ['Fridge', '36" built-in stainless'], ['Ovens', 'Steam oven + wall oven column'], ['Cooktop 2', 'Flush 2-zone induction in work island'], ['Lighting', 'Skylight + linear suspended LED; shelf strips'], ['Opening', 'Lift-and-slide pocket wall to pergola']], [40, 95], 2.0)
 sh.text(545, 350, 'ROUGH COST (THB, EXCL. VAT)', 3, weight=600, font='Khand')
 yy2 = table(sh, 545, 353, ['Item', 'THB'], [[a, f"{c:,}"] for a, c in KITCHEN['costs']], [170, 25], 1.9)
 sh.text(545, yy2 + 6, f"Kitchen total about {sum(c for _, c in KITCHEN['costs']):,} THB", 2.6, weight=600)

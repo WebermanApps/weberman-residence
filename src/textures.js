@@ -124,9 +124,9 @@ export function makeTextures() {
     noise(g, 256, 0.3, ['#97938c', '#c2beb6'], 5000); T.concrete = tex(c, 6);
   }
   { // lime plaster (soft mottled, hand-troweled)
-    const [c, g] = canvas(256); g.fillStyle = '#efe9de'; g.fillRect(0, 0, 256, 256);
-    for (let i = 0; i < 140; i++) { const x = rnd() * 256, y = rnd() * 256, r = 10 + rnd() * 40; const gr = g.createRadialGradient(x, y, 0, x, y, r); const l = rnd() < 0.5 ? 'rgba(255,252,246,0.35)' : 'rgba(214,204,188,0.28)'; gr.addColorStop(0, l); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
-    noise(g, 256, 0.12, ['#fbf7f0', '#ddd3c4'], 2500); T.lime = tex(c, 8); T.limeN = normalFrom(c, 8, 1.2);
+    const [c, g] = canvas(256); g.fillStyle = '#f6f6f4'; g.fillRect(0, 0, 256, 256);
+    for (let i = 0; i < 140; i++) { const x = rnd() * 256, y = rnd() * 256, r = 10 + rnd() * 40; const gr = g.createRadialGradient(x, y, 0, x, y, r); const l = rnd() < 0.5 ? 'rgba(255,255,255,0.35)' : 'rgba(226,226,222,0.22)'; gr.addColorStop(0, l); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
+    noise(g, 256, 0.12, ['#fdfdfc', '#e8e8e5'], 2500); T.lime = tex(c, 8); T.limeN = normalFrom(c, 8, 1.2);
   }
   { // honey oak (wide plank, warm amber)
     const [c, g] = canvas(512); g.fillStyle = '#b98544'; g.fillRect(0, 0, 512, 512);

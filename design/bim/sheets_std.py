@@ -26,7 +26,7 @@ def layers_detail(x, y, title, n, rows, horiz=True):
     return yy + 18
 yb = layers_detail(585, 120, 'Typical Exterior Wall W1 (Plan Cut, Out to In)', '4', [
     ('Charred-timber cladding or white lime render on fiber-cement panel, on aluminium battens', 4, '#3d3d3d', None), ('25 mm ventilated rainscreen cavity, insect mesh top + bottom', 5, '#ffffff', '1,.6'),
-    ('Breather membrane', 1.2, '#d4d4d4', None), ('12 mm fiber-cement sheathing (SCG Smartboard / Shera)', 2.5, '#e5e5e5', None), ('150 mm LGS studs @ 400 mm infill in RC frame + mineral-wool cavity insulation', 30, '#f5f0d8', None), ('12 mm moisture-resistant fiber-cement board, AR mesh tape at joints', 2.5, '#e5e5e5', None), ('Lime plaster skim, textured finish (TBD), mineral paint warm white', 2, '#fafafa', None)])
+    ('Breather membrane', 1.2, '#d4d4d4', None), ('12 mm fiber-cement sheathing (SCG Smartboard / Shera)', 2.5, '#e5e5e5', None), ('150 mm LGS studs @ 400 mm infill in RC frame + mineral-wool cavity insulation', 30, '#f5f0d8', None), ('12 mm moisture-resistant fiber-cement board, AR mesh tape at joints', 2.5, '#e5e5e5', None), ('Lime plaster skim, textured finish (TBD), mineral paint, white', 2, '#fafafa', None)])
 yb = layers_detail(585, yb, 'Typical Roof (Top Down)', '5', [
     ('Standing-seam metal 0.5 mm AZ150', 2, '#3d3d3d', None), ('Vapor-open underlay', 1.2, '#d4d4d4', None), ('40 mm ventilated cavity, eave intake to ridge vent', 8, '#ffffff', '1,.6'),
     ('Reflective radiant barrier', 1.2, '#cfd8dc', None), ('75 mm PIR insulation', 15, '#f5f0d8', None), ('C-purlins on steel H-rafters (no timber)', 12, '#ffffff', '2,1'), ('Ceiling: board on steel furring', 3, '#fafafa', None)])

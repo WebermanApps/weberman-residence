@@ -14,7 +14,7 @@ export function makeMaterials() {
   const M = {};
   const std = (o) => new THREE.MeshStandardMaterial(o);
   M.stucco = std({ map: T.stucco, roughness: 0.92 });
-  M.plaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.96 }); // lime plaster
+  M.plaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.3, 0.3), roughness: 0.95, color: 0xffffff }); // lime plaster
   M.charred = std({ map: T.charred, normalMap: T.charredN, roughness: 0.82 });
   M.rammed = std({ map: T.rammed, normalMap: T.rammedN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.95 });
   M.stone = std({ map: T.stone, roughness: 0.8, color: 0xf8f0e0 }); // honed limestone
@@ -30,7 +30,7 @@ export function makeMaterials() {
   M.granite = std({ map: T.stone, roughness: 0.92, color: 0xc4c0b8 });
   M.slate = std({ map: T.flag, normalMap: T.flagN, roughness: 0.85, color: 0x77818a });
   M.soapstone = std({ map: T.marble, roughness: 0.6, color: 0x7f8a85 });
-  M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xd2ad84 });
+  M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xcca477 });
   M.whiteplaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.94, color: 0xffffff });
   M.bronze = std({ color: 0x4e3d2c, roughness: 0.4, metalness: 0.65 });
   M.blackstone = std({ map: T.blackstone, normalMap: T.blackstoneN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.42 });
