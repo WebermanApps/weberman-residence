@@ -425,7 +425,7 @@ const qs = new URLSearchParams(location.search);
 goView(VIEWS[qs.get('view')] ? qs.get('view') : 'aerial', true);
 if (qs.get('mode')) setMode(qs.get('mode'));
 if (qs.get('light') === 'eve') setLight('eve');
-if (qs.get('roof') === '0') setRoof(false);
+if (qs.get('roof') !== '1') setRoof(false); // roof defaults off (Max, Oct 13 2026)
 if (qs.get('room')) select(qs.get('room'), true);
 requestAnimationFrame(loop);
 controls.addEventListener('start', () => { tween = null; });
