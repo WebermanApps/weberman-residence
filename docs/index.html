@@ -46,8 +46,9 @@ b.addEventListener('click',async function(){var url=location.origin+location.pat
  try{await navigator.clipboard.writeText(url);b.textContent='Link Copied';setTimeout(function(){b.textContent='⇪ Share'},1800)}catch(e){prompt('Copy this link:',url)}});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();})();
 </script><!--/mw-polish-->
-  <script type="module" crossorigin src="./assets/index-B7D2plW7.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DwyxdljP.css">
+<script src="./ptr.js" defer></script>
+  <script type="module" crossorigin src="./assets/index-BKBfG64H.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CXWs8ywE.css">
 </head>
 <body>
 <div id="app">
@@ -79,7 +80,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       </div>
     </aside>
     <section class="viewport-shell" id="shell">
-      <div id="viewport"></div>
+      <div id="viewport" data-ptr-ignore></div>
       <div class="viewer-top">
         <div class="seg" id="mode-seg" role="tablist" aria-label="View mode">
           <button data-mode="orbit" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg><span>3D Model</span></button>
