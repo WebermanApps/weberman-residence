@@ -1,3 +1,5 @@
+/* Plan images are encrypted (files/*.enc); mwEncUrl decrypts via enc_file_viewer.js after unlock. */
+window.mwEncUrl=window.mwEncUrl||function(p){return new Promise(function(res,rej){var n=0;(function t(){if(window.mwEncFile)return window.mwEncFile.decrypt(p).then(function(r){res(r.url)},rej);if(++n>150)return rej(new Error('enc viewer missing'));setTimeout(t,100)})()})};
 import './brand-tokens.css';
 import './style.css';
 import * as THREE from 'three';
@@ -57,11 +59,11 @@ for (const r of P.rooms) {
 const ovMat = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.85, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4 });
 let overlay = null;
 fetch('./plan_overlay.json').then(r => r.json()).then(ext => {
-  new THREE.TextureLoader().load('./plan_overlay.png', (t) => {
+  window.mwEncUrl('files/35o73egm3y39.enc').then(u => new THREE.TextureLoader().load(u, (t) => {
     t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; ovMat.map = t; ovMat.needsUpdate = true;
     const w = ext.x1 - ext.x0, h = ext.y1 - ext.y0; const g = new THREE.PlaneGeometry(w, h); g.rotateX(-Math.PI / 2);
     overlay = new THREE.Mesh(g, ovMat); overlay.position.copy(W((ext.x0 + ext.x1) / 2, (ext.y0 + ext.y1) / 2, 0.06)); overlay.renderOrder = 3; overlay.visible = state.overlay; scene.add(overlay);
-  });
+  })).catch(() => {});
 });
 
 // highlight
@@ -390,8 +392,8 @@ $('t-full').onclick = () => { const el = document.documentElement; if (!document
 function modal(title, html) { $('modal-title').textContent = title; $('modal-body').innerHTML = html; $('modal').hidden = false; }
 $('modal-close').onclick = () => $('modal').hidden = true; $('modal').onclick = (e) => { if (e.target.id === 'modal') $('modal').hidden = true; };
 const programTable = () => `<table>${WINGS.map(w => `<tr><td colspan="3"><b>${w}</b></td></tr>` + P.rooms.filter(r => r.wing === w).map(r => `<tr><td>${r.id}</td><td>${r.name}${r.cond ? '' : ' (unconditioned)'}</td><td style="text-align:right">${r.area} SF · ${(r.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')).join('')}<tr><td colspan="3"><b>Covered Outdoor (Not Conditioned)</b></td></tr>${(P.covered||[]).map(c => `<tr><td>${c.id}</td><td>${c.name}</td><td style="text-align:right">${c.area} SF · ${(c.area * SF2M2).toFixed(1)} m²</td></tr>`).join('')}<tr><td></td><td><b>Total Conditioned</b></td><td style="text-align:right"><b>${P.total.toLocaleString()} SF · ${Math.round(P.total * SF2M2)} m²</b></td></tr></table>`;
-$('btn-drawings').onclick = () => { modal('Drawings', `<div class="tabs"><button class="on" data-img="Floor_Plan.png">Floor Plan</button><button data-img="Site_Plan.png">Site Plan</button><button data-img="prog">Room Program</button></div><div id="dw"><img src="./Floor_Plan.png" alt="Floor plan"></div>`);
-  document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); $('dw').innerHTML = b.dataset.img === 'prog' ? programTable() : `<img src="./${b.dataset.img}" alt="${b.textContent}">`; }); };
+$('btn-drawings').onclick = () => { modal('Drawings', `<div class="tabs"><button class="on" data-img="files/wo8o586bms0e.enc">Floor Plan</button><button data-img="files/v6xu73yamn4h.enc">Site Plan</button><button data-img="prog">Room Program</button></div><div id="dw"><img data-enc-img="files/wo8o586bms0e.enc" alt="Floor plan"></div>`);
+  document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); $('dw').innerHTML = b.dataset.img === 'prog' ? programTable() : `<img data-enc-img="${b.dataset.img}" alt="${b.textContent}">`; }); };
 const ABOUT = `<h3>Concept</h3><p>A low, warm courtyard house for a mountain site, drawing on Bali, Japan and mid-century modernism rather than the cabin. Four single-storey pavilions wrap a 36 × 28 ft courtyard: <b>living</b> to the north facing the mountains, <b>sleeping</b> to the east, <b>wellness + gym</b> to the south on the pool, and <b>studio + arrival</b> to the west. Glazed engawas on the east and west and an open-air covered walkway on the south link them all, so every room looks into the garden. Deep 6 to 8 ft eaves, a butterfly roof over the living pavilion, standing seam metal, white lime-plaster panels with charred-timber siding, bronze windows, walnut and cherry inside, limestone, a cedar engawa and rammed earth.</p>
 <h3>Model Notes</h3><p>Geometry is generated from the same plan data as the 2D drawings. Wall heights run up to the underside of each roof: 10 to 14 ft, with the butterfly roof rising from 12' 7" at the valley to about 14' at the walls. Areas are measured to wall centerlines. Furniture and equipment are simple blocks at true size. The lot, grades and mountain backdrop are illustrative only.</p>${programTable()}`;
 $('btn-about').onclick = () => modal('About This Model', ABOUT); $('btn-notes').onclick = () => modal('Model Notes', ABOUT);
