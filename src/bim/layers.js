@@ -101,7 +101,7 @@ function init(app, M) {
   const sw = (id) => '#' + ((COLORS[id][Object.keys(COLORS[id])[0]] ?? 0x888888).toString(16).padStart(6, '0'));
   panel.innerHTML = `<div class="bim-head"><div><h2>Layers</h2><p class="bim-sub">One shared model drives the 3D view and the Design Development sheets. Tap an element for its properties.</p></div><button class="bim-x mw-hover" type="button" aria-label="Close layers">×</button></div>` +
     M.layers.map(l => `<div class="bim-row"><label class="bim-tg mw-hover" title="${l.desc}"><span class="bim-sw" style="background:${sw(l.id)}"></span><span class="bim-name">${l.name} <span class="bim-n">${counts[l.id] || 0}</span></span><input type="checkbox" data-layer="${l.id}" ${state[l.id] ? 'checked' : ''} aria-label="Show ${l.name}"><i></i></label>` +
-      `<a class="bim-link mw-hover" href="./sheets/${l.sheet}.svg" target="_blank" rel="noopener" data-sheet="${l.sheet}" aria-label="View Sheet ${l.sheet} (${l.name})">View Sheet</a><a class="bim-link pdf mw-hover" href="https://webermanapps.github.io/blueprint-dashboard/#mw-projects" target="_blank" rel="noopener" aria-label="${l.sheet} PDF">PDF</a></div>`).join('') +
+      `<a class="bim-link mw-hover" href="#" data-sheet-view="${l.sheet}" data-sheet="${l.sheet}" aria-label="View Sheet ${l.sheet} (${l.name})">View Sheet</a><a class="bim-link pdf mw-hover" href="https://webermanapps.github.io/blueprint-dashboard/#mw-projects" target="_blank" rel="noopener" aria-label="${l.sheet} PDF">PDF</a></div>`).join('') +
     `<div class="bim-foot"><a class="bim-link primary mw-hover" href="https://webermanapps.github.io/blueprint-dashboard/#mw-projects" target="_blank" rel="noopener">Full Set (PDF)</a><button class="bim-link mw-hover" type="button" data-act="all">Show All Systems</button></div><p class="bim-note">Design Development, Not for Construction. Sizes are concept placeholders for a Thai engineer to verify.</p>`;
   shell.appendChild(panel);
   const props = document.createElement('div'); props.className = 'bim-props'; props.hidden = true; props.setAttribute('role', 'dialog'); props.setAttribute('aria-label', 'Element Properties'); shell.appendChild(props);
@@ -135,7 +135,7 @@ function init(app, M) {
     const room = e.room ? (roomName[e.room] ? `${roomName[e.room]} (${e.room})` : e.room) : (e.rooms ? e.rooms.map(r => roomName[r] || r).join(' / ') : '');
     const rows = [['Type', e.type], ['Size', e.size], ['System', e.system], e.tag && ['Mark', e.tag], e.circuit && ['Circuit', e.circuit], room && ['Location', room], e.grid && ['Grid', e.grid], e.spec && ['Build-Up', e.spec], e.standard && ['Standard', e.standard], e.wall_type && ['Wall Type', e.wall_type]].filter(Boolean);
     const sheet = sheetOf[e.layer];
-    props.innerHTML = `<button class="bim-x mw-hover" type="button" aria-label="Close properties">×</button><div class="bim-k">${LABEL[e.layer]} · ${e.id}</div><h3>${esc(e.type)}</h3><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(String(v))}</dd>`).join('')}</dl><a class="bim-link mw-hover" href="./sheets/${sheet}.svg" target="_blank" rel="noopener">View Sheet ${sheet}</a>`;
+    props.innerHTML = `<button class="bim-x mw-hover" type="button" aria-label="Close properties">×</button><div class="bim-k">${LABEL[e.layer]} · ${e.id}</div><h3>${esc(e.type)}</h3><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(String(v))}</dd>`).join('')}</dl><a class="bim-link mw-hover" href="#" data-sheet-view="${sheet}">View Sheet ${sheet}</a>`;
     props.querySelector('.bim-x').addEventListener('click', clearSel); props.hidden = false;
   }
   const esc = (s) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -167,3 +167,17 @@ function init(app, M) {
   window.bim = { state, apply, setOpen, show, layerGroups, model: M, select: (id) => { const m = pickables.find(p => p.userData.bim.id === id); if (m) show(m); return !!m; } };
 }
 (function wait() { if (window.app && window.app.scene) boot(window.app); else setTimeout(wait, 50); })();
+
+/* Sheet viewer (locked plan files, Oct 17 2026): View Sheet shows the encrypted sheet via enc_file_viewer.js (data-enc-img). */
+(function(){if(window.__mwSheetView)return;window.__mwSheetView=1;var M={"A-101":"files/hfmeac2npsaj.enc","A-102":"files/x5xy4cf5sqen.enc","A-201":"files/b9svxh0rqhb1.enc","A-301":"files/9b8no0a9fi86.enc","A-401":"files/7a1wq30fh9i0.enc","E-101":"files/60xxdwnxyulx.enc","E-102":"files/y2ulryrb4b60.enc","E-103":"files/2344ij11c8m2.enc","G-001":"files/hqbt2phf1aj4.enc","G-002":"files/ekyouw0mqf74.enc","G-003":"files/jc2zfl5dljri.enc","M-101":"files/7an5wbq2s1qb.enc","P-101":"files/gbag9ut7d1kv.enc","P-102":"files/ltfumoacq1uh.enc","P-103":"files/bu0paxket3de.enc","S-101":"files/lsu6vd6sm8af.enc","S-102":"files/d475sqykwe1a.enc"};
+function close(){var o=document.getElementById('mw-sheet-ov');if(o)o.remove();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-sheet-view]');if(!a)return;e.preventDefault();e.stopPropagation();
+var id=a.getAttribute('data-sheet-view'),f=M[id];if(!f)return;close();
+var o=document.createElement('div');o.id='mw-sheet-ov';o.setAttribute('role','dialog');o.setAttribute('aria-label','Sheet '+id);
+o.style.cssText='position:fixed;inset:0;z-index:2147483000;background:rgba(10,10,10,.88);display:flex;align-items:center;justify-content:center;padding:60px 12px 12px;box-sizing:border-box';
+var b=document.createElement('button');b.type='button';b.className='mw-hover';b.setAttribute('aria-label','Close sheet');b.textContent='\u00d7';
+b.style.cssText='position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:#fff;color:#0a0a0a;font-size:26px;line-height:1;cursor:pointer';
+var w=document.createElement('div');w.style.cssText='width:100%;height:100%;overflow:auto;display:flex;align-items:center;justify-content:center';
+var i=document.createElement('img');i.alt='Sheet '+id;i.setAttribute('data-enc-img',f);i.style.cssText='max-width:100%;max-height:100%;background:#fff';
+w.appendChild(i);o.appendChild(b);o.appendChild(w);o.addEventListener('click',function(ev){if(ev.target===o||ev.target===w||ev.target===b)close();});document.body.appendChild(o);},true);})();
