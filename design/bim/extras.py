@@ -117,7 +117,7 @@ for tag, nm, spec, x, y, grp, c in CTRL:
     add('ctrl', 'device', nm, spec, 'Controls: ' + grp, [B(x - .5, y - .5, 4.5, x + .5, y + .5, 5.5)], tag=tag, pos=[x, y], cost=c)
     if tag not in ('HUB', 'PRG'):
         add('ctrl', 'link', f"Control Link HUB to {tag}", 'Cat6 / RS485 / Zigbee mesh', 'Controls', [PIPE([(HUB[0], HUB[1], 10), (x, HUB[1], 10), (x, y, 10), (x, y, 5.5)], 0.05)], pts=[list(HUB), [x, HUB[1]], [x, y]])
-for x, y, r_ in [(88, 70.5, '202'), (79.4, 42.5, '208'), (85, 22.5, '210'), (25.4, 44.5, '403'), (31.3, 77.3, '101'), (81, 57.5, '205'), (90, 57, '206'), (95.8, 56.8, '206'), (93, 16.5, '211'), (60, 18, '303'), (70.8, 14, '306'), (79, 37, '208'), (96, 72, '202'), (17, 57, '105')]:
+for x, y, r_ in [(88, 70.5, '202'), (100, 40, '208'), (8, 24, '409'), (25.4, 44.5, '403'), (31.3, 77.3, '101'), (81, 20, '205'), (90, 57, '206'), (95.8, 56.8, '206'), (93, 16.5, '211'), (60, 18, '303'), (70.8, 14, '306'), (88, 40, '208'), (96, 72, '202'), (17, 57, '105')]:
     add('ctrl', 'leak', 'Leak Sensor (Zigbee)', 'Floor puck, 2-year battery', 'Controls: Leak', [B(x - .25, y - .25, 0, x + .25, y + .25, 0.15)], room=r_, tag='LK', pos=[x, y])
 CTRL_SUM = dict(items=[(t, n, s, g, c) for t, n, s, x, y, g, c in CTRL], total=sum(c[6] for c in CTRL),
     automations=['Pool pump + salt cell run at 10:00-15:00 when PV surplus > 2 kW; minimum 6 h turnover guaranteed',

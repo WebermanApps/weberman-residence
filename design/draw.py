@@ -269,7 +269,7 @@ def floor_plan(path, overlay=False):
     fig.text(sx,y-0.02,"TOTAL CONDITIONED",fontsize=8,weight='bold',color=OLIVE)
     fig.text(0.975,y-0.02,f"{t:,} SF · {t*SF2M2:,.0f} m²",fontsize=8,weight='bold',color=OLIVE,ha='right')
     y-=0.06
-    notes=["Areas measured to wall centerlines.","Footprint 94' × 83' (28.7 × 25.3 m) around a 36' × 28' courtyard.",
+    notes=["Areas measured to wall centerlines.","Total includes 208 SF of kids' bunk + play lofts (2 × 8' × 13', over 207 + 209).","Footprint 104' × 88' (31.7 × 26.8 m) around a 36' × 28' courtyard.",
            "Ceilings: living 12' butterfly with clerestory, office 14',","bedrooms 10-11', sauna/steam 8'.",
            "Glass shown in blue: pocketing sliders to the courtyard.","Not for construction. Concept study for discussion."]
     for n in notes: fig.text(sx,y,n,fontsize=6.3,color=MUTED); y-=0.013

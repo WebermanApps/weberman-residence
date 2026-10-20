@@ -15,7 +15,7 @@ sh = new('E-102'); K16 = 25.4 * 3 / 32; v = View(sh, K16, 40, 255)
 draw_base(v, light=True, roomtext=False, doors=False)
 for r in P['roofs']:
     x0, y0, x1, y1 = ext(r); a_, b_ = v.P(x0, y1), v.P(x1, y0); sh.rect(a_[0], a_[1], b_[0] - a_[0], b_[1] - a_[1], sw=.35)
-    c = v.P((x0 + x1) / 2, y0 + 2); face = {'master': 'FACES S', 'living': 'N HALF FACES S', 'east': 'FACES E', 'west': 'FACES E', 'south': 'FACES N', 'office': 'FACES N'}[r['id']]
+    c = v.P((x0 + x1) / 2, y0 + 2); face = {'master': 'FACES S', 'living': 'N HALF FACES S', 'east': 'FACES E', 'west': 'FACES E', 'south': 'FACES N', 'office': 'FACES N', 'kids': 'FACES W', 'laundry': 'FACES W', 'guest': 'FACES E'}[r['id']]
     sh.text(c[0], c[1], f"{r['id'].upper()} · {face}", 1.6, 'middle', 600, '#525252')
 SCOL = {'S1': '#d4d4d4', 'S2': '#a3a3a3', 'S3': '#d4d4d4', 'S4': '#a3a3a3'}
 for e in layer('solar'):

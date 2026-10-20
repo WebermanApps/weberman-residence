@@ -1,7 +1,7 @@
 # executed inside model.py: approved project construction + services standard (Oct 11 2026) applied to every element
 STD_STRUCT = 'RC frame (columns, beams, slabs); poured concrete only for pool, retaining walls, cistern, engineer-required shear walls; no timber framing (termites)'
 # trapped floor drains in every wet room with a fixture (plus laundry/mech)
-for rid in ['202', '205', '206', '208', '210', '303', '305', '306', '403', '211']:
+for rid in ['202', '205', '206', '208', '409', '303', '305', '306', '403', '211']:
     r = ROOMS[rid]; x, y = r['x0'] + (r['x1'] - r['x0']) * 0.35, r['y0'] + (r['y1'] - r['y0']) * 0.35
     add('plumb', 'floordrain', 'Trapped Floor Drain FD (Deep-Seal + Trap Primer)', '100 mm SS grate, 50 mm deep-seal P-trap, membrane clamping flange, 1:80 fall to drain', 'Sanitary Drainage', [CYL(x, y, 0.3, -0.6, 0)], room=rid, tag='FD', pos=[x, y], standard='Trapped floor drain bonded to the wet-area membrane; trap primer keeps the seal')
 for e in EL:

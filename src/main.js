@@ -83,7 +83,7 @@ pcontrols.mouseButtons = { LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIG
 pcontrols.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }; pcontrols.enabled = false;
 
 const VIEWS = {
-  aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: true, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
+  aerial: { name: 'Aerial', cam: [0, -128, 76], tgt: [50, 56, 28], fov: 50, roof: false, title: 'The whole house.', kicker: 'A DRAWING-BASED SPATIAL STUDY' },
   courtyard: { name: 'Courtyard', cam: [39, 29.5, 6.2], tgt: [67, 43, 6], roof: true, title: 'The courtyard.', kicker: 'VIEW · CEDAR ENGAWA, LOOKING NORTH-EAST', fov: 62 },
   living: { name: 'Living', cam: [48, 20, 54], tgt: [58, 67, 0], roof: false, cut: 8, title: 'Living pavilion.', kicker: 'ROOMS 101-103 · ROOF HIDDEN' },
   office: { name: 'Studio', cam: [48, -38, 58], tgt: [16, 11, 0], roof: false, cut: 8, title: 'Isolated studio / office.', kicker: 'ROOM 407 · ROOM-WITHIN-A-ROOM · TARGET STC 60+' },
@@ -91,14 +91,14 @@ const VIEWS = {
   bath: { name: 'Bath', cam: [93, 66, 22], tgt: [93.8, 78, 0], roof: false, cut: 8, title: 'Master bath.', kicker: 'ROOM 202 · HINOKI SOAKING TUB BY THE WINDOW, SKYLIGHT', fov: 55 },
   utility: { name: 'Utility', cam: [126, -46, 62], tgt: [118, 9, 0], roof: false, title: 'Utility yard.', kicker: 'OUTDOORS · SCREENED SERVICE YARD · WATER, WASTEWATER, POWER, HVAC', fov: 50 },
   climb: { name: 'Climbing', cam: [-4, -34, 9], tgt: [-13, 14, 8], roof: true, title: 'Climbing pavilion.', kicker: 'OUTDOORS · COVERED OPEN-AIR · NOT CONDITIONED', fov: 50 },
-  kitchen: { name: 'Kitchen', cam: [30, 43, 27], tgt: [39, 70, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · MARBLE ISLAND, ZELLIGE, CONVERSATION PIT', fov: 50 },
+  kitchen: { name: 'Kitchen', cam: [30, 43, 27], tgt: [39, 70, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · QUARTZITE ISLANDS, FLAT-FLOOR LIVING', fov: 50 },
   gym: { name: 'Gym', cam: [52, -12, 24], tgt: [38, 11, 2], roof: false, cut: 8, title: 'Exercise room.', kicker: 'ROOM 302 · CALM STUDIO, RIG, CADILLAC, ROWER', fov: 50 },
-  kids: { name: 'Kids', cam: [104, 20, 36], tgt: [90, 38, 0], roof: false, cut: 8, title: 'Kids\' rooms.', kicker: 'ROOMS 207-209 · WINDOW SEATS, DESKS BY THE WINDOW, CLIMBING WALLS', fov: 52 },
+  kids: { name: 'Kids', cam: [112, 20, 38], tgt: [94, 40, 0], roof: false, cut: 8, title: 'Kids\' rooms.', kicker: 'ROOMS 207-215 · GROW-INTO-TEEN ROOMS, BUNK/PLAY LOFTS, WALK-INS, STUDY NOOK', fov: 52 },
   master: { name: 'Master', cam: [124, 33, 64], tgt: [86, 71, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
 };
 
 // ---------- state ----------
-const state = { mode: 'orbit', light: 'day', roof: true, cut: false, cutH: 4.5, furn: true, labels: false, overlay: false, ovOp: 0.85, site: true, mtn: true, shadows: true, sel: null, view: 'aerial' };
+const state = { mode: 'orbit', light: 'day', roof: false, cut: false, cutH: 4.5, furn: true, labels: false, overlay: false, ovOp: 0.85, site: true, mtn: true, shadows: true, sel: null, view: 'aerial' };
 
 // ---------- labels ----------
 const labelObjs = [];

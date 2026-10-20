@@ -5,12 +5,12 @@ An interactive, drawing-referenced 3D model of a single-level mountain courtyard
 **Live:** https://webermanapps.github.io/weberman-residence/
 
 ## The House
-- 5,272 SF conditioned (490 m²; the isolated studio is 528 SF gross, about 426 SF net), all on one level (trimmed from 5,952 SF on 10.10.26). Footprint 94' × 83'. The courtyard is 36' × 28'.
+- 6,334 SF conditioned (588 m², under the 6,400 SF cap; includes 208 SF of kids' bunk/play lofts; the isolated studio is 616 SF gross, about 505 SF net). Layout updated from 5 decks on 10.20.26 (was 5,272 SF). Footprint 104' × 88'. The courtyard stays 36' × 28' (shape pending a clarification deck).
 - Four low pavilions under deep 6 to 8 ft eaves wrap a central courtyard and are linked by a glazed engawa:
-  - **Living Pavilion** (north, facing the mountains): kitchen with a marble island, walk-in pantry, dining, and living with a sunken conversation pit under a butterfly roof.
-  - **Sleeping Wing** (east): the master suite with a hinoki soaking tub, two kids' rooms sharing a Jack-and-Jill bath (Kids' Room 2 doubles as the guest room), a guest / pool bath, and laundry.
-  - **Wellness + Gym Wing** (south, on the pool): exercise room (storage wall + rig), sauna, hammam, wet room with a cold plunge, and changing room.
-  - **Studio + Arrival** (west): the entry genkan, powder room, tatami room, and the office / music loft.
+  - **Living Pavilion** (north, facing the mountains): kitchen with a marble island, walk-in pantry, dining, and flat-floor living under a butterfly roof.
+  - **Sleeping Wing** (east): the master suite with a hinoki soaking tub, two grow-into-teen kids' rooms (kids only) with bunk/play lofts and small walk-in closets, a two-sink Jack-and-Jill bath, one kids' entry with lockers, a shared study nook, laundry and linen/mechanical.
+  - **Wellness + Gym Wing** (south, on the pool): enlarged exercise room (storage wall + rig), sauna, steam room, enlarged wet room with a cold plunge and recovery corner, and changing room with pool access.
+  - **Studio + Arrival** (west): the entry genkan, a full guest suite (bedroom, bath, closet) off the genkan, powder room, tea + reading room (tatami, takes a guest futon), and the enlarged isolated studio / office behind a sound lock.
 - Outdoors: an open-air **Climbing Pavilion** (18' × 18', 324 SF covered, not conditioned) with a kids' bouldering wall over soft-fall, next to the gym, sprint lane and a second bike rack; a 34' × 12' pool, a 20-yard turf sprint lane, an outdoor shower, a vegetable garden, bike racks, pergola dining, a sunken fire pit, and a carport.
 
 ## The App

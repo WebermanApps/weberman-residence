@@ -46,7 +46,7 @@ WALLS = P['walls']
 def wall_xy(w):
     return ((w['a'], w['c']), (w['b'], w['c'])) if w['o'] == 'h' else ((w['c'], w['a']), (w['c'], w['b']))
 def wall_rooms(w): return [q for q in (w['pos'], w['neg']) if q]
-WET = {'101', '104', '105', '202', '205', '206', '208', '210', '211', '303', '304', '305', '306', '403'}
+WET = {'101', '104', '105', '202', '205', '206', '208', '409', '211', '303', '304', '305', '306', '403'}
 
 # ================= STRUCTURE (RC frame, typical Thai practice) =================
 TOP_BEAM_D = 400 / 304.8
@@ -163,7 +163,7 @@ for w in WALLS:
         rooms=wall_rooms(w), plan=[x0, y0, x1, y1], t=t, ext=w['ext'])
     for f in feats:
         s0, s1 = heights(f, w['h']); nm, sysn = OPEN[f['k']]
-        if f['k'] == 'door' and set(wall_rooms(w)) & {'202', '208', '210', '403', '205', '206', '211', '304', '305', '303'}: nm = 'Solid Cherry Pocket Door'
+        if f['k'] == 'door' and set(wall_rooms(w)) & {'202', '208', '409', '403', '205', '206', '211', '304', '305', '303'}: nm = 'Solid Cherry Pocket Door'
         if f['k'] == 'door' and '404' in wall_rooms(w): nm = 'Shoji + Fusuma Sliding Panels'
         if f['k'] == 'door' and set(wall_rooms(w)) & {'304', '305'}: nm = 'Tempered Glass Sauna/Steam Door'
         if f['k'] == 'door' and '407' in wall_rooms(w): nm = 'Acoustic Door Pair (STC 50+, Sound Lock)'
@@ -221,7 +221,7 @@ for r in P['roofs']:
 
 # ================= ELECTRICAL =================
 PANELS = {
-    'MDB': dict(x=97.3, y=51.0, room='206', name='Main Distribution Board MDB', size='3-phase 400/230 V, 125 A, 36-way, RCBO protected'),
+    'MDB': dict(x=101.0, y=57.5, room='206', name='Main Distribution Board MDB', size='3-phase 400/230 V, 125 A, 36-way, RCBO protected'),
     'SDB-W': dict(x=71.4, y=15.0, room='306', name='Sub-Board SDB-W (Wellness)', size='3-phase, 63 A, 18-way'),
     'SDB-S': dict(x=26.6, y=1.0, room='407', name='Sub-Board SDB-S (Studio, Isolated Ground)', size='1-phase, 40 A, 12-way'),
     'ATS': dict(x=126.0, y=4.3, room=None, name='Utility Yard: PEA Meter + ATS + Hybrid Inverter', size='3-phase 400 V meter (PEA), 125 A ATS; 20 kW hybrid inverter + 30 kWh LFP (see E-102)'),
@@ -290,12 +290,12 @@ DED = [  # panel, desc, load, breaker, x, y, z, room
     ('MDB', 'Built-In Stainless Refrigerator', '0.6 kW', '16 A', 21.5, 66, 1, '101'), ('MDB', 'Dishwasher (Left of Sink)', '1.8 kW', '16 A', 25.5, 77.3, 1, '101'),
     ('MDB', 'Hidden Hood Inline Blower 1,500 m³/h + Make-Up Air Fan', '0.8 kW', '16 A', 25, 56.3, 9, '101'), ('MDB', 'Flush Induction 2-Zone (Work Island)', '3.7 kW', '20 A', 27.5, 62, 2.5, '101'),
     ('MDB', 'Appliance Garage Counter Outlets (2 x Duplex, GFCI)', '1.8 kW', '16 A RCBO', 21.5, 63.4, 3.6, '101'), ('MDB', 'Island Pop-Up Outlets (Waterfall Island, GFCI)', '1.8 kW', '16 A RCBO', 28, 69, 2.9, '101'),
-    ('MDB', 'Washer', '2.2 kW', '16 A', 80, 57.5, 3, '205'),
-    ('MDB', 'Heat-Pump Dryer', '1.0 kW', '16 A', 82, 57.5, 3, '205'), ('MDB', 'Heat-Pump Water Heater HWH-1', '1.5 kW', '16 A', 90, 57, 4, '206'),
+    ('MDB', 'Washer', '2.2 kW', '16 A', 80, 22, 3, '205'),
+    ('MDB', 'Heat-Pump Dryer', '1.0 kW', '16 A', 82, 22, 3, '205'), ('MDB', 'Heat-Pump Water Heater HWH-1', '1.5 kW', '16 A', 90, 57, 4, '206'),
     ('MDB', 'ERV-1 + Air Handler', '0.4 kW', '10 A', 95.8, 56.8, 6, '206'), ('MDB', 'Pool Pump + Salt Cell', '1.5 kW', '16 A', 93, 16.5, 3, '211'),
     ('MDB', 'Water Treatment Booster Pump', '1.1 kW', '16 A', 128, 18, 3, None), ('MDB', 'Well Pump (Submersible)', '1.5 kW', '16 A', 140, 95, 1, None),
     ('MDB', 'EV Charger (Carport)', '7.4 kW', '32 A 2P', -43.5, 42, 4, None), ('MDB', 'Outdoor Unit CU-1', '9.0 kW', '3P 25 A', 119, 1, 2, None),
-    ('MDB', 'Outdoor Unit CU-2', '9.0 kW', '3P 25 A', 119, 5, 2, None), ('MDB', 'Kids\' Bath Exhaust + Towel Warmer', '0.2 kW', '10 A', 81, 38, 8, '208'),
+    ('MDB', 'Outdoor Unit CU-2', '9.0 kW', '3P 25 A', 119, 5, 2, None), ('MDB', 'Kids\' Bath Exhaust + Towel Warmer', '0.2 kW', '10 A', 92, 40, 8, '208'),
     ('SDB-W', 'Sauna Heater 9 kW', '9.0 kW', '3P 16 A', 56.9, 1.5, 2, '304'), ('SDB-W', 'Steam Generator 9 kW', '9.0 kW', '3P 16 A', 70.8, 14, 2, '306'),
     ('SDB-W', 'Cold Plunge Chiller', '1.2 kW', '16 A', 64.5, 22.3, 1, '303'), ('SDB-W', 'Exercise Room Equipment', '2.0 kW', '16 A', 40, 1, 1, '302'),
     ('SDB-W', 'Wellness Exhaust Fans', '0.3 kW', '10 A', 60, 12, 9, '303'),
@@ -317,7 +317,7 @@ for rid in ['101', '102', '103', '201', '207', '209', '404', '407', '302', '401'
     r = ROOMS[rid]; x, y = (r['x0'] + r['x1']) / 2, r['y0'] + 0.3
     add('elec', 'data', 'Data Outlet (2 x Cat6A)', 'Cat6A to rack', 'Low Voltage + Data', [B(x - .15, y - .1, 1.0, x + .15, y + .1, 1.4)], room=rid, tag='D', pos=[x, y])
     add('elec', 'lvrun', f"Data Home Run {rid}", 'Cat6A in 25 mm conduit', 'Low Voltage + Data', [PIPE([(x, y, 9.6), (x, RACK[1], 9.6), (RACK[0], RACK[1], 9.6)], 0.05)], pts=[[x, y], [x, RACK[1]], list(RACK)])
-for x, y, rid in [(60, 67, '103'), (28, 60, '101'), (85, 71, '201'), (90, 36.5, '207'), (75, 40, '204'), (40, 11, '302'), (16, 11, '407'), (24, 49, '401'), (60, 30, None), (110, 10, None)]:
+for x, y, rid in [(60, 67, '103'), (28, 60, '101'), (85, 71, '201'), (97, 49.5, '207'), (75, 40, '204'), (40, 11, '302'), (16, 11, '407'), (24, 49, '401'), (60, 30, None), (110, 10, None)]:
     add('elec', 'ap', 'Wi-Fi 7 Access Point (PoE)' if rid else 'Outdoor Wi-Fi AP / Camera (PoE)', 'Ceiling / eave mount', 'Low Voltage + Data', [CYL(x, y, 0.4, (ceiling(ROOMS[rid]) - 0.15) if rid else 8.5, (ceiling(ROOMS[rid])) if rid else 8.7)], room=rid, tag='AP', pos=[x, y])
 
 # ================= PLUMBING =================
@@ -339,7 +339,7 @@ for f in P['furn']:
 for nm, k, rid in [('Outdoor Shower', 'outdoor_shower', None), ('Courtyard Shower', 'cshower', None)]:
     q = S[k]; fixture(nm, (q['x0'] + q['x1']) / 2, (q['y0'] + q['y1']) / 2, rid, dfu=2, size='Cold + hot, to rain garden', vent=False)
 fixture('Steam Generator Feed', 70.8, 14, '306', hot=False, dfu=1, size='15 mm cold + drain')
-fixture('Utility Sink', 91, 52, '206', dfu=2, size='40 mm drain')
+fixture('Utility Sink', 93, 57.5, '206', dfu=2, size='40 mm drain')
 # supply trunk ring (ceiling, recirculating hot loop)
 RING = [(93, 52), (75, 52), (75, 57.5), (13, 57.5), (13, 57.5)]
 RING_S = [(75, 52), (75, 24.5), (33, 24.5), (33, 57.5)]
@@ -363,7 +363,7 @@ for tr in TRUNKS:
     add('plumb', 'main', 'Cold Water Trunk', '25 mm PPR PN20', 'Domestic Cold Water', [PIPE([(x, y, ZS) for x, y in tr], 0.09)], tag='CW', pts=[list(p) for p in tr])
     add('plumb', 'main', 'Hot Water Trunk + Recirculation Loop', '25 mm PPR PN20 insulated, recirc pump RP-1', 'Domestic Hot Water', [PIPE([(x + .5, y + .5, ZS + .3) for x, y in tr], 0.09)], tag='HW', pts=[[x + .5, y + .5] for x, y in tr])
 add('plumb', 'equip', 'Heat-Pump Water Heater HWH-1', '300 L, 1.5 kW heat pump with 3 kW backup element', 'Domestic Hot Water', [CYL(90, 57, 1.1, 0, 6)], room='206', tag='HWH-1', pos=[90, 57])
-add('plumb', 'equip', 'Recirculation Pump RP-1 + Manifold', 'Timer + thermostat control, 15 mm', 'Domestic Hot Water', [B(91.5, 51.5, 3, 93.5, 52.5, 5)], room='206', tag='RP-1', pos=[92.5, 52])
+add('plumb', 'equip', 'Recirculation Pump RP-1 + Manifold', 'Timer + thermostat control, 15 mm', 'Domestic Hot Water', [B(91.5, 56.5, 3, 93.5, 58.5, 5)], room='206', tag='RP-1', pos=[92.5, 57.5])
 for e in FIX:
     x, y = e['pos']
     add('plumb', 'branch', f"Cold Branch to {e['type']}", '20 mm PPR', 'Domestic Cold Water', [PIPE(lroute((x, y), ZS), 0.06)], room=e.get('room'), pts=[p[:2] for p in lroute((x, y), ZS)][:3])
@@ -437,7 +437,7 @@ add('plumb', 'poolpipe', 'Backwash to Saltwater Soakaway (Not to Septic)', '50 m
 # ================= HVAC =================
 CU = {'CU-1': (119, 1), 'CU-2': (119, 5), 'CU-3': (119, 9)}
 STD = [9000, 12000, 18000, 24000, 30000, 36000]
-NOAC = {'104', '105', '202', '203', '205', '206', '208', '210', '211', '212', '213', '303', '304', '305', '306', '402', '403', '301'}
+NOAC = {'104', '105', '202', '203', '205', '206', '208', '409', '410', '411', '214', '215', '211', '212', '213', '303', '304', '305', '306', '402', '403', '301'}
 CUload = {k: 0 for k in CU}
 def cu_for(r):
     if r['id'] == '407': return 'CU-3'
@@ -475,9 +475,9 @@ for k, (x, y) in CU.items():
     cap = CUload[k]
     add('hvac', 'outdoor', f"Outdoor Heat-Pump Unit {k}", f"{cap:,} BTU/h connected ({cap/3412:.1f} kW), inverter VRF/multi-split", f"Multi-Split / VRF {k}", [B(x - 1.6, y - 1.4, 0.3, x + 1.6, y + 1.4, 4.2)], tag=k, pos=[x, y])
 # ERV + exhaust
-add('hvac', 'erv', 'Energy Recovery Ventilator ERV-1', '350 m³/h, enthalpy core, MERV 13 + PM2.5 filter', 'Ventilation (ERV)', [B(94, 55, 6.5, 97.6, 58.6, 8.5)], room='206', tag='ERV-1', pos=[95.8, 56.8])
+add('hvac', 'erv', 'Energy Recovery Ventilator ERV-1', '350 m³/h, enthalpy core, MERV 13 + PM2.5 filter', 'Ventilation (ERV)', [B(94, 56.2, 6.5, 97.6, 58.8, 8.5)], room='206', tag='ERV-1', pos=[95.8, 56.8])
 add('hvac', 'erv', 'Energy Recovery Ventilator ERV-2 (Studio)', '120 m³/h, acoustic-lined ducts', 'Ventilation (ERV)', [B(5, 18.5, 11, 9, 21, 12.5)], room='407', tag='ERV-2', pos=[7, 19.7])
-SUP = ['201', '207', '209', '103', '102', '404', '302', '401']
+SUP = ['201', '207', '209', '103', '102', '404', '302', '401', '408']
 for rid in SUP:
     r = ROOMS[rid]; x, y = (r['x0'] + r['x1']) / 2 + 2, (r['y0'] + r['y1']) / 2 + 2; zd = 9.8
     if y > 24.5 and x < 75: rt = [(95.8, 56.8, zd), (75.8, 56.8, zd), (75.8, 57.0 if y >= 55 else 25, zd), (x, 57.0 if y >= 55 else 25, zd), (x, y, zd)]
