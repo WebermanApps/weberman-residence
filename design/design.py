@@ -212,8 +212,9 @@ def segments():
 WALLS = segments()
 
 # Exterior material per room (cladding)
-CLAD = {"Living Pavilion":"whiteplaster","Sleeping Wing":"charred","Wellness + Gym Wing":"charred","Studio + Arrival":"whiteplaster"}
-CLAD_OVR = {"401":"rammed"}
+CLAD = {"Living Pavilion":"whiteplaster","Sleeping Wing":"whiteplaster","Wellness + Gym Wing":"whiteplaster","Studio + Arrival":"whiteplaster"}
+# Nov 3 exterior deck: white smooth plaster body; teak at the entry; yakisugi (charred cedar) vertical-board feature panels
+CLAD_OVR = {"401":"teak","211":"charred","205":"charred","306":"charred"}
 
 # Furniture & equipment: (room, label, x0,y0,x1,y1, h, z0, color, shape)
 C = dict(oak="#c39a6b",walnut="#6b4a33",marble="#ece8e1",linen="#e6dfd2",olive="#6f7a55",terra="#b0684a",
@@ -444,7 +445,7 @@ COVERED = [dict(id="C1",name="Climbing Pavilion",x0=-22,y0=0,x1=-4,y1=18,w=18,d=
   notes="Open-air timber pavilion with a standing-seam roof and 5-ft eaves, matching the house. 16-ft-wide, 12-ft-high kids' bouldering wall on the north side facing the sprint lane, over a 12-inch poured-rubber soft-fall surface. Sits in the active zone with the gym, sprint lane and a second bike rack.")]
 
 OUTDOOR_FIN = [
- ("Exterior","Flagstone terraces","Split by zone: white lime-plaster panels with black timber trim on the Living Pavilion and Studio + Arrival wings (entry and view faces); charred-timber (shou sugi ban) siding on the Sleeping and Wellness wings; bronze window and door frames; bronze front door (style + timber: open item); koshi street lattice on the entry face; standing-seam metal roofs; rammed-earth entry wall; exterior wall light: open item"),
+ ("Exterior","Pale limestone plinth with a dark basalt kick at grade","Nov 3 Exterior Finishes deck + direction: white smooth plaster body (tropical-grade breathable mineral render, sealed, under 6-8 ft eaves); yakisugi charred-cedar feature panels (vertical boards) at service and wellness ends; oiled-honey natural teak at the entry, the engawa decks, soffits and slatted engawa screens; copper trims: thin copper fascia + roof edge, copper gutters + rain chain, copper window and door trim, copper-clad entry; standing-seam roof"),
  ("Engawa + courtyard","Western red cedar engawa deck with a bluestone step; slate paving with bluestone paths; lawn; raked gravel","Timber engawa on the north, east and west edges under the eaves; recessed step lights in the bluestone step + string lights under the eave; two teak loungers on the east engawa; big shade tree; Japanese maples; planted water court; stone lanterns + mushroom path lights in the planting; stone water basin; curved teak bench; courtyard table: open item; courtyard shower"),
  ("Saltwater pool + bale","Basalt deck with flamed-granite coping (both sealed, salt-resistant)","Saltwater pool with salt chlorine generator (cell replaced about every 3-5 years); marine-grade 316 stainless fittings, ladders and drains; green stone pool tile; teak loungers with linen; bale pavilion with walnut platform and standing-seam roof"),
  ("Landscape","Meadow, gravel","Wildflower meadow; vegetable garden in western red cedar beds; fruit trees; round stone fire pit; front garden beds; cedar pergola with teak table"),

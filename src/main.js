@@ -94,6 +94,10 @@ const VIEWS = {
   kitchen: { name: 'Kitchen', cam: [30, 43, 27], tgt: [39, 70, 0], roof: false, cut: 8, title: 'Kitchen + living.', kicker: 'ROOMS 101-103 · QUARTZITE ISLANDS, FLAT-FLOOR LIVING', fov: 50 },
   gym: { name: 'Gym', cam: [52, -12, 24], tgt: [38, 11, 2], roof: false, cut: 8, title: 'Exercise room.', kicker: 'ROOM 302 · GYM-FORWARD: WEIGHTS, CARDIO, OPEN MATS', fov: 50 },
   kids: { name: 'Kids', cam: [112, 20, 38], tgt: [94, 40, 0], roof: false, cut: 8, title: 'Kids\' rooms.', kicker: 'ROOMS 207-215 · GROW-INTO-TEEN ROOMS, BUNK/PLAY LOFTS, WALK-INS, STUDY NOOK', fov: 52 },
+  entry: { name: 'Entry', cam: [-18, 31, 6], tgt: [17, 51, 6.5], roof: true, title: 'Arrival + entry.', kicker: 'EXTERIOR · WHITE PLASTER, TEAK ENTRY, COPPER TRIM', fov: 55 },
+  exterior: { name: 'Exterior', cam: [118, -52, 26], tgt: [60, 25, 6], roof: true, title: 'From the pool.', kicker: 'EXTERIOR · WHITE PLASTER, YAKISUGI PANELS, TEAK SOFFITS, COPPER EDGES', fov: 50 },
+  aerialroof: { name: 'Aerial (roof)', cam: [-40, -110, 80], tgt: [50, 45, 5], roof: true, fov: 50, title: 'The whole house.', kicker: 'EXTERIOR · ROOF ON' },
+  engawa: { name: 'Engawa', cam: [44, 33, 5.5], tgt: [74, 46, 5], roof: true, title: 'Engawa + courtyard.', kicker: 'TEAK ENGAWA, SLATTED SCREENS', fov: 60 },
   tatami: { name: 'Tatami', cam: [37, 22, 22], tgt: [24, 34, 2], roof: false, cut: 8, title: 'Tea + reading room.', kicker: 'ROOM 404 · TATAMI, SHOJI, WARM EARTH PLASTER', fov: 50 },
   master: { name: 'Master', cam: [124, 33, 64], tgt: [86, 71, 0], roof: false, cut: 8, title: 'Master suite.', kicker: 'ROOMS 201-203 · ROOF HIDDEN' },
 };

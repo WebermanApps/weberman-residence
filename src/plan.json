@@ -118,7 +118,7 @@
    "h": 12,
    "floor": "bigtile",
    "cond": true,
-   "notes": "The heart of the house, fully open to the garden: 21 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. Flat floor with a low modular sofa group, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
+   "notes": "The heart of the house, fully open to the garden: 21 ft of pocketing glass to the courtyard and a big fixed mountain-view window to the north. Flat floor (the sunken conversation pit was dropped, Oct 20 deck) with a low modular sofa group, cognac leather lounge chair, paper lanterns, shoji screens to the dining room, and art on the east wall. A slim linear gas fire sits in a lime-plaster plinth (no stone fireplace).",
    "fin": "Continuous large-format pale near-white stone-look tile (120x120 / 60x120 cm, thin tight joints); smooth white painted walls; warm pale plaster fireplace wall (accent); warm oak beam canopy; low linen sofa group (flat floor); classic leather lounger; paper lanterns over the seating + woven pendants by the north window; shoji screens; frameless corner glass at the courtyard corner; bronze frames elsewhere; art wall",
    "floorName": "Large-format pale near-white stone-look tile, 120x120 / 60x120 cm, thin tight joints (one continuous floor: kitchen, dining, living)",
    "w": 22,
@@ -5035,12 +5035,15 @@
  },
  "clad": {
   "Living Pavilion": "whiteplaster",
-  "Sleeping Wing": "charred",
-  "Wellness + Gym Wing": "charred",
+  "Sleeping Wing": "whiteplaster",
+  "Wellness + Gym Wing": "whiteplaster",
   "Studio + Arrival": "whiteplaster"
  },
  "cladOvr": {
-  "401": "rammed"
+  "401": "teak",
+  "211": "charred",
+  "205": "charred",
+  "306": "charred"
  },
  "total": 6334,
  "courtyard": {

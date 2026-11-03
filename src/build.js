@@ -24,7 +24,7 @@ export function makeMaterials() {
   M.rammed = std({ map: T.rammed, normalMap: T.rammedN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.95 });
   M.stone = std({ map: T.stone, roughness: 0.8, color: 0xf8f0e0 }); // honed limestone
   M.flag = std({ map: T.flag, normalMap: T.flagN, roughness: 0.88 });
-  M.plinth = std({ map: T.plinth, roughness: 0.9 });
+  M.plinth = std({ map: T.stone, roughness: 0.85, color: 0xf3ecdf }); // pale limestone plinth
   M.oak = std({ map: T.oak, roughness: 0.6 });
   M.honey = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.48, color: 0x8a5d40 }); // walnut (Round 2: walnut replaces oak)
   M.cherry = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.45, color: 0xd08a62 });
@@ -36,7 +36,7 @@ export function makeMaterials() {
   M.slate = std({ map: T.flag, normalMap: T.flagN, roughness: 0.85, color: 0x77818a });
   M.soapstone = std({ map: T.marble, roughness: 0.6, color: 0x7f8a85 });
   M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xd9b88f }); // warm natural earth/clay plaster (tatami)
-  M.whiteplaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.94, color: 0xffffff });
+  M.whiteplaster = std({ normalMap: T.limeN, normalScale: new THREE.Vector2(0.08, 0.08), roughness: 0.88, color: 0xf8f6f1 }); // white smooth plaster body
   M.bronze = std({ color: 0x4e3d2c, roughness: 0.4, metalness: 0.65 });
   M.blackstone = std({ map: T.blackstone, normalMap: T.blackstoneN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.42 });
   M.marble = std({ map: T.marble, roughness: 0.18 });
@@ -49,7 +49,7 @@ export function makeMaterials() {
   M.lacq = std({ color: 0xf4f2ed, roughness: 0.32 });
   M.steel = std({ color: 0xb8bcbe, roughness: 0.3, metalness: 0.85 });
   M.deck = std({ map: T.deck, roughness: 0.8 });
-  M.soffit = std({ map: T.soffit, roughness: 0.75 });
+  M.soffit = std({ map: T.soffit, roughness: 0.7, color: 0xe8b47c }); // teak soffits
   M.tatami = std({ map: T.tatami, normalMap: T.tatamiN, roughness: 0.9 });
   M.rubber = std({ map: T.rubber, roughness: 0.95 });
   M.seam = std({ map: T.seam, normalMap: T.seamN, roughness: 0.42, metalness: 0.35, color: 0xe6e6e6 });
@@ -72,11 +72,12 @@ export function makeMaterials() {
   M.white = std({ color: 0xf1eee7, roughness: 0.6 });
   M.dark = std({ color: 0x2c2a27, roughness: 0.7 });
   M.fir = std({ color: 0xc89a66, roughness: 0.7 });
-  M.teak = std({ color: 0x9c6a3c, roughness: 0.6 });
+  M.teak = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.4, 0.4), color: 0xd8a066, roughness: 0.55 }); // oiled honey teak
+  M.copper = std({ color: 0xb8734a, roughness: 0.35, metalness: 0.85 }); // copper trim
   M.highlight = new THREE.MeshBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.28, depthWrite: false });
   // clipped twins for everything inside the building (section cuts)
   M.c = {};
-  for (const k of ['drywall', 'warmplaster', 'clay', 'hinoki', 'sage', 'paver', 'bigtile', 'cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
+  for (const k of ['drywall', 'warmplaster', 'clay', 'hinoki', 'sage', 'paver', 'bigtile', 'copper', 'cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
     const m = M[k].clone(); m.name = M[k].name; m.clippingPlanes = clip; m.clipShadows = true; M.c[k] = m;
   }
   M.T = T;
@@ -151,7 +152,7 @@ function buildRoofs(M) {
     if (r.type === 'shed') { // low-slung mono-pitch standing seam with deep eaves (+ skylight openings)
       const sh = (px, py) => shedH(r, px, py) - (r.axis === 'x' ? r.h0 + (r.h1 - r.h0) * ((r.x0 + r.x1) / 2 - r.x0) / (r.x1 - r.x0) : r.h0 + (r.h1 - r.h0) * ((r.y0 + r.y1) / 2 - r.y0) / (r.y1 - r.y0));
       const hm = shedH(r, (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2);
-      const fm = [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred];
+      const fm = [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam];
       let rects = [[x0, y0, x1, y1]];
       for (const [hx0, hy0, hx1, hy1] of (r.holes || [])) {
         rects = [[x0, y0, x1, hy0], [x0, hy1, x1, y1], [x0, hy0, hx0, hy1], [hx1, hy0, x1, hy1]];
@@ -160,12 +161,12 @@ function buildRoofs(M) {
         addBox('roof', M.glass, hx0, hy0, hx1, hy1, zt + 0.7, zt + 0.78);
       }
       for (const [a, b2, c2, d2] of rects) addBox('roof', fm, a, b2, c2, d2, hm - 0.6, hm + 0.4, sh);
-      addBox('roof', M.dark, x0 - 0.05, y0 - 0.05, x1 + 0.05, y1 + 0.05, hm + 0.35, hm + 0.45, sh);
+      addBox('roof', M.seam, x0, y0, x1, y1, hm + 0.35, hm + 0.45, sh); for (const [a1, b1, c1, d1] of [[x0 - 0.08, y0 - 0.08, x1 + 0.08, y0 + 0.12], [x0 - 0.08, y1 - 0.12, x1 + 0.08, y1 + 0.08], [x0 - 0.08, y0, x0 + 0.12, y1], [x1 - 0.12, y0, x1 + 0.08, y1]]) addBox('roof', M.copper, a1, b1, c1, d1, hm - 0.7, hm + 0.5, sh); // copper fascia + roof edge
     } else if (r.type === 'flat') {
       const z0 = r.h - 0.6, z1 = r.h + 0.4;
-      addBox('roof', [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred], x0, y0, x1, y1, z0, z1);
+      addBox('roof', [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam], x0, y0, x1, y1, z0, z1);
       // thin fascia reveal line
-      addBox('roof', M.dark, x0 - 0.05, y0 - 0.05, x1 + 0.05, y1 + 0.05, z1 - 0.05, z1 + 0.05);
+      addBox('roof', M.seam, x0, y0, x1, y1, z1 - 0.05, z1 + 0.05); for (const [a1, b1, c1, d1] of [[x0 - 0.08, y0 - 0.08, x1 + 0.08, y0 + 0.12], [x0 - 0.08, y1 - 0.12, x1 + 0.08, y1 + 0.08], [x0 - 0.08, y0, x0 + 0.12, y1], [x1 - 0.12, y0, x1 + 0.08, y1]]) addBox('roof', M.copper, a1, b1, c1, d1, z0 - 0.1, z1 + 0.1);
     } else {
       const th = 0.9; const xw = x1 - x0, cx = (x0 + x1) / 2 - CX;
       const slab = (ya, ha, yb, hb, mats, wOverride, xc, drop = 0) => { // ya<yb plan
@@ -176,7 +177,7 @@ function buildRoofs(M) {
         const ni = g.toNonIndexed();
         mats.forEach((m, f) => { const part = new THREE.BufferGeometry(); for (const a of ['position', 'normal', 'uv']) { const src = ni.attributes[a]; part.setAttribute(a, new THREE.BufferAttribute(src.array.slice(f * 6 * src.itemSize, (f + 1) * 6 * src.itemSize), src.itemSize)); } B.add('roof', m, part); });
       };
-      const fm = [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred];
+      const fm = [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam];
       slab(y0, r.he, r.valley, r.hv, fm);
       slab(r.valley, r.hv, y1, r.he, fm);
       // exposed fir beams under the butterfly (inside, every 8 ft)
@@ -186,7 +187,7 @@ function buildRoofs(M) {
         slab(r.valley, r.hv, r.y1, roofUnder(bx, r.y1), bm, 0.55, bx - CX, 1.1);
       }
       // valley gutter + rain chain into courtyard
-      addBox('roof', M.frame, x0, r.valley - 0.4, x1, r.valley + 0.4, r.hv + 0.6, r.hv + 0.95);
+      addBox('roof', M.copper, x0, r.valley - 0.4, x1, r.valley + 0.4, r.hv + 0.6, r.hv + 0.95);
     }
   }
 }
@@ -250,12 +251,12 @@ function glassPanel(M, s, a, b, zb, zt, slider) {
     if (s.o === 'h') addBox(layer, mat, A, s.c + o1, Bv, s.c + o2, za, zz); else addBox(layer, mat, s.c + o1, A, s.c + o2, Bv, za, zz);
   };
   box(a, b, zb, zt, -t / 2, t / 2, M.c.glass, 'glass');
-  box(a, b, zb, zb + 0.25, -0.18, 0.18, M.c.bronze, 'walls');
-  box(a, b, zt - 0.3, zt, -0.18, 0.18, M.c.bronze, 'walls');
+  box(a, b, zb, zb + 0.25, -0.18, 0.18, M.c.copper, 'walls');
+  box(a, b, zt - 0.3, zt, -0.18, 0.18, M.c.copper, 'walls');
   const fl = (P.frameless || []).some(([o, c, fa, fb]) => o === s.o && Math.abs(c - s.c) < 0.01 && a < fb && b > fa);
   if (fl) return void blocking.push({ s, a, b }); // frameless corner glass: no mullions, no corner post
   const n = Math.max(1, Math.round((b - a) / (slider ? 5.5 : 8)));
-  for (let i = 0; i <= n; i++) { const p = a + (b - a) * i / n; box(p - 0.09, p + 0.09, zb, zt, -0.15, 0.15, M.c.bronze, 'walls'); }
+  for (let i = 0; i <= n; i++) { const p = a + (b - a) * i / n; box(p - 0.09, p + 0.09, zb, zt, -0.15, 0.15, M.c.copper, 'walls'); }
   blocking.push({ s, a, b });
 }
 function buildWalls(M) {
@@ -269,7 +270,7 @@ function buildWalls(M) {
         if (top > dh + 0.05) wallSolid(M, s, p.a, p.b, dh, null);
         if (p.k === 'front') { // charred-oak pivot door, slightly open
           const L = p.b - p.a; const g = boxGeo(L * 0.62, dh - 0.05, 0.22); g.translate(L * 0.31, dh / 2, 0);
-          g.rotateY(-0.55); const [hx, hy] = pt(s, p.a + L * 0.19); g.translate(hx - CX, 0, -(hy - CY)); B.add('walls', M.c.bronze, g);
+          g.rotateY(-0.55); const [hx, hy] = pt(s, p.a + L * 0.19); g.translate(hx - CX, 0, -(hy - CY)); B.add('walls', M.c.teak, g);
         }
         const SHOJI = ['201', '203', '207', '209', '212', '213', '404'];
         if ((p.k === 'door' || p.k === 'slide') && (SHOJI.includes(s.pos) || SHOJI.includes(s.neg)) && !['405', '407'].includes(s.pos) && !['405', '407'].includes(s.neg)) {
@@ -467,7 +468,7 @@ function buildSite(M, groups) {
   const c = P.courtyard; const FL = [M.plinth, M.plinth, M.flag, M.plinth, M.plinth, M.plinth];
   addBox('site', [M.plinth, M.plinth, M.paver, M.plinth, M.plinth, M.plinth], c.x0, c.y0, c.x1, c.y1, G, -0.3); // pale stone pavers
   { // timber engawa (western red cedar) with a bluestone step, on the north, west and east edges under the eaves
-    const DK = [M.cedar, M.cedar, M.cedar, M.cedar, M.cedar, M.cedar], BS = [M.granite, M.granite, M.granite, M.granite, M.granite, M.granite]; // hard stone band at the engawa edge
+    const DK = [M.teak, M.teak, M.teak, M.teak, M.teak, M.teak], BS = [M.granite, M.granite, M.granite, M.granite, M.granite, M.granite]; // hard stone band at the engawa edge
     addBox('site', DK, c.x0, c.y1 - 4.5, c.x1, c.y1, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y1 - 5.8, c.x1 - 4.5, c.y1 - 4.5, -0.3, -0.18);
     addBox('site', DK, c.x0, c.y0 + 0.2, c.x0 + 4.5, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y0 + 5.5, c.x0 + 5.8, c.y1 - 5.8, -0.3, -0.18);
     addBox('site', DK, c.x1 - 4.5, c.y0 + 5, c.x1, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x1 - 5.8, c.y0 + 5.5, c.x1 - 4.5, c.y1 - 5.8, -0.3, -0.18);
@@ -529,7 +530,7 @@ function buildSite(M, groups) {
   { const ba = S.bale; addBox('site', M.c.honey, ba.x0, ba.y0, ba.x1, ba.y1, -1.0, 0.4); addBox('site', M.c.linen, ba.x0 + 0.4, ba.y0 + 0.4, ba.x1 - 0.4, ba.y1 - 0.4, 0.4, 0.9);
     [[ba.x0 + 1, ba.y0 + 2], [ba.x1 - 2, ba.y0 + 2], [ba.x0 + 1.5, ba.y1 - 1.5]].forEach(([x, y], i) => addBox('site', colorMat(['#a7b39a', '#e2c894', '#c98f6a'][i]), x, y, x + 1.2, y + 1.2, 0.9, 1.5));
     [[ba.x0, ba.y0], [ba.x1 - 0.5, ba.y0], [ba.x0, ba.y1 - 0.5], [ba.x1 - 0.5, ba.y1 - 0.5]].forEach(([x, y]) => addBox('site', M.c.fir, x, y, x + 0.5, y + 0.5, 0.4, ba.h));
-    addBox('site', [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred], ba.x0 - 3, ba.y0 - 3, ba.x1 + 3, ba.y1 + 3, ba.h, ba.h + 0.6, (px, py) => (py - (ba.y0 + ba.y1) / 2) * 0.12); }
+    addBox('site', [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam], ba.x0 - 3, ba.y0 - 3, ba.x1 + 3, ba.y1 + 3, ba.h, ba.h + 0.6, (px, py) => (py - (ba.y0 + ba.y1) / 2) * 0.12); }
   // loungers
   for (let i = 0; i < 3; i++) { addBox('site', M.c.teak, 60 + i * 7, -27, 62.5 + i * 7, -23.5, -1, -0.5); addBox('site', M.c.linen, 60.1 + i * 7, -26.9, 62.4 + i * 7, -23.6, -0.5, -0.25); }
   // outdoor shower w/ slat screen
@@ -573,8 +574,8 @@ function buildSite(M, groups) {
   { const sh = (px, py) => (px - (cp.x0 + cp.x1) / 2) * 0.06; addBox('site', [M.frame, M.frame, M.seam, M.frame, M.frame, M.frame], cp.x0 - 3, cp.y0 - 3, cp.x1 + 3, cp.y1 + 3, 9, 9.7, sh); }
   // cars (simple blocks)
   addBox('site', colorMat('#8d9399'), cp.x0 + 3, cp.y0 + 3, cp.x0 + 9.5, cp.y1 - 4, G, 3.6); addBox('site', colorMat('#5b6e5a'), cp.x0 + 13, cp.y0 + 3, cp.x0 + 19.5, cp.y1 - 4, G, 4.8);
-  // entry slat screen + low rammed earth wall
-  addBox('site', M.c.rammed, 1, 36, 2, 47, G, 4);
+  // entry slat screen + low white plaster garden wall
+  addBox('site', M.c.whiteplaster, 1, 36, 2, 47, G, 4);
   // front garden beds (grasses, low shrubs, a multi-stem tree)
   { const grass = new THREE.MeshStandardMaterial({ color: 0x9aa25a, roughness: 1 }), shrub = new THREE.MeshStandardMaterial({ color: 0x4f6e3c, roughness: 0.9 });
     S.frontgarden.forEach(([x0, y0, x1, y1], j) => { addBox('site', M.plinth, x0, y0, x1, y1, G, -1.0); addBox('site', colorMat('#4a3a2c'), x0 + 0.3, y0 + 0.3, x1 - 0.3, y1 - 0.3, -1.0, -0.95);
@@ -605,7 +606,7 @@ function buildSite(M, groups) {
     [[cl.x0, cl.y0], [cl.x1 - 0.7, cl.y0], [cl.x0, cl.y1 - 0.7], [cl.x1 - 0.7, cl.y1 - 0.7]].forEach(([x, y]) => addBox('site', M.c.fir, x, y, x + 0.7, y + 0.7, -0.6, cl.h - 1));
     addBox('site', M.c.fir, cl.x0 - 0.5, cl.y0, cl.x1 + 0.5, cl.y0 + 0.7, cl.h - 2, cl.h - 1); addBox('site', M.c.fir, cl.x0 - 0.5, cl.y1 - 0.7, cl.x1 + 0.5, cl.y1, cl.h - 2, cl.h - 1);
     for (let x = cl.x0 + 3; x < cl.x1 - 1; x += 3) addBox('site', M.c.fir, x, cl.y0 - o + 0.5, x + 0.35, cl.y1 + o - 0.5, cl.h - 1.0, cl.h - 0.6);
-    addBox('site', [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred], cl.x0 - o, cl.y0 - o, cl.x1 + o, cl.y1 + o, cl.h - 0.6, cl.h + 0.3, (px, py) => (py - (cl.y0 + cl.y1) / 2) * 0.07);
+    addBox('site', [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam], cl.x0 - o, cl.y0 - o, cl.x1 + o, cl.y1 + o, cl.h - 0.6, cl.h + 0.3, (px, py) => (py - (cl.y0 + cl.y1) / 2) * 0.07);
     // climbing wall on the north side, facing south, with holds and a volume
     addBox('site', M.c.charred, cl.x0 + 1, cl.y1 - 1.6, cl.x1 - 1, cl.y1 - 0.9, -0.6, cl.wall);
     addBox('site', M.c.fir, cl.x0 + 1.2, cl.y1 - 2.0, cl.x1 - 1.2, cl.y1 - 1.6, -0.4, cl.wall - 0.2);
@@ -629,7 +630,7 @@ function buildSite(M, groups) {
     addBox('site', M.c.charred, gx[0] + 0.3, u.y0 - 0.6, gx[0] + 5.8, u.y0 - 0.3, -0.6, sh - 0.6); addBox('site', M.c.charred, gx[1] - 5.8, u.y0 - 0.6, gx[1] - 0.3, u.y0 - 0.3, -0.6, sh - 0.6); // gate leaves (open)
     S.tanks.forEach(([x, y, r]) => { addCyl('site', colorMat('#5f6b5a'), x, y, r, -1.1, 8.5, 28); addCyl('site', colorMat('#4f5a4b'), x, y, r * 0.98, 8.5, 9.2, 28); });
     const wt = S.watertreat; addBox('site', M.concrete || M.stone, wt.x0, wt.y0, wt.x1, wt.y1, G, -0.6);
-    addBox('site', [M.charred, M.charred, M.seam, M.soffit, M.charred, M.charred], wt.x0 - 0.5, wt.y0 - 0.5, wt.x1 + 0.5, wt.y1 + 0.5, 8.4, 8.8);
+    addBox('site', [M.seam, M.seam, M.seam, M.soffit, M.seam, M.seam], wt.x0 - 0.5, wt.y0 - 0.5, wt.x1 + 0.5, wt.y1 + 0.5, 8.4, 8.8);
     addBox('site', M.c.charred, wt.x0, wt.y1 - 0.4, wt.x1, wt.y1, -0.6, 8.4); addBox('site', M.c.charred, wt.x1 - 0.4, wt.y0, wt.x1, wt.y1, -0.6, 8.4);
     [[wt.x0 + 0.8, 0.9, '#3f7fbf'], [wt.x0 + 2.3, 0.9, '#9aa0a3'], [wt.x0 + 3.8, 0.9, '#9aa0a3'], [wt.x0 + 5.3, 0.6, '#c9c2b4']].forEach(([x, r, c]) => addCyl('site', colorMat(c), x, wt.y1 - 1.6, r * 0.6, -0.6, 4.5, 14));
     addCyl('site', colorMat('#2f4f7a'), wt.x0 + 7.6, wt.y1 - 1.8, 0.9, -0.6, 4.8, 16); addBox('site', colorMat('#2a2a2a'), wt.x0 + 1, wt.y0 + 1.5, wt.x0 + 3.5, wt.y0 + 4, -0.6, 1.8); // softener + pressure pump
@@ -642,7 +643,7 @@ function buildSite(M, groups) {
     const wl = S.well; addCyl('site', colorMat('#7d7a70'), wl.cx, wl.cy, 1.6, G, 1.2, 16); addCyl('site', M.c.charred, wl.cx, wl.cy, 0.5, 1.2, 3.2, 10);
   }
   // koshi street lattice on the west (entry/street) face, in front of the tatami window
-  { for (let y = 28.6; y <= 45.4; y += 0.42) addBox('site', M.c.cedar, 17.1, y, 17.35, y + 0.16, -0.2, 8.2); addBox('site', M.c.cedar, 17.0, 28.4, 17.45, 45.6, 8.2, 8.5); addBox('site', M.c.cedar, 17.0, 28.4, 17.45, 45.6, -0.3, 0.0); }
+  { for (let y = 28.6; y <= 45.4; y += 0.42) addBox('site', M.c.teak, 17.1, y, 17.35, y + 0.16, -0.2, 8.2); addBox('site', M.c.copper, 17.0, 28.4, 17.45, 45.6, 8.2, 8.5); addBox('site', M.c.teak, 17.0, 28.4, 17.45, 45.6, -0.3, 0.0); }
   // bath garden wall
   const bg = S.bathgarden; addBox('site', M.c.charred, bg.x1 - 0.5, bg.y0, bg.x1, bg.y1, G, 7); addBox('site', M.c.charred, bg.x0, bg.y1 - 0.5, bg.x1, bg.y1, G, 7);
   addBox('site', M.gravel, bg.x0, bg.y0, bg.x1 - 0.5, bg.y1 - 0.5, G, -1.1);
