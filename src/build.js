@@ -19,7 +19,7 @@ export function makeMaterials() {
   M.drywall = std({ color: 0xf7f6f2, roughness: 0.9 }); // smooth finished white drywall/paint (default interior)
   M.clay = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.35, 0.35), roughness: 0.96, color: 0xf2e7d8 }); // calm pale clay plaster (gym)
   M.hinoki = std({ map: T.aspen, normalMap: T.aspenN, normalScale: new THREE.Vector2(0.3, 0.3), roughness: 0.7, color: 0xfff0d6 }); // pale hinoki
-  M.sage = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.2, color: 0xc4d6b4 }); // sage handmade tile
+  M.sage = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.3, color: 0xe3eedb }); // soft sage handmade tile
   M.charred = std({ map: T.charred, normalMap: T.charredN, roughness: 0.82 });
   M.rammed = std({ map: T.rammed, normalMap: T.rammedN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.95 });
   M.stone = std({ map: T.stone, roughness: 0.8, color: 0xf8f0e0 }); // honed limestone
@@ -40,7 +40,8 @@ export function makeMaterials() {
   M.bronze = std({ color: 0x4e3d2c, roughness: 0.4, metalness: 0.65 });
   M.blackstone = std({ map: T.blackstone, normalMap: T.blackstoneN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.42 });
   M.marble = std({ map: T.marble, roughness: 0.18 });
-  M.paver = std({ map: T.stone, roughness: 0.85, color: 0xefe9dd }); // pale stone pavers
+  M.paver = std({ map: T.stonetile, normalMap: T.stonetileN, roughness: 0.85, color: 0xfffcf5 });
+  M.bigtile = std({ map: T.stonetile, normalMap: T.stonetileN, normalScale: new THREE.Vector2(0.2, 0.2), roughness: 0.4, color: 0xffffff }); // large-format pale stone-look tile // pale stone pavers
   M.zellige = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.12, metalness: 0.05 });
   M.aspen = std({ map: T.aspen, normalMap: T.aspenN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.7 });
   M.pooltile = std({ map: T.pooltile, normalMap: T.pooltileN, roughness: 0.3 });
@@ -75,7 +76,7 @@ export function makeMaterials() {
   M.highlight = new THREE.MeshBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.28, depthWrite: false });
   // clipped twins for everything inside the building (section cuts)
   M.c = {};
-  for (const k of ['drywall', 'warmplaster', 'clay', 'hinoki', 'sage', 'paver', 'cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
+  for (const k of ['drywall', 'warmplaster', 'clay', 'hinoki', 'sage', 'paver', 'bigtile', 'cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
     const m = M[k].clone(); m.name = M[k].name; m.clippingPlanes = clip; m.clipShadows = true; M.c[k] = m;
   }
   M.T = T;
@@ -290,7 +291,7 @@ function buildWalls(M) {
 }
 
 // ---------- floors, rooms ----------
-const FLOOR = { oakplank: 'oak', sage: 'sage', hinoki: 'hinoki', oak: 'oak', honey: 'honey', herring: 'herring', stonetile: 'stonetile', blackstone: 'blackstone', aspen: 'aspen', stone: 'stone', tatami: 'tatami', rubber: 'rubber', cedar: 'cedar', concrete: 'concrete' };
+const FLOOR = { bigtile: 'bigtile', oakplank: 'oak', sage: 'sage', hinoki: 'hinoki', oak: 'oak', honey: 'honey', herring: 'herring', stonetile: 'stonetile', blackstone: 'blackstone', aspen: 'aspen', stone: 'stone', tatami: 'tatami', rubber: 'rubber', cedar: 'cedar', concrete: 'concrete' };
 export const pickMeshes = [];
 function buildFloors(M, groups) {
   const pickMat = new THREE.MeshBasicMaterial({ visible: false });
