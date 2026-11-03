@@ -14,7 +14,12 @@ export function makeMaterials() {
   const M = {};
   const std = (o) => new THREE.MeshStandardMaterial(o);
   M.stucco = std({ map: T.stucco, roughness: 0.92 });
-  M.plaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.3, 0.3), roughness: 0.95, color: 0xffffff }); // lime plaster
+  M.plaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.25, 0.25), roughness: 0.95, color: 0xfffcf6 }); // pale near-white accent plaster
+  M.warmplaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.3, 0.3), roughness: 0.95, color: 0xf6ebdc }); // warm plaster fireplace
+  M.drywall = std({ color: 0xf7f6f2, roughness: 0.9 }); // smooth finished white drywall/paint (default interior)
+  M.clay = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.35, 0.35), roughness: 0.96, color: 0xf2e7d8 }); // calm pale clay plaster (gym)
+  M.hinoki = std({ map: T.aspen, normalMap: T.aspenN, normalScale: new THREE.Vector2(0.3, 0.3), roughness: 0.7, color: 0xfff0d6 }); // pale hinoki
+  M.sage = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.2, color: 0xc4d6b4 }); // sage handmade tile
   M.charred = std({ map: T.charred, normalMap: T.charredN, roughness: 0.82 });
   M.rammed = std({ map: T.rammed, normalMap: T.rammedN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.95 });
   M.stone = std({ map: T.stone, roughness: 0.8, color: 0xf8f0e0 }); // honed limestone
@@ -23,18 +28,19 @@ export function makeMaterials() {
   M.oak = std({ map: T.oak, roughness: 0.6 });
   M.honey = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.48, color: 0x8a5d40 }); // walnut (Round 2: walnut replaces oak)
   M.cherry = std({ map: T.honey, normalMap: T.honeyN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.45, color: 0xd08a62 });
-  M.herring = std({ map: T.herring, normalMap: T.herringN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.5, color: 0x8f6244 });
+  M.herring = std({ map: T.herring, normalMap: T.herringN, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.5, color: 0xc99a68 }); // warm herringbone oak
   M.stonetile = std({ map: T.stonetile, normalMap: T.stonetileN, normalScale: new THREE.Vector2(0.5, 0.5), roughness: 0.62, color: 0xf6eedd }); // limestone
   M.bluestone = std({ map: T.stonetile, normalMap: T.stonetileN, roughness: 0.75, color: 0x8d99a3 });
   M.basalt = std({ map: T.stonetile, normalMap: T.stonetileN, roughness: 0.8, color: 0x5a5d60 });
   M.granite = std({ map: T.stone, roughness: 0.92, color: 0xc4c0b8 });
   M.slate = std({ map: T.flag, normalMap: T.flagN, roughness: 0.85, color: 0x77818a });
   M.soapstone = std({ map: T.marble, roughness: 0.6, color: 0x7f8a85 });
-  M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xcca477 });
+  M.earth = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.7, 0.7), roughness: 0.97, color: 0xd9b88f }); // warm natural earth/clay plaster (tatami)
   M.whiteplaster = std({ map: T.lime, normalMap: T.limeN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.94, color: 0xffffff });
   M.bronze = std({ color: 0x4e3d2c, roughness: 0.4, metalness: 0.65 });
   M.blackstone = std({ map: T.blackstone, normalMap: T.blackstoneN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.42 });
   M.marble = std({ map: T.marble, roughness: 0.18 });
+  M.paver = std({ map: T.stone, roughness: 0.85, color: 0xefe9dd }); // pale stone pavers
   M.zellige = std({ map: T.zellige, normalMap: T.zelligeN, roughness: 0.12, metalness: 0.05 });
   M.aspen = std({ map: T.aspen, normalMap: T.aspenN, normalScale: new THREE.Vector2(0.4, 0.4), roughness: 0.7 });
   M.pooltile = std({ map: T.pooltile, normalMap: T.pooltileN, roughness: 0.3 });
@@ -69,7 +75,7 @@ export function makeMaterials() {
   M.highlight = new THREE.MeshBasicMaterial({ color: 0x75805f, transparent: true, opacity: 0.28, depthWrite: false });
   // clipped twins for everything inside the building (section cuts)
   M.c = {};
-  for (const k of ['cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
+  for (const k of ['drywall', 'warmplaster', 'clay', 'hinoki', 'sage', 'paver', 'cherry', 'bluestone', 'basalt', 'granite', 'slate', 'soapstone', 'earth', 'whiteplaster', 'bronze', 'brass', 'teak', 'stucco', 'plaster', 'charred', 'rammed', 'cedar', 'stone', 'frame', 'glass', 'oak', 'fir', 'honey', 'herring', 'stonetile', 'blackstone', 'marble', 'zellige', 'aspen', 'linen', 'lacq', 'steel', 'sheer', 'paper', 'lamp', 'rgb', 'mirror', 'brass', 'leather', 'water', 'rubber', 'tatami', 'white', 'dark', 'teak', 'flag']) {
     const m = M[k].clone(); m.name = M[k].name; m.clippingPlanes = clip; m.clipShadows = true; M.c[k] = m;
   }
   M.T = T;
@@ -227,15 +233,16 @@ function wallSolid(M, s, a, b, zb, zt) {
   if (s.ext) { if (Math.abs(a - s.a) < 1e-6) aa -= t / 2; if (Math.abs(b - s.b) < 1e-6) bb += t / 2; }
   if (s.ext) {
     const inside = s.pos || s.neg; const outSign = s.pos ? -1 : 1;
-    const clad = M.c[cladFor(inside)]; const inner = inside === '304' ? M.c.cedar : inside === '305' ? M.c.blackstone : inside === '303' ? M.c.earth : M.c.plaster;
+    const clad = M.c[cladFor(inside)]; const inner = wallMatFor(M, inside);
     const outRange = outSign > 0 ? [0, t / 2] : [-t / 2, 0]; const inRange = outSign > 0 ? [-t / 2, 0] : [0, t / 2];
     extrudeOnWall('walls', clad, s, aa, bb, zb, zt, outRange[0], outRange[1]);
     extrudeOnWall('walls', inner, s, aa, bb, zb, zt, inRange[0], inRange[1]);
   } else {
     const has = (id) => s.pos === id || s.neg === id;
-    extrudeOnWall('walls', has('304') ? M.c.cedar : has('305') ? M.c.blackstone : has('303') ? M.c.earth : M.c.plaster, s, a - t / 2 + 0.001, b + t / 2 - 0.001, zb, zt, -t / 2, t / 2);
+    const wm = ['304', '305', '303', '404', '302'].find(has); extrudeOnWall('walls', wallMatFor(M, wm), s, a - t / 2 + 0.001, b + t / 2 - 0.001, zb, zt, -t / 2, t / 2);
   }
 }
+function wallMatFor(M, id) { return M.c[(P.wallMat || {})[id] || 'drywall']; }
 function glassPanel(M, s, a, b, zb, zt, slider) {
   const t = 0.08;
   const box = (A, Bv, za, zz, o1, o2, mat, layer) => {
@@ -283,7 +290,7 @@ function buildWalls(M) {
 }
 
 // ---------- floors, rooms ----------
-const FLOOR = { oak: 'oak', honey: 'honey', herring: 'herring', stonetile: 'stonetile', blackstone: 'blackstone', aspen: 'aspen', stone: 'stone', tatami: 'tatami', rubber: 'rubber', cedar: 'cedar', concrete: 'concrete' };
+const FLOOR = { oakplank: 'oak', sage: 'sage', hinoki: 'hinoki', oak: 'oak', honey: 'honey', herring: 'herring', stonetile: 'stonetile', blackstone: 'blackstone', aspen: 'aspen', stone: 'stone', tatami: 'tatami', rubber: 'rubber', cedar: 'cedar', concrete: 'concrete' };
 export const pickMeshes = [];
 function buildFloors(M, groups) {
   const pickMat = new THREE.MeshBasicMaterial({ visible: false });
@@ -457,39 +464,48 @@ function buildSite(M, groups) {
   const ground = new THREE.Mesh(gg, M.meadow); ground.position.y = G; ground.receiveShadow = true; groups.ground.add(ground);
   // courtyard: flagstone terrace ring (no timber engawa deck), raked gravel, planted water court, lawn, shade tree, maples
   const c = P.courtyard; const FL = [M.plinth, M.plinth, M.flag, M.plinth, M.plinth, M.plinth];
-  addBox('site', [M.plinth, M.plinth, M.slate, M.plinth, M.plinth, M.plinth], c.x0, c.y0, c.x1, c.y1, G, -0.3); // slate paving
+  addBox('site', [M.plinth, M.plinth, M.paver, M.plinth, M.plinth, M.plinth], c.x0, c.y0, c.x1, c.y1, G, -0.3); // pale stone pavers
   { // timber engawa (western red cedar) with a bluestone step, on the north, west and east edges under the eaves
-    const DK = [M.cedar, M.cedar, M.cedar, M.cedar, M.cedar, M.cedar], BS = [M.bluestone, M.bluestone, M.bluestone, M.bluestone, M.bluestone, M.bluestone];
+    const DK = [M.cedar, M.cedar, M.cedar, M.cedar, M.cedar, M.cedar], BS = [M.granite, M.granite, M.granite, M.granite, M.granite, M.granite]; // hard stone band at the engawa edge
     addBox('site', DK, c.x0, c.y1 - 4.5, c.x1, c.y1, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y1 - 5.8, c.x1 - 4.5, c.y1 - 4.5, -0.3, -0.18);
     addBox('site', DK, c.x0, c.y0 + 0.2, c.x0 + 4.5, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x0 + 4.5, c.y0 + 5.5, c.x0 + 5.8, c.y1 - 5.8, -0.3, -0.18);
     addBox('site', DK, c.x1 - 4.5, c.y0 + 5, c.x1, c.y1 - 4.5, -0.3, -0.05); addBox('site', BS, c.x1 - 5.8, c.y0 + 5.5, c.x1 - 4.5, c.y1 - 5.8, -0.3, -0.18);
     for (let x = c.x0 + 6; x < c.x1 - 5; x += 3) addBox('detail', M.lamp, x, c.y1 - 5.82, x + 0.5, c.y1 - 5.78, -0.26, -0.22); // recessed step lights
     for (let y = c.y0 + 7; y < c.y1 - 6; y += 3) { addBox('detail', M.lamp, c.x0 + 5.78, y, c.x0 + 5.82, y + 0.5, -0.26, -0.22); addBox('detail', M.lamp, c.x1 - 5.82, y, c.x1 - 5.78, y + 0.5, -0.26, -0.22); }
     for (let x = c.x0 + 1; x <= c.x1 - 1; x += 1.6) { const sag = Math.sin(((x - c.x0) / 8) * Math.PI) * 0.5; addCyl('detail', M.lamp, x, c.y1 - 6.2, 0.09, 8.6 - Math.abs(sag), 8.78 - Math.abs(sag), 6); } // string lights under the eave
-    addBox('site', BS, c.x0 + 5.8, 40.3, c.x1 - 5.8, 41.7, -0.3, -0.2); // bluestone path
+    
     [[c.x1 - 4, 34], [c.x1 - 4, 41.5]].forEach(([x, y]) => { addBox('site', M.c.teak, x - 1.1, y, x + 1.1, y + 6, -0.05, 0.9); addBox('site', M.c.linen, x - 1.0, y + 0.2, x + 1.0, y + 4.4, 0.9, 1.25); const g = boxGeo(2.0, 0.3, 1.8); g.rotateX(-0.9); g.translate(x - CX, 1.6, -(y + 5.2 - CY)); B.add('site', M.c.teak, g); }); // teak loungers on the east engawa
   }
   const lw = S.lawn; addBox('site', [M.plinth, M.plinth, M.turf, M.plinth, M.plinth, M.plinth], lw.x0, lw.y0, lw.x1, lw.y1, -0.5, -0.28);
-  const z = S.zen; addBox('site', M.plinth, z.x0 - 0.3, z.y0 - 0.3, z.x1 + 0.3, z.y1 + 0.3, -0.5, -0.26); addBox('site', M.gravel, z.x0, z.y0, z.x1, z.y1, -0.5, -0.27);
-  [[42, 33, 1.6, 1.4], [48.5, 36.5, 1.2, 1.0], [50, 32, 0.9, 0.8]].forEach(([x, y, r, h]) => { const g = new THREE.DodecahedronGeometry(r, 0); g.scale(1, h / r * 0.7, 1); g.translate(x - CX, -0.3 + h * 0.3, -(y - CY)); B.add('site', M.plinth, g); });
+  if (false) { const z = S.zen; addBox('site', M.plinth, z.x0 - 0.3, z.y0 - 0.3, z.x1 + 0.3, z.y1 + 0.3, -0.5, -0.26); addBox('site', M.gravel, z.x0, z.y0, z.x1, z.y1, -0.5, -0.27);
+  [[42, 33, 1.6, 1.4], [48.5, 36.5, 1.2, 1.0], [50, 32, 0.9, 0.8]].forEach(([x, y, r, h]) => { const g = new THREE.DodecahedronGeometry(r, 0); g.scale(1, h / r * 0.7, 1); g.translate(x - CX, -0.3 + h * 0.3, -(y - CY)); B.add('site', M.plinth, g); }); }
   // planted water court with reeds + stone water basin (tsukubai)
-  const wc = S.water; addBox('site', M.c.blackstone, wc.x0 - 0.6, wc.y0 - 0.6, wc.x1 + 0.6, wc.y1 + 0.6, G, 0.1); addBox('site', M.poolwater, wc.x0, wc.y0, wc.x1, wc.y1, G, -0.05);
+  const wc = S.water; addBox('site', M.c.granite, wc.x0 - 0.7, wc.y0 - 0.7, wc.x1 + 0.7, wc.y1 + 0.7, G, 0.15); addBox('site', [M.water, M.water, M.water, M.water, M.water, M.water], wc.x0, wc.y0, wc.x1, wc.y1, G, 0.05); // still reflecting pool, slightly raised coping
+  if (false)
   { const reed = new THREE.MeshStandardMaterial({ color: 0x6f8a45, roughness: 0.9 }); const lily = new THREE.MeshStandardMaterial({ color: 0x4f7a3a, roughness: 0.6 });
-    for (let i = 0; i < 26; i++) { const x = wc.x0 + 0.8 + ((i * 41) % 100) / 100 * (wc.x1 - wc.x0 - 1.6), y = wc.y0 + 0.8 + ((i * 67) % 100) / 100 * (wc.y1 - wc.y0 - 1.6);
+    for (let i = 0; i < 0; i++) { const x = wc.x0 + 0.8 + ((i * 41) % 100) / 100 * (wc.x1 - wc.x0 - 1.6), y = wc.y0 + 0.8 + ((i * 67) % 100) / 100 * (wc.y1 - wc.y0 - 1.6);
       if (i % 3) { addCyl('site', reed, x, y, 0.06, -0.05, 2.2 + (i % 4) * 0.5, 4, 0.02); } else addCyl('site', lily, x, y, 0.6, 0, 0.03, 10); } }
   addCyl('site', M.c.stone, wc.x0 - 1.8, wc.y0 + 2.5, 1.2, -0.3, 1.1, 12); addCyl('site', M.water, wc.x0 - 1.8, wc.y0 + 2.5, 0.8, 1.1, 1.13, 12); addBox('site', M.c.fir, wc.x0 - 1.85, wc.y0 + 2.5, wc.x0 - 0.2, wc.y0 + 2.62, 1.6, 1.72);
   // big shade tree (katsura) + Japanese maples
-  const st = S.shadetree; addCyl('site', M.dark, st.cx, st.cy, 0.9, -0.3, 11, 10, 0.55);
-  { const crown = new THREE.MeshStandardMaterial({ color: 0x6d8a3e, roughness: 0.9 }); [[0, 0, 17, 5.6], [2.8, 1.6, 15.5, 3.7], [-2.8, -1.2, 16, 3.8], [1.2, -2.8, 19, 3.4], [-1.6, 2.4, 19.5, 3.5], [0, 0, 22, 3.2]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1, 0.72, 1); g.translate(st.cx + dx - CX, h, -(st.cy + dy - CY)); B.add('site', crown, g); }); }
+  const st = S.bodhi || S.shadetree; addCyl('site', colorMat('#8b8277'), st.cx, st.cy, 0.8, -0.3, 10, 10, 0.5); // bodhi tree (pale trunk)
+  { const crown = new THREE.MeshStandardMaterial({ color: 0x7fa046, roughness: 0.9 }); [[0, 0, 17, 5.6], [2.8, 1.6, 15.5, 3.7], [-2.8, -1.2, 16, 3.8], [1.2, -2.8, 19, 3.4], [-1.6, 2.4, 19.5, 3.5], [0, 0, 22, 3.2]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1, 0.72, 1); g.translate(st.cx + dx - CX, h, -(st.cy + dy - CY)); B.add('site', crown, g); }); }
   { const leaf = new THREE.MeshStandardMaterial({ color: 0xb8442a, roughness: 0.9 }); const leaf2 = new THREE.MeshStandardMaterial({ color: 0xd06a2e, roughness: 0.9 });
     S.maples.forEach(([mx, my], j) => { addCyl('site', M.dark, mx, my, 0.22, -0.3, 4.5, 6, 0.14); [[0, 0, 5.6, 2.5], [1.3, 0.6, 4.9, 1.8], [-1.4, -0.6, 5.1, 1.9], [0.4, -1.2, 6.5, 1.6]].forEach(([dx, dy, h, r]) => { const g = new THREE.IcosahedronGeometry(r, 1); g.scale(1.15, 0.55, 1.15); g.translate(mx + dx - CX, h, -(my + dy - CY)); B.add('site', j % 2 ? leaf2 : leaf, g); }); }); }
+  { const bam = new THREE.MeshStandardMaterial({ color: 0xa8bf6a, roughness: 0.7 }); const bl = new THREE.MeshStandardMaterial({ color: 0x9cc05a, roughness: 0.9 });
+    (S.bamboo || []).forEach(([bx, by]) => { for (let k = 0; k < 7; k++) { const x = bx + ((k * 37) % 10) / 10 - 0.5, y = by + ((k * 53) % 10) / 10 - 0.5, h = 11 + (k % 3) * 2; addCyl('site', bam, x, y, 0.09, -0.3, h, 6); const g = new THREE.IcosahedronGeometry(0.9, 0); g.scale(0.8, 1.6, 0.8); g.translate(x - CX, h - 0.8, -(y - CY)); B.add('site', bl, g); } }); }
+  // tree uplights + linear ground wash at the court edges
+  [[st.cx + 1.2, st.cy - 1.2], [st.cx - 1.2, st.cy + 1.0], ...S.maples.map(([x, y]) => [x + 0.8, y - 0.8])].forEach(([x, y]) => addCyl('detail', M.lamp, x, y, 0.25, -0.3, -0.18, 10));
+  addBox('detail', M.lamp, c.x0 + 6, c.y0 + 0.3, c.x1 - 6, c.y0 + 0.45, -0.3, -0.22);
+  // movable timber chairs + low timber table (tea for two by the reflecting pool)
+  { const tx = S.water.x0 - 4.5, ty = (S.water.y0 + S.water.y1) / 2; addBox('site', M.c.teak, tx - 1.3, ty - 1.3, tx + 1.3, ty + 1.3, 1.1, 1.3); addBox('site', M.c.teak, tx - 1.0, ty - 1.0, tx + 1.0, ty + 1.0, -0.3, 1.1);
+    [[tx - 2.9, ty], [tx + 2.9, ty]].forEach(([x, y]) => { addBox('site', M.c.teak, x - 0.9, y - 0.9, x + 0.9, y + 0.9, 1.2, 1.4); [[-0.8, -0.8], [0.65, -0.8], [-0.8, 0.65], [0.65, 0.65]].forEach(([a, b]) => addBox('site', M.c.teak, x + a, y + b, x + a + 0.15, y + b + 0.15, -0.3, 1.2)); addBox('site', M.c.teak, x - 0.9, y + 0.75, x + 0.9, y + 0.9, 1.4, 3.0); addBox('site', M.c.linen, x - 0.8, y - 0.8, x + 0.8, y + 0.7, 1.4, 1.6); }); }
   // stone lanterns (ishidoro)
   S.lanterns.forEach(([x, y]) => { addCyl('site', M.c.stone, x, y, 0.55, -0.3, 0.1, 6); addCyl('site', M.c.stone, x, y, 0.2, 0.1, 1.8, 6); addBox('site', M.c.stone, x - 0.5, y - 0.5, x + 0.5, y + 0.5, 1.8, 2.6); addBox('site', M.paper, x - 0.32, y - 0.52, x + 0.32, y + 0.52, 1.95, 2.45); addCyl('site', M.c.stone, x, y, 0.15, 2.6, 3.3, 6, 0.9); addCyl('site', M.c.stone, x, y, 0.05, 3.3, 3.55, 6, 0.18); });
   // curved teak bench around the shade tree
-  { for (let k = 0; k < 9; k++) { const a0 = Math.PI * (1.05 + k * 0.06); const g = boxGeo(1.25, 0.18, 1.5); g.translate(0, 0, 0); g.rotateY(a0 + Math.PI / 2); const r = 6.2; addGeo('site', M.teak, g, st.cx + Math.cos(a0) * r, st.cy + Math.sin(a0) * r, 1.4);
+  { for (let k = 0; k < 0; k++) { const a0 = Math.PI * (1.05 + k * 0.06); const g = boxGeo(1.25, 0.18, 1.5); g.translate(0, 0, 0); g.rotateY(a0 + Math.PI / 2); const r = 6.2; addGeo('site', M.teak, g, st.cx + Math.cos(a0) * r, st.cy + Math.sin(a0) * r, 1.4);
       if (k % 2 === 0) { const g2 = boxGeo(0.25, 1.4, 1.1); g2.rotateY(a0 + Math.PI / 2); addGeo('site', M.c.blackstone, g2, st.cx + Math.cos(a0) * r, st.cy + Math.sin(a0) * r, 0.0); } } }
   // tropical planting clumps (broad leaves) along the terrace
-  { const trop = new THREE.MeshStandardMaterial({ color: 0x3f6b35, roughness: 0.8 }); [[38.5, 29.5], [56, 41.2], [42.5, 52.5], [69.5, 51.5], [54, 29], [70, 36.5]].forEach(([x, y], i) => { for (let k = 0; k < 5; k++) { const g = new THREE.ConeGeometry(0.5, 3 + (k % 3), 4); g.rotateZ((k - 2) * 0.35); g.rotateY(k * 1.3); addGeo('site', trop, g, x + (k - 2) * 0.3, y + ((k * 7) % 3 - 1) * 0.3, 1.0); } }); }
+  { const trop = new THREE.MeshStandardMaterial({ color: 0x3f6b35, roughness: 0.8 }); [[38.5, 29.5], [69.5, 51.5], [54, 29]].forEach(([x, y], i) => { for (let k = 0; k < 5; k++) { const g = new THREE.ConeGeometry(0.5, 3 + (k % 3), 4); g.rotateZ((k - 2) * 0.35); g.rotateY(k * 1.3); addGeo('site', trop, g, x + (k - 2) * 0.3, y + ((k * 7) % 3 - 1) * 0.3, 1.0); } }); }
   // lit garden path lights (instanced)
   { const pts = []; for (let x = 39; x <= 69; x += 6) { pts.push([x, 28.4], [x, 53.8]); } for (let y = 34; y <= 50; y += 5.3) { pts.push([37.2, y], [70.8, y]); }
     const g = new THREE.CylinderGeometry(0.07, 0.09, 1.3, 6); g.translate(0, 0.65, 0); const im = new THREE.InstancedMesh(g, M.bronze, pts.length); const g2 = new THREE.SphereGeometry(0.42, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2); g2.scale(1, 0.55, 1); const im2 = new THREE.InstancedMesh(g2, M.lamp, pts.length); // mushroom path lights in the planting
@@ -704,7 +720,7 @@ export const OUTDOOR = [
   { id: 'U', name: 'Utility Yard', wing: 'Outdoor', x0: 100, y0: -6, x1: 136, y1: 24, area: 0, notes: '36 x 30 ft screened service yard beside the Pool Equipment room (211, which keeps the pool pump, filter and salt cell) and the wellness wing. 7-ft charred-timber screen matching the house, with a 12-ft service gate on the gravel service lane from the drive for pump trucks and deliveries.', floor: 'Compacted gravel + concrete pads', fin: 'Charred-timber screen; gravel; concrete pads' },
   { id: 'U6', name: 'Drain Field', wing: 'Outdoor', x0: 30, y0: -74, x1: 90, y1: -52, notes: 'On-site wastewater drain field in the south meadow below the service lane, more than 100 ft from the vegetable garden and the well, kept clear of the service lane. Size to the perc test.', floor: 'Meadow grass', fin: 'Meadow over trenches' },
   { id: 'U7', name: 'Well', wing: 'Outdoor', x0: 137, y0: 92, x1: 143, y1: 98, notes: 'Well head up-slope in the north-east, far from the drain field. Backup supply to the rainwater tanks.', floor: 'Gravel', fin: 'Stone pad; charred timber cover' },
-  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 36, y0: 27, x1: 72, y1: 55, notes: 'The heart of the house, 36 x 28 ft. A western red cedar engawa runs along the north, east and west glass under the eaves, with a bluestone step lit by recessed step lights and string lights under the eave. Slate paving with a bluestone path, a katsura shade tree with a curved teak bench, Japanese maples, a lawn, raked gravel, a planted water court with a stone basin, stone lanterns and mushroom path lights in the planting, and two teak loungers on the east engawa. Courtyard table: open item.', floor: 'Cedar engawa; slate + bluestone paving', fin: 'Western red cedar engawa; bluestone step; slate paving; bluestone path; teak bench and loungers; stone lanterns; mushroom path lights; string lights' },
+  { id: 'C', name: 'Courtyard', wing: 'Outdoor', x0: 36, y0: 27, x1: 72, y1: 55, notes: 'Quiet morning-tea court, 36 x 28 ft (Oct 28 + Oct 29 decks): pale stone pavers, a hard stone band leading at the engawa edge, a still reflecting pool with slightly raised coping, one bodhi tree and one Japanese maple with light bamboo in layered planting that leaves more breathing room, tree uplights and a linear ground wash, and movable timber chairs with a low timber table for tea for two by the pool. Cedar engawa under the eaves.', floor: 'Pale stone pavers; hard stone band; cedar engawa', fin: 'Pale stone pavers; granite band + raised coping; reflecting pool; bodhi + maple + bamboo; timber chairs + low table; ground wash + uplights' },
   { id: 'P', name: 'Saltwater Pool', wing: 'Outdoor', x0: 54, y0: -22, x1: 88, y1: -10, notes: 'Small 34 x 12 ft saltwater pool lined in green stone tile, on the sunny south side outside the wellness wing. A salt chlorine generator in the Pool Equipment room (cell replaced about every 3-5 years), marine-grade 316 stainless fittings, a sealed basalt deck with flamed-granite coping, teak loungers, and a bale pavilion at the east end.', floor: 'Basalt deck, flamed-granite coping', fin: 'Green stone pool tile; basalt deck; flamed-granite coping; 316 stainless fittings; teak and linen loungers' },
   { id: 'B', name: 'Bale Pavilion', wing: 'Outdoor', x0: 90, y0: -27, x1: 97, y1: -19, notes: 'Balinese-style bale by the pool: a raised honey-oak platform with linen cushions under a low standing-seam roof on fir posts.', floor: 'Honey-oak platform', fin: 'Honey oak; fir posts; standing-seam roof; linen cushions' },
   { id: 'L', name: 'Turf Sprint Lane', wing: 'Outdoor', x0: -32, y0: -16, x1: 43, y1: -8, notes: '20 yards (60 ft) of turf marked every 5 yards, plus a 15-ft run-out to a charred-timber end wall. An outdoor pull-up station stands at the gym end.', floor: 'Synthetic turf', fin: 'Turf; charred-timber end wall; black steel pull-up station' },

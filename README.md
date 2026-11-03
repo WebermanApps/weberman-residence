@@ -1,6 +1,6 @@
 # Weberman Residence: Spatial Study
 
-An interactive, drawing-referenced 3D model of a single-level mountain courtyard house designed for Max Weberman. The approach follows the [Agnes spatial study](https://maxweberman.com/agnes).
+An interactive, drawing-referenced 3D model of a single-level mountain courtyard house. 
 
 **Live:** https://webermanapps.github.io/weberman-residence/
 
