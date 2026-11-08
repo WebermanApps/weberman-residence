@@ -21,6 +21,9 @@ An interactive, drawing-referenced 3D model of a single-level mountain courtyard
 - 3D model last updated Nov 3, 2026 (commit 0bdeff1).
 
 ## The App
+**Default view: Rooms + Photos.** A clickable 2D floor plan drawn from `src/plan.json` (rooms, walls, doors and glazing). Tap any room or the courtyard to open a gallery of 2 to 3 photoreal concept views of that room with its size and finishes (back, close, next/previous, thumbnails, swipe, arrow keys). The proposed meditation room (not yet placed in the plan) has its own gallery. Gallery images are AI-generated concepts (Nov 8, 2026), stored only as encrypted `files/*.enc`, and unlock with the page password. A fixed bottom bar (Home, Reports, Ask, More) stays on screen. The 3D model and walk-through are still available from the mode switch or More.
+
+### 3D model
 Vite and Three.js. Features: orbit, pan and zoom (with touch support), preset views (Aerial, Courtyard, Living, Office, Wellness, Climbing, Master), a roof toggle, floating room labels, a plan view with the 2D drawing overlaid on a 3D section cut, a click-a-room info panel, a walk-through mode, daylight and evening lighting, cutaway walls with a section-height slider, and image capture.
 
 ```
